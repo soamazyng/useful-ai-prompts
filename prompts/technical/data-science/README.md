@@ -1,13 +1,13 @@
-# Data Science Prompts
+# Prompts de Ciência de Dados
 
-Advanced prompts for machine learning, statistical analysis, and data-driven insights.
+Prompts avançados para aprendizado de máquina, análise estatística e insights orientados por dados.
 
-## Available Prompts
+## Prompts Disponíveis
 
-### Machine Learning
+### Aprendizado de Máquina
 
-- [Model Evaluation Framework](./model-evaluation-framework.md) - Comprehensive ML model assessment and optimization
+- [Framework de Avaliação de Modelos](./model-evaluation-framework.md) - Avaliação e otimização abrangente de modelos de ML
 
 ---
 
-_Unlock data potential with AI-enhanced analytical frameworks._
+_Libere o potencial dos dados com frameworks analíticos aprimorados por IA._

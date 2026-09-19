@@ -1,18 +1,18 @@
-# Infrastructure Prompts
+# Prompts de Infraestrutura
 
-Infrastructure as Code and automation prompts for modern cloud operations.
+Prompts de Infraestrutura como Código e automação para operações modernas em nuvem.
 
-## Available Prompts
+## Prompts Disponíveis
 
-### Infrastructure as Code
+### Infraestrutura como Código
 
-- [AzureRM Terraform Module Maker](./azurerm-terraform-module-maker.md) - Azure-specific Terraform module generation
-- [Terraform Formatting Prompt](./terraform-formatting-prompt.md) - Terraform code formatting and best practices
+- [Criador de Módulos Terraform AzureRM](./azurerm-terraform-module-maker.md) - Geração de módulos Terraform específicos para Azure
+- [Prompt de Formatação Terraform](./terraform-formatting-prompt.md) - Formatação de código Terraform e boas práticas
 
-### CI/CD & Automation
+### CI/CD e Automação
 
-- [CI Workflow Watchdog](./ci-workflow-watchdog.md) - Continuous integration monitoring and optimization
+- [Vigilante de Workflows de CI](./ci-workflow-watchdog.md) - Monitoramento e otimização de integração contínua
 
 ---
 
-_Automate infrastructure with AI-powered DevOps practices._
+_Automatize infraestrutura com práticas de DevOps alimentadas por IA._

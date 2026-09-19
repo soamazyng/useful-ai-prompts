@@ -1,13 +1,13 @@
-# Quality Assurance Prompts
+# Prompts de Garantia de Qualidade
 
-Test strategy and quality engineering prompts for software excellence.
+Prompts de estratégia de testes e engenharia de qualidade para excelência em software.
 
-## Available Prompts
+## Prompts Disponíveis
 
-### Test Strategy
+### Estratégia de Testes
 
-- [Comprehensive Test Strategist](./comprehensive-test-strategist.md) - End-to-end testing strategy and implementation
+- [Estrategista de Testes Abrangente](./comprehensive-test-strategist.md) - Estratégia e implementação de testes de ponta a ponta
 
 ---
 
-_Ensure quality with AI-powered testing frameworks._
+_Garanta qualidade com frameworks de testes alimentados por IA._

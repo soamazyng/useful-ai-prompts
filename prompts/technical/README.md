@@ -1,58 +1,58 @@
-# Technical Prompts
+# Prompts Técnicos
 
-Specialized prompts for software engineering, infrastructure, and technical operations.
+Prompts especializados para engenharia de software, infraestrutura e operações técnicas.
 
-## Categories
+## Categorias
 
-### [AI Engineering](./ai-engineering/)
+### [Engenharia de IA](./ai-engineering/)
 
-- [Memory Management Patterns](./ai-engineering/memory-management-patterns.md)
+- [Padrões de Gerenciamento de Memória](./ai-engineering/memory-management-patterns.md)
 
-### [Architecture](./architecture/)
+### [Arquitetura](./architecture/)
 
-- [Cloud Migration Expert](./architecture/cloud-migration-expert.md)
+- [Especialista em Migração para Nuvem](./architecture/cloud-migration-expert.md)
 
-### [Cybersecurity](./cybersecurity/)
+### [Cibersegurança](./cybersecurity/)
 
-- [Incident Response Commander](./cybersecurity/incident-response-commander.md)
+- [Comandante de Resposta a Incidentes](./cybersecurity/incident-response-commander.md)
 
-### [Data Engineering](./data-engineering/)
+### [Engenharia de Dados](./data-engineering/)
 
-- [Pipeline Design Architect](./data-engineering/pipeline-design-architect.md)
+- [Arquiteto de Design de Pipelines](./data-engineering/pipeline-design-architect.md)
 
-### [Data Science](./data-science/)
+### [Ciência de Dados](./data-science/)
 
-- [Model Evaluation Framework](./data-science/model-evaluation-framework.md)
+- [Framework de Avaliação de Modelos](./data-science/model-evaluation-framework.md)
 
 ### [DevOps](./devops/)
 
-- [CI/CD Pipeline Optimizer](./devops/cicd-pipeline-optimizer.md)
+- [Otimizador de Pipelines CI/CD](./devops/cicd-pipeline-optimizer.md)
 
-### [Infrastructure](./infrastructure/)
+### [Infraestrutura](./infrastructure/)
 
-- [AzureRM Terraform Module Maker](./infrastructure/azurerm-terraform-module-maker.md)
-- [CI Workflow Watchdog](./infrastructure/ci-workflow-watchdog.md)
-- [Terraform Formatting Prompt](./infrastructure/terraform-formatting-prompt.md)
+- [Criador de Módulos Terraform AzureRM](./infrastructure/azurerm-terraform-module-maker.md)
+- [Vigilante de Workflows de CI](./infrastructure/ci-workflow-watchdog.md)
+- [Prompt de Formatação Terraform](./infrastructure/terraform-formatting-prompt.md)
 
 ### [MCP (Model Context Protocol)](./mcp/)
 
-- [Claude MCP Example](./mcp/claude-mcp-example.md)
-- [Claude with MCPs](./mcp/claude-with-mcps.md)
-- [Register New MCP Servers](./mcp/register-new-mcp-servers.md)
+- [Exemplo de Claude MCP](./mcp/claude-mcp-example.md)
+- [Claude com MCPs](./mcp/claude-with-mcps.md)
+- [Registrar Novos Servidores MCP](./mcp/register-new-mcp-servers.md)
 
-### [Quality Assurance](./quality-assurance/)
+### [Garantia de Qualidade](./quality-assurance/)
 
-- [Comprehensive Test Strategist](./quality-assurance/comprehensive-test-strategist.md)
+- [Estrategista de Testes Abrangente](./quality-assurance/comprehensive-test-strategist.md)
 
-### [Security](./security/)
+### [Segurança](./security/)
 
-- [Cybersecurity Defense Architect](./security/cybersecurity-defense-architect.md)
+- [Arquiteto de Defesa em Cibersegurança](./security/cybersecurity-defense-architect.md)
 
-### [Software Engineering](./software-engineering/)
+### [Engenharia de Software](./software-engineering/)
 
-- [Advanced Debugging Analyzer](./software-engineering/advanced-debugging-analyzer.md)
-- [Fullstack Developer Architect](./software-engineering/fullstack-developer-architect.md)
+- [Analisador Avançado de Debugging](./software-engineering/advanced-debugging-analyzer.md)
+- [Arquiteto Desenvolvedor Fullstack](./software-engineering/fullstack-developer-architect.md)
 
 ---
 
-_Professional-grade technical prompts for engineers and technical teams._
+_Prompts técnicos de nível profissional para engenheiros e equipes técnicas._

@@ -1,13 +1,13 @@
-# Architecture Prompts
+# Prompts de Arquitetura
 
-System architecture and cloud migration prompts for scalable solutions.
+Prompts de arquitetura de sistemas e migração para nuvem para soluções escaláveis.
 
-## Available Prompts
+## Prompts Disponíveis
 
-### Cloud Architecture
+### Arquitetura de Nuvem
 
-- [Cloud Migration Expert](./cloud-migration-expert.md) - Enterprise cloud migration strategy and execution
+- [Especialista em Migração para Nuvem](./cloud-migration-expert.md) - Estratégia e execução de migração empresarial para nuvem
 
 ---
 
-_Design resilient systems with AI-powered architectural patterns._
+_Projete sistemas resilientes com padrões arquiteturais alimentados por IA._

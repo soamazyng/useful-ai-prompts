@@ -1,36 +1,36 @@
-# Claude Code Hooks Library
+# Biblioteca de Hooks do Claude Code
 
-## Overview
+## Visão Geral
 
-A comprehensive collection of production-ready hooks for Claude Code. Hooks enable automated validation, testing, formatting, and environment setup at key points in your development workflow.
+Uma coleção abrangente de hooks prontos para produção para o Claude Code. Hooks permitem validação automatizada, testes, formatação e configuração de ambiente em pontos-chave do seu fluxo de trabalho de desenvolvimento.
 
-**Total Hooks**: 6 comprehensive examples covering all major use cases
+**Total de Hooks**: 6 exemplos abrangentes cobrindo todos os principais casos de uso
 
-## What Are Hooks?
+## O que São Hooks?
 
-Hooks are automated scripts that execute at specific events in Claude Code's workflow. They enable:
+Hooks são scripts automatizados que executam em eventos específicos no fluxo de trabalho do Claude Code. Eles permitem:
 
-- **Automated Quality Control**: Run linters, tests, and security scans automatically
-- **Environment Setup**: Initialize development environment on session start
-- **Code Formatting**: Auto-format code after edits
-- **Security**: Prevent commits with exposed secrets or vulnerable dependencies
-- **Breaking Change Detection**: Warn before committing API-breaking changes
+- **Controle de Qualidade Automatizado**: Executar linters, testes e varreduras de segurança automaticamente
+- **Configuração de Ambiente**: Inicializar ambiente de desenvolvimento no início da sessão
+- **Formatação de Código**: Autoformatar código após edições
+- **Segurança**: Prevenir commits com segredos expostos ou dependências vulneráveis
+- **Detecção de Breaking Changes**: Alertar antes de commitar mudanças que quebram APIs
 
-## Quick Start
+## Início Rápido
 
-### 1. Copy Hooks to Your Project
+### 1. Copie os Hooks para Seu Projeto
 
 ```bash
-# Copy all hooks
-cp -r hooks/ /path/to/your/project/.claude/hooks/
+# Copiar todos os hooks
+cp -r hooks/ /caminho/para/seu/projeto/.claude/hooks/
 
-# Or copy individual hooks
-cp -r hooks/security-scan /path/to/your/project/.claude/hooks/
+# Ou copiar hooks individuais
+cp -r hooks/security-scan /caminho/para/seu/projeto/.claude/hooks/
 ```
 
-### 2. Configure in Settings
+### 2. Configure nas Definições
 
-Add to `.claude/settings.json`:
+Adicione ao `.claude/settings.json`:
 
 ```json
 {
@@ -51,24 +51,24 @@ Add to `.claude/settings.json`:
 }
 ```
 
-### 3. Make Scripts Executable
+### 3. Torne os Scripts Executáveis
 
 ```bash
 chmod +x .claude/hooks/*/hook.sh
 ```
 
-## Available Hooks
+## Hooks Disponíveis
 
 ### 🔒 security-scan
 
-**Event:** PreToolUse (Bash) | **Purpose:** Prevent secret leaks
+**Evento:** PreToolUse (Bash) | **Finalidade:** Prevenir vazamento de segredos
 
-Scans for exposed secrets before commits:
+Escaneia segredos expostos antes de commits:
 
-- AWS keys, API tokens, private keys
-- Database credentials and passwords
-- 15+ secret pattern detections
-- Whitelist support via `.secretsignore`
+- Chaves AWS, tokens de API, chaves privadas
+- Credenciais de banco de dados e senhas
+- 15+ detecções de padrões de segredos
+- Suporte a whitelist via `.secretsignore`
 
 ```json
 {
@@ -86,25 +86,25 @@ Scans for exposed secrets before commits:
 }
 ```
 
-**Key Features:**
+**Funcionalidades Principais:**
 
-- ✅ Blocks commits with exposed secrets
-- ✅ Clear remediation guidance
-- ✅ Configurable sensitivity levels
-- ✅ False positive management
+- ✅ Bloqueia commits com segredos expostos
+- ✅ Orientação clara de remediação
+- ✅ Níveis de sensibilidade configuráveis
+- ✅ Gerenciamento de falsos positivos
 
 ---
 
 ### ✅ test-runner
 
-**Event:** PreToolUse (Bash) | **Purpose:** Run tests before commits
+**Evento:** PreToolUse (Bash) | **Finalidade:** Executar testes antes de commits
 
-Automatically runs tests with smart framework detection:
+Executa testes automaticamente com detecção inteligente de framework:
 
 - Jest, pytest, RSpec, Go test, Cargo test
-- Runs tests for changed files only
-- Parallel execution support
-- Test result caching
+- Executa testes apenas para arquivos alterados
+- Suporte a execução paralela
+- Cache de resultados de testes
 
 ```json
 {
@@ -123,25 +123,25 @@ Automatically runs tests with smart framework detection:
 }
 ```
 
-**Key Features:**
+**Funcionalidades Principais:**
 
-- ✅ Multi-framework support
-- ✅ Fast incremental testing
-- ✅ Detailed failure reports
-- ✅ Coverage tracking
+- ✅ Suporte a múltiplos frameworks
+- ✅ Testes incrementais rápidos
+- ✅ Relatórios detalhados de falhas
+- ✅ Rastreamento de cobertura
 
 ---
 
 ### 🚀 session-setup
 
-**Event:** SessionStart | **Purpose:** Initialize development environment
+**Evento:** SessionStart | **Finalidade:** Inicializar ambiente de desenvolvimento
 
-Prepares your environment on session start:
+Prepara seu ambiente no início da sessão:
 
-- Loads `.env` variables
-- Checks dependency versions
-- Verifies database connections
-- Displays git status and reminders
+- Carrega variáveis `.env`
+- Verifica versões de dependências
+- Verifica conexões de banco de dados
+- Exibe status do git e lembretes
 
 ```json
 {
@@ -159,25 +159,25 @@ Prepares your environment on session start:
 }
 ```
 
-**Key Features:**
+**Funcionalidades Principais:**
 
-- ✅ Environment validation
-- ✅ Dependency checking
-- ✅ Status dashboard
-- ✅ Project reminders
+- ✅ Validação de ambiente
+- ✅ Verificação de dependências
+- ✅ Painel de status
+- ✅ Lembretes do projeto
 
 ---
 
 ### 🎨 auto-format
 
-**Event:** PostToolUse (Edit|Write) | **Purpose:** Auto-format code
+**Evento:** PostToolUse (Edit|Write) | **Finalidade:** Autoformatar código
 
-Automatically formats code after edits:
+Formata código automaticamente após edições:
 
 - Prettier (JS/TS), Black (Python), RuboCop (Ruby)
 - gofmt (Go), rustfmt (Rust), Spotless (Java)
-- Shows formatting diff
-- Optional auto-commit
+- Mostra diff de formatação
+- Auto-commit opcional
 
 ```json
 {
@@ -195,25 +195,25 @@ Automatically formats code after edits:
 }
 ```
 
-**Key Features:**
+**Funcionalidades Principais:**
 
-- ✅ 8+ language formatters
-- ✅ Diff visualization
-- ✅ Respects project configs
-- ✅ Configurable behavior
+- ✅ 8+ formatadores de linguagem
+- ✅ Visualização de diff
+- ✅ Respeita configurações do projeto
+- ✅ Comportamento configurável
 
 ---
 
 ### ⚠️ breaking-change-detection
 
-**Event:** PreToolUse (Bash) | **Purpose:** Detect API breaking changes
+**Evento:** PreToolUse (Bash) | **Finalidade:** Detectar breaking changes em APIs
 
-Warns before committing breaking changes:
+Alerta antes de commitar mudanças que quebram APIs:
 
-- Compares API signatures
-- Detects removed exports
-- Identifies parameter changes
-- Semantic versioning integration
+- Compara assinaturas de API
+- Detecta exports removidos
+- Identifica mudanças de parâmetros
+- Integração com versionamento semântico
 
 ```json
 {
@@ -231,25 +231,25 @@ Warns before committing breaking changes:
 }
 ```
 
-**Key Features:**
+**Funcionalidades Principais:**
 
-- ✅ Multi-language support
-- ✅ Signature comparison
-- ✅ Clear change reports
-- ✅ SemVer recommendations
+- ✅ Suporte a múltiplas linguagens
+- ✅ Comparação de assinaturas
+- ✅ Relatórios claros de mudanças
+- ✅ Recomendações de SemVer
 
 ---
 
 ### 🛡️ dependency-check
 
-**Event:** PreToolUse (Bash) | **Purpose:** Check for vulnerable dependencies
+**Evento:** PreToolUse (Bash) | **Finalidade:** Verificar dependências vulneráveis
 
-Scans dependencies for security vulnerabilities:
+Escaneia dependências em busca de vulnerabilidades de segurança:
 
 - npm audit, pip-audit, bundle audit
-- Severity-based blocking
-- Auto-fix suggestions
-- Security report generation
+- Bloqueio baseado em severidade
+- Sugestões de autocorreção
+- Geração de relatório de segurança
 
 ```json
 {
@@ -267,30 +267,30 @@ Scans dependencies for security vulnerabilities:
 }
 ```
 
-**Key Features:**
+**Funcionalidades Principais:**
 
-- ✅ 5+ package managers
-- ✅ Configurable severity
-- ✅ Upgrade suggestions
-- ✅ Vulnerability whitelisting
+- ✅ 5+ gerenciadores de pacotes
+- ✅ Severidade configurável
+- ✅ Sugestões de atualização
+- ✅ Whitelist de vulnerabilidades
 
 ---
 
-## Hook Events Reference
+## Referência de Eventos de Hooks
 
-| Event                | Trigger              | Common Uses                           |
-| -------------------- | -------------------- | ------------------------------------- |
-| **PreToolUse**       | Before tool executes | Validation, linting, security scans   |
-| **PostToolUse**      | After tool completes | Auto-formatting, notifications        |
-| **UserPromptSubmit** | User submits prompt  | Content filtering, policy enforcement |
-| **SessionStart**     | Session begins       | Environment setup, status display     |
-| **SessionEnd**       | Session ends         | Cleanup, report generation            |
-| **Stop**             | Agent finishes       | Quality checks, summaries             |
-| **Notification**     | Permission request   | Auto-approval rules                   |
+| Evento               | Gatilho                  | Usos Comuns                                       |
+| -------------------- | ------------------------ | ------------------------------------------------- |
+| **PreToolUse**       | Antes da execução da ferramenta | Validação, linting, varreduras de segurança |
+| **PostToolUse**      | Após conclusão da ferramenta   | Autoformatação, notificações               |
+| **UserPromptSubmit** | Usuário envia prompt     | Filtragem de conteúdo, aplicação de políticas     |
+| **SessionStart**     | Sessão inicia            | Configuração de ambiente, exibição de status      |
+| **SessionEnd**       | Sessão encerra           | Limpeza, geração de relatórios                    |
+| **Stop**             | Agente termina           | Verificações de qualidade, resumos                |
+| **Notification**     | Solicitação de permissão | Regras de aprovação automática                    |
 
-## Recommended Configurations
+## Configurações Recomendadas
 
-### Minimal Setup (Security + Testing)
+### Configuração Mínima (Segurança + Testes)
 
 ```json
 {
@@ -326,7 +326,7 @@ Scans dependencies for security vulnerabilities:
 }
 ```
 
-### Full Stack Development
+### Desenvolvimento Full Stack
 
 ```json
 {
@@ -381,7 +381,7 @@ Scans dependencies for security vulnerabilities:
 }
 ```
 
-### API/Library Development
+### Desenvolvimento de API/Biblioteca
 
 ```json
 {
@@ -417,29 +417,29 @@ Scans dependencies for security vulnerabilities:
 }
 ```
 
-## Hook Development Best Practices
+## Boas Práticas de Desenvolvimento de Hooks
 
-### Input Validation
+### Validação de Entrada
 
 ```bash
 #!/bin/bash
 set -euo pipefail
 
-# Always parse and validate input
+# Sempre analisar e validar a entrada
 INPUT=$(cat)
 TOOL_INPUT=$(echo "$INPUT" | jq -r '.tool_input.command // empty')
 
-# Validate before using
+# Validar antes de usar
 if [ -z "$TOOL_INPUT" ]; then
     echo '{"continue": true, "suppressOutput": true}'
     exit 0
 fi
 ```
 
-### Proper Quoting
+### Uso Correto de Aspas
 
 ```bash
-# ✅ Good - variables are quoted
+# ✅ Bom - variáveis entre aspas
 if [[ "$TOOL_INPUT" =~ git[[:space:]]+commit ]]; then
     FILES=$(git diff --cached --name-only --diff-filter=ACM)
     for FILE in "$FILES"; do
@@ -447,7 +447,7 @@ if [[ "$TOOL_INPUT" =~ git[[:space:]]+commit ]]; then
     done
 fi
 
-# ❌ Bad - unquoted variables
+# ❌ Ruim - variáveis sem aspas
 if [[ $TOOL_INPUT =~ git commit ]]; then
     for FILE in $FILES; do
         check_file $FILE
@@ -455,19 +455,19 @@ if [[ $TOOL_INPUT =~ git commit ]]; then
 fi
 ```
 
-### Error Handling
+### Tratamento de Erros
 
 ```bash
-# Exit code 0: Success
+# Código de saída 0: Sucesso
 echo '{"permissionDecision": "allow"}'
 exit 0
 
-# Exit code 2: Blocking error (fed to Claude)
+# Código de saída 2: Erro bloqueante (alimentado ao Claude)
 echo '{"permissionDecision": "deny", "reason": "Tests failed"}'
 exit 2
 
-# Other codes: Non-blocking error (shown to user)
-echo "Warning: Linter not found" >&2
+# Outros códigos: Erro não bloqueante (mostrado ao usuário)
+echo "Aviso: Linter não encontrado" >&2
 exit 1
 ```
 
@@ -479,87 +479,87 @@ exit 1
     {
       "type": "command",
       "command": "./hook.sh",
-      "timeout": 300 // 5 minutes for slow operations
+      "timeout": 300 // 5 minutos para operações lentas
     }
   ]
 }
 ```
 
-## Security Considerations
+## Considerações de Segurança
 
-⚠️ **Important**: Hooks execute arbitrary shell commands with your user permissions.
+⚠️ **Importante**: Hooks executam comandos shell arbitrários com as permissões do seu usuário.
 
-**Best Practices:**
+**Boas Práticas:**
 
-1. ✅ Validate all input from hook JSON
-2. ✅ Use absolute paths or `$CLAUDE_PROJECT_DIR`
-3. ✅ Quote all variables
-4. ✅ Check for path traversal (`..` in paths)
-5. ✅ Review hook scripts before using
-6. ✅ Use minimal permissions
-7. ✅ Test in safe environment first
+1. ✅ Validar toda entrada do JSON do hook
+2. ✅ Usar caminhos absolutos ou `$CLAUDE_PROJECT_DIR`
+3. ✅ Colocar todas as variáveis entre aspas
+4. ✅ Verificar path traversal (`..` em caminhos)
+5. ✅ Revisar scripts de hook antes de usar
+6. ✅ Usar permissões mínimas
+7. ✅ Testar em ambiente seguro primeiro
 
-## Debugging
+## Depuração
 
-### Check Hook Registration
+### Verificar Registro de Hooks
 
 ```bash
 claude
 > /hooks
 ```
 
-### Debug Mode
+### Modo de Depuração
 
 ```bash
 claude --debug
 ```
 
-### Test Hook Manually
+### Testar Hook Manualmente
 
 ```bash
-# Simulate hook input
+# Simular entrada do hook
 echo '{"tool_name":"Bash","tool_input":{"command":"git commit -m test"}}' | \
   .claude/hooks/security-scan/hook.sh
 ```
 
-### Common Issues
+### Problemas Comuns
 
-**Hook not triggering:**
+**Hook não ativando:**
 
-- Check matcher is case-sensitive and correct
-- Verify script has executable permissions (`chmod +x`)
-- Ensure JSON syntax is valid
+- Verifique se o matcher é case-sensitive e está correto
+- Verifique se o script tem permissões de execução (`chmod +x`)
+- Certifique-se de que a sintaxe JSON é válida
 
-**Permission errors:**
+**Erros de permissão:**
 
-- Make scripts executable: `chmod +x .claude/hooks/*/hook.sh`
-- Check file paths are correct
+- Torne scripts executáveis: `chmod +x .claude/hooks/*/hook.sh`
+- Verifique se os caminhos de arquivo estão corretos
 
-**Timeout errors:**
+**Erros de timeout:**
 
-- Increase timeout value for slow operations
-- Optimize hook script performance
+- Aumente o valor do timeout para operações lentas
+- Otimize o desempenho do script do hook
 
-## Contributing
+## Contribuindo
 
-To create custom hooks:
+Para criar hooks customizados:
 
-1. Create hook directory: `.claude/hooks/your-hook-name/`
-2. Add `README.md` with documentation
-3. Create `hook.sh` with script
-4. Make executable: `chmod +x hook.sh`
-5. Add configuration example
-6. Test thoroughly
+1. Crie o diretório do hook: `.claude/hooks/nome-do-seu-hook/`
+2. Adicione `README.md` com documentação
+3. Crie `hook.sh` com o script
+4. Torne executável: `chmod +x hook.sh`
+5. Adicione exemplo de configuração
+6. Teste minuciosamente
 
-## Resources
+## Recursos
 
-- [Official Claude Code Hooks Documentation](https://code.claude.com/docs/en/hooks)
-- [Hook Examples Repository](https://github.com/aj-geddes/useful-ai-prompts)
-- [Settings Configuration Guide](https://code.claude.com/docs/en/settings)
+- [Documentação Oficial de Hooks do Claude Code](https://code.claude.com/docs/en/hooks)
+- [Repositório de Exemplos de Hooks](https://github.com/aj-geddes/useful-ai-prompts)
+- [Guia de Configuração de Settings](https://code.claude.com/docs/en/settings)
 
 ---
 
-**Total Hooks**: 6 production-ready examples
-**Total Lines**: 6,135+ lines of code and documentation
-**Languages Supported**: JavaScript, TypeScript, Python, Ruby, Go, Rust, PHP, Java, C/C++
-**Package Managers**: npm, pip, bundler, cargo, go modules
+**Total de Hooks**: 6 exemplos prontos para produção
+**Total de Linhas**: 6.135+ linhas de código e documentação
+**Linguagens Suportadas**: JavaScript, TypeScript, Python, Ruby, Go, Rust, PHP, Java, C/C++
+**Gerenciadores de Pacotes**: npm, pip, bundler, cargo, go modules

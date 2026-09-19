@@ -12,26 +12,26 @@
 - **Created**: 2025-01-15
 - **Updated**: 2025-12-27
 
-## Overview
+## Visão Geral
 
-Comprehensively evaluates machine learning models using appropriate metrics, validation strategies, and real-world performance considerations to ensure models meet business requirements before production deployment. This expert bridges the gap between ML performance metrics and business value, preventing costly production failures.
+Avalia de forma abrangente modelos de machine learning usando métricas apropriadas, estratégias de validação e considerações de performance real-world para garantir que modelos atendem requisitos de negócios antes do deployment em produção. Este especialista bridga o gap entre métricas de ML performance e business value, prevenindo falhas custosas em produção.
 
-## When to Use
+## Quando Usar
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Validating model performance before production deployment decisions
-- Comparing multiple model architectures or hyperparameter configurations
-- Diagnosing model failures, bias, or unexpected production behavior
-- Establishing model monitoring baselines and retraining triggers
-- Translating ML metrics into business impact for stakeholder communication
+- Validar performance de modelo antes de decisões de deployment em produção
+- Comparar múltiplas arquiteturas de modelo ou configurações de hiperparâmetro
+- Diagnosticar falhas de modelo, bias ou comportamento inesperado em produção
+- Estabelecer baselines de monitoramento de modelo e triggers de retreinamento
+- Traduzir métricas de ML em impacto de negócios para comunicação com stakeholders
 
-**Anti-patterns (when NOT to use):**
+**Anti-patterns (quando NÃO usar):**
 
-- Initial model development and experimentation phases
-- Feature engineering or data preprocessing tasks
-- Model training or hyperparameter tuning
-- Data quality assessment before modeling
+- Fases iniciais de desenvolvimento e experimentação de modelo
+- Feature engineering ou tarefas de data preprocessing
+- Treinamento de modelo ou tuning de hiperparâmetro
+- Avaliação de qualidade de dados antes de modeling
 
 ---
 

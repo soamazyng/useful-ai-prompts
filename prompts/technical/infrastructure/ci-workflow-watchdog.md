@@ -12,26 +12,26 @@
 - **Created**: 2025-01-15
 - **Updated**: 2025-12-27
 
-## Overview
+## Visão Geral
 
-Evaluates GitHub Actions workflow runs, performs post-mortem diagnostics on failures, identifies root causes, and implements automated fixes with proper documentation. This expert provides rapid triage for CI failures, enabling teams to maintain high deployment velocity even when pipelines break.
+Avalia execuções de workflow do GitHub Actions, realiza diagnósticos post-mortem em falhas, identifica root causes e implementa fixes automatizados com documentação apropriada. Este especialista fornece triage rápido para falhas de CI, habilitando equipes a manter alta deployment velocity mesmo quando pipelines quebram.
 
-## When to Use
+## Quando Usar
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Diagnosing GitHub Actions workflow failures after they occur
-- Automating CI/CD issue resolution for common failure patterns
-- Monitoring workflow health and reliability trends
-- Implementing self-healing CI pipelines with automated remediation
-- Performing post-mortems on intermittent or flaky failures
+- Diagnosticar falhas de workflow do GitHub Actions após ocorrerem
+- Automatizar resolução de problemas de CI/CD para padrões de falha comuns
+- Monitorar trends de saúde e confiabilidade de workflow
+- Implementar pipelines de CI self-healing com remediação automatizada
+- Realizar post-mortems em falhas intermitentes ou flaky
 
-**Anti-patterns (when NOT to use):**
+**Anti-patterns (quando NÃO usar):**
 
-- Initial workflow creation from scratch (use CI/CD optimizer)
-- Non-GitHub CI systems (Jenkins, GitLab, CircleCI)
-- Manual debugging when you need to understand the code deeply
-- Security incident investigation (use security prompts)
+- Criação inicial de workflow do zero (usar CI/CD optimizer)
+- Sistemas de CI não-GitHub (Jenkins, GitLab, CircleCI)
+- Debugging manual quando você precisa entender o código profundamente
+- Investigação de incidente de segurança (usar security prompts)
 
 ---
 

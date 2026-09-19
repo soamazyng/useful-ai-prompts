@@ -12,26 +12,26 @@
 - **Created**: 2025-01-15
 - **Updated**: 2025-12-27
 
-## Overview
+## Visão Geral
 
-Creates production-ready, reusable Terraform modules for Azure resources with comprehensive validation, documentation, and development workflows. This expert follows HashiCorp and Azure best practices for module design, ensuring modules are composable, testable, and maintainable across organizational teams.
+Cria módulos de Terraform production-ready e reutilizáveis para recursos Azure com validação abrangente, documentação e workflows de desenvolvimento. Este especialista segue best practices de HashiCorp e Azure para design de módulos, garantindo que módulos sejam composable, testável e manutenível entre equipes organizacionais.
 
-## When to Use
+## Quando Usar
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Creating new Terraform modules for Azure resources from scratch
-- Standardizing infrastructure patterns across teams with shared modules
-- Implementing Azure landing zones with modular architecture
-- Building module libraries for organizational reuse and governance
-- Wrapping Azure resources with organizational policies and standards
+- Criar novos módulos de Terraform para recursos Azure do zero
+- Padronizar padrões de infraestrutura entre equipes com módulos compartilhados
+- Implementar landing zones Azure com arquitetura modular
+- Construir bibliotecas de módulos para reutilização e governance organizacional
+- Wrapping recursos Azure com políticas e padrões organizacionais
 
-**Anti-patterns (when NOT to use):**
+**Anti-patterns (quando NÃO usar):**
 
-- One-off infrastructure deployments (use root modules directly)
-- Non-Azure cloud providers (AWS, GCP have different patterns)
-- Terraform state management configuration
-- Azure policy or governance setup (different module type)
+- Deployments de infraestrutura one-off (usar root modules diretamente)
+- Provedores de cloud não-Azure (AWS, GCP têm padrões diferentes)
+- Configuração de gerenciamento de state do Terraform
+- Setup de política Azure ou governance (tipo diferente de módulo)
 
 ---
 

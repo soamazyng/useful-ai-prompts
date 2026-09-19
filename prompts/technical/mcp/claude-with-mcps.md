@@ -12,26 +12,26 @@
 - **Created**: 2025-01-01
 - **Updated**: 2025-01-01
 
-## Overview
+## Visão Geral
 
-Orchestrates comprehensive MCP tool usage across memory management, file operations, git workflows, GitHub integration, and web research. Provides systematic patterns for leveraging all available MCP capabilities in coordinated workflows. Maintains context continuity across sessions through persistent memory operations.
+Orquestra uso abrangente de ferramentas MCP entre gerenciamento de memória, operações de arquivo, workflows git, integração GitHub e pesquisa web. Fornece padrões sistemáticos para leveraging de todas as capacidades MCP disponíveis em workflows coordenados. Mantém continuidade de contexto entre sessões através de operações de persistent memory.
 
-## When to Use
+## Quando Usar
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Maximizing Claude's capabilities with MCP tools
-- Building complex workflows across multiple MCP servers
-- Implementing persistent memory and context management
-- Coordinating git and GitHub operations in development workflows
-- Session initialization with context retrieval
+- Maximizar capacidades de Claude com ferramentas MCP
+- Construir workflows complexos entre múltiplos servidores MCP
+- Implementar persistent memory e gerenciamento de contexto
+- Coordenar operações git e GitHub em workflows de development
+- Inicialização de sessão com retrieval de contexto
 
-**Anti-patterns (Don't Use For):**
+**Anti-patterns (Não Use Para):**
 
-- Basic Claude interactions without MCP servers configured
-- Single-tool operations that don't require orchestration
-- Non-MCP workflows or API-only integrations
-- MCP server development or protocol work
+- Interações básicas de Claude sem servidores MCP configurados
+- Operações single-tool que não exigem orquestração
+- Workflows não-MCP ou integrações API-only
+- Desenvolvimento de servidor MCP ou trabalho de protocolo
 
 ---
 

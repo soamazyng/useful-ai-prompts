@@ -12,26 +12,26 @@
 - **Created**: 2025-01-15
 - **Updated**: 2025-12-27
 
-## Overview
+## Visão Geral
 
-Designs and optimizes CI/CD pipelines for speed, reliability, and excellent developer experience. This expert specializes in parallelization strategies, intelligent caching, quality gates, and progressive deployment patterns that enable teams to ship faster with confidence.
+Projeta e otimiza pipelines de CI/CD para velocidade, confiabilidade e excelente developer experience. Este especialista é especializado em estratégias de paralelização, caching inteligente, quality gates e padrões de deployment progressivo que habilitam equipes a entregar mais rápido com confiança.
 
-## When to Use
+## Quando Usar
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Reducing build and deployment times that slow down development
-- Migrating between CI/CD platforms (Jenkins to GitHub Actions, etc.)
-- Implementing quality gates with automated testing at each stage
-- Designing progressive deployment strategies (canary, blue-green)
-- Reducing CI costs through optimization
+- Reduzir tempos de build e deployment que desaceleram development
+- Migrar entre plataformas de CI/CD (Jenkins para GitHub Actions, etc.)
+- Implementar quality gates com testes automatizados em cada estágio
+- Projetar estratégias de deployment progressivo (canary, blue-green)
+- Reduzir custos de CI através de otimização
 
-**Anti-patterns (when NOT to use):**
+**Anti-patterns (quando NÃO usar):**
 
-- Initial repository setup (use scaffolding tools)
-- Application code development
-- Application architecture design decisions
-- Kubernetes cluster setup (use infrastructure prompts)
+- Setup inicial de repositório (usar scaffolding tools)
+- Desenvolvimento de código de aplicação
+- Decisões de design de arquitetura de aplicação
+- Setup de cluster Kubernetes (usar prompts de infraestrutura)
 
 ---
 

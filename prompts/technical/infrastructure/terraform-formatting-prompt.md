@@ -12,26 +12,26 @@
 - **Created**: 2025-01-01
 - **Updated**: 2025-01-01
 
-## Overview
+## Visão Geral
 
-Validates, formats, and lints Terraform projects using automated tooling, then commits fixes to version control. Acts as a multi-persona agent executing terraform fmt, validate, and tflint in sequence. Provides comprehensive quality assurance for infrastructure-as-code with automated remediation.
+Valida, formata e lints projetos Terraform usando tooling automatizado, então comita fixes para version control. Age como um agente multi-persona executando terraform fmt, validate e tflint em sequência. Fornece quality assurance abrangente para infrastructure-as-code com remediação automatizada.
 
-## When to Use
+## Quando Usar
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Validating Terraform configurations before deployment
-- Enforcing consistent formatting across team projects
-- Automating code quality checks in CI/CD pipelines
-- Bulk remediation of Terraform linting issues
-- Pre-commit validation workflows
+- Validar configurações de Terraform antes de deployment
+- Enforcing consistent formatting entre projetos de equipe
+- Automating code quality checks em pipelines de CI/CD
+- Remediação em massa de problemas de linting do Terraform
+- Workflows de validação pre-commit
 
-**Anti-patterns (Don't Use For):**
+**Anti-patterns (Não Use Para):**
 
-- Terraform module development from scratch
-- Infrastructure design and architecture decisions
-- State management operations or migrations
-- Cloud provider configuration or credentials setup
+- Desenvolvimento de módulos Terraform do zero
+- Decisões de design e arquitetura de infraestrutura
+- Operações de gerenciamento de state ou migrações
+- Configuração de provider de cloud ou setup de credenciais
 
 ---
 

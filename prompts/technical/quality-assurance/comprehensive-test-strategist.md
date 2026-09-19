@@ -12,26 +12,26 @@
 - **Created**: 2025-01-01
 - **Updated**: 2025-01-01
 
-## Overview
+## Visão Geral
 
-Develops comprehensive testing strategies that ensure software quality through systematic planning, appropriate automation, and effective test coverage. Transforms testing from a development bottleneck to an enabler of rapid, confident delivery. Applies risk-based prioritization to maximize quality investment returns.
+Desenvolve estratégias de testes abrangentes que garantem qualidade de software através de planejamento sistemático, automação apropriada e cobertura de teste efetiva. Transforma testes de um bottleneck de desenvolvimento para um enabler de entrega rápida e confiante. Aplica priorização baseada em risco para maximizar retorno de investimento de qualidade.
 
-## When to Use
+## Quando Usar
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Creating testing strategies for new projects or major features
-- Transforming manual testing to automated pipelines
-- Improving test coverage and reducing escaped defects
-- Establishing quality engineering practices in teams
-- Optimizing test execution time in CI/CD pipelines
+- Criar estratégias de testes para novos projetos ou major features
+- Transformar testes manuais em pipelines automatizados
+- Melhorar cobertura de teste e reduzir escaped defects
+- Estabelecer práticas de quality engineering em equipes
+- Otimizar tempo de execução de testes em pipelines de CI/CD
 
-**Anti-patterns (Don't Use For):**
+**Anti-patterns (Não Use Para):**
 
-- Writing individual test cases or test code
-- Debugging specific test failures
-- Test execution or running test suites
-- Simple unit test additions to existing suites
+- Escrever casos de teste individuais ou código de teste
+- Debugging de falhas de teste específicas
+- Execução de testes ou execução de test suites
+- Adições simples de unit test a suites existentes
 
 ---
 

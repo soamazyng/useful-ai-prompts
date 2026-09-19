@@ -12,26 +12,26 @@
 - **Created**: 2025-01-01
 - **Updated**: 2025-01-01
 
-## Overview
+## Visão Geral
 
-Designs comprehensive cybersecurity defense architectures that protect against modern threats while enabling business operations. Covers defense-in-depth strategies, zero-trust implementation, and compliance framework alignment. Balances security controls with operational requirements and budget constraints.
+Projeta arquiteturas de cybersecurity defense abrangentes que protegem contra ameaças modernas enquanto habilitam operações de negócios. Cobre estratégias de defense-in-depth, implementação zero-trust e alinhamento de framework de compliance. Balanceia controles de segurança com requisitos operacionais e restrições de orçamento.
 
-## When to Use
+## Quando Usar
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Designing security architecture for new systems or environments
-- Achieving compliance certifications (SOC2, PCI-DSS, HIPAA, ISO 27001)
-- Implementing zero-trust security models
-- Building security operations and monitoring capabilities
-- Security architecture reviews and gap assessments
+- Projetar arquitetura de segurança para novos sistemas ou ambientes
+- Alcançar certificações de compliance (SOC2, PCI-DSS, HIPAA, ISO 27001)
+- Implementar modelos de segurança zero-trust
+- Construir operações de segurança e capacidades de monitoramento
+- Avaliações de arquitetura de segurança e gap assessments
 
-**Anti-patterns (Don't Use For):**
+**Anti-patterns (Não Use Para):**
 
-- Penetration testing execution or vulnerability exploitation
-- Active threat hunting or incident response
-- Security operations center monitoring
-- Specific tool configuration or implementation
+- Execução de teste de penetração ou exploração de vulnerabilidade
+- Threat hunting ativo ou incident response
+- Monitoramento de security operations center
+- Configuração ou implementação específica de ferramenta
 
 ---
 

@@ -12,26 +12,26 @@
 - **Created**: 2025-01-01
 - **Updated**: 2025-01-01
 
-## Overview
+## Visão Geral
 
-Systematically debugs complex software issues through structured hypothesis testing and root cause identification. Provides specific diagnostic commands, queries, and monitoring recommendations. Focuses on prevention strategies to ensure issues do not recur after resolution.
+Debugs sistematicamente problemas complexos de software através de hypothesis testing estruturado e identificação de root cause. Fornece comandos diagnósticos específicos, queries e recomendações de monitoramento. Foca em estratégias de prevenção para garantir que problemas não recorram após resolução.
 
-## When to Use
+## Quando Usar
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Diagnosing intermittent production issues that are hard to reproduce
-- Investigating performance degradation under load
-- Identifying memory leaks and resource exhaustion
-- Root cause analysis for complex multi-service failures
-- Post-incident analysis and prevention planning
+- Diagnosticar problemas intermitentes de produção que são difíceis de reproduzir
+- Investigar degradação de performance sob carga
+- Identificar memory leaks e resource exhaustion
+- Root cause analysis para falhas complexas multi-service
+- Análise pós-incidente e planejamento de prevenção
 
-**Anti-patterns (Don't Use For):**
+**Anti-patterns (Não Use Para):**
 
-- Simple syntax errors or typos
-- Configuration validation or linting
-- Code review or style improvements
-- Writing new code or features
+- Erros simples de sintaxe ou typos
+- Validação de configuração ou linting
+- Code review ou melhorias de estilo
+- Escrever novo código ou features
 
 ---
 

@@ -12,26 +12,26 @@
 - **Created**: 2025-01-01
 - **Updated**: 2025-01-01
 
-## Overview
+## Visão Geral
 
-Automates the registration of MCP server implementations across public registries and directories. Handles metadata synthesis from repository assets, schema validation, and multi-registry submission workflows for maximum discoverability. Ensures MCP servers are properly documented and accessible to the community.
+Automatiza o registro de implementações de servidores MCP através de registries e diretórios públicos. Lida com síntese de metadata de assets de repositório, validação de schema e workflows de submissão multi-registry para máxima discoverability. Garante que servidores MCP sejam propriamente documentados e acessíveis à comunidade.
 
-## When to Use
+## Quando Usar
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Registering new MCP servers with community directories
-- Standardizing MCP server metadata across repositories
-- Automating registry submissions via GitHub PRs
-- Validating MCP server compliance with protocol specifications
-- Updating existing registry entries with new versions
+- Registrar novos servidores MCP com diretórios de comunidade
+- Padronizar metadata de servidor MCP entre repositórios
+- Automatizar submissões de registry via GitHub PRs
+- Validar conformidade de servidor MCP com especificações de protocolo
+- Atualizar entradas existentes de registry com novas versões
 
-**Anti-patterns (Don't Use For):**
+**Anti-patterns (Não Use Para):**
 
-- MCP server development or implementation
-- Protocol specification work
-- Private registry management
-- MCP client configuration
+- Desenvolvimento ou implementação de servidor MCP
+- Trabalho de especificação de protocolo
+- Gerenciamento de private registry
+- Configuração de cliente MCP
 
 ---
 

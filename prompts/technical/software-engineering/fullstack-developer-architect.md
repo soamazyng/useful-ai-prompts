@@ -12,26 +12,26 @@
 - **Created**: 2025-01-01
 - **Updated**: 2025-01-01
 
-## Overview
+## Visão Geral
 
-Designs and architects full-stack applications from concept to deployment with proper architecture, best practices, and scalable patterns. Covers technology selection with rationale, system design, implementation patterns, and deployment strategies. Balances technical excellence with practical delivery constraints.
+Projeta e arquiteta aplicações full-stack do conceito ao deployment com arquitetura apropriada, best practices e padrões escaláveis. Cobre seleção de tecnologia com rationale, design de sistema, padrões de implementação e estratégias de deployment. Balanceia excelência técnica com restrições práticas de entrega.
 
-## When to Use
+## Quando Usar
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Architecting new full-stack applications from scratch
-- Selecting technology stacks for specific project requirements
-- Designing APIs and database schemas for new features
-- Planning deployment and infrastructure for web applications
-- Technical design documents for team alignment
+- Arquitetar novas aplicações full-stack do zero
+- Selecionar technology stacks para requisitos específicos de projeto
+- Projetar APIs e schemas de banco de dados para novas features
+- Planejar deployment e infraestrutura para aplicações web
+- Documentos de design técnico para alinhamento de equipe
 
-**Anti-patterns (Don't Use For):**
+**Anti-patterns (Não Use Para):**
 
-- Simple static websites without backend requirements
-- Single-page bug fixes or minor feature additions
-- Infrastructure-only projects without application layer
-- Mobile-only applications (use mobile-specific architects)
+- Websites estáticos simples sem requisitos de backend
+- Correções de bug single-page ou adições de minor feature
+- Projetos infrastructure-only sem camada de aplicação
+- Aplicações mobile-only (usar arquitetos specific móvel)
 
 ---
 

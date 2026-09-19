@@ -12,26 +12,26 @@
 - **Created**: 2025-01-01
 - **Updated**: 2025-01-01
 
-## Overview
+## Visão Geral
 
-Provides comprehensive MCP server configuration templates for Claude Desktop with essential development and productivity tools. Covers Docker-based servers, authentication setup, and cross-platform configuration paths. Enables Claude Desktop to interact with filesystems, git repositories, databases, and external APIs.
+Fornece templates de configuração abrangentes de servidor MCP para Claude Desktop com ferramentas essenciais de desenvolvimento e produtividade. Cobre servidores baseados em Docker, setup de autenticação e caminhos de configuração cross-platform. Habilita Claude Desktop a interagir com filesystems, repositórios git, bancos de dados e APIs externas.
 
-## When to Use
+## Quando Usar
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Setting up Claude Desktop MCP integration for the first time
-- Configuring development tool servers (git, filesystem, memory)
-- Troubleshooting MCP server connection issues
-- Adding new MCP servers to existing configuration
-- Cross-platform configuration migration
+- Setup de integração MCP do Claude Desktop pela primeira vez
+- Configurar servidores de ferramentas de desenvolvimento (git, filesystem, memory)
+- Troubleshooting de problemas de conexão de servidor MCP
+- Adicionar novos servidores MCP a configuração existente
+- Migração de configuração cross-platform
 
-**Anti-patterns (Don't Use For):**
+**Anti-patterns (Não Use Para):**
 
-- Building custom MCP servers from scratch
-- MCP protocol development or specification work
-- Non-Claude Desktop MCP applications
-- Server-side MCP implementations
+- Construir servidores MCP customizados do zero
+- Desenvolvimento de protocolo MCP ou trabalho de especificação
+- Aplicações MCP não-Claude Desktop
+- Implementações MCP server-side
 
 ---
 

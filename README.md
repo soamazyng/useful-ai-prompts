@@ -5,11 +5,11 @@
 [![Run in Smithery](https://smithery.ai/badge/skills/aj-geddes)](https://smithery.ai/skills?ns=aj-geddes&utm_source=github&utm_medium=badge)
 [![GitHub Stars](https://img.shields.io/github/stars/aj-geddes/useful-ai-prompts?style=social)](https://github.com/aj-geddes/useful-ai-prompts)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Prompts](https://img.shields.io/badge/Prompts-488+-green)](prompts/)
+[![Prompts](https://img.shields.io/badge/Prompts-679+-green)](prompts/)
 [![Skills](https://img.shields.io/badge/Skills-260+-orange)](skills/)
 [![Hooks](https://img.shields.io/badge/Hooks-7-purple)](hooks/)
 
-> **488 prompts de IA prontos para uso, todos seguindo um template padronizado com verificações de qualidade validadas.**
+> **679 prompts de IA prontos para uso, todos seguindo um template padronizado com verificações de qualidade validadas.**
 
 Transforme o ChatGPT, Claude e outros assistentes de IA em consultores especialistas. Cada prompt desta biblioteca passa por 11 verificações de qualidade, garantindo estrutura consistente, entregáveis claros e critérios de qualidade mensuráveis.
 
@@ -19,7 +19,7 @@ Transforme o ChatGPT, Claude e outros assistentes de IA em consultores especiali
 
 | Tipo de Recurso                   | Qtd   | Descrição                                                |
 | --------------------------------- | ----- | -------------------------------------------------------- |
-| **[Prompts de IA](prompts/)**     | 488+  | Prompts especializados padronizados em 47 categorias     |
+| **[Prompts de IA](prompts/)**     | 679+  | Prompts especializados padronizados em 47 categorias     |
 | **[Skills para Claude Code](skills/)** | 260+ | Habilidades com ativação automática e exemplos de código |
 | **[Hooks de Automação](hooks/)** | 7     | Segurança, testes, formatação e automação de CI/CD       |
 
@@ -260,7 +260,7 @@ Consulte [HOOKS-LIBRARY.md](HOOKS-LIBRARY.md) para instalação e configuração
 
 ```
 useful-ai-prompts/
-├── prompts/               # 488+ prompts padronizados por categoria
+├── prompts/               # 679+ prompts padronizados por categoria
 │   ├── analysis/          # Análise competitiva, de dados, financeira
 │   ├── technical/         # Software, DevOps, segurança, ciência de dados
 │   ├── business/          # Finanças, marketing, operações

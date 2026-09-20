@@ -184,11 +184,87 @@ If you're unsure whether something should be translated:
 
 ---
 
+## 🌿 Git Workflow & Best Practices
+
+**CRITICAL**: Never push directly to `main` branch. Always follow feature branch workflow:
+
+### Branch Naming Convention
+
+Create feature branches with descriptive names following this pattern:
+
+```
+feature/[what-you-are-doing]
+```
+
+**Examples**:
+```
+feature/translate-readme-pt-br
+feature/add-missing-hooks
+feature/update-prompt-count
+feature/fix-schema-compatibility
+feature/add-rules-documentation
+```
+
+### Workflow Steps
+
+1. **Create a feature branch** from `main`:
+   ```bash
+   git checkout -b feature/[description]
+   ```
+
+2. **Make your changes** in the feature branch:
+   - Commit with clear, descriptive messages
+   - Follow conventional commits (feat:, fix:, docs:, etc.)
+   - Include proper attribution in commits
+
+3. **Push to remote**:
+   ```bash
+   git push origin feature/[description]
+   ```
+
+4. **Create a Pull Request** on GitHub:
+   - Link the PR to relevant issues
+   - Add clear description of changes
+   - Wait for code review and automated checks
+   - Address feedback if any
+
+5. **Merge to main** only after:
+   - ✅ Pull request is approved
+   - ✅ All CI/CD checks pass
+   - ✅ Code review is complete
+   - ✅ No conflicts with main
+
+### What NOT to Do ❌
+
+- ❌ **Never push directly to main**: `git push origin main`
+- ❌ **Never force-push**: `git push --force`
+- ❌ **Never commit to main locally and push**: Create a branch first
+- ❌ **Never skip PR review**: Always create a PR for peer review
+- ❌ **Never merge without passing checks**: Ensure CI/CD is green
+
+### Commit Message Format
+
+```
+[type]: [description]
+
+[optional detailed explanation]
+
+Co-Authored-By: Claude Haiku 4.5 <noreply@anthropic.com>
+```
+
+**Types**: `feat:`, `fix:`, `docs:`, `refactor:`, `test:`, `chore:`
+
+---
+
 ## 📝 Last Updated
 
 - **2026-09-20** — Created to prevent schema translation errors in README.md
+- **2026-09-20** — Added Git Workflow & Best Practices section
 - **Status**: Active for all future translation work in this repository
 
 ---
 
-**Responsibility**: Any translator should review this document before making changes to `README.md`, `CLAUDE.md`, `CONTRIBUTING.md`, or prompt template files.
+**Responsibility**: 
+- Any translator should review this document before making changes
+- Every contributor must follow feature branch workflow
+- No direct commits to `main` — always use feature branches and PRs

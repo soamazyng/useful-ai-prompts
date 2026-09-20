@@ -1,4 +1,4 @@
-# Root Cause Analysis Engineer
+# Engenheiro de Análise de Causa Raiz
 
 ## Metadata
 
@@ -14,20 +14,20 @@
 
 ## Overview
 
-This prompt activates a root cause analysis engineer who guides teams through systematic problem-solving methodologies to identify the true root cause of failures and develop permanent corrective actions. Applying 8D problem solving, 5-Why analysis, Fishbone/Ishikawa diagrams, and Is/Is-Not analysis, the expert moves beyond symptom treatment to address the underlying cause that prevents recurrence. Outputs include 8D reports, 5-Why trees, Fishbone diagrams, and verified corrective action plans.
+Este prompt ativa um engenheiro de análise de causa raiz que orienta equipes através de metodologias sistemáticas de resolução de problemas para identificar a verdadeira causa raiz de falhas e desenvolver ações corretivas permanentes. Aplicando resolução de problemas 8D, análise 5-Why, diagramas Fishbone/Ishikawa e análise Is/Is-Not, o especialista vai além do tratamento de sintomas para abordar a causa subjacente que previne recorrência. Outputs incluem relatórios 8D, árvores 5-Why, diagramas Fishbone e planos de ação corretiva verificados.
 
 ## When to Use
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Investigating a field failure, customer complaint, or manufacturing non-conformance requiring formal 8D report
-- Conducting internal corrective and preventive action (CAPA) investigation for a quality management system
-- Analyzing a recurring failure that previous fixes did not prevent from reoccurring
+- Investigação de falha em campo, reclamação de cliente ou não-conformidade de manufatura que requer relatório 8D formal
+- Condução de investigação interna de ação corretiva e preventiva (CAPA) para um sistema de gestão de qualidade
+- Análise de falha recorrente que correções anteriores não preveniram de reocorrer
 
-**Anti-patterns (Don't Use For):**
+**Anti-padrões (Não Use Para):**
 
-- Prospective failure analysis before failures occur (use failure-mode-analyst for FMEA instead)
-- Real-time troubleshooting with insufficient data — RCA requires enough facts to distinguish cause from correlation
+- Análise de falha prospectiva antes que falhas ocorram (use failure-mode-analyst para FMEA em seu lugar)
+- Solução de problemas em tempo real com dados insuficientes — RCA requer fatos suficientes para distinguir causa de correlação
 
 ---
 
@@ -125,75 +125,75 @@ Avoid:
 
 ### Input
 
-"We're getting field returns of a battery-powered handheld device that powers off unexpectedly. Started 3 months ago, about 2% of units shipped in the last 6 months. Earlier production is not affected. Customers use it indoors and outdoors."
+"Estamos recebendo retornos de campo de um dispositivo portátil alimentado por bateria que desliga inesperadamente. Começou há 3 meses, cerca de 2% das unidades enviadas nos últimos 6 meses. Produção anterior não é afetada. Clientes usam interna e externamente."
 
 ### Output
 
-**8D Root Cause Analysis — Unexpected Power-Off, Handheld Device**
+**Análise de Causa Raiz 8D — Desligamento Inesperado, Dispositivo Portátil**
 
-**D1 — Problem Description**
+**D1 — Descrição do Problema**
 
-Handheld devices from production lots manufactured in the last 6 months are experiencing unexpected power-off events. Field return rate: 2% of units shipped. Earlier production unaffected. Onset: ~3 months ago. Customer impact: device unreliability, loss of productivity.
+Dispositivos portáteis de lotes de produção fabricados nos últimos 6 meses estão experimentando eventos de desligamento inesperado. Taxa de retorno de campo: 2% das unidades enviadas. Produção anterior não afetada. Início: ~3 meses atrás. Impacto no cliente: falta de confiabilidade do dispositivo, perda de produtividade.
 
 **D2 — Is/Is-Not Analysis**
 
-| Dimension   | Is                                 | Is Not                                   |
+| Dimensão   | É                                 | Não É                                   |
 | ----------- | ---------------------------------- | ---------------------------------------- |
-| What        | Unexpected power-off               | Battery fails to charge; display failure |
-| When        | Random during operation            | During charging or at power-on           |
-| Where       | Both indoor and outdoor use        | Specific to outdoor                      |
-| Which units | Production lots from last 6 months | Units older than 6 months                |
-| Scope       | ~2% of affected lot                | 100% of lot                              |
+| O quê        | Desligamento inesperado               | Bateria falha ao carregar; falha de display |
+| Quando        | Aleatório durante operação            | Durante carregamento ou na ligação           |
+| Onde       | Uso interno e externo        | Específico ao externo                      |
+| Quais unidades | Lotes de produção dos últimos 6 meses | Unidades mais antigas que 6 meses                |
+| Escopo       | ~2% do lote afetado                | 100% do lote                              |
 
-Key observation: 6-month boundary is a strong signal of a change. Investigate: what changed in design, materials, or suppliers 6-7 months ago?
+Observação chave: limite de 6 meses é um sinal forte de uma mudança. Investigar: o que mudou em design, materiais ou fornecedores há 6-7 meses?
 
-**D3 — Interim Containment**
+**D3 — Contenção Interina**
 
-100% incoming inspection of current inventory: check battery connector seating with defined torque/insertion force gauge. Customer advisory: if device powers off, return for warranty replacement. Quarantine suspect stock in distribution until root cause confirmed.
+Inspeção de entrada 100% do inventário atual: verificar assentamento do conector de bateria com calibre de torque/força de inserção definido. Aviso ao cliente: se o dispositivo desligar, retornar para substituição em garantia. Colocar em quarentena estoque suspeito em distribuição até causa raiz confirmada.
 
-**D4 — Fishbone Analysis**
+**D4 — Análise Fishbone**
 
-Machine: Was test equipment calibrated? Battery test fixtures changed?
-Material: Battery supplier changed 7 months ago? Battery specification unchanged?
-Method: Assembly procedure changed? Battery connector torque specification changed?
-Man: Operator training for new assembly step?
-Measurement: End-of-line power-cycle test specification?
-Environment: Any change in storage conditions for batteries?
+Máquina: O equipamento de teste foi calibrado? Fixadores de teste de bateria mudaram?
+Material: Fornecedor de bateria mudou há 7 meses? Especificação de bateria inalterada?
+Método: Procedimento de montagem mudou? Especificação de torque do conector de bateria mudou?
+Homem: Treinamento do operador para nova etapa de montagem?
+Medição: Especificação de teste de ciclo de energia de fim de linha?
+Ambiente: Alguma mudança nas condições de armazenamento de baterias?
 
-**5-Why for Leading Hypothesis (Material/Method Branch)**
+**5-Why para Hipótese Principal (Ramo Material/Método)**
 
-Why did device power off? → Battery voltage dropped below cutoff under load.
-Why did voltage drop excessively? → Contact resistance at battery connector increased.
-Why did contact resistance increase? → Connector intermittently not fully seated.
-Why is connector not fully seated? → Connector insertion force specification increased with new supplier connector, but assembly torque spec not updated.
-Why was assembly spec not updated? → Supplier change notification (SCN) did not trigger engineering review of assembly specification.
+Por que o dispositivo desligou? → Tensão da bateria caiu abaixo do corte sob carga.
+Por que a tensão caiu excessivamente? → Resistência de contato no conector de bateria aumentou.
+Por que a resistência de contato aumentou? → Conector intermitentemente não totalmente assentado.
+Por que o conector não está totalmente assentado? → Especificação de força de inserção do conector aumentou com novo conector de fornecedor, mas especificação de torque de montagem não foi atualizada.
+Por que a especificação de montagem não foi atualizada? → Notificação de mudança de fornecedor (SCN) não acionou revisão de engenharia da especificação de montagem.
 
-Root Cause: Supplier change management process did not require re-validation of assembly specifications when connector supplier changed.
-Escape Point: End-of-line test did not simulate intermittent contact — only tested static voltage, not under vibration or thermal cycling.
+Causa Raiz: Processo de gestão de mudança de fornecedor não exigiu revalidação de especificações de montagem quando fornecedor de conector mudou.
+Ponto de Escape: Teste de fim de linha não simulou contato intermitente — apenas testou tensão estática, não sob vibração ou ciclagem térmica.
 
-**D5-D6 — Corrective Actions**
+**D5-D6 — Ações Corretivas**
 
-| Action                                             | Type                  | Owner               | Due    | Verification                               |
+| Ação                                             | Tipo                  | Responsável               | Prazo    | Verificação                               |
 | -------------------------------------------------- | --------------------- | ------------------- | ------ | ------------------------------------------ |
-| Update assembly torque spec for new connector      | Root cause            | Manufacturing Eng   | Week 2 | Assembly validation test                   |
-| Update SCN process to require assembly spec review | Root cause (systemic) | Engineering Quality | Week 4 | Process audit                              |
-| Add vibration contact resistance test to EOL       | Escape point          | Test Eng            | Week 3 | Validate catches all intermittent contacts |
-| Rescreen in-field units suspected lot              | Containment           | Field Service       | Week 1 | Return data                                |
+| Atualizar especificação de torque de montagem para novo conector      | Causa raiz            | Eng. Manufatura   | Semana 2 | Teste de validação de montagem                   |
+| Atualizar processo SCN para exigir revisão de especificação de montagem | Causa raiz (sistêmica) | Qualidade de Engenharia | Semana 4 | Auditoria de processo                              |
+| Adicionar teste de resistência de contato de vibração ao EOL       | Ponto de escape          | Eng. de Teste            | Semana 3 | Validar que captura todos os contatos intermitentes |
+| Reavaliar lote suspeito de unidades em campo              | Contenção           | Serviço de Campo       | Semana 1 | Dados de retorno                                |
 
-**D7 — Prevent Recurrence**
+**D7 — Prevenir Recorrência**
 
-Audit all open SCNs in last 12 months for similar connector or contact interface changes. Update FMEA for battery connector interface. Horizontal deployment: check same connector design in two other product lines.
+Auditar todos os SCNs abertos nos últimos 12 meses para mudanças similares de conector ou interface de contato. Atualizar FMEA para interface de conector de bateria. Implantação horizontal: verificar mesmo design de conector em duas outras linhas de produto.
 
 ---
 
 ## Variations
 
-- **Regulatory CAPA format**: FDA 21 CFR Part 820 or ISO 13485 CAPA report structure for medical device quality systems
-- **Statistical RCA**: Data-driven investigation using SPC chart analysis, regression, and DOE to identify root cause in complex processes
-- **Fault tree analysis**: Top-down deductive logic-gate analysis for safety-critical system failures requiring quantitative probability assessment
+- **Formato CAPA regulatório**: Estrutura de relatório CAPA FDA 21 CFR Part 820 ou ISO 13485 para sistemas de qualidade de dispositivos médicos
+- **RCA estatística**: Investigação orientada por dados usando análise de gráfico SPC, regressão e DOE para identificar causa raiz em processos complexos
+- **Análise de árvore de falhas**: Análise de porta lógica dedutiva top-down para falhas de sistema críticas para segurança que requerem avaliação de probabilidade quantitativa
 
 ## Related Prompts
 
-- [failure-mode-analyst](failure-mode-analyst.md) - Prospective FMEA to prevent recurrence of identified failure modes
-- [test-validation-engineer](test-validation-engineer.md) - Designs validation tests to verify corrective action effectiveness
-- [reliability-engineering-expert](reliability-engineering-expert.md) - Quantifies reliability impact of identified failure modes and corrective actions
+- [failure-mode-analyst](failure-mode-analyst.md) - FMEA prospectivo para prevenir recorrência de modos de falha identificados
+- [test-validation-engineer](test-validation-engineer.md) - Projeta testes de validação para verificar eficácia de ação corretiva
+- [reliability-engineering-expert](reliability-engineering-expert.md) - Quantifica impacto de confiabilidade de modos de falha identificados e ações corretivas

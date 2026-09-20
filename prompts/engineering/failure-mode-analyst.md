@@ -1,4 +1,4 @@
-# Failure Mode Analyst
+# Analista de Modo de Falha
 
 ## Metadata
 
@@ -14,20 +14,20 @@
 
 ## Overview
 
-This prompt activates a failure mode and effects analysis (FMEA/FMECA) specialist who systematically identifies potential failure modes in products, processes, and systems and evaluates their effects before they occur. Using Risk Priority Number (RPN) scoring and criticality analysis, the expert guides engineers through structured FMEA sessions and produces analysis worksheets that drive design improvements and process controls. Outputs include FMEA worksheets, criticality rankings, and prioritized corrective action plans.
+Este prompt ativa um especialista em análise de modo e efeitos de falha (FMEA/FMECA) que sistematicamente identifica possíveis modos de falha em produtos, processos e sistemas e avalia seus efeitos antes que ocorram. Usando pontuação de Número de Prioridade de Risco (RPN) e análise de criticidade, o especialista orienta engenheiros através de sessões estruturadas de FMEA e produz planilhas de análise que impulsionam melhorias de design e controles de processo. Outputs incluem planilhas FMEA, rankings de criticidade e planos de ação corretiva priorizados.
 
 ## When to Use
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Conducting Design FMEA (DFMEA) during product development to identify and mitigate design failure modes before release
-- Performing Process FMEA (PFMEA) for manufacturing processes to identify production failure modes and quality controls
-- Analyzing safety-critical systems requiring FMECA (Failure Mode, Effects, and Criticality Analysis) for regulatory submissions
+- Condução de FMEA de Design (DFMEA) durante desenvolvimento de produto para identificar e mitigar modos de falha de design antes do lançamento
+- Realização de FMEA de Processo (PFMEA) para processos de manufatura para identificar modos de falha de produção e controles de qualidade
+- Análise de sistemas críticos para segurança que exigem FMECA (Análise de Modo de Falha, Efeitos e Criticidade) para submissões regulatórias
 
-**Anti-patterns (Don't Use For):**
+**Anti-padrões (Não Use Para):**
 
-- Root cause analysis of failures that have already occurred (use root-cause-analysis-engineer instead)
-- Reliability life prediction or MTBF estimation (use reliability-engineering-expert instead)
+- Análise de causa raiz de falhas que já ocorreram (use root-cause-analysis-engineer em seu lugar)
+- Previsão de vida de confiabilidade ou estimativa de MTBF (use reliability-engineering-expert em seu lugar)
 
 ---
 
@@ -125,47 +125,47 @@ Avoid:
 
 ### Input
 
-"Conduct a DFMEA for the latching mechanism of a portable medical infusion pump. The latch holds the drug cassette in place during operation. If it fails, the cassette could detach and infuse the wrong amount of drug."
+"Conduza um DFMEA para o mecanismo de trava de uma bomba de infusão médica portátil. A trava mantém o cassete de medicamento no lugar durante a operação. Se falhar, o cassete pode se soltar e infundir a quantidade errada de medicamento."
 
 ### Output
 
-**DFMEA — Infusion Pump Cassette Latch Mechanism**
+**DFMEA — Mecanismo de Trava do Cassete da Bomba de Infusão**
 
-**System Boundary**: Cassette latch mechanism — includes latch body, engagement tab, spring, and mounting to pump housing. Interfaces: drug cassette (external), pump housing (internal), operator (human).
+**Limite do Sistema**: Mecanismo de trava do cassete — inclui corpo da trava, aba de engate, mola e montagem na carcaça da bomba. Interfaces: cassete de medicamento (externo), carcaça da bomba (interno), operador (humano).
 
-**Customer**: Patient (end user safety), clinical operator (usability), FDA (regulatory — medical device)
+**Cliente**: Paciente (segurança do usuário final), operador clínico (usabilidade), FDA (regulatório — dispositivo médico)
 
-**FMEA Worksheet**
+**Planilha FMEA**
 
-| #   | Function                         | Failure Mode                                   | Effect                                                         | Cause                                                   | S   | O   | D   | RPN | Current Controls                    | Action                                                                  |
+| #   | Função                         | Modo de Falha                                   | Efeito                                                         | Causa                                                   | S   | O   | D   | RPN | Controles Atuais                    | Ação                                                                  |
 | --- | -------------------------------- | ---------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------- | --- | --- | --- | --- | ----------------------------------- | ----------------------------------------------------------------------- |
-| 1   | Retain cassette during operation | Latch disengages during infusion               | Cassette ejects — under/over infusion (potential patient harm) | Insufficient spring force — spring relaxation over life | 10  | 3   | 6   | 180 | Life cycle spring testing (limited) | Redesign: increase spring force margin 40%; add redundant retention tab |
-| 2   | Retain cassette during operation | Latch fails to engage on cassette insertion    | No infusion — delayed treatment                                | Tolerance stack too tight — cassette tab misses latch   | 8   | 4   | 5   | 160 | Incoming inspection (not 100%)      | Tolerance analysis (worst-case); consider snap-fit geometry redesign    |
-| 3   | Indicate cassette seated         | False positive "latched" indication            | Operator proceeds — cassette not secured                       | Hall sensor drift — indicates latched when not          | 9   | 2   | 4   | 72  | Functional test at production       | Add redundant mechanical confirmation indicator; diagnostic at power-on |
-| 4   | Release cassette on demand       | Latch release requires excessive force (>15 N) | Operator cannot remove cassette                                | Latch geometry interference after thermal cycling       | 4   | 3   | 7   | 84  | Not currently tested                | Add usability test (release force over temp range) to DVT protocol      |
+| 1   | Reter cassete durante operação | Trava desengata durante infusão               | Cassete ejeta — sub/sobre infusão (dano potencial ao paciente) | Força de mola insuficiente — relaxamento de mola ao longo da vida | 10  | 3   | 6   | 180 | Teste de ciclo de vida de mola (limitado) | Redesign: aumentar margem de força de mola 40%; adicionar aba de retenção redundante |
+| 2   | Reter cassete durante operação | Trava falha ao engatar na inserção do cassete    | Sem infusão — tratamento atrasado                                | Empilhamento de tolerância muito apertado — aba do cassete não encontra trava   | 8   | 4   | 5   | 160 | Inspeção de entrada (não 100%)      | Análise de tolerância (pior caso); considerar redesign de geometria snap-fit    |
+| 3   | Indicar cassete encaixado         | Indicação falso positivo "travado"            | Operador prossegue — cassete não fixado                       | Deriva do sensor Hall — indica travado quando não está          | 9   | 2   | 4   | 72  | Teste funcional na produção       | Adicionar indicador de confirmação mecânica redundante; diagnóstico na inicialização |
+| 4   | Liberar cassete sob demanda       | Liberação de trava requer força excessiva (>15 N) | Operador não consegue remover cassete                                | Interferência de geometria de trava após ciclagem térmica       | 4   | 3   | 7   | 84  | Não testado atualmente                | Adicionar teste de usabilidade (força de liberação em faixa de temperatura) ao protocolo DVT      |
 
-**S=9/10 Priority Actions (Safety — Override RPN)**
+**Ações Prioritárias S=9/10 (Segurança — Sobrepõe RPN)**
 
-Item 1 (S=10): Redesign spring force margin per FDA guidance on force-based retention. Validate with accelerated life test (10,000 insertion cycles). Owner: Lead Mechanical Engineer. Due: CDR.
+Item 1 (S=10): Redesenhar margem de força de mola conforme orientação da FDA sobre retenção baseada em força. Validar com teste de vida acelerado (10.000 ciclos de inserção). Responsável: Engenheiro Mecânico Líder. Prazo: CDR.
 
-Item 3 (S=9): False-positive latch indication creates unreliable safety barrier. Add independent mechanical sensor channel. Conduct fault injection testing. Owner: Electrical Engineering. Due: CDR.
+Item 3 (S=9): Indicação falso-positivo de trava cria barreira de segurança não confiável. Adicionar canal de sensor mecânico independente. Conduzir teste de injeção de falhas. Responsável: Engenharia Elétrica. Prazo: CDR.
 
-**Top Corrective Actions**
+**Principais Ações Corretivas**
 
-1. Spring redesign (RPN 180, S=10): Increase spring force specification from 5N to 8N minimum engagement; tighten spring material and heat treatment specification. Validate with life cycle fatigue testing.
-2. Tolerance analysis (RPN 160, S=8): Conduct worst-case and RSS tolerance stackup on cassette engagement geometry. If stack exceeds 0.3mm, redesign engagement ramp geometry.
-3. Diagnostic latch check (S=9): Implement power-on latch state verification routine independent of Hall sensor using contact-based confirmation.
+1. Redesign da mola (RPN 180, S=10): Aumentar especificação de força de mola de 5N para 8N de engate mínimo; apertar especificação de material da mola e tratamento térmico. Validar com teste de fadiga de ciclo de vida.
+2. Análise de tolerância (RPN 160, S=8): Conduzir empilhamento de tolerância de pior caso e RSS na geometria de engate do cassete. Se empilhamento exceder 0,3mm, redesenhar geometria de rampa de engate.
+3. Verificação diagnóstica de trava (S=9): Implementar rotina de verificação de estado de trava na inicialização, independente do sensor Hall, usando confirmação baseada em contato.
 
 ---
 
 ## Variations
 
-- **Process FMEA (PFMEA)**: Manufacturing process analysis identifying process failure modes, their effects on product quality, and production control improvements
-- **System FMEA**: Top-level functional analysis for complex systems identifying functional failures and their system-level effects before detailed design
-- **FMECA with criticality matrix**: MIL-HDBK-1629 criticality analysis producing criticality numbers for safety-critical aerospace and defense systems
+- **FMEA de Processo (PFMEA)**: Análise de processo de manufatura identificando modos de falha de processo, seus efeitos na qualidade do produto e melhorias de controle de produção
+- **FMEA de Sistema**: Análise funcional de alto nível para sistemas complexos identificando falhas funcionais e seus efeitos em nível de sistema antes do design detalhado
+- **FMECA com matriz de criticidade**: Análise de criticidade MIL-HDBK-1629 produzindo números de criticidade para sistemas aeroespaciais e de defesa críticos para segurança
 
 ## Related Prompts
 
-- [root-cause-analysis-engineer](root-cause-analysis-engineer.md) - Investigates actual failures identified through field returns or testing
-- [reliability-engineering-expert](reliability-engineering-expert.md) - Estimates MTBF and quantifies reliability targets that inform FMEA occurrence ratings
-- [test-validation-engineer](test-validation-engineer.md) - Designs tests that verify corrective actions reduced FMEA risk as intended
+- [root-cause-analysis-engineer](root-cause-analysis-engineer.md) - Investiga falhas reais identificadas através de retornos de campo ou testes
+- [reliability-engineering-expert](reliability-engineering-expert.md) - Estima MTBF e quantifica metas de confiabilidade que informam classificações de ocorrência FMEA
+- [test-validation-engineer](test-validation-engineer.md) - Projeta testes que verificam se ações corretivas reduziram risco FMEA como pretendido

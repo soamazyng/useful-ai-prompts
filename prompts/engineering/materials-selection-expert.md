@@ -1,4 +1,4 @@
-# Materials Selection Expert
+# Especialista em Seleção de Materiais
 
 ## Metadata
 
@@ -14,20 +14,20 @@
 
 ## Overview
 
-This prompt activates a materials selection engineer who guides systematic material choices for mechanical, thermal, electrical, and environmental applications using Ashby's materials selection methodology and performance index optimization. The expert balances functional requirements, cost, manufacturability, and sustainability to recommend materials with clear trade-off rationale. Outputs include materials selection matrices, performance index analysis, supplier considerations, and substitution recommendations.
+Este prompt ativa um engenheiro de seleção de materiais que orienta escolhas sistemáticas de materiais para aplicações mecânicas, térmicas, elétricas e ambientais usando a metodologia de seleção de materiais de Ashby e otimização de índice de desempenho. O especialista equilibra requisitos funcionais, custo, capacidade de manufatura e sustentabilidade para recomendar materiais com raciocínio claro de trade-off. Outputs incluem matrizes de seleção de materiais, análise de índice de desempenho, considerações de fornecedor e recomendações de substituição.
 
 ## When to Use
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Selecting materials for a new component with defined performance, weight, cost, and environmental constraints
-- Evaluating material substitutions driven by supply chain, cost, regulatory (RoHS, REACH), or sustainability requirements
-- Investigating whether a field failure has a materials root cause — corrosion, fatigue, creep, or wear
+- Seleção de materiais para um novo componente com desempenho, peso, custo e restrições ambientais definidos
+- Avaliação de substituições de materiais impulsionadas por cadeia de suprimentos, custo, regulatório (RoHS, REACH) ou requisitos de sustentabilidade
+- Investigação se uma falha em campo tem causa raiz de materiais — corrosão, fadiga, fluência ou desgaste
 
-**Anti-patterns (Don't Use For):**
+**Anti-padrões (Não Use Para):**
 
-- Detailed manufacturing process design (use process engineering for forming, casting, and machining specifics)
-- Chemical process design involving bulk fluid materials (different domain from structural/functional materials)
+- Design detalhado de processo de manufatura (use engenharia de processo para especificidades de conformação, fundição e usinagem)
+- Design de processo químico envolvendo materiais fluidos a granel (domínio diferente de materiais estruturais/funcionais)
 
 ---
 
@@ -126,58 +126,58 @@ Avoid:
 
 ### Input
 
-"We're designing a lightweight bicycle frame component — a handlebar stem. It needs to be strong, stiff, and as light as possible. It's a high-stress fatigue application since it transmits all handlebar forces. Budget is moderate. It will be produced at about 5,000 units/year."
+"Estamos projetando um componente leve de quadro de bicicleta — um mesa de guidão. Precisa ser forte, rígido e o mais leve possível. É uma aplicação de fadiga de alta tensão já que transmite todas as forças do guidão. Orçamento é moderado. Será produzido em cerca de 5.000 unidades/ano."
 
 ### Output
 
-**Materials Selection — Bicycle Handlebar Stem**
+**Seleção de Materiais — Mesa de Guidão de Bicicleta**
 
-**Functional Requirements**
+**Requisitos Funcionais**
 
-Function: Transmit handlebar forces to fork steerer tube in bending and torsion. Primary performance: high stiffness-to-weight AND high fatigue strength-to-weight. Constraints: must survive 200,000+ load cycles without crack initiation; must be formable into complex geometry at 5,000 units/year.
+Função: Transmitir forças do guidão para o tubo de direção da forqueta em flexão e torção. Desempenho primário: alta rigidez em relação ao peso E alta resistência à fadiga em relação ao peso. Restrições: deve sobreviver a 200.000+ ciclos de carga sem iniciação de trinca; deve ser conformável em geometria complexa em 5.000 unidades/ano.
 
-**Performance Index**
+**Índice de Desempenho**
 
-For a beam in bending where stiffness and minimum mass are objectives:
-Performance index = E^(1/2)/ρ (specific stiffness)
+Para uma viga em flexão onde rigidez e massa mínima são objetivos:
+Índice de desempenho = E^(1/2)/ρ (rigidez específica)
 
-For fatigue life performance index = σ_endurance/ρ (specific fatigue strength)
+Para vida em fadiga, índice de desempenho = σ_resistência/ρ (resistência à fadiga específica)
 
-Best materials in these combined indices: CFRP composites, high-strength aluminum alloys, titanium alloys, high-strength steel.
+Melhores materiais nesses índices combinados: compósitos CFRP, ligas de alumínio de alta resistência, ligas de titânio, aço de alta resistência.
 
-**Materials Comparison Matrix**
+**Matriz de Comparação de Materiais**
 
-| Material            | E^1/2/ρ   | Fatigue Str/ρ | Machinability    | Weldability  | Unit Cost | Recyclable     |
+| Material            | E^1/2/ρ   | Resist. Fadiga/ρ | Usinabilidade    | Soldabilidade  | Custo Unitário | Reciclável     |
 | ------------------- | --------- | ------------- | ---------------- | ------------ | --------- | -------------- |
-| 6061-T6 Al          | Good      | Moderate      | Excellent        | Good         | $         | Yes            |
-| 7075-T6 Al          | Good      | High          | Good             | Poor (avoid) | $$        | Yes            |
-| Ti-6Al-4V           | Excellent | Excellent     | Difficult        | Good         | $$$$      | Yes            |
-| CFRP (UD prepreg)   | Best      | Best          | Complex (lay-up) | N/A          | $$$       | No (thermoset) |
-| 4130 Chromoly Steel | Moderate  | High          | Excellent        | Excellent    | $         | Yes            |
-| 6-4 Ti (formed)     | Excellent | Excellent     | Moderate         | Good         | $$$$      | Yes            |
+| Al 6061-T6          | Bom      | Moderado      | Excelente        | Boa         | $         | Sim            |
+| Al 7075-T6          | Bom      | Alto      | Boa             | Ruim (evitar) | $$        | Sim            |
+| Ti-6Al-4V           | Excelente | Excelente     | Difícil        | Boa         | $$$$      | Sim            |
+| CFRP (UD prepreg)   | Melhor      | Melhor      | Complexa (lay-up) | N/A          | $$$       | Não (termofixo) |
+| Aço Chromoly 4130 | Moderado  | Alto      | Excelente        | Excelente    | $         | Sim            |
+| Ti 6-4 (formado)     | Excelente | Excelente     | Moderada         | Boa         | $$$$      | Sim            |
 
-**Ranked Recommendation**
+**Recomendação Classificada**
 
-1. **7075-T6 Aluminum** (Primary Recommendation): Best combination of high fatigue strength-to-weight, established production methods for stem geometry (CNC machining from billet or forging at 5,000/year scale), moderate cost, widely used in cycling industry. Key risk: weld-sensitivity — if design requires welding, switch to 6061-T6. Specify: AA 7075-T6; ASTM B209 (sheet/plate) or B221 (extrusion); anodize for corrosion protection. Fatigue life target: design to σ_a < 100 MPa for infinite life per Goodman correction.
+1. **Alumínio 7075-T6** (Recomendação Principal): Melhor combinação de alta resistência à fadiga em relação ao peso, métodos de produção estabelecidos para geometria de mesa (usinagem CNC de tarugo ou forjamento em escala de 5.000/ano), custo moderado, amplamente usado na indústria de ciclismo. Risco principal: sensibilidade à solda — se o design exigir soldagem, mude para 6061-T6. Especifique: AA 7075-T6; ASTM B209 (chapa/placa) ou B221 (extrusão); anodizar para proteção contra corrosão. Meta de vida em fadiga: projetar para σ_a < 100 MPa para vida infinita conforme correção de Goodman.
 
-2. **CFRP** (High-Performance Alternative): Significantly better specific stiffness and strength, but requires different manufacturing process (filament winding or layup with mandrel) — may not be cost-effective at 5,000/year in current setup without tooling investment.
+2. **CFRP** (Alternativa de Alto Desempenho): Rigidez e resistência específicas significativamente melhores, mas requer processo de manufatura diferente (enrolamento de filamento ou layup com mandril) — pode não ser custo-efetivo em 5.000/ano na configuração atual sem investimento em ferramental.
 
-3. **4130 Chromoly Steel** (Budget Alternative): Lower cost, excellent weldability and machinability, well-understood in bicycle frames. Heavier than aluminum for equivalent performance — accept ~40% mass increase vs. 7075.
+3. **Aço Chromoly 4130** (Alternativa Econômica): Menor custo, excelente soldabilidade e usinabilidade, bem compreendido em quadros de bicicleta. Mais pesado que alumínio para desempenho equivalente — aceite ~40% de aumento de massa vs. 7075.
 
-**Implementation Guidance**
+**Orientação de Implementação**
 
-7075-T6 specification: Alloy 7075 to ASTM B221 extrusion or B209 plate. Heat treat to T6 temper. Surface finish: Type II sulfuric anodize (MIL-A-8625 Type II) for corrosion protection. Critical surfaces: machine after anodize to avoid stress concentration at coating edge. Fastener interfaces: specify 5/16-24 minimum thread engagement; use steel thread inserts (HeliCoil) to prevent galling.
+Especificação 7075-T6: Liga 7075 conforme extrusão ASTM B221 ou placa B209. Tratar termicamente para têmpera T6. Acabamento de superfície: anodização sulfúrica Tipo II (MIL-A-8625 Tipo II) para proteção contra corrosão. Superfícies críticas: usinar após anodização para evitar concentração de tensão na borda do revestimento. Interfaces de fixadores: especificar engate de rosca mínimo 5/16-24; usar insertos de rosca de aço (HeliCoil) para prevenir galling.
 
 ---
 
 ## Variations
 
-- **Polymer and composite selection**: Thermoplastic vs. thermoset vs. elastomer selection for injection molding, structural composite, or seal applications
-- **Corrosion-driven selection**: Materials selection for marine, chemical, or highly corrosive environments where corrosion resistance is the primary constraint
-- **High-temperature materials**: Refractory metals, superalloys, and ceramics for elevated-temperature applications above 300°C
+- **Seleção de polímero e compósito**: Seleção de termoplástico vs. termofixo vs. elastômero para moldagem por injeção, compósito estrutural ou aplicações de vedação
+- **Seleção orientada por corrosão**: Seleção de materiais para ambientes marinhos, químicos ou altamente corrosivos onde resistência à corrosão é a restrição primária
+- **Materiais de alta temperatura**: Metais refratários, superligas e cerâmicas para aplicações de temperatura elevada acima de 300°C
 
 ## Related Prompts
 
-- [simulation-modeling-advisor](simulation-modeling-advisor.md) - Requires accurate material property data for FEA/CFD simulation inputs
-- [reliability-engineering-expert](reliability-engineering-expert.md) - Uses material fatigue properties to predict component life
-- [sustainability-engineer](sustainability-engineer.md) - Evaluates materials from life cycle assessment and circular economy perspectives
+- [simulation-modeling-advisor](simulation-modeling-advisor.md) - Requer dados precisos de propriedades de material para inputs de simulação FEA/CFD
+- [reliability-engineering-expert](reliability-engineering-expert.md) - Usa propriedades de fadiga de material para prever vida do componente
+- [sustainability-engineer](sustainability-engineer.md) - Avalia materiais de perspectivas de avaliação de ciclo de vida e economia circular

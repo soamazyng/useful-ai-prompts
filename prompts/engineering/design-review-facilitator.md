@@ -1,4 +1,4 @@
-# Design Review Facilitator
+# Facilitador de Revisão de Design
 
 ## Metadata
 
@@ -14,20 +14,20 @@
 
 ## Overview
 
-This prompt activates a design review facilitation specialist who structures and prepares Preliminary Design Reviews (PDR), Critical Design Reviews (CDR), and other technical gate reviews. The expert develops review agendas, domain-specific checklists, entrance and exit criteria, and action item tracking systems that ensure rigorous design closure without stalling program momentum. Outputs include review preparation guides, structured checklists, agenda templates, and action item management frameworks.
+Este prompt ativa um especialista em facilitação de revisão de design que estrutura e prepara Revisões de Design Preliminar (PDR), Revisões de Design Crítico (CDR) e outras revisões técnicas de gates. O especialista desenvolve agendas de revisão, checklists específicas do domínio, critérios de entrada e saída, e sistemas de rastreamento de itens de ação que garantem fechamento rigoroso de design sem atrapalhar o momentum do programa. Outputs incluem guias de preparação de revisão, checklists estruturadas, templates de agenda e frameworks de gerenciamento de itens de ação.
 
 ## When to Use
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Preparing for an upcoming PDR or CDR on a new product or system development program
-- Improving the rigor and repeatability of design reviews on an existing engineering program
-- Facilitating a post-design-freeze review for a significant design change or product update
+- Preparação para uma PDR ou CDR próxima em um novo produto ou programa de desenvolvimento de sistema
+- Melhoria do rigor e repetibilidade de revisões de design em um programa de engenharia existente
+- Facilitação de uma revisão pós-congelamento de design para uma mudança significativa de design ou atualização de produto
 
-**Anti-patterns (Don't Use For):**
+**Anti-padrões (Não Use Para):**
 
-- Performing the technical analysis itself — design reviews evaluate analysis already completed
-- Final acceptance testing or qualification (different lifecycle gate requiring formal test procedures)
+- Realização da análise técnica em si — revisões de design avaliam análise já concluída
+- Testes de aceitação final ou qualificação (gate de ciclo de vida diferente que requer procedimentos de teste formal)
 
 ---
 
@@ -127,80 +127,80 @@ Avoid:
 
 ### Input
 
-"Help me prepare for a Critical Design Review (CDR) for a new industrial pump controller PCB. We're two weeks out. The design is electronic — custom microcontroller firmware, power supply design, sensor interfaces, and communications. External customer review."
+"Ajude-me a preparar para uma Revisão de Design Crítico (CDR) para um novo PCB controlador de bomba industrial. Estamos a duas semanas de distância. O design é eletrônico — firmware customizado de microcontrolador, design de fonte de alimentação, interfaces de sensores e comunicações. Revisão do cliente externo."
 
 ### Output
 
-**CDR Preparation Package — Industrial Pump Controller PCB**
+**Pacote de Preparação CDR — PCB Controlador de Bomba Industrial**
 
-**CDR Entrance Criteria (must be complete before review)**
+**Critérios de Entrada CDR (devem estar completos antes da revisão)**
 
-- [ ] Schematic and PCB layout frozen — no changes after ERC/DRC clearance
-- [ ] BOM complete with qualified, approved suppliers for all critical components
-- [ ] All specifications met — requirements traceability matrix complete with 100% coverage
-- [ ] Critical analysis complete: power budget, thermal analysis, EMC prediction, signal integrity
-- [ ] Design for Manufacturing review complete with PCB fabricator and assembly house
-- [ ] Firmware architecture documented; critical algorithms code-complete and reviewed
-- [ ] Risk register updated with mitigation status for all High risks
+- [ ] Esquemático e layout de PCB congelados — nenhuma mudança após limpeza de ERC/DRC
+- [ ] BOM completo com fornecedores qualificados aprovados para todos os componentes críticos
+- [ ] Todas as especificações atendidas — matriz de rastreabilidade de requisitos com 100% de cobertura
+- [ ] Análise crítica completa: orçamento de potência, análise térmica, predição de EMC, integridade do sinal
+- [ ] Revisão de Design para Manufatura completa com fabricante de PCB e casa de montagem
+- [ ] Arquitetura de firmware documentada; algoritmos críticos code-complete e revisados
+- [ ] Registro de riscos atualizado com status de mitigação para todos os riscos High
 
-**Two-Day CDR Agenda**
+**Agenda CDR de Dois Dias**
 
-Day 1:
+Dia 1:
 
-- 0800: Review objectives and agenda (15 min)
-- 0815: System overview — purpose, requirements, operating environment (30 min)
-- 0845: Requirements traceability and status — coverage, open items (45 min)
-- 0930: Schematic review — power supply, MCU, I/O, communications (90 min)
-- 1100: Break
-- 1115: PCB layout review — stackup, critical routing, thermal, EMC layout practices (60 min)
-- 1215: Lunch
-- 1300: Thermal analysis and power dissipation (45 min)
-- 1345: EMC compliance analysis and mitigation strategy (45 min)
-- 1430: Signal integrity and interface analysis (30 min)
-- 1500: Break
-- 1515: Action item capture and review Day 1 (45 min)
+- 0800: Objetivos de revisão e agenda (15 min)
+- 0815: Visão geral do sistema — propósito, requisitos, ambiente operacional (30 min)
+- 0845: Rastreabilidade e status de requisitos — cobertura, itens abertos (45 min)
+- 0930: Revisão esquemática — fonte de alimentação, MCU, E/S, comunicações (90 min)
+- 1100: Pausa
+- 1115: Revisão de layout de PCB — stackup, roteamento crítico, térmico, práticas de layout EMC (60 min)
+- 1215: Almoço
+- 1300: Análise térmica e dissipação de potência (45 min)
+- 1345: Análise de conformidade EMC e estratégia de mitigação (45 min)
+- 1430: Análise de integridade de sinal e interface (30 min)
+- 1500: Pausa
+- 1515: Captura de item de ação e revisão Dia 1 (45 min)
 
-Day 2:
+Dia 2:
 
-- 0800: Firmware architecture and safety-critical algorithm review (60 min)
-- 0900: Interface control — sensor inputs, communication outputs (45 min)
-- 0945: Risk register review — top 5 risks and mitigations (30 min)
-- 1015: V&V plan review — test for every performance requirement (45 min)
-- 1100: Break
-- 1115: Manufacturing and producibility review (30 min)
-- 1145: Open issues and corrective action plan (30 min)
-- 1215: Exit criteria review — determination and authorization (30 min)
+- 0800: Revisão de arquitetura de firmware e algoritmo de segurança crítica (60 min)
+- 0900: Controle de interface — entradas de sensores, saídas de comunicação (45 min)
+- 0945: Revisão de registro de riscos — top 5 riscos e mitigações (30 min)
+- 1015: Revisão de plano de V&V — teste para cada requisito de desempenho (45 min)
+- 1100: Pausa
+- 1115: Revisão de manufatura e produtividade (30 min)
+- 1145: Problemas abertos e plano de ação corretiva (30 min)
+- 1215: Revisão de critérios de saída — determinação e autorização (30 min)
 
-**CDR Checklist — Electronics PCB**
+**Checklist CDR — PCB Eletrônico**
 
-Requirements: All system-level requirements allocated to design? Requirements with tolerances and test conditions? EMC limits specified and traceable to standard?
-Power Design: Power budget within margin? All rail voltages analyzed under min/max load? Overvoltage and overcurrent protection defined?
-Thermal: Worst-case junction temperatures analyzed (Tj max < rated -20°C margin)? Thermal interface materials specified?
-EMC: Decoupling capacitor placement reviewed? Return path discontinuities avoided? Cable interface filtering defined?
-Firmware: Critical timing requirements analyzed? Watchdog timer and fault recovery implemented? Memory footprint within budget?
+Requisitos: Todos os requisitos de nível de sistema alocados para design? Requisitos com tolerâncias e condições de teste? Limites EMC especificados e rastreáveis para padrão?
+Design de Potência: Orçamento de potência dentro da margem? Todas as tensões de trilho analisadas sob carga min/máx? Proteção de sobretensão e sobrecorrente definidas?
+Térmico: Temperaturas de junção de pior caso analisadas (Tj máx < classificado -20°C margem)? Materiais de interface térmica especificados?
+EMC: Colocação de capacitor de desacoplamento revisada? Descontinuidades de caminho de retorno evitadas? Filtragem de interface de cabo definida?
+Firmware: Requisitos críticos de tempo analisados? Timer watchdog e recuperação de falha implementados? Pegada de memória dentro do orçamento?
 
-**Action Item Tracker**
+**Rastreador de Item de Ação**
 
-| ID     | Description | Owner | Due | Priority             | Status      |
+| ID     | Description | Proprietário | Vencimento | Prioridade             | Status      |
 | ------ | ----------- | ----- | --- | -------------------- | ----------- |
-| AI-001 |             |       |     | Critical/Major/Minor | Open/Closed |
+| AI-001 |             |       |     | Crítico/Maior/Menor | Aberto/Fechado |
 
-Critical actions must close before prototype build authorization. Major actions close before prototype test start. Minor actions tracked to production.
+Ações críticas devem fechar antes da autorização de construção de protótipo. Ações maiores fecham antes do início do teste de protótipo. Ações menores rastreadas para produção.
 
-**Exit Criteria**
+**Critérios de Saída**
 
-CDR exits when: all critical action items have documented closure; customer has signed CDR minutes; no open requirements without allocated design solution. Conditional exit permitted with Major action items with approved closure plan.
+CDR sai quando: todos os itens de ação crítica têm fechamento documentado; cliente assinou atas CDR; nenhum requisito aberto sem solução de design alocada. Saída condicional permitida com itens de ação Maior com plano de fechamento aprovado.
 
 ---
 
 ## Variations
 
-- **Preliminary Design Review (PDR)**: Earlier-stage review focused on requirements completeness, design concept selection, and analysis plans rather than detailed design verification
-- **Manufacturing readiness review**: Production-gate review validating producibility, tooling, process qualification, and first-article inspection planning
-- **Design change review**: Structured review process for engineering changes after design baseline, including impact assessment on other subsystems
+- **Revisão de Design Preliminar (PDR)**: Revisão de estágio anterior focada em completude de requisitos, seleção de conceito de design e planos de análise ao invés de verificação de design detalhada
+- **Revisão de prontidão de manufatura**: Revisão de gate de produção validando produtividade, ferramental, qualificação de processo e planejamento de inspeção de primeiro artigo
+- **Revisão de mudança de design**: Processo de revisão estruturado para mudanças de engenharia após baseline de design, incluindo avaliação de impacto em outros subsistemas
 
 ## Related Prompts
 
-- [systems-engineering-expert](systems-engineering-expert.md) - Develops the requirements and architecture that design reviews evaluate
-- [failure-mode-analyst](failure-mode-analyst.md) - FMEA outputs are a key input to CDR risk review
-- [test-validation-engineer](test-validation-engineer.md) - V&V plan reviewed at CDR is developed using this prompt
+- [systems-engineering-expert](systems-engineering-expert.md) - Desenvolve os requisitos e arquitetura que revisões de design avaliam
+- [failure-mode-analyst](failure-mode-analyst.md) - Outputs FMEA são uma entrada chave para revisão de risco CDR
+- [test-validation-engineer](test-validation-engineer.md) - Plano de V&V revisado em CDR é desenvolvido usando este prompt

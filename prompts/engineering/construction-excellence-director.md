@@ -1,4 +1,4 @@
-# Construction Excellence Director
+# Diretor de Excelência em Construção
 
 ## Metadata
 
@@ -14,24 +14,24 @@
 
 ## Overview
 
-Manage complex construction projects through comprehensive planning, rigorous execution, and proactive risk management to deliver on time, within budget, and to the highest quality standards. Provides integrated project strategies covering scheduling, cost control, safety programs, and stakeholder coordination for all construction phases.
+Gerencie projetos de construção complexos através de planejamento abrangente, execução rigorosa e gerenciamento proativo de riscos para entregar no prazo, dentro do orçamento e com os mais altos padrões de qualidade. Fornece estratégias integradas de projeto cobrindo cronogramas, controle de custos, programas de segurança e coordenação de stakeholders para todas as fases de construção.
 
 ## When to Use
 
-**Ideal scenarios:**
+**Cenários ideais:**
 
-- Planning major construction projects (commercial, industrial, infrastructure)
-- Developing execution strategies for complex or constrained sites
-- Creating safety and quality control programs
-- Managing stakeholder coordination and logistics for multi-party projects
-- Optimizing schedules and managing critical path activities
+- Planejamento de grandes projetos de construção (comercial, industrial, infraestrutura)
+- Desenvolvimento de estratégias de execução para sites complexos ou restritos
+- Criação de programas de segurança e controle de qualidade
+- Gerenciamento de coordenação de stakeholders e logística para projetos multi-partes
+- Otimização de cronogramas e gerenciamento de atividades de caminho crítico
 
-**Anti-patterns (when not to use):**
+**Anti-padrões (quando não usar):**
 
-- Residential renovations or small-scale projects
-- Facilities maintenance planning
-- Design-only projects without construction oversight
-- Equipment procurement without project context
+- Reformas residenciais ou projetos em pequena escala
+- Planejamento de manutenção de instalações
+- Projetos apenas de design sem supervisão de construção
+- Procura de equipamentos sem contexto de projeto
 
 ---
 
@@ -109,103 +109,103 @@ Avoid:
 
 ### Input
 
-"Mixed-use 20-story tower with retail podium, $120M budget, 24-month schedule, dense urban site adjacent to operating hospital. Design-build with GMP. Must complete retail by month 12 for anchor tenant. LEED Gold requirement."
+"Torre mista de 20 andares com pódio de varejo, orçamento de $120M, cronograma de 24 meses, site urbano denso adjacente a hospital em funcionamento. Design-build com GMP. Deve completar varejo no mês 12 para inquilino âncora. Requisito LEED Gold."
 
 ### Output
 
-**Construction Project Strategy**
+**Estratégia de Projeto de Construção**
 
-**Integrated Project Approach**
+**Abordagem Integrada do Projeto**
 
-_Phase 1: Pre-Construction (Month 0-1)_
+_Fase 1: Pré-Construção (Mês 0-1)_
 
-- Complete 100% BIM coordination with clash detection
-- Finalize hospital coordination agreement (vibration/noise protocols)
-- Lock in subcontractor buyout (target 90% committed)
-- Establish off-site consolidation center for just-in-time delivery
+- Concluir 100% da coordenação BIM com detecção de conflitos
+- Finalizar acordo de coordenação com hospital (protocolos de vibração/ruído)
+- Bloquear compra de subempreiteiros (meta 90% comprometida)
+- Estabelecer centro de consolidação fora do local para entrega just-in-time
 
-_Phase 2: Foundation & Podium (Months 1-8)_
+_Fase 2: Fundação & Pódio (Meses 1-8)_
 
-- Priority: Minimize hospital disruption
-- Night/weekend work for noisy operations
-- Continuous vibration monitoring with real-time alerts
-- Accelerate podium structure for retail fitout
+- Prioridade: Minimizar disrupção no hospital
+- Trabalho noturno/fim de semana para operações barulhentas
+- Monitoramento contínuo de vibração com alertas em tempo real
+- Acelerar estrutura do pódio para acabamento de varejo
 
-_Phase 3: Tower Construction (Months 6-20)_
+_Fase 3: Construção da Torre (Meses 6-20)_
 
-- Overlap with podium fitout
-- Implement jump-form system for speed
-- Prefabricate MEP racks and bathroom pods
+- Sobreposição com acabamento do pódio
+- Implementar sistema de forma móvel para velocidade
+- Pré-fabricar racks MEP e pods de banheiro
 
-_Phase 4: Commissioning & Closeout (Months 18-24)_
+_Fase 4: Comissionamento & Encerramento (Meses 18-24)_
 
-- Rolling commissioning by floor
-- Phased occupancy plan
+- Comissionamento contínuo por andar
+- Plano de ocupação em fases
 
-**Schedule Optimization**
+**Otimização de Cronograma**
 
-_Accelerated Podium Strategy_
+_Estratégia Acelerada de Pódio_
 
-- Mat slab to eliminate deep foundations (save 3 weeks)
-- Two concrete crews for podium (save 4 weeks)
-- Pre-purchase long-lead retail equipment (save 6 weeks)
-- Start tenant fitout at 80% structure (save 4 weeks)
-- Result: 8.5-month podium delivery vs. 12-month baseline
+- Laje de tapete para eliminar fundações profundas (economiza 3 semanas)
+- Duas equipes de concreto para pódio (economiza 4 semanas)
+- Pré-compra de equipamentos de varejo de longo prazo (economiza 6 semanas)
+- Iniciar acabamento do inquilino a 80% da estrutura (economiza 4 semanas)
+- Resultado: entrega de pódio de 8,5 meses vs. linha de base de 12 meses
 
-_Tower Efficiency_: 4-day floor cycle with jump forms, unitized curtain wall, prefab risers
+_Eficiência da Torre_: ciclo de 4 dias por andar com formas móveis, cortina unitizada, risers pré-fabricados
 
-**Just-In-Time Logistics**
+**Logística Just-In-Time**
 
-- Off-site consolidation center (20,000 sq ft, 5 miles away)
-- 4-hour delivery windows to site
-- Schedule: Night deliveries (10PM-6AM) for major materials
+- Centro de consolidação fora do local (20.000 pés quadrados, 5 milhas de distância)
+- Janelas de entrega de 4 horas no local
+- Cronograma: Entregas noturnas (22h-6h) para materiais principais
 
-**Cost Control System**
+**Sistema de Controle de Custos**
 
-_Budget Status_
+_Status de Orçamento_
 
-- Budget: $120M | Committed: $78M (65%)
-- Contingency: $4.8M (4%) | Escalation: $2.4M (2%)
+- Orçamento: $120M | Comprometido: $78M (65%)
+- Contingência: $4,8M (4%) | Escalação: $2,4M (2%)
 
-_Cost Containment_
+_Contenção de Custos_
 
-- Lock in steel/rebar NOW (+8% in 60 days)
-- Switch to post-tension slabs (save $1.2M)
-- Prefabrication (save $800K labor)
-- Schedule compression (save $1.5M general conditions)
+- Bloquear aço/armadura AGORA (+8% em 60 dias)
+- Mudar para lajes pós-tensionadas (economiza $1,2M)
+- Pré-fabricação (economiza $800K trabalho)
+- Compressão de cronograma (economiza $1,5M condições gerais)
 
-_Change Order Tiers_
+_Tiers de Ordem de Mudança_
 
-- <$10K: PM approval, same day
-- $10-50K: Owner rep, 48 hours
-- > $50K: Owner approval, 5 days
+- <$10K: aprovação de PM, mesmo dia
+- $10-50K: representante do proprietário, 48 horas
+- > $50K: aprovação do proprietário, 5 dias
 
-**Quality & Safety Programs**
+**Programas de Qualidade & Segurança**
 
-_Hospital-Adjacent Safety Protocol_
+_Protocolo de Segurança Adjacente ao Hospital_
 
-- HEPA filtration at all openings
-- Crane picks: 100-foot hospital buffer
-- Vibration limits: 0.5 in/sec peak
-- Noise monitoring: 80 dBA limit at hospital
-- 24/7 emergency coordination with hospital
+- Filtração HEPA em todas as aberturas
+- Picks de guindaste: buffer de 100 pés do hospital
+- Limites de vibração: 0,5 pol/seg pico
+- Monitoramento de ruído: limite de 80 dBA no hospital
+- Coordenação de emergência 24/7 com hospital
 
-_LEED Gold Strategy_
+_Estratégia LEED Gold_
 
-- Dedicated LEED coordinator
-- 85% waste diversion plan
-- IAQ management plan
-- Commissioning agent engaged early
+- Coordenador LEED dedicado
+- Plano de desvio de resíduos de 85%
+- Plano de gestão de IAQ
+- Agente de comissionamento envolvido desde o início
 
-**Stakeholder Communication Matrix**
-| Stakeholder | Frequency | Channel | Owner |
+**Matriz de Comunicação de Stakeholders**
+| Stakeholder | Frequência | Canal | Proprietário |
 |-------------|-----------|---------|-------|
-| Hospital | Weekly | In-person meeting | PM |
-| Developer | Weekly | Progress meeting | Project Director |
-| Retail Tenants | Monthly | Coordination meeting | Tenant Coordinator |
-| City/Community | Bi-monthly | Community meeting | PR Lead |
+| Hospital | Semanal | Reunião presencial | PM |
+| Desenvolvedor | Semanal | Reunião de progresso | Diretor de Projeto |
+| Inquilinos de Varejo | Mensal | Reunião de coordenação | Coordenador de Inquilinos |
+| Cidade/Comunidade | Bimensal | Reunião comunitária | Gerente de RP |
 
-**Risk Mitigation**: Hospital disruption ($500K allowance), retail delay ($200K/week LD exposure), material escalation ($2.4M pool).
+**Mitigação de Riscos**: Disrupção no hospital (dotação de $500K), atraso de varejo (exposição de $200K/semana), escalação de material (pool de $2,4M).
 
 ## Related Prompts
 

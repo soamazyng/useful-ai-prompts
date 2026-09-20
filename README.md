@@ -249,6 +249,7 @@ Consulte [SKILLS-MATRIX.md](SKILLS-MATRIX.md) para a referência completa.
 | [pre-commit-linting](hooks/pre-commit-linting/) | Pré-commit     | Aplicação de formatação de código         |
 | [test-runner](hooks/test-runner/)               | Pré-commit     | Execução automatizada de testes           |
 | [dependency-check](hooks/dependency-check/)     | Pré-commit     | Auditoria de vulnerabilidades em dependências |
+| [breaking-change-detection](hooks/breaking-change-detection/) | Pré-commit | Detecção de mudanças incompatíveis        |
 | [auto-format](hooks/auto-format/)               | Pós-salvamento | Formatação automática de código           |
 | [session-setup](hooks/session-setup/)           | Início de sessão | Inicialização do ambiente               |
 

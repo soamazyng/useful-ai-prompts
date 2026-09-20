@@ -32,21 +32,21 @@ Cada prompt segue a mesma estrutura validada:
 ```markdown
 # [Nome do Prompt]
 
-## Metadados
+## Metadata
 
 - **ID**: `categoria-slug-do-prompt`
-- **Versão**: 1.0.0
-- **Categoria**: Categoria principal
+- **Version**: 1.0.0
+- **Category**: Categoria principal
 - **Tags**: palavras, chave, aqui
-- **Complexidade**: simples | intermediário | avançado
-- **Interação**: única | conversacional | iterativo
-- **Modelos**: Claude 3+, GPT-4+
+- **Complexity**: simple | intermediate | advanced
+- **Interaction**: single-shot | conversational | iterative
+- **Models**: Claude 3+, GPT-4+
 
-## Visão Geral
+## Overview
 
 2-3 frases explicando o que o prompt faz e para quem é.
 
-## Quando Usar
+## When to Use
 
 - Cenário específico 1
 - Cenário específico 2
@@ -84,46 +84,46 @@ Limites rígidos e restrições
 
 ---
 
-## Exemplo de Uso
+## Example Usage
 
-### Entrada
+### Input
 
 Solicitação realista do usuário (20-200 palavras)
 
-### Saída
+### Output
 
 Resposta representativa demonstrando qualidade (100-600 palavras)
 
-## Prompts Relacionados
+## Related Prompts
 
 Links para prompts complementares
 ```
 
 ---
 
-## Estrutura de Tags XML
+## XML Tag Structure
 
 A seção de prompt usa tags XML semânticas para análise consistente:
 
-| Tag                      | Finalidade                 | Conteúdo                                                    |
+| Tag                      | Purpose                    | Content                                                     |
 | ------------------------ | -------------------------- | ----------------------------------------------------------- |
-| `<role>`                 | Identidade do especialista | Credenciais, experiência, abordagem de raciocínio           |
-| `<context>`              | Enquadramento da situação  | Quando usar, critérios de sucesso, premissas principais     |
-| `<input_handling>`       | Especificação de entradas  | Inputs obrigatórios vs opcionais com valores padrão         |
-| `<task>`                 | Etapas do processo         | 3-7 passos de ação numerados                                |
-| `<output_specification>` | Formato do entregável      | Formato, extensão, estrutura, elementos obrigatórios        |
-| `<quality_criteria>`     | Métricas de sucesso        | Padrões objetivos e anti-padrões                            |
-| `<constraints>`          | Limites rígidos            | Restrições não negociáveis de escopo/formato                |
+| `<role>`                 | Expert identity            | Credenciais, experiência, abordagem de raciocínio           |
+| `<context>`              | Situation framing          | Quando usar, critérios de sucesso, premissas principais     |
+| `<input_handling>`       | Input specification        | Inputs obrigatórios vs opcionais com valores padrão         |
+| `<task>`                 | Process steps              | 3-7 passos de ação numerados                                |
+| `<output_specification>` | Deliverable format         | Formato, extensão, estrutura, elementos obrigatórios        |
+| `<quality_criteria>`     | Success metrics            | Padrões objetivos e anti-padrões                            |
+| `<constraints>`          | Hard limits                | Restrições não negociáveis de escopo/formato                |
 
 ---
 
-## Verificações de Qualidade
+## Quality Checks
 
 Cada prompt passa por estas 11 verificações de validação:
 
-| Verificação           | Requisito                                                                                            |
+| Check                 | Requirement                                                                                          |
 | --------------------- | ---------------------------------------------------------------------------------------------------- |
-| `metadata_complete`   | Todos os campos obrigatórios presentes (ID, Versão, Categoria, Tags, Complexidade, Interação, Modelos) |
+| `metadata_complete`   | Todos os campos obrigatórios presentes (ID, Version, Category, Tags, Complexity, Interaction, Models) |
 | `overview_concise`    | No máximo 3 frases, sem linguagem promocional                                                        |
 | `role_specific`       | Expertise concreta definida, não apenas "vou te ajudar"                                              |
 | `inputs_categorized`  | Obrigatórios vs opcionais distinguidos com valores padrão                                            |
@@ -137,16 +137,16 @@ Cada prompt passa por estas 11 verificações de validação:
 
 ---
 
-## Início Rápido
+## Quick Start
 
-### Usando os Prompts
+### Using the Prompts
 
 1. **Navegue** pelo [diretório de prompts](prompts/) ou pela [interface web](https://aj-geddes.github.io/useful-ai-prompts/)
 2. **Copie** o conteúdo da seção `## Prompt` (incluindo as tags XML)
 3. **Cole** no ChatGPT, Claude ou no seu assistente de IA preferido
 4. **Forneça** sua entrada específica — o prompt cuida do resto
 
-### Exemplo: Análise Competitiva
+### Example: Competitive Analysis
 
 ```text
 <role>
@@ -182,7 +182,7 @@ Inferir se não fornecido: Escopo geográfico, linha do tempo da análise
 
 ---
 
-## Categorias de Prompts
+## Prompt Categories
 
 ### Negócios e Estratégia
 
@@ -224,7 +224,7 @@ Inferir se não fornecido: Escopo geográfico, linha do tempo da análise
 
 ---
 
-## Skills para Claude Code (260+)
+## Skills for Claude Code (260+)
 
 As skills são ativadas automaticamente quando o Claude Code detecta palavras-chave relevantes:
 
@@ -241,7 +241,7 @@ Consulte [SKILLS-MATRIX.md](SKILLS-MATRIX.md) para a referência completa.
 
 ---
 
-## Hooks de Automação (7)
+## Automation Hooks (7)
 
 | Hook                                            | Gatilho        | Finalidade                                |
 | ----------------------------------------------- | -------------- | ----------------------------------------- |
@@ -256,7 +256,7 @@ Consulte [HOOKS-LIBRARY.md](HOOKS-LIBRARY.md) para instalação e configuração
 
 ---
 
-## Estrutura do Repositório
+## Repository Structure
 
 ```
 useful-ai-prompts/
@@ -279,9 +279,9 @@ useful-ai-prompts/
 
 ---
 
-## Integração
+## Integration
 
-### Para Agentes de IA
+### For AI Agents
 
 ```python
 import json
@@ -296,13 +296,13 @@ prompts_analise = [p for p in prompts if p['category'] == 'analysis']
 
 Consulte [AI-AGENT-GUIDE.md](AI-AGENT-GUIDE.md) para classificação de tarefas e padrões de integração com APIs.
 
-### Para Usuários
+### For Users
 
 Consulte [README-HUMANS.md](README-HUMANS.md) para primeiros passos, dicas de personalização e exemplos práticos.
 
 ---
 
-## Interface Web
+## Web Interface
 
 Navegue pelos prompts com busca e filtros em:
 **[https://aj-geddes.github.io/useful-ai-prompts/](https://aj-geddes.github.io/useful-ai-prompts/)**
@@ -316,7 +316,7 @@ Funcionalidades:
 
 ---
 
-## Contribuindo
+## Contributing
 
 Contribuições são bem-vindas! Todos os novos prompts devem:
 
@@ -334,7 +334,7 @@ Consulte [CONTRIBUTING.md](CONTRIBUTING.md) para as diretrizes completas.
 
 ---
 
-## Licença
+## License
 
 Licença MIT — veja [LICENSE](LICENSE) para detalhes.
 
@@ -343,9 +343,9 @@ Licença MIT — veja [LICENSE](LICENSE) para detalhes.
 ## Links
 
 - **Website**: [https://aj-geddes.github.io/useful-ai-prompts/](https://aj-geddes.github.io/useful-ai-prompts/)
-- **Repositório Original**: [https://github.com/aj-geddes/useful-ai-prompts](https://github.com/aj-geddes/useful-ai-prompts)
+- **Original Repository**: [https://github.com/aj-geddes/useful-ai-prompts](https://github.com/aj-geddes/useful-ai-prompts)
 - **Issues**: [Reportar bugs ou solicitar funcionalidades](https://github.com/aj-geddes/useful-ai-prompts/issues)
-- **Discussões**: [Perguntas e respostas da comunidade](https://github.com/aj-geddes/useful-ai-prompts/discussions)
+- **Discussions**: [Perguntas e respostas da comunidade](https://github.com/aj-geddes/useful-ai-prompts/discussions)
 
 ---
 

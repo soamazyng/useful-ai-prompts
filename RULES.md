@@ -184,10 +184,119 @@ If you're unsure whether something should be translated:
 
 ---
 
+## 🌿 Git Workflow & Best Practices
+
+**CRITICAL**: Never push directly to `main` branch. Always follow feature branch workflow:
+
+### Branch Naming Convention
+
+Create feature branches with descriptive names following this pattern:
+
+```
+feature/[what-you-are-doing]
+```
+
+**Examples**:
+```
+feature/translate-readme-pt-br
+feature/add-missing-hooks
+feature/update-prompt-count
+feature/fix-schema-compatibility
+feature/add-rules-documentation
+```
+
+### Workflow Steps
+
+1. **Create a feature branch** from `main`:
+   ```bash
+   git checkout -b feature/[description]
+   ```
+
+2. **Make your changes** in the feature branch:
+   - Commit with clear, descriptive messages
+   - Follow conventional commits (feat:, fix:, docs:, etc.)
+   - Include proper attribution in commits
+
+3. **Push to remote**:
+   ```bash
+   git push origin feature/[description]
+   ```
+
+4. **Create a Pull Request** on GitHub:
+   - Link the PR to relevant issues
+   - Add clear description of changes
+   - Wait for code review and automated checks
+   - Address feedback if any
+
+5. **Merge to main** only after:
+   - ✅ Pull request is approved
+   - ✅ All CI/CD checks pass
+   - ✅ Code review is complete
+   - ✅ No conflicts with main
+
+### What NOT to Do ❌
+
+- ❌ **Never push directly to main**: `git push origin main`
+- ❌ **Never force-push**: `git push --force`
+- ❌ **Never commit to main locally and push**: Create a branch first
+- ❌ **Never skip PR review**: Always create a PR for peer review
+- ❌ **Never merge without passing checks**: Ensure CI/CD is green
+
+### Commit Message Format
+
+```
+[type]: [description]
+
+[optional detailed explanation]
+
+Co-Authored-By: Claude Haiku 4.5 <noreply@anthropic.com>
+```
+
+**Types**: `feat:`, `fix:`, `docs:`, `refactor:`, `test:`, `chore:`
+
+---
+
+## 🔒 CRITICAL: Pull Requests Must Target the Fork Only — Never the Upstream Repository
+
+**This repository is a fork.** `git remote -v` shows two remotes:
+
+```
+origin    https://github.com/soamazyng/useful-ai-prompts.git   (this fork — the ONLY valid PR target)
+upstream  https://github.com/aj-geddes/useful-ai-prompts       (the original project — NEVER open PRs here)
+```
+
+`gh pr create` auto-detects the parent repository when a fork has an `upstream` remote configured, and **defaults to opening the PR against `upstream`** unless told otherwise. This is the opposite of what we want here — every PR from this repo must land on `origin` (`soamazyng/useful-ai-prompts`), not on `aj-geddes/useful-ai-prompts`.
+
+### Rule
+
+**Always pass `--repo` explicitly** when creating a PR from this repository:
+
+```bash
+gh pr create --repo soamazyng/useful-ai-prompts --base main --head feature/[description]
+```
+
+Never run a bare `gh pr create` in this repo — it will silently target the wrong repository.
+
+### If a PR is accidentally opened against `upstream`
+
+1. Close it on the upstream repo (`gh pr close <number> --repo aj-geddes/useful-ai-prompts`)
+2. Re-open it correctly with `--repo soamazyng/useful-ai-prompts`
+
+### Checklist Before Any `gh pr create`
+
+- [ ] Command includes `--repo soamazyng/useful-ai-prompts`
+- [ ] `--base` is `main` (this fork's main, not upstream's)
+- [ ] `--head` is the local feature branch that was pushed to `origin`
+- [ ] Confirm the printed PR URL starts with `github.com/soamazyng/useful-ai-prompts/pull/`, not `github.com/aj-geddes/useful-ai-prompts/pull/`
+
+---
+
 ## 📝 Last Updated
 
 - **2026-09-20** — Created to prevent schema translation errors in README.md
-- **Status**: Active for all future translation work in this repository
+- **2026-09-20** — Added Git Workflow & Best Practices section
+- **2026-09-20** — Added critical rule: PRs must target the fork (`origin`) only, never `upstream`
+- **Status**: Active for all future translation and contribution work in this repository
 
 ---
 

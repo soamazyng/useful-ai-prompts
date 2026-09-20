@@ -1,168 +1,168 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Este arquivo fornece orientações ao Claude Code (claude.ai/code) ao trabalhar com código neste repositório.
 
-## Repository Overview
+## Visão Geral do Repositório
 
-This is the **Useful AI Prompts** repository - a comprehensive library of specialized prompts designed for AI assistants to adopt expert personas when completing tasks. The repository contains 259+ prompts organized across 14 categories, combining multiple expert perspectives with professional frameworks.
+Este é o repositório **Useful AI Prompts** — uma biblioteca abrangente de prompts especializados projetados para assistentes de IA adotarem personas de especialistas ao completar tarefas. O repositório contém 259+ prompts organizados em 14 categorias, combinando múltiplas perspectivas de especialistas com frameworks profissionais.
 
-## Key Commands
+## Comandos Principais
 
-### Development Commands
+### Comandos de Desenvolvimento
 ```bash
-# Install dependencies
+# Instalar dependências
 npm install
 
-# Code formatting
+# Formatação de código
 npx prettier --write .
 
-# Validation scripts
+# Scripts de validação
 python validate_jekyll_conversion.py
 python update_prompt_index.py
 ```
 
-### Jekyll Website (docs/ directory)
+### Website Jekyll (diretório docs/)
 ```bash
 cd docs/
-bundle install           # Install Ruby dependencies
-bundle exec jekyll build # Build the site
-bundle exec jekyll serve # Serve locally (http://localhost:4000)
+bundle install           # Instalar dependências Ruby
+bundle exec jekyll build # Compilar o site
+bundle exec jekyll serve # Servir localmente (http://localhost:4000)
 ```
 
-### Prompt Management
+### Gerenciamento de Prompts
 ```bash
-# Convert old format prompts to new conversational format
+# Converter prompts do formato antigo para o novo formato conversacional
 python batch_convert_prompts.py
 
-# Fix conversion errors
+# Corrigir erros de conversão
 python fix_conversion_errors.py
 
-# Update the prompt index
+# Atualizar o índice de prompts
 python update_prompt_index.py
 ```
 
-## Architecture Overview
+## Visão Geral da Arquitetura
 
-### Directory Structure
-- **`/prompts/`** - Main prompt library organized by domain (technical, business, creative, specialized)
-- **`/docs/`** - Jekyll website for browsing prompts (GitHub Pages deployment)
-- **`/metadata/`** - Framework definitions and guidelines
-- **`/_prompts/`** (in docs) - Jekyll collection of converted prompts for website
-- **Python scripts** - Conversion, validation, and maintenance utilities
+### Estrutura de Diretórios
+- **`/prompts/`** - Biblioteca principal de prompts organizada por domínio (técnico, negócios, criativo, especializado)
+- **`/docs/`** - Website Jekyll para navegação de prompts (deploy via GitHub Pages)
+- **`/metadata/`** - Definições de frameworks e diretrizes
+- **`/_prompts/`** (em docs) - Coleção Jekyll de prompts convertidos para o website
+- **Scripts Python** - Utilitários de conversão, validação e manutenção
 
-### Prompt Architecture
-Each prompt follows a conversational, user-friendly format:
-- **Clear metadata** (category, tags, use cases)
-- **Helpful description** explaining the prompt's purpose
-- **Interactive questions** to understand user's context
-- **Structured deliverables** based on user's needs
-- **Practical examples** showing usage
+### Arquitetura de Prompts
+Cada prompt segue um formato conversacional e amigável:
+- **Metadados claros** (categoria, tags, casos de uso)
+- **Descrição útil** explicando o propósito do prompt
+- **Perguntas interativas** para entender o contexto do usuário
+- **Entregáveis estruturados** baseados nas necessidades do usuário
+- **Exemplos práticos** mostrando uso
 
-### Data Flow
-1. Source prompts in `/prompts/` directories
-2. Conversion scripts transform to Jekyll format in `/docs/_prompts/`
-3. Jekyll builds website from `/docs/` directory
-4. PROMPT-INDEX.json provides machine-readable catalog
+### Fluxo de Dados
+1. Prompts fonte nos diretórios `/prompts/`
+2. Scripts de conversão transformam para formato Jekyll em `/docs/_prompts/`
+3. Jekyll compila o website a partir do diretório `/docs/`
+4. PROMPT-INDEX.json fornece catálogo legível por máquina
 
-## File Organization Patterns
+## Padrões de Organização de Arquivos
 
-### Prompt Files
-- Located in categorized subdirectories under `/prompts/`
-- Use kebab-case naming: `strategic-roadmap-generator.md`
-- Include role/function in filename
-- Follow conversational format with clear structure
+### Arquivos de Prompts
+- Localizados em subdiretórios categorizados em `/prompts/`
+- Usar nomenclatura kebab-case: `strategic-roadmap-generator.md`
+- Incluir papel/função no nome do arquivo
+- Seguir formato conversacional com estrutura clara
 
-### Jekyll Collections
-- `_prompts/` - Individual prompt pages
-- `_categories/` - Category index pages
-- Uses frontmatter for metadata (title, category, tags, etc.)
+### Coleções Jekyll
+- `_prompts/` - Páginas individuais de prompts
+- `_categories/` - Páginas de índice de categorias
+- Usa frontmatter para metadados (título, categoria, tags, etc.)
 
-### Python Utilities
-- `batch_convert_prompts.py` - Converts old format to new conversational format
-- `convert_prompts_to_jekyll.py` - Jekyll format conversion
-- `validate_jekyll_conversion.py` - Validation and error checking
-- `update_prompt_index.py` - Generates/updates PROMPT-INDEX.json
+### Utilitários Python
+- `batch_convert_prompts.py` - Converte formato antigo para novo formato conversacional
+- `convert_prompts_to_jekyll.py` - Conversão para formato Jekyll
+- `validate_jekyll_conversion.py` - Validação e verificação de erros
+- `update_prompt_index.py` - Gera/atualiza PROMPT-INDEX.json
 
-## Working with Prompts
+## Trabalhando com Prompts
 
-### Required Skill: prompt-refactor
+### Skill Obrigatória: prompt-refactor
 
-**IMPORTANT**: When creating, editing, refactoring, or improving any prompts in this repository, you MUST use the `prompt-refactor` skill located at `.claude/skills/prompt-refactor/`.
+**IMPORTANTE**: Ao criar, editar, refatorar ou melhorar qualquer prompt neste repositório, você DEVE usar a skill `prompt-refactor` localizada em `.claude/skills/prompt-refactor/`.
 
-The skill provides:
-- Standardized template structure for all prompts
-- 11 quality gates for validation
-- Batch processing support for multiple prompts
-- Consistent metadata and formatting
+A skill fornece:
+- Estrutura de template padronizada para todos os prompts
+- 11 verificações de qualidade para validação
+- Suporte a processamento em lote para múltiplos prompts
+- Metadados e formatação consistentes
 
-**How to use:**
+**Como usar:**
 ```bash
-# Single prompt refactoring
-claude "Using prompt-refactor skill, refactor this prompt: [paste or path]"
+# Refatoração de prompt único
+claude "Using prompt-refactor skill, refactor this prompt: [cole ou caminho]"
 
-# Batch processing
+# Processamento em lote
 ./.claude/skills/prompt-refactor/scripts/orchestrate-refactor.sh ./prompts ./output 4
 
-# Validate a refactored prompt
+# Validar um prompt refatorado
 ./.claude/skills/prompt-refactor/scripts/validate-prompt.sh ./prompts/my-prompt.md
 ```
 
-**Skill triggers** (auto-activated on these phrases):
+**Gatilhos da skill** (ativada automaticamente nestas frases):
 - "refactor prompt"
 - "improve prompt"
 - "standardize prompts"
 - "prompt template"
 - "apply prompt template"
 
-See `.claude/skills/prompt-refactor/SKILL.md` for full template specification and quality gates.
+Veja `.claude/skills/prompt-refactor/SKILL.md` para especificação completa do template e verificações de qualidade.
 
-### Adding New Prompts
-1. Create prompt in appropriate `/prompts/[category]/` directory
-2. **Use the prompt-refactor skill** to ensure proper structure
-3. Follow the standardized template with metadata, role, task, output specification
-4. Validate with the validation script
-5. Run conversion scripts to generate Jekyll version
-6. Update PROMPT-INDEX.json
+### Adicionando Novos Prompts
+1. Criar prompt no diretório `/prompts/[categoria]/` apropriado
+2. **Usar a skill prompt-refactor** para garantir a estrutura adequada
+3. Seguir o template padronizado com metadados, papel, tarefa, especificação de saída
+4. Validar com o script de validação
+5. Executar scripts de conversão para gerar versão Jekyll
+6. Atualizar PROMPT-INDEX.json
 
-### Prompt Quality Standards (enforced by prompt-refactor skill)
-- Complete metadata (ID, version, category, tags, complexity, interaction, models)
-- Concise overview (≤3 sentences)
-- Specific role definition with concrete expertise
-- Categorized inputs (required vs optional)
-- Structured task (3-7 clear steps)
-- Specified outputs (format + length + requirements)
-- Measurable quality criteria
-- Realistic examples (input: 20-200 words, output: 100-600 words)
-- Copy-paste ready prompt section
+### Padrões de Qualidade de Prompts (aplicados pela skill prompt-refactor)
+- Metadados completos (ID, versão, categoria, tags, complexidade, interação, modelos)
+- Visão geral concisa (≤3 frases)
+- Definição de papel específica com expertise concreta
+- Inputs categorizados (obrigatórios vs opcionais)
+- Tarefa estruturada (3-7 passos claros)
+- Saídas especificadas (formato + extensão + requisitos)
+- Critérios de qualidade mensuráveis
+- Exemplos realistas (entrada: 20-200 palavras, saída: 100-600 palavras)
+- Seção de prompt pronta para copiar e colar
 
-### Conversion Process
-Old format prompts are converted to new standardized format using:
-- Extract key metadata (title, category, tags)
-- Transform to structured XML tags (role, input_handling, task, output_specification, etc.)
-- Apply quality gates validation
-- Add practical examples and clear deliverables
+### Processo de Conversão
+Prompts no formato antigo são convertidos para o novo formato padronizado usando:
+- Extrair metadados chave (título, categoria, tags)
+- Transformar em tags XML estruturadas (role, input_handling, task, output_specification, etc.)
+- Aplicar validação de verificações de qualidade
+- Adicionar exemplos práticos e entregáveis claros
 
-## Website Deployment
+## Deploy do Website
 
-The Jekyll website is automatically deployed to GitHub Pages from the `/docs/` directory:
-- Base URL: `/useful-ai-prompts`
-- Collections: prompts and categories
-- Search functionality enabled
-- Responsive design with category browsing
+O website Jekyll é automaticamente implantado no GitHub Pages a partir do diretório `/docs/`:
+- URL base: `/useful-ai-prompts`
+- Coleções: prompts e categorias
+- Funcionalidade de busca habilitada
+- Design responsivo com navegação por categorias
 
-## Integration Guidelines
+## Diretrizes de Integração
 
-For AI agents working with this repository:
-1. Parse task requirements to identify appropriate prompt category
-2. Match to prompt taxonomy using `/prompts/[category]/[subcategory]/`
-3. Load and customize selected prompt with task-specific variables
-4. Execute using the standard 4-phase framework
-5. Reference PROMPT-INDEX.json for programmatic selection
+Para agentes de IA trabalhando com este repositório:
+1. Analisar requisitos da tarefa para identificar a categoria de prompt apropriada
+2. Corresponder à taxonomia de prompts usando `/prompts/[categoria]/[subcategoria]/`
+3. Carregar e personalizar o prompt selecionado com variáveis específicas da tarefa
+4. Executar usando o framework padrão de 4 fases
+5. Referenciar PROMPT-INDEX.json para seleção programática
 
-## Important Notes
+## Notas Importantes
 
-- This repository focuses on **helpful prompts** for professional workflows
-- Each prompt provides expert guidance in a conversational format
-- Prompts gather context through questions and provide structured deliverables
-- The conversion system maintains compatibility between source and Jekyll formats
-- Quality standards focus on clarity, usability, and practical value
+- Este repositório foca em **prompts úteis** para fluxos de trabalho profissionais
+- Cada prompt fornece orientação especializada em formato conversacional
+- Prompts coletam contexto através de perguntas e fornecem entregáveis estruturados
+- O sistema de conversão mantém compatibilidade entre formatos fonte e Jekyll
+- Padrões de qualidade focam em clareza, usabilidade e valor prático

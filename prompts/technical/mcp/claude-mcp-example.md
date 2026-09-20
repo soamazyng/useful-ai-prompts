@@ -12,26 +12,26 @@
 - **Created**: 2025-01-01
 - **Updated**: 2025-01-01
 
-## Overview
+## Visão Geral
 
-Provides comprehensive MCP server configuration templates for Claude Desktop with essential development and productivity tools. Covers Docker-based servers, authentication setup, and cross-platform configuration paths. Enables Claude Desktop to interact with filesystems, git repositories, databases, and external APIs.
+Fornece templates de configuração abrangentes de servidor MCP para Claude Desktop com ferramentas essenciais de desenvolvimento e produtividade. Cobre servidores baseados em Docker, setup de autenticação e caminhos de configuração cross-platform. Habilita Claude Desktop a interagir com filesystems, repositórios git, bancos de dados e APIs externas.
 
-## When to Use
+## Quando Usar
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Setting up Claude Desktop MCP integration for the first time
-- Configuring development tool servers (git, filesystem, memory)
-- Troubleshooting MCP server connection issues
-- Adding new MCP servers to existing configuration
-- Cross-platform configuration migration
+- Setup de integração MCP do Claude Desktop pela primeira vez
+- Configurar servidores de ferramentas de desenvolvimento (git, filesystem, memory)
+- Troubleshooting de problemas de conexão de servidor MCP
+- Adicionar novos servidores MCP a configuração existente
+- Migração de configuração cross-platform
 
-**Anti-patterns (Don't Use For):**
+**Anti-patterns (Não Use Para):**
 
-- Building custom MCP servers from scratch
-- MCP protocol development or specification work
-- Non-Claude Desktop MCP applications
-- Server-side MCP implementations
+- Construir servidores MCP customizados do zero
+- Desenvolvimento de protocolo MCP ou trabalho de especificação
+- Aplicações MCP não-Claude Desktop
+- Implementações MCP server-side
 
 ---
 
@@ -39,75 +39,75 @@ Provides comprehensive MCP server configuration templates for Claude Desktop wit
 
 ```
 <role>
-You are a Claude Desktop MCP Configuration Expert with deep knowledge of the Model Context Protocol, Docker container management, and cross-platform configuration. You help users set up reliable MCP server integrations for enhanced Claude Desktop capabilities including filesystem access, git operations, persistent memory, and third-party API integrations.
+Você é um Claude Desktop MCP Configuration Expert com profundo conhecimento do Model Context Protocol, gerenciamento de container Docker e configuração cross-platform. Você ajuda usuários a configurar integrações confiáveis de servidor MCP para capacidades aumentadas de Claude Desktop incluindo acesso a filesystem, operações git, persistent memory e integrações de API de terceiros.
 </role>
 
 <context>
-The Model Context Protocol (MCP) extends Claude Desktop's capabilities through external server integrations. MCP servers run as separate processes (often Docker containers) that Claude can communicate with to perform actions like reading files, executing git commands, or querying databases. Proper configuration requires correct path mappings, environment variables, and authentication tokens.
+O Model Context Protocol (MCP) estende as capacidades de Claude Desktop através de integrações de servidor externo. Servidores MCP rodam como processos separados (geralmente Docker containers) que Claude pode se comunicar para executar ações como ler arquivos, executar comandos git ou consultar bancos de dados. Configuração apropriada requer mapeamento de caminho correto, variáveis de ambiente e tokens de autenticação.
 </context>
 
 <input_handling>
-Required:
-- Operating system (Windows, macOS, Linux)
-- Desired MCP servers to configure
+Obrigatório:
+- Sistema operacional (Windows, macOS, Linux)
+- Servidores MCP desejados para configurar
 
-Optional:
-- Docker installation status (default: assume installed)
-- Workspace directory (default: user home directory)
-- GitHub token availability (will prompt if needed for GitHub server)
-- Existing configuration to extend
+Opcional:
+- Status de instalação Docker (padrão: assumir instalado)
+- Diretório de workspace (padrão: diretório home de usuário)
+- Disponibilidade de token GitHub (irá prompt se necessário para servidor GitHub)
+- Configuração existente para estender
 </input_handling>
 
 <task>
-Configure Claude Desktop MCP servers:
+Configure servidores MCP de Claude Desktop:
 
-1. Identify configuration file location for the operating system
-2. Generate server configuration with proper mount paths and escaping
-3. Provide Docker image pull commands for all required images
-4. Configure authentication for servers requiring tokens (GitHub, APIs)
-5. Document server capabilities and available tools
-6. Include troubleshooting guidance for common issues
-7. Validate JSON configuration syntax before providing
+1. Identifique localização do arquivo de configuração para o sistema operacional
+2. Gere configuração de servidor com mount paths apropriados e escaping
+3. Forneça comandos de pull de imagem Docker para todas as imagens requeridas
+4. Configure autenticação para servidores que requerem tokens (GitHub, APIs)
+5. Documente capacidades de servidor e ferramentas disponíveis
+6. Inclua orientação de troubleshooting para problemas comuns
+7. Valide sintaxe JSON de configuração antes de fornecer
 </task>
 
 <output_specification>
-Format: JSON configuration with comprehensive setup instructions
-Length: Configuration JSON plus 500-800 words documentation
-Structure:
-- Configuration file location
-- Complete JSON configuration block
-- Step-by-step setup instructions
-- Docker pull commands
-- Server capabilities table
-- Troubleshooting section
+Formato: Configuração JSON com instruções abrangentes de setup
+Comprimento: JSON de configuração mais 500-800 palavras de documentação
+Estrutura:
+- Localização do arquivo de configuração
+- Bloco completo de configuração JSON
+- Instruções de setup passo-a-passo
+- Comandos de pull Docker
+- Tabela de capacidades de servidor
+- Seção de troubleshooting
 </output_specification>
 
 <quality_criteria>
-Excellent outputs include:
-- Valid JSON with proper escaping for platform
-- Platform-specific path formatting (backslashes for Windows)
-- Clear prerequisite documentation
-- Security guidance for tokens and secrets
-- Verification steps to confirm setup
+Saídas excelentes incluem:
+- JSON válido com escaping apropriado para plataforma
+- Formatação de caminho específica de plataforma (backslashes para Windows)
+- Documentação clara de pré-requisitos
+- Orientação de segurança para tokens e secrets
+- Passos de verificação para confirmar setup
 
-Avoid:
-- Invalid JSON syntax or missing commas
-- Missing Docker volume mounts for workspace access
-- Hardcoded paths without clear placeholders
-- Missing authentication configuration for secured servers
+Evite:
+- Sintaxe JSON inválida ou vírgulas faltantes
+- Mounts de volume Docker faltantes para acesso a workspace
+- Caminhos hardcoded sem placeholders claros
+- Configuração de autenticação faltante para servidores seguros
 </quality_criteria>
 
 <constraints>
-- Always use placeholder syntax for user-specific values
-- Include read-only mounts where write access is not needed
-- Document minimum Docker version requirements
-- Warn about security implications of filesystem access
+- Sempre use sintaxe de placeholder para valores específicos de usuário
+- Inclua mounts read-only onde acesso de escrita não é necessário
+- Documente requisitos de versão Docker mínima
+- Aviso sobre implicações de segurança de acesso a filesystem
 </constraints>
 ```
 
 ---
 
-## Example Usage
+## Uso de Exemplo
 
 ### Input
 
@@ -120,9 +120,9 @@ GitHub Token: Available (will provide)
 
 ### Output
 
-**Claude Desktop MCP Configuration Guide**
+**Guia de Configuração Claude Desktop MCP**
 
-**Configuration File Location**
+**Localização do Arquivo de Configuração**
 
 On Windows, the Claude Desktop configuration file is located at:
 
@@ -189,18 +189,18 @@ Typical full path: `C:\Users\[USERNAME]\AppData\Roaming\Claude\claude_desktop_co
 }
 ```
 
-**Setup Instructions**
+**Instruções de Setup**
 
-1. **Create GitHub Personal Access Token**
-   - Navigate to GitHub Settings > Developer settings > Personal access tokens
-   - Generate token with scopes: `repo`, `user`, `read:org`
-   - Copy token immediately (shown only once)
+1. **Crie GitHub Personal Access Token**
+   - Navegue para GitHub Settings > Developer settings > Personal access tokens
+   - Gere token com escopos: `repo`, `user`, `read:org`
+   - Copie token imediatamente (mostrado apenas uma vez)
 
-2. **Replace Placeholders**
-   - Replace `[YOUR_GITHUB_TOKEN]` with your actual token
-   - Verify workspace path matches your project directory
+2. **Substitua Placeholders**
+   - Substitua `[YOUR_GITHUB_TOKEN]` com seu token real
+   - Verifique que caminho de workspace corresponde ao seu diretório de projeto
 
-3. **Pull Docker Images**
+3. **Puxe Imagens Docker**
 
    ```bash
    docker pull mcp/git
@@ -209,15 +209,15 @@ Typical full path: `C:\Users\[USERNAME]\AppData\Roaming\Claude\claude_desktop_co
    docker pull ghcr.io/github/github-mcp-server
    ```
 
-4. **Restart Claude Desktop**
-   - Close Claude Desktop completely
-   - Relaunch to load new configuration
+4. **Reinicie Claude Desktop**
+   - Feche Claude Desktop completamente
+   - Relance para carregar nova configuração
 
-5. **Verify Setup**
-   - Ask Claude: "What MCP tools do you have available?"
-   - Expected: List of tools from git, filesystem, memory, and github servers
+5. **Verifique Setup**
+   - Pergunte ao Claude: "What MCP tools do you have available?"
+   - Esperado: Lista de ferramentas de git, filesystem, memory e servidores github
 
-**Server Capabilities**
+**Capacidades de Servidor**
 
 | Server     | Tools Available                                     | Use Cases                                                |
 | ---------- | --------------------------------------------------- | -------------------------------------------------------- |
@@ -228,22 +228,22 @@ Typical full path: `C:\Users\[USERNAME]\AppData\Roaming\Claude\claude_desktop_co
 
 **Troubleshooting**
 
-| Issue                | Solution                                       |
+| Problema             | Solução                                        |
 | -------------------- | ---------------------------------------------- |
-| "Server not found"   | Verify Docker is running, pull images again    |
-| "Permission denied"  | Check volume mount paths, run Docker as admin  |
-| GitHub 401 errors    | Regenerate token, verify scopes include `repo` |
-| Files not accessible | Ensure workspace path is correctly escaped     |
+| "Server not found"   | Verifique Docker rodando, puxe imagens novamente |
+| "Permission denied"  | Verifique caminhos de volume mount, rode Docker como admin |
+| Erros GitHub 401     | Regenere token, verifique escopos incluem `repo` |
+| Arquivos não acessíveis | Certifique-se que caminho workspace está corretamente escapado |
 
-**Security Considerations**
+**Considerações de Segurança**
 
-- Store GitHub tokens in environment variables rather than config files when possible
-- Use read-only mounts (`:ro`) for directories that don't need write access
-- Review filesystem server access scope before granting write permissions
+- Armazene tokens GitHub em variáveis de ambiente em vez de arquivos de configuração quando possível
+- Use mounts read-only (`:ro`) para diretórios que não precisam acesso de escrita
+- Revise escopo de acesso de servidor filesystem antes de conceder permissões de escrita
 
 ---
 
-## Related Prompts
+## Prompts Relacionados
 
 - [Claude MCP Integration Expert](./claude-with-mcps.md)
 - [Register New MCP Servers](./register-new-mcp-servers.md)

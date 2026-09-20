@@ -1,4 +1,4 @@
-# Memory Management Patterns Expert
+# Especialista em Padrões de Memory Management
 
 ## Metadata
 
@@ -12,26 +12,26 @@
 - **Created**: 2025-01-15
 - **Updated**: 2025-12-27
 
-## Overview
+## Visão Geral
 
-Implements sophisticated memory management patterns for AI assistants using knowledge graphs and entity-relationship models. This expert enables persistent context across conversations, personalized interactions based on learned preferences, and intelligent memory consolidation that maintains relevance while managing storage efficiently.
+Implementa padrões sofisticados de memory management para assistentes de IA usando knowledge graphs e modelos entity-relationship. Este especialista permite contexto persistente entre conversas, interações personalizadas baseadas em preferências aprendidas e consolidação inteligente de memória que mantém relevância enquanto gerencia armazenamento de forma eficiente.
 
-## When to Use
+## Quando Usar
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Building AI assistants that need to remember user context across sessions
-- Implementing knowledge graph-based context management for agents
-- Designing personalized recommendation or interaction systems
-- Creating developer copilots that track project state and preferences
-- Building customer service bots that remember interaction history
+- Construir assistentes de IA que precisam lembrar contexto do usuário entre sessões
+- Implementar gerenciamento de contexto baseado em knowledge graph para agents
+- Projetar sistemas personalizados de recomendação ou interação
+- Criar developer copilots que rastreiam estado do projeto e preferências
+- Construir bots de atendimento ao cliente que lembram histórico de interações
 
-**Anti-patterns (when NOT to use):**
+**Anti-patterns (quando NÃO usar):**
 
-- Simple stateless interactions or single-turn Q&A
-- Systems without persistence requirements or storage
-- Privacy-sensitive applications where memory is inappropriate
-- High-throughput systems where memory lookup adds unacceptable latency
+- Interações simples stateless ou Q&A de turno único
+- Sistemas sem requisitos de persistência ou armazenamento
+- Aplicações sensíveis à privacidade onde memória é inadequada
+- Sistemas de high-throughput onde a consulta à memória adiciona latência inaceitável
 
 ---
 
@@ -108,26 +108,26 @@ Avoid these issues:
 
 ---
 
-## Example Usage
+## Exemplo de Uso
 
 ### Input
 
-I am building a developer assistant that needs to remember user preferences, active projects, and technology choices across sessions. The assistant should track relationships between team members, projects they work on, and the tech stack decisions made. Users may work on multiple projects with different teams. We are using a Node.js backend and can integrate with a graph database if needed. Sessions can span weeks of inactivity.
+Estou construindo um developer assistant que precisa lembrar preferências do usuário, projetos ativos e escolhas de stack tecnológica entre sessões. O assistente deve rastrear relacionamentos entre membros da equipe, projetos em que trabalham e as decisões de stack feitas. Usuários podem trabalhar em múltiplos projetos com equipes diferentes. Estamos usando um backend Node.js e podemos integrar com um graph database se necessário. As sessões podem ter semanas de inatividade entre elas.
 
 ### Output
 
-**Entity Type Taxonomy**
+**Taxonomia de Entity Types**
 
-| Entity Type  | Purpose                 | Key Attributes                                       | Retention      |
+| Entity Type  | Finalidade              | Atributos Principais                                 | Retenção       |
 | ------------ | ----------------------- | ---------------------------------------------------- | -------------- |
-| Person       | Users and team members  | name, role, skills, preferences, communication_style | Permanent      |
-| Project      | Active work initiatives | name, status, start_date, tech_stack, repository     | Until archived |
-| Technology   | Tools and frameworks    | name, version, category, issues_encountered          | Permanent      |
-| Organization | Teams and companies     | name, domain, conventions                            | Permanent      |
-| Decision     | Technical choices made  | rationale, date, alternatives_considered             | 2 years        |
-| Session      | Conversation context    | topics, active_project, timestamp                    | 30 days        |
+| Person       | Usuários e membros da equipe | name, role, skills, preferences, communication_style | Permanente     |
+| Project      | Iniciativas de trabalho ativas | name, status, start_date, tech_stack, repository   | Até arquivado  |
+| Technology   | Ferramentas e frameworks | name, version, category, issues_encountered         | Permanente     |
+| Organization | Equipes e empresas      | name, domain, conventions                            | Permanente     |
+| Decision     | Escolhas técnicas feitas | rationale, date, alternatives_considered             | 2 anos         |
+| Session      | Contexto da conversa    | topics, active_project, timestamp                    | 30 dias        |
 
-**Relationship Model**
+**Modelo de Relationships**
 
 ```
 Person ─works_for→ Organization
@@ -141,15 +141,15 @@ Decision ─affects→ Project
 Decision ─made_by→ Person
 ```
 
-**Session Initialization Pattern**
+**Padrão de Inicialização de Session**
 
 ```javascript
 async function initializeSession(userId) {
-  // Retrieve core user context
+  // Recuperar contexto central do usuário
   const userNode = await searchNodes(userId);
 
   if (!userNode) {
-    // New user - create initial entity
+    // Novo usuário - criar entity inicial
     await createEntities([
       {
         name: userId,
@@ -160,7 +160,7 @@ async function initializeSession(userId) {
     return { status: "new_user", context: {} };
   }
 
-  // Parallel retrieval for performance
+  // Retrieval paralelo para performance
   const [projects, technologies, recentDecisions, lastSession] =
     await Promise.all([
       getRelatedEntities(userId, "manages", { status: "active" }),
@@ -169,7 +169,7 @@ async function initializeSession(userId) {
       getRelatedEntities(userId, "had_session", { limit: 1 }),
     ]);
 
-  // Build context summary for system prompt
+  // Construir resumo de contexto para o system prompt
   const contextSummary = buildContextSummary({
     user: userNode,
     activeProjects: projects,
@@ -186,13 +186,13 @@ async function initializeSession(userId) {
 }
 ```
 
-**Progressive Memory Building**
+**Construção Progressiva de Memória**
 
 ```javascript
 async function processConversationTurn(message, response, context) {
   const extracted = await extractEntities(message, response);
 
-  // Update existing entities with new observations
+  // Atualizar entities existentes com novas observações
   for (const [entityName, observations] of Object.entries(extracted.updates)) {
     await addObservations([
       {
@@ -202,24 +202,24 @@ async function processConversationTurn(message, response, context) {
     ]);
   }
 
-  // Create new entities discovered in conversation
+  // Criar novas entities descobertas na conversa
   if (extracted.newEntities.length > 0) {
     await createEntities(extracted.newEntities);
   }
 
-  // Establish new relationships
+  // Estabelecer novos relationships
   if (extracted.relationships.length > 0) {
     await createRelations(extracted.relationships);
   }
 
-  // Handle potential conflicts
+  // Lidar com potenciais conflitos
   for (const conflict of extracted.conflicts) {
     await resolveConflict(conflict);
   }
 }
 
 async function resolveConflict(conflict) {
-  // Strategy: Prefer recent information, but flag for review
+  // Estratégia: preferir informação mais recente, mas sinalizar para revisão
   const resolution = {
     entityName: conflict.entity,
     contents: [
@@ -236,33 +236,33 @@ async function resolveConflict(conflict) {
 }
 ```
 
-**Memory Layers Architecture**
+**Arquitetura de Memory Layers**
 
-| Layer      | Scope                  | Examples                                      | Retrieval Priority |
-| ---------- | ---------------------- | --------------------------------------------- | ------------------ |
-| Immediate  | Current conversation   | Active topic, pending questions, code context | Highest            |
-| Session    | Current work session   | Today's project focus, files being edited     | High               |
-| Project    | Active project context | Tech stack, team members, conventions         | Medium             |
-| Historical | Long-term patterns     | Preferences, expertise areas, past decisions  | Low                |
+| Layer      | Escopo                  | Exemplos                                              | Prioridade de Retrieval |
+| ---------- | ----------------------- | ----------------------------------------------------- | ----------------------- |
+| Immediate  | Conversa atual          | Tópico ativo, perguntas pendentes, contexto de código | Mais alta               |
+| Session    | Sessão de trabalho atual | Foco de projeto do dia, arquivos sendo editados      | Alta                    |
+| Project    | Contexto do projeto ativo | Stack tecnológica, membros da equipe, convenções    | Média                   |
+| Historical | Padrões de longo prazo  | Preferências, áreas de expertise, decisões passadas   | Baixa                   |
 
-**Maintenance Procedures**
+**Procedimentos de Manutenção**
 
 ```javascript
-// Daily cleanup job
+// Job de cleanup diário
 async function performMaintenance() {
-  // Archive old sessions
+  // Arquivar sessions antigas
   await archiveEntities({
     type: "Session",
     olderThan: "30 days",
   });
 
-  // Consolidate redundant observations
+  // Consolidar observações redundantes
   await consolidateObservations({
     similarityThreshold: 0.9,
     keepMostRecent: true,
   });
 
-  // Flag stale project information
+  // Sinalizar informações de projeto obsoletas
   await flagForReview({
     type: "Project",
     noUpdatesFor: "90 days",
@@ -271,9 +271,9 @@ async function performMaintenance() {
 }
 ```
 
-**Context Injection for Responses**
+**Context Injection para Responses**
 
-When generating responses, inject relevant memory:
+Ao gerar responses, injetar memória relevante:
 
 ```javascript
 function buildSystemPrompt(basePrompt, memoryContext) {
@@ -296,8 +296,8 @@ ${memoryContext.decisions.map((d) => `- ${d.summary}`).join("\n")}
 
 ---
 
-## Related Prompts
+## Prompts Relacionados
 
-- [AI Agent Development Expert](../../specialized/ai-agents/autonomous-agent-development-expert.md) - Build agents that use memory
-- [Pipeline Design Architect](../data-engineering/pipeline-design-architect.md) - Design data flows for memory systems
-- [System Architecture Design Expert](../../technical-workflows/system-architecture-design-expert.md) - Architect memory infrastructure
+- [AI Agent Development Expert](../../specialized/ai-agents/autonomous-agent-development-expert.md) - Construir agents que usam memória
+- [Pipeline Design Architect](../data-engineering/pipeline-design-architect.md) - Projetar data flows para sistemas de memória
+- [System Architecture Design Expert](../../technical-workflows/system-architecture-design-expert.md) - Arquitetar infraestrutura de memória

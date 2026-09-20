@@ -1,13 +1,13 @@
-# DevOps Prompts
+# Prompts de DevOps
 
-Continuous integration and deployment prompts for operational excellence.
+Prompts de integração e implantação contínua para excelência operacional.
 
-## Available Prompts
+## Prompts Disponíveis
 
-### CI/CD Excellence
+### Excelência em CI/CD
 
-- [CI/CD Pipeline Optimizer](./cicd-pipeline-optimizer.md) - Advanced pipeline optimization and automation
+- [Otimizador de Pipelines CI/CD](./cicd-pipeline-optimizer.md) - Otimização e automação avançada de pipelines
 
 ---
 
-_Accelerate delivery with AI-enhanced DevOps practices._
+_Acelere entregas com práticas de DevOps aprimoradas por IA._

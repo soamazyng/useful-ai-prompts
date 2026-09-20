@@ -1,14 +1,14 @@
-# Software Engineering Prompts
+# Prompts de Engenharia de Software
 
-Professional software development prompts for code quality and system design.
+Prompts profissionais de desenvolvimento de software para qualidade de código e design de sistemas.
 
-## Available Prompts
+## Prompts Disponíveis
 
-### Development Excellence
+### Excelência em Desenvolvimento
 
-- [Fullstack Developer Architect](./fullstack-developer-architect.md) - End-to-end application development expertise
-- [Advanced Debugging Analyzer](./advanced-debugging-analyzer.md) - Systematic debugging and performance optimization
+- [Arquiteto Desenvolvedor Fullstack](./fullstack-developer-architect.md) - Expertise em desenvolvimento de aplicações de ponta a ponta
+- [Analisador Avançado de Debugging](./advanced-debugging-analyzer.md) - Debugging sistemático e otimização de desempenho
 
 ---
 
-_Elevate code quality with AI-enhanced engineering practices._
+_Eleve a qualidade do código com práticas de engenharia aprimoradas por IA._

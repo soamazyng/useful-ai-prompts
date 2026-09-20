@@ -1,83 +1,85 @@
-# Useful AI Prompts - Production-Ready AI Prompt Library
+# Useful AI Prompts - Biblioteca de Prompts de IA Prontos para Uso
+
+> *Este repositório é um fork traduzido para português do projeto original [useful-ai-prompts](https://github.com/aj-geddes/useful-ai-prompts), criado por [aj-geddes](https://github.com/aj-geddes).*
 
 [![Run in Smithery](https://smithery.ai/badge/skills/aj-geddes)](https://smithery.ai/skills?ns=aj-geddes&utm_source=github&utm_medium=badge)
 [![GitHub Stars](https://img.shields.io/github/stars/aj-geddes/useful-ai-prompts?style=social)](https://github.com/aj-geddes/useful-ai-prompts)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Prompts](https://img.shields.io/badge/Prompts-488+-green)](prompts/)
+[![Prompts](https://img.shields.io/badge/Prompts-679+-green)](prompts/)
 [![Skills](https://img.shields.io/badge/Skills-260+-orange)](skills/)
 [![Hooks](https://img.shields.io/badge/Hooks-7-purple)](hooks/)
 
-> **488 production-ready AI prompts, all following a standardized template with validated quality gates.**
+> **679 prompts de IA prontos para uso, todos seguindo um template padronizado com verificações de qualidade validadas.**
 
-Transform ChatGPT, Claude, and other AI assistants into expert consultants. Every prompt in this library passes 11 quality validation checks, ensuring consistent structure, clear deliverables, and measurable quality criteria.
-
----
-
-## What's Inside
-
-| Resource Type                     | Count | Description                                         |
-| --------------------------------- | ----- | --------------------------------------------------- |
-| **[AI Prompts](prompts/)**        | 488+  | Standardized expert prompts across 47 categories    |
-| **[Claude Code Skills](skills/)** | 260+  | Auto-triggering capabilities with code examples     |
-| **[Automation Hooks](hooks/)**    | 7     | Security, testing, formatting, and CI/CD automation |
+Transforme o ChatGPT, Claude e outros assistentes de IA em consultores especialistas. Cada prompt desta biblioteca passa por 11 verificações de qualidade, garantindo estrutura consistente, entregáveis claros e critérios de qualidade mensuráveis.
 
 ---
 
-## Standardized Prompt Format
+## O que tem aqui
 
-Every prompt follows the same validated structure:
+| Tipo de Recurso                   | Qtd   | Descrição                                                |
+| --------------------------------- | ----- | -------------------------------------------------------- |
+| **[Prompts de IA](prompts/)**     | 679+  | Prompts especializados padronizados em 47 categorias     |
+| **[Skills para Claude Code](skills/)** | 260+ | Habilidades com ativação automática e exemplos de código |
+| **[Hooks de Automação](hooks/)** | 7     | Segurança, testes, formatação e automação de CI/CD       |
+
+---
+
+## Formato Padronizado de Prompts
+
+Cada prompt segue a mesma estrutura validada:
 
 ```markdown
-# [Prompt Name]
+# [Nome do Prompt]
 
 ## Metadata
 
-- **ID**: `category-prompt-slug`
+- **ID**: `categoria-slug-do-prompt`
 - **Version**: 1.0.0
-- **Category**: Primary category
-- **Tags**: searchable, keywords, here
+- **Category**: Categoria principal
+- **Tags**: palavras, chave, aqui
 - **Complexity**: simple | intermediate | advanced
 - **Interaction**: single-shot | conversational | iterative
 - **Models**: Claude 3+, GPT-4+
 
 ## Overview
 
-2-3 sentences explaining what the prompt does and who it's for.
+2-3 frases explicando o que o prompt faz e para quem é.
 
 ## When to Use
 
-- Specific scenario 1
-- Specific scenario 2
+- Cenário específico 1
+- Cenário específico 2
 
-**Don't use for**: Anti-patterns where this prompt isn't appropriate
+**Não use para**: Anti-padrões onde este prompt não é apropriado
 
 ---
 
 ## Prompt
 
-<role>Expert identity with specific credentials and experience</role>
+<role>Identidade do especialista com credenciais e experiência específicas</role>
 
-<context>Situation, success criteria, and key assumptions</context>
+<context>Situação, critérios de sucesso e premissas principais</context>
 
 <input_handling>
-Required: Must-have inputs
-Optional: Inferred defaults when not provided
+Obrigatório: Inputs indispensáveis
+Opcional: Valores padrão inferidos quando não fornecidos
 </input_handling>
 
 <task>
-Clear steps (3-7) for what to accomplish
+Passos claros (3-7) do que deve ser realizado
 </task>
 
 <output_specification>
-Format, length, and structure requirements
+Requisitos de formato, extensão e estrutura
 </output_specification>
 
 <quality_criteria>
-Measurable standards for excellent output
+Padrões mensuráveis para uma saída de excelência
 </quality_criteria>
 
 <constraints>
-Hard boundaries and limitations
+Limites rígidos e restrições
 </constraints>
 
 ---
@@ -86,94 +88,95 @@ Hard boundaries and limitations
 
 ### Input
 
-Realistic user request (20-200 words)
+Solicitação realista do usuário (20-200 palavras)
 
 ### Output
 
-Representative response demonstrating quality (100-600 words)
+Resposta representativa demonstrando qualidade (100-600 palavras)
 
 ## Related Prompts
 
-Links to complementary prompts
+Links para prompts complementares
 ```
 
 ---
 
 ## XML Tag Structure
 
-The prompt section uses semantic XML tags for consistent parsing:
+A seção de prompt usa tags XML semânticas para análise consistente:
 
-| Tag                      | Purpose             | Content                                              |
-| ------------------------ | ------------------- | ---------------------------------------------------- |
-| `<role>`                 | Expert identity     | Specific credentials, experience, reasoning approach |
-| `<context>`              | Situation framing   | When used, success criteria, key assumptions         |
-| `<input_handling>`       | Input specification | Required vs optional inputs with defaults            |
-| `<task>`                 | Process steps       | 3-7 numbered action steps                            |
-| `<output_specification>` | Deliverable format  | Format, length, structure, must-include elements     |
-| `<quality_criteria>`     | Success measures    | Objective standards and anti-patterns                |
-| `<constraints>`          | Hard boundaries     | Non-negotiable limits on scope/format                |
+| Tag                      | Purpose                    | Content                                                     |
+| ------------------------ | -------------------------- | ----------------------------------------------------------- |
+| `<role>`                 | Expert identity            | Credenciais, experiência, abordagem de raciocínio           |
+| `<context>`              | Situation framing          | Quando usar, critérios de sucesso, premissas principais     |
+| `<input_handling>`       | Input specification        | Inputs obrigatórios vs opcionais com valores padrão         |
+| `<task>`                 | Process steps              | 3-7 passos de ação numerados                                |
+| `<output_specification>` | Deliverable format         | Formato, extensão, estrutura, elementos obrigatórios        |
+| `<quality_criteria>`     | Success metrics            | Padrões objetivos e anti-padrões                            |
+| `<constraints>`          | Hard limits                | Restrições não negociáveis de escopo/formato                |
 
 ---
 
-## Quality Gates
+## Quality Checks
 
-Every prompt passes these 11 validation checks:
+Cada prompt passa por estas 11 verificações de validação:
 
-| Gate                  | Requirement                                                                                |
-| --------------------- | ------------------------------------------------------------------------------------------ |
-| `metadata_complete`   | All required fields present (ID, Version, Category, Tags, Complexity, Interaction, Models) |
-| `overview_concise`    | 3 sentences or fewer, no marketing fluff                                                   |
-| `role_specific`       | Concrete expertise defined, not "I'll help you"                                            |
-| `inputs_categorized`  | Required vs optional distinguished with defaults                                           |
-| `task_structured`     | 3-7 clear numbered steps                                                                   |
-| `outputs_specified`   | Format + length + requirements for each deliverable                                        |
-| `criteria_measurable` | Objective quality standards, not vague aspirations                                         |
-| `example_realistic`   | Input shows real usage (20-200 words)                                                      |
-| `example_concise`     | Output demonstrates pattern (100-600 words)                                                |
-| `no_duplication`      | No repeated information across sections                                                    |
-| `copy_paste_ready`    | Prompt section is standalone and clearly delimited                                         |
+| Check                 | Requirement                                                                                          |
+| --------------------- | ---------------------------------------------------------------------------------------------------- |
+| `metadata_complete`   | Todos os campos obrigatórios presentes (ID, Version, Category, Tags, Complexity, Interaction, Models) |
+| `overview_concise`    | No máximo 3 frases, sem linguagem promocional                                                        |
+| `role_specific`       | Expertise concreta definida, não apenas "vou te ajudar"                                              |
+| `inputs_categorized`  | Obrigatórios vs opcionais distinguidos com valores padrão                                            |
+| `task_structured`     | 3-7 passos claros e numerados                                                                        |
+| `outputs_specified`   | Formato + extensão + requisitos para cada entregável                                                 |
+| `criteria_measurable` | Padrões de qualidade objetivos, não aspirações vagas                                                 |
+| `example_realistic`   | Entrada mostra uso real (20-200 palavras)                                                            |
+| `example_concise`     | Saída demonstra o padrão (100-600 palavras)                                                          |
+| `no_duplication`      | Sem informações repetidas entre seções                                                               |
+| `copy_paste_ready`    | Seção do prompt é independente e claramente delimitada                                               |
 
 ---
 
 ## Quick Start
 
-### Using Prompts
+### Using the Prompts
 
-1. **Browse** the [prompts directory](prompts/) or [web interface](https://aj-geddes.github.io/useful-ai-prompts/)
-2. **Copy** the content within the `## Prompt` section (including XML tags)
-3. **Paste** into ChatGPT, Claude, or your preferred AI assistant
-4. **Provide** your specific input - the prompt handles the rest
+1. **Navegue** pelo [diretório de prompts](prompts/) ou pela [interface web](https://aj-geddes.github.io/useful-ai-prompts/)
+2. **Copie** o conteúdo da seção `## Prompt` (incluindo as tags XML)
+3. **Cole** no ChatGPT, Claude ou no seu assistente de IA preferido
+4. **Forneça** sua entrada específica — o prompt cuida do resto
 
 ### Example: Competitive Analysis
 
 ```text
 <role>
-You are a competitive intelligence strategist with 12+ years of experience
-in market analysis, having led competitive strategy for both startups and
-Fortune 500 companies.
+Você é um estrategista de inteligência competitiva com mais de 12 anos de
+experiência em análise de mercado, tendo liderado estratégia competitiva
+tanto em startups quanto em empresas Fortune 500.
 </role>
 
 <context>
-Businesses need competitive intelligence to make informed strategic decisions.
-Success means identifying specific opportunities that inform immediate action.
+Empresas precisam de inteligência competitiva para tomar decisões estratégicas
+informadas. Sucesso significa identificar oportunidades específicas que orientem
+ações imediatas.
 </context>
 
 <input_handling>
-Required: Industry, top competitors, current market position
-Infer if not provided: Geographic scope, analysis timeline
+Obrigatório: Setor, principais concorrentes, posição atual no mercado
+Inferir se não fornecido: Escopo geográfico, linha do tempo da análise
 </input_handling>
 
 <task>
-1. Map competitive landscape with positioning matrix
-2. Profile key competitors (strengths, weaknesses, strategies)
-3. Identify competitive gaps and white space opportunities
-4. Create action recommendations with timelines
+1. Mapear o cenário competitivo com matriz de posicionamento
+2. Criar perfis dos principais concorrentes (forças, fraquezas, estratégias)
+3. Identificar lacunas competitivas e oportunidades de espaço em branco
+4. Elaborar recomendações de ação com cronogramas
 </task>
 
 <output_specification>
-- Format: Strategic analysis with visual frameworks
-- Length: 500-800 words
-- Must include: Positioning map, competitor profiles, action plan
+- Formato: Análise estratégica com frameworks visuais
+- Extensão: 500-800 palavras
+- Deve incluir: Mapa de posicionamento, perfis de concorrentes, plano de ação
 </output_specification>
 ```
 
@@ -181,75 +184,76 @@ Infer if not provided: Geographic scope, analysis timeline
 
 ## Prompt Categories
 
-### Business & Strategy
+### Negócios e Estratégia
 
-| Category                                          | Prompts | Key Use Cases                                 |
-| ------------------------------------------------- | ------- | --------------------------------------------- |
-| [Business Analysis](prompts/business/)            | 45+     | Requirements engineering, process improvement |
-| [Finance](prompts/finance/)                       | 30+     | Financial modeling, investment analysis       |
-| [Marketing](prompts/business/marketing/)          | 25+     | Campaign strategy, brand development          |
-| [Operations](prompts/operations/)                 | 35+     | Process optimization, supply chain            |
-| [Project Management](prompts/project-management/) | 40+     | Risk assessment, agile methodologies          |
+| Categoria                                                | Prompts | Principais Casos de Uso                         |
+| -------------------------------------------------------- | ------- | ------------------------------------------------ |
+| [Análise de Negócios](prompts/business/)                 | 45+     | Engenharia de requisitos, melhoria de processos  |
+| [Finanças](prompts/finance/)                             | 30+     | Modelagem financeira, análise de investimentos   |
+| [Marketing](prompts/business/marketing/)                 | 25+     | Estratégia de campanhas, desenvolvimento de marca |
+| [Operações](prompts/operations/)                         | 35+     | Otimização de processos, cadeia de suprimentos   |
+| [Gestão de Projetos](prompts/project-management/)        | 40+     | Avaliação de riscos, metodologias ágeis          |
 
-### Technology & Engineering
+### Tecnologia e Engenharia
 
-| Category                                        | Prompts | Key Use Cases                           |
-| ----------------------------------------------- | ------- | --------------------------------------- |
-| [Software Engineering](prompts/technical/)      | 50+     | Architecture design, code review        |
-| [DevOps](prompts/technical/devops/)             | 25+     | CI/CD pipelines, infrastructure as code |
-| [Security](prompts/security/)                   | 20+     | Threat modeling, incident response      |
-| [Data Science](prompts/technical/data-science/) | 30+     | ML development, data analysis           |
+| Categoria                                                  | Prompts | Principais Casos de Uso                          |
+| ---------------------------------------------------------- | ------- | ------------------------------------------------ |
+| [Engenharia de Software](prompts/technical/)               | 50+     | Design de arquitetura, revisão de código         |
+| [DevOps](prompts/technical/devops/)                        | 25+     | Pipelines de CI/CD, infraestrutura como código   |
+| [Segurança](prompts/security/)                             | 20+     | Modelagem de ameaças, resposta a incidentes      |
+| [Ciência de Dados](prompts/technical/data-science/)        | 30+     | Desenvolvimento de ML, análise de dados          |
 
-### Emerging Technologies
+### Tecnologias Emergentes
 
-| Category                                          | Prompts | Key Use Cases                               |
-| ------------------------------------------------- | ------- | ------------------------------------------- |
-| [Quantum Computing](prompts/quantum-computing/)   | 14      | Algorithm development, circuit optimization |
-| [Blockchain & Web3](prompts/blockchain/)          | 15      | Smart contracts, DeFi protocols             |
-| [Biotechnology](prompts/biotechnology/)           | 15      | Drug discovery, bioinformatics              |
-| [Space Economy](prompts/space-economy/)           | 24      | Satellite operations, mission planning      |
-| [Renewable Energy](prompts/renewable-energy/)     | 19      | Solar development, grid integration         |
-| [Healthcare Digital](prompts/healthcare-digital/) | 20      | Telehealth, AI diagnostics                  |
+| Categoria                                                    | Prompts | Principais Casos de Uso                              |
+| ------------------------------------------------------------ | ------- | ---------------------------------------------------- |
+| [Computação Quântica](prompts/quantum-computing/)            | 14      | Desenvolvimento de algoritmos, otimização de circuitos |
+| [Blockchain e Web3](prompts/blockchain/)                     | 15      | Contratos inteligentes, protocolos DeFi              |
+| [Biotecnologia](prompts/biotechnology/)                      | 15      | Descoberta de medicamentos, bioinformática           |
+| [Economia Espacial](prompts/space-economy/)                  | 24      | Operações de satélite, planejamento de missões       |
+| [Energia Renovável](prompts/renewable-energy/)               | 19      | Desenvolvimento solar, integração à rede             |
+| [Saúde Digital](prompts/healthcare-digital/)                 | 20      | Telemedicina, diagnósticos por IA                    |
 
-### Creative & Communication
+### Criatividade e Comunicação
 
-| Category                                                | Prompts | Key Use Cases                        |
-| ------------------------------------------------------- | ------- | ------------------------------------ |
-| [Creative](prompts/creative/)                           | 25+     | Graphic design, UX research          |
-| [Communication](prompts/communication/)                 | 30+     | Presentations, technical writing     |
-| [Learning & Development](prompts/learning-development/) | 20+     | Curriculum design, training programs |
+| Categoria                                                        | Prompts | Principais Casos de Uso                            |
+| ---------------------------------------------------------------- | ------- | -------------------------------------------------- |
+| [Criatividade](prompts/creative/)                                | 25+     | Design gráfico, pesquisa de UX                     |
+| [Comunicação](prompts/communication/)                            | 30+     | Apresentações, redação técnica                     |
+| [Aprendizagem e Desenvolvimento](prompts/learning-development/) | 20+     | Design de currículo, programas de treinamento      |
 
 ---
 
-## Claude Code Skills (260+)
+## Skills for Claude Code (260+)
 
-Skills auto-trigger when Claude Code detects relevant keywords:
+As skills são ativadas automaticamente quando o Claude Code detecta palavras-chave relevantes:
 
-| Domain                      | Skills | Examples                                       |
-| --------------------------- | ------ | ---------------------------------------------- |
-| **Software Development**    | 35     | refactor-legacy-code, code-review-analysis     |
-| **DevOps & Infrastructure** | 20     | docker-containerization, kubernetes-deployment |
-| **Testing & QA**            | 15     | unit-testing-framework, e2e-testing            |
-| **Security**                | 15     | vulnerability-scanning, oauth-implementation   |
-| **API & Integration**       | 12     | rest-api-design, graphql-implementation        |
-| **Database**                | 12     | sql-optimization, schema-design                |
+| Domínio                          | Skills | Exemplos                                           |
+| -------------------------------- | ------ | -------------------------------------------------- |
+| **Desenvolvimento de Software**  | 35     | refactor-legacy-code, code-review-analysis         |
+| **DevOps e Infraestrutura**      | 20     | docker-containerization, kubernetes-deployment     |
+| **Testes e QA**                  | 15     | unit-testing-framework, e2e-testing                |
+| **Segurança**                    | 15     | vulnerability-scanning, oauth-implementation       |
+| **API e Integração**             | 12     | rest-api-design, graphql-implementation            |
+| **Banco de Dados**               | 12     | sql-optimization, schema-design                    |
 
-See [SKILLS-MATRIX.md](SKILLS-MATRIX.md) for the complete reference.
+Consulte [SKILLS-MATRIX.md](SKILLS-MATRIX.md) para a referência completa.
 
 ---
 
 ## Automation Hooks (7)
 
-| Hook                                            | Trigger       | Purpose                              |
-| ----------------------------------------------- | ------------- | ------------------------------------ |
-| [security-scan](hooks/security-scan/)           | Pre-commit    | Scan for vulnerabilities and secrets |
-| [pre-commit-linting](hooks/pre-commit-linting/) | Pre-commit    | Code formatting enforcement          |
-| [test-runner](hooks/test-runner/)               | Pre-commit    | Automated test execution             |
-| [dependency-check](hooks/dependency-check/)     | Pre-commit    | Dependency vulnerability audit       |
-| [auto-format](hooks/auto-format/)               | Post-save     | Automatic code formatting            |
-| [session-setup](hooks/session-setup/)           | Session start | Environment initialization           |
+| Hook                                            | Gatilho        | Finalidade                                |
+| ----------------------------------------------- | -------------- | ----------------------------------------- |
+| [security-scan](hooks/security-scan/)           | Pré-commit     | Escanear vulnerabilidades e segredos      |
+| [pre-commit-linting](hooks/pre-commit-linting/) | Pré-commit     | Aplicação de formatação de código         |
+| [test-runner](hooks/test-runner/)               | Pré-commit     | Execução automatizada de testes           |
+| [dependency-check](hooks/dependency-check/)     | Pré-commit     | Auditoria de vulnerabilidades em dependências |
+| [breaking-change-detection](hooks/breaking-change-detection/) | Pré-commit | Detecção de mudanças incompatíveis        |
+| [auto-format](hooks/auto-format/)               | Pós-salvamento | Formatação automática de código           |
+| [session-setup](hooks/session-setup/)           | Início de sessão | Inicialização do ambiente               |
 
-See [HOOKS-LIBRARY.md](HOOKS-LIBRARY.md) for installation and configuration.
+Consulte [HOOKS-LIBRARY.md](HOOKS-LIBRARY.md) para instalação e configuração.
 
 ---
 
@@ -257,21 +261,21 @@ See [HOOKS-LIBRARY.md](HOOKS-LIBRARY.md) for installation and configuration.
 
 ```
 useful-ai-prompts/
-├── prompts/               # 488+ standardized prompts by category
-│   ├── analysis/          # Competitive, data, financial analysis
-│   ├── technical/         # Software, DevOps, security, data science
-│   ├── business/          # Finance, marketing, operations
-│   ├── blockchain/        # Web3, DeFi, smart contracts
-│   ├── quantum-computing/ # Quantum algorithms, circuits
-│   └── ...                # 47 total categories
-├── skills/                # 260+ Claude Code skills
-├── hooks/                 # 7 automation hooks
-├── docs/                  # Jekyll website (GitHub Pages)
-├── .claude/skills/        # Prompt refactoring skill
-│   └── prompt-refactor/   # Template spec and validation
-├── PROMPT-INDEX.json      # Machine-readable prompt catalog
-├── SKILLS-MATRIX.md       # Complete skills reference
-└── HOOKS-LIBRARY.md       # Hooks documentation
+├── prompts/               # 679+ prompts padronizados por categoria
+│   ├── analysis/          # Análise competitiva, de dados, financeira
+│   ├── technical/         # Software, DevOps, segurança, ciência de dados
+│   ├── business/          # Finanças, marketing, operações
+│   ├── blockchain/        # Web3, DeFi, contratos inteligentes
+│   ├── quantum-computing/ # Algoritmos quânticos, circuitos
+│   └── ...                # 47 categorias no total
+├── skills/                # 260+ skills para Claude Code
+├── hooks/                 # 7 hooks de automação
+├── docs/                  # Site Jekyll (GitHub Pages)
+├── .claude/skills/        # Skill de refatoração de prompts
+│   └── prompt-refactor/   # Especificação de template e validação
+├── PROMPT-INDEX.json      # Catálogo de prompts legível por máquina
+├── SKILLS-MATRIX.md       # Referência completa de skills
+└── HOOKS-LIBRARY.md       # Documentação de hooks
 ```
 
 ---
@@ -283,67 +287,67 @@ useful-ai-prompts/
 ```python
 import json
 
-# Load prompt index
+# Carregar índice de prompts
 with open('PROMPT-INDEX.json') as f:
     prompts = json.load(f)
 
-# Select by category
-analysis_prompts = [p for p in prompts if p['category'] == 'analysis']
+# Selecionar por categoria
+prompts_analise = [p for p in prompts if p['category'] == 'analysis']
 ```
 
-See [AI-AGENT-GUIDE.md](AI-AGENT-GUIDE.md) for task classification and API integration patterns.
+Consulte [AI-AGENT-GUIDE.md](AI-AGENT-GUIDE.md) para classificação de tarefas e padrões de integração com APIs.
 
-### For Human Users
+### For Users
 
-See [README-HUMANS.md](README-HUMANS.md) for getting started, customization tips, and real-world examples.
+Consulte [README-HUMANS.md](README-HUMANS.md) para primeiros passos, dicas de personalização e exemplos práticos.
 
 ---
 
 ## Web Interface
 
-Browse prompts with search and filtering at:
+Navegue pelos prompts com busca e filtros em:
 **[https://aj-geddes.github.io/useful-ai-prompts/](https://aj-geddes.github.io/useful-ai-prompts/)**
 
-Features:
+Funcionalidades:
 
-- Category-based navigation
-- Full-text search
-- Responsive design
-- Direct copy-to-clipboard
+- Navegação por categorias
+- Busca por texto completo
+- Design responsivo
+- Copiar para a área de transferência
 
 ---
 
 ## Contributing
 
-We welcome contributions! All new prompts must:
+Contribuições são bem-vindas! Todos os novos prompts devem:
 
-1. Follow the standardized template structure
-2. Pass all 11 quality gates
-3. Include realistic example usage
+1. Seguir a estrutura do template padronizado
+2. Passar por todas as 11 verificações de qualidade
+3. Incluir exemplos de uso realistas
 
-Use the prompt-refactor skill for validation:
+Use a skill de refatoração de prompts para validação:
 
 ```bash
 ./.claude/skills/prompt-refactor/scripts/validate-prompt.sh ./prompts/my-prompt.md
 ```
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for complete guidelines.
+Consulte [CONTRIBUTING.md](CONTRIBUTING.md) para as diretrizes completas.
 
 ---
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) for details.
+Licença MIT — veja [LICENSE](LICENSE) para detalhes.
 
 ---
 
 ## Links
 
 - **Website**: [https://aj-geddes.github.io/useful-ai-prompts/](https://aj-geddes.github.io/useful-ai-prompts/)
-- **GitHub**: [https://github.com/aj-geddes/useful-ai-prompts](https://github.com/aj-geddes/useful-ai-prompts)
-- **Issues**: [Report bugs or request features](https://github.com/aj-geddes/useful-ai-prompts/issues)
-- **Discussions**: [Community Q&A](https://github.com/aj-geddes/useful-ai-prompts/discussions)
+- **Original Repository**: [https://github.com/aj-geddes/useful-ai-prompts](https://github.com/aj-geddes/useful-ai-prompts)
+- **Issues**: [Reportar bugs ou solicitar funcionalidades](https://github.com/aj-geddes/useful-ai-prompts/issues)
+- **Discussions**: [Perguntas e respostas da comunidade](https://github.com/aj-geddes/useful-ai-prompts/discussions)
 
 ---
 
-**Keywords**: AI prompts, ChatGPT prompts, Claude prompts, prompt engineering, standardized prompts, AI productivity, Claude Code skills, prompt library, LLM prompts, professional AI tools
+**Palavras-chave**: prompts de IA, prompts ChatGPT, prompts Claude, engenharia de prompts, prompts padronizados, produtividade com IA, skills Claude Code, biblioteca de prompts, prompts LLM, ferramentas profissionais de IA

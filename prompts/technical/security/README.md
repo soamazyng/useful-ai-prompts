@@ -1,13 +1,13 @@
-# Security Prompts
+# Prompts de Segurança
 
-Enterprise security architecture and defense strategy prompts.
+Prompts de arquitetura de segurança empresarial e estratégia de defesa.
 
-## Available Prompts
+## Prompts Disponíveis
 
-### Security Architecture
+### Arquitetura de Segurança
 
-- [Cybersecurity Defense Architect](./cybersecurity-defense-architect.md) - Comprehensive security architecture design
+- [Arquiteto de Defesa em Cibersegurança](./cybersecurity-defense-architect.md) - Design abrangente de arquitetura de segurança
 
 ---
 
-_Build impenetrable defenses with AI-driven security strategies._
+_Construa defesas impenetráveis com estratégias de segurança orientadas por IA._

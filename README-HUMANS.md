@@ -1,404 +1,404 @@
-# Useful AI Prompts - User Guide
+# Useful AI Prompts - Guia do Usuário
 
-> Transform your AI interactions with expert-level prompts designed by professionals, for professionals.
+> Transforme suas interações com IA usando prompts de nível especialista, projetados por profissionais, para profissionais.
 
-## Welcome!
+## Bem-vindo!
 
-This library contains **820+ resources** to help you get the most out of AI assistants like ChatGPT, Claude, and others:
+Esta biblioteca contém **820+ recursos** para ajudá-lo a tirar o máximo proveito de assistentes de IA como ChatGPT, Claude e outros:
 
-- **557+ Expert Prompts** - Transform AI into specialized consultants
-- **260+ Claude Code Skills** - Auto-triggering capabilities for developers
-- **7 Automation Hooks** - Security, testing, and CI/CD automation
+- **557+ Prompts Especializados** - Transforme a IA em consultores especializados
+- **260+ Skills para Claude Code** - Habilidades com ativação automática para desenvolvedores
+- **7 Hooks de Automação** - Segurança, testes e automação de CI/CD
 
-Each prompt transforms your AI into a domain expert with deep professional knowledge.
+Cada prompt transforma sua IA em um especialista do domínio com profundo conhecimento profissional.
 
 ---
 
-## Quick Start
+## Início Rápido
 
-### Step 1: Find Your Prompt
+### Passo 1: Encontre Seu Prompt
 
-**Option A: Browse the Website**
-Visit [https://aj-geddes.github.io/useful-ai-prompts/](https://aj-geddes.github.io/useful-ai-prompts/) for searchable, categorized browsing.
+**Opção A: Navegue pelo Website**
+Visite [https://aj-geddes.github.io/useful-ai-prompts/](https://aj-geddes.github.io/useful-ai-prompts/) para navegação com busca e categorias.
 
-**Option B: Browse by Category**
-See the category sections below or explore the [prompts directory](prompts/).
+**Opção B: Navegue por Categoria**
+Veja as seções de categorias abaixo ou explore o [diretório de prompts](prompts/).
 
-### Step 2: Copy the Prompt
+### Passo 2: Copie o Prompt
 
-Open the prompt file and copy the entire content.
+Abra o arquivo do prompt e copie todo o conteúdo.
 
-### Step 3: Customize Variables
+### Passo 3: Personalize as Variáveis
 
-Replace placeholders marked with `{{double_brackets}}`:
+Substitua os espaços reservados marcados com `{{chaves_duplas}}`:
 
 ```markdown
-CONTEXT:
+CONTEXTO:
 
-- **Company**: {{company_name}} → Replace with: "Acme Corp"
-- **Industry**: {{industry}} → Replace with: "E-commerce"
-- **Challenge**: {{specific_challenge}} → Replace with: "Reduce cart abandonment"
+- **Empresa**: {{company_name}} → Substitua por: "Acme Corp"
+- **Setor**: {{industry}} → Substitua por: "E-commerce"
+- **Desafio**: {{specific_challenge}} → Substitua por: "Reduzir abandono de carrinho"
 ```
 
-### Step 4: Paste and Run
+### Passo 4: Cole e Execute
 
-Paste into ChatGPT, Claude, or your preferred AI assistant and watch the magic happen!
+Cole no ChatGPT, Claude ou no seu assistente de IA preferido e veja a mágica acontecer!
 
 ---
 
-## Browse by Profession
+## Navegue por Profissão
 
 <details>
-<summary><b>Business & Management</b></summary>
+<summary><b>Negócios e Gestão</b></summary>
 
-### For Executives & Managers
+### Para Executivos e Gestores
 
-| Prompt                                                                             | Description                                                |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| [Marketing Manager](prompts/business/marketing/marketing-manager-strategist.md)    | Lead marketing teams, campaigns, and brand strategy        |
-| [Operations Manager](prompts/business/operations/operations-manager-excellence.md) | Drive operational excellence and process optimization      |
-| [HR Leader](prompts/human-resources/hr-excellence-leader.md)                       | Transform talent acquisition, culture, and development     |
-| [Project Manager](prompts/project-management/)                                     | Risk assessment, resource planning, stakeholder management |
+| Prompt                                                                             | Descrição                                                     |
+| ---------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| [Gerente de Marketing](prompts/business/marketing/marketing-manager-strategist.md) | Liderar equipes de marketing, campanhas e estratégia de marca  |
+| [Gerente de Operações](prompts/business/operations/operations-manager-excellence.md) | Impulsionar excelência operacional e otimização de processos |
+| [Líder de RH](prompts/human-resources/hr-excellence-leader.md)                    | Transformar aquisição de talentos, cultura e desenvolvimento  |
+| [Gerente de Projetos](prompts/project-management/)                                 | Avaliação de riscos, planejamento de recursos, gestão de stakeholders |
 
-### For Analysts & Specialists
+### Para Analistas e Especialistas
 
-| Prompt                                                                         | Description                                          |
-| ------------------------------------------------------------------------------ | ---------------------------------------------------- |
-| [Financial Analyst](prompts/finance/financial-analysis-expert.md)              | Investment analysis, valuation, portfolio management |
-| [Business Analyst](prompts/business/business-analysis/)                        | Requirements engineering, process improvement        |
-| [Supply Chain Manager](prompts/operations/supply-chain-excellence-director.md) | Logistics optimization, network design               |
-| [Compliance Officer](prompts/business/legal/compliance-officer-expert.md)      | Regulatory compliance, risk management               |
+| Prompt                                                                         | Descrição                                                  |
+| ------------------------------------------------------------------------------ | ---------------------------------------------------------- |
+| [Analista Financeiro](prompts/finance/financial-analysis-expert.md)            | Análise de investimentos, avaliação, gestão de portfólio   |
+| [Analista de Negócios](prompts/business/business-analysis/)                    | Engenharia de requisitos, melhoria de processos            |
+| [Gerente de Cadeia de Suprimentos](prompts/operations/supply-chain-excellence-director.md) | Otimização logística, design de rede              |
+| [Oficial de Conformidade](prompts/business/legal/compliance-officer-expert.md) | Conformidade regulatória, gestão de riscos                 |
 
 </details>
 
 <details>
-<summary><b>Technology & Engineering</b></summary>
+<summary><b>Tecnologia e Engenharia</b></summary>
 
-### For Developers
+### Para Desenvolvedores
 
-| Prompt                                                                                          | Description                                    |
-| ----------------------------------------------------------------------------------------------- | ---------------------------------------------- |
-| [Full-Stack Developer](prompts/technical/software-engineering/fullstack-developer-architect.md) | Complete application development, architecture |
-| [DevOps Engineer](prompts/technical/devops/cicd-pipeline-optimizer.md)                          | CI/CD pipelines, infrastructure automation     |
-| [System Architect](prompts/technical/)                                                          | System design, scalability, microservices      |
+| Prompt                                                                                          | Descrição                                                |
+| ----------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| [Desenvolvedor Full-Stack](prompts/technical/software-engineering/fullstack-developer-architect.md) | Desenvolvimento completo de aplicações, arquitetura  |
+| [Engenheiro DevOps](prompts/technical/devops/cicd-pipeline-optimizer.md)                        | Pipelines de CI/CD, automação de infraestrutura          |
+| [Arquiteto de Sistemas](prompts/technical/)                                                     | Design de sistemas, escalabilidade, microsserviços       |
 
-### For Security & Data
+### Para Segurança e Dados
 
-| Prompt                                                                         | Description                                       |
-| ------------------------------------------------------------------------------ | ------------------------------------------------- |
-| [Security Architect](prompts/security/cybersecurity-defense-architect.md)      | Threat modeling, secure design, incident response |
-| [Data Scientist](prompts/technical/data-science/model-evaluation-framework.md) | ML model development, validation, deployment      |
-
-</details>
-
-<details>
-<summary><b>Creative & Design</b></summary>
-
-| Prompt                                                                                  | Description                                        |
-| --------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| [Graphic Designer](prompts/creative/design/graphic-design-expert.md)                    | Visual design, brand identity, marketing materials |
-| [UX Researcher](prompts/creative/ux-design/user-research-synthesizer.md)                | User research synthesis, experience optimization   |
-| [Content Strategist](prompts/creative/content-strategy/editorial-calendar-architect.md) | Content planning, editorial strategy               |
+| Prompt                                                                         | Descrição                                                        |
+| ------------------------------------------------------------------------------ | ---------------------------------------------------------------- |
+| [Arquiteto de Segurança](prompts/security/cybersecurity-defense-architect.md)  | Modelagem de ameaças, design seguro, resposta a incidentes       |
+| [Cientista de Dados](prompts/technical/data-science/model-evaluation-framework.md) | Desenvolvimento de modelos de ML, validação, implantação     |
 
 </details>
 
 <details>
-<summary><b>Emerging Technologies (2025 Expansion)</b></summary>
+<summary><b>Criatividade e Design</b></summary>
 
-### Quantum Computing
-
-| Prompt                                               | Description                                 |
-| ---------------------------------------------------- | ------------------------------------------- |
-| [Quantum Circuit Design](prompts/quantum-computing/) | Algorithm development, circuit optimization |
-| [Quantum ML](prompts/quantum-computing/)             | Quantum machine learning applications       |
-
-### Blockchain & Web3
-
-| Prompt                                            | Description                               |
-| ------------------------------------------------- | ----------------------------------------- |
-| [Smart Contract Development](prompts/blockchain/) | Solidity, security audits, DeFi protocols |
-| [Tokenization](prompts/blockchain/)               | Asset tokenization, NFT platforms         |
-
-### Biotechnology
-
-| Prompt                                   | Description                           |
-| ---------------------------------------- | ------------------------------------- |
-| [Drug Discovery](prompts/biotechnology/) | AI-powered screening, clinical trials |
-| [Genomics](prompts/biotechnology/)       | Bioinformatics, gene editing          |
-
-### Space Economy
-
-| Prompt                                           | Description                             |
-| ------------------------------------------------ | --------------------------------------- |
-| [Satellite Operations](prompts/space-economy/)   | Orbit design, ground systems            |
-| [Commercial Spaceflight](prompts/space-economy/) | Mission architecture, launch operations |
-
-### Renewable Energy
-
-| Prompt                                         | Description                             |
-| ---------------------------------------------- | --------------------------------------- |
-| [Solar Development](prompts/renewable-energy/) | Utility-scale projects, site assessment |
-| [Energy Storage](prompts/renewable-energy/)    | Battery systems, grid integration       |
-
-### Healthcare Digital
-
-| Prompt                                        | Description                                |
-| --------------------------------------------- | ------------------------------------------ |
-| [Telehealth](prompts/healthcare-digital/)     | Virtual care platforms, remote monitoring  |
-| [AI Diagnostics](prompts/healthcare-digital/) | Clinical decision support, medical imaging |
+| Prompt                                                                                  | Descrição                                                    |
+| --------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| [Designer Gráfico](prompts/creative/design/graphic-design-expert.md)                    | Design visual, identidade de marca, materiais de marketing   |
+| [Pesquisador de UX](prompts/creative/ux-design/user-research-synthesizer.md)            | Síntese de pesquisa com usuários, otimização de experiência  |
+| [Estrategista de Conteúdo](prompts/creative/content-strategy/editorial-calendar-architect.md) | Planejamento de conteúdo, estratégia editorial          |
 
 </details>
 
 <details>
-<summary><b>Specialized Industries</b></summary>
+<summary><b>Tecnologias Emergentes (Expansão 2025)</b></summary>
 
-| Prompt                                                                                | Description                                 |
-| ------------------------------------------------------------------------------------- | ------------------------------------------- |
-| [Pharmaceutical Researcher](prompts/healthcare/pharmaceutical-research-excellence.md) | Drug development, clinical trials           |
-| [Construction Director](prompts/engineering/construction-excellence-director.md)      | Project delivery, safety management         |
-| [Research Scientist](prompts/academic/research/research-excellence-scientist.md)      | Academic research, grant writing            |
-| [Executive Assistant](prompts/administrative/executive-excellence-partner.md)         | Strategic administrative support            |
-| [Customer Service Leader](prompts/customer-service/)                                  | Support operations, experience optimization |
+### Computação Quântica
+
+| Prompt                                                       | Descrição                                           |
+| ------------------------------------------------------------ | --------------------------------------------------- |
+| [Design de Circuitos Quânticos](prompts/quantum-computing/)  | Desenvolvimento de algoritmos, otimização de circuitos |
+| [ML Quântico](prompts/quantum-computing/)                    | Aplicações de aprendizado de máquina quântico       |
+
+### Blockchain e Web3
+
+| Prompt                                                          | Descrição                                           |
+| --------------------------------------------------------------- | --------------------------------------------------- |
+| [Desenvolvimento de Smart Contracts](prompts/blockchain/)       | Solidity, auditorias de segurança, protocolos DeFi  |
+| [Tokenização](prompts/blockchain/)                              | Tokenização de ativos, plataformas de NFT           |
+
+### Biotecnologia
+
+| Prompt                                           | Descrição                                          |
+| ------------------------------------------------ | -------------------------------------------------- |
+| [Descoberta de Medicamentos](prompts/biotechnology/) | Triagem alimentada por IA, ensaios clínicos    |
+| [Genômica](prompts/biotechnology/)               | Bioinformática, edição genética                    |
+
+### Economia Espacial
+
+| Prompt                                                      | Descrição                                          |
+| ----------------------------------------------------------- | -------------------------------------------------- |
+| [Operações de Satélite](prompts/space-economy/)             | Design de órbita, sistemas de solo                 |
+| [Voo Espacial Comercial](prompts/space-economy/)            | Arquitetura de missão, operações de lançamento     |
+
+### Energia Renovável
+
+| Prompt                                                      | Descrição                                             |
+| ----------------------------------------------------------- | ----------------------------------------------------- |
+| [Desenvolvimento Solar](prompts/renewable-energy/)          | Projetos de grande escala, avaliação de local         |
+| [Armazenamento de Energia](prompts/renewable-energy/)       | Sistemas de baterias, integração à rede              |
+
+### Saúde Digital
+
+| Prompt                                                      | Descrição                                                  |
+| ----------------------------------------------------------- | ---------------------------------------------------------- |
+| [Telemedicina](prompts/healthcare-digital/)                 | Plataformas de atendimento virtual, monitoramento remoto   |
+| [Diagnósticos por IA](prompts/healthcare-digital/)          | Apoio à decisão clínica, imagens médicas                   |
+
+</details>
+
+<details>
+<summary><b>Setores Especializados</b></summary>
+
+| Prompt                                                                                | Descrição                                              |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| [Pesquisador Farmacêutico](prompts/healthcare/pharmaceutical-research-excellence.md)  | Desenvolvimento de medicamentos, ensaios clínicos      |
+| [Diretor de Construção](prompts/engineering/construction-excellence-director.md)      | Entrega de projetos, gestão de segurança               |
+| [Cientista Pesquisador](prompts/academic/research/research-excellence-scientist.md)   | Pesquisa acadêmica, redação de propostas de fomento    |
+| [Assistente Executivo](prompts/administrative/executive-excellence-partner.md)        | Apoio administrativo estratégico                       |
+| [Líder de Atendimento ao Cliente](prompts/customer-service/)                          | Operações de suporte, otimização de experiência        |
 
 </details>
 
 ---
 
-## What You Get
+## O que Você Recebe
 
-Every prompt delivers structured, professional output:
+Cada prompt entrega um resultado estruturado e profissional:
 
-### Example Output Sections
+### Exemplo de Seções do Resultado
 
-1. **Executive Summary** - Key insights at a glance
-2. **Detailed Analysis** - Deep dive into your challenge
-3. **Strategic Recommendations** - Prioritized action items
-4. **Implementation Roadmap** - Step-by-step execution plan
-5. **Risk Assessment** - Potential issues and mitigations
-6. **Success Metrics** - How to measure progress
+1. **Resumo Executivo** - Insights principais em uma visão geral
+2. **Análise Detalhada** - Aprofundamento no seu desafio
+3. **Recomendações Estratégicas** - Itens de ação priorizados
+4. **Roteiro de Implementação** - Plano de execução passo a passo
+5. **Avaliação de Riscos** - Problemas potenciais e mitigações
+6. **Métricas de Sucesso** - Como medir o progresso
 
-### Output Quality
+### Qualidade do Resultado
 
-- **Comprehensive**: 400-800+ lines of structured content
-- **Actionable**: Step-by-step guidance you can implement immediately
-- **Professional**: Industry-standard frameworks and methodologies
-
----
-
-## Real-World Examples
-
-### Example 1: Marketing Campaign
-
-**Your Situation**: "I need to launch a new product in a competitive market"
-
-**Using**: [Marketing Manager Strategist](prompts/business/marketing/marketing-manager-strategist.md)
-
-**What You Get**:
-
-- Complete go-to-market strategy
-- Campaign timeline with milestones
-- Budget allocation framework
-- Team structure and responsibilities
-- Performance tracking dashboard
+- **Abrangente**: 400-800+ linhas de conteúdo estruturado
+- **Acionável**: Orientação passo a passo que você pode implementar imediatamente
+- **Profissional**: Frameworks e metodologias padrão da indústria
 
 ---
 
-### Example 2: Technical Architecture
+## Exemplos do Mundo Real
 
-**Your Situation**: "We need to migrate our monolith to microservices"
+### Exemplo 1: Campanha de Marketing
 
-**Using**: [Full-Stack Developer Architect](prompts/technical/software-engineering/fullstack-developer-architect.md)
+**Sua Situação**: "Preciso lançar um novo produto em um mercado competitivo"
 
-**What You Get**:
+**Usando**: [Marketing Manager Strategist](prompts/business/marketing/marketing-manager-strategist.md)
 
-- Migration strategy and phases
-- Service decomposition plan
-- Technology stack recommendations
-- Risk mitigation strategies
-- DevOps pipeline design
+**O que Você Recebe**:
 
----
-
-### Example 3: Financial Analysis
-
-**Your Situation**: "I need to evaluate an acquisition target"
-
-**Using**: [Financial Analysis Expert](prompts/finance/financial-analysis-expert.md)
-
-**What You Get**:
-
-- DCF valuation model
-- Comparable company analysis
-- Synergy assessment
-- Risk factors and sensitivity analysis
-- Investment recommendation
+- Estratégia completa de go-to-market
+- Cronograma de campanha com marcos
+- Framework de alocação de orçamento
+- Estrutura de equipe e responsabilidades
+- Painel de acompanhamento de desempenho
 
 ---
 
-## Pro Tips
+### Exemplo 2: Arquitetura Técnica
 
-### Getting the Best Results
+**Sua Situação**: "Precisamos migrar nosso monolito para microsserviços"
 
-1. **Be Specific** - More context = better output
-2. **Use Examples** - Show what you're looking for
-3. **Iterate** - Use initial output as a starting point and refine
-4. **Combine Prompts** - Chain prompts for complex projects
+**Usando**: [Full-Stack Developer Architect](prompts/technical/software-engineering/fullstack-developer-architect.md)
 
-### Power User Features
+**O que Você Recebe**:
 
-- **Chain Prompts**: Strategy → Implementation → Optimization
-- **Cross-Domain**: Combine business + technical perspectives
-- **Custom Variables**: Create reusable templates for your team
-- **Team Sharing**: Standardize AI usage across your organization
+- Estratégia e fases de migração
+- Plano de decomposição de serviços
+- Recomendações de stack tecnológica
+- Estratégias de mitigação de riscos
+- Design de pipeline DevOps
 
 ---
 
-## Claude Code Skills (For Developers)
+### Exemplo 3: Análise Financeira
 
-If you use [Claude Code](https://claude.ai/code), you can supercharge your workflow with **260+ skills** that auto-trigger based on your requests.
+**Sua Situação**: "Preciso avaliar um alvo de aquisição"
 
-### How to Use Skills
+**Usando**: [Financial Analysis Expert](prompts/finance/financial-analysis-expert.md)
+
+**O que Você Recebe**:
+
+- Modelo de avaliação DCF
+- Análise de empresas comparáveis
+- Avaliação de sinergias
+- Fatores de risco e análise de sensibilidade
+- Recomendação de investimento
+
+---
+
+## Dicas Avançadas
+
+### Obtendo os Melhores Resultados
+
+1. **Seja Específico** - Mais contexto = melhor resultado
+2. **Use Exemplos** - Mostre o que você está procurando
+3. **Itere** - Use o resultado inicial como ponto de partida e refine
+4. **Combine Prompts** - Encadeie prompts para projetos complexos
+
+### Funcionalidades para Usuários Avançados
+
+- **Encadear Prompts**: Estratégia → Implementação → Otimização
+- **Cross-Domain**: Combine perspectivas de negócios + técnicas
+- **Variáveis Customizadas**: Crie templates reutilizáveis para sua equipe
+- **Compartilhamento com Equipe**: Padronize o uso de IA na sua organização
+
+---
+
+## Skills para Claude Code (Para Desenvolvedores)
+
+Se você usa o [Claude Code](https://claude.ai/code), pode turbinar seu fluxo de trabalho com **260+ skills** que são ativadas automaticamente com base nas suas solicitações.
+
+### Como Usar as Skills
 
 ```bash
-# Copy skills to your project
-cp -r skills/ /path/to/your/project/.claude/skills/
+# Copiar skills para seu projeto
+cp -r skills/ /caminho/para/seu/projeto/.claude/skills/
 
-# Skills activate automatically
-# Example: "Help me refactor this legacy code"
-# Claude Code automatically applies the refactor-legacy-code skill
+# As skills são ativadas automaticamente
+# Exemplo: "Help me refactor this legacy code"
+# O Claude Code aplica automaticamente a skill refactor-legacy-code
 ```
 
-### Popular Skills
+### Skills Populares
 
-| Skill                     | What It Does                                    |
-| ------------------------- | ----------------------------------------------- |
-| `refactor-legacy-code`    | Modernize codebases with incremental strategies |
-| `docker-containerization` | Create production-ready containers              |
-| `rest-api-design`         | Design APIs following best practices            |
-| `unit-testing-framework`  | Write comprehensive test suites                 |
-| `sql-optimization`        | Optimize database queries                       |
+| Skill                     | O que Faz                                           |
+| ------------------------- | --------------------------------------------------- |
+| `refactor-legacy-code`    | Modernizar bases de código com estratégias incrementais |
+| `docker-containerization` | Criar containers prontos para produção              |
+| `rest-api-design`         | Projetar APIs seguindo boas práticas                |
+| `unit-testing-framework`  | Escrever suítes de testes abrangentes               |
+| `sql-optimization`        | Otimizar consultas de banco de dados                |
 
-See [SKILLS-MATRIX.md](SKILLS-MATRIX.md) for all 260+ skills.
-
----
-
-## Automation Hooks (For CI/CD)
-
-Automate quality checks with **7 pre-built hooks**:
-
-| Hook                        | Purpose                              |
-| --------------------------- | ------------------------------------ |
-| `security-scan`             | Scan for vulnerabilities and secrets |
-| `pre-commit-linting`        | Code formatting and style            |
-| `test-runner`               | Automated test execution             |
-| `dependency-check`          | Audit dependencies                   |
-| `breaking-change-detection` | Detect API changes                   |
-| `auto-format`               | Automatic formatting                 |
-| `session-setup`             | Environment initialization           |
-
-See [HOOKS-LIBRARY.md](HOOKS-LIBRARY.md) for installation instructions.
+Veja [SKILLS-MATRIX.md](SKILLS-MATRIX.md) para todas as 260+ skills.
 
 ---
 
-## Browse All Categories
+## Hooks de Automação (Para CI/CD)
 
-### Business Operations
+Automatize verificações de qualidade com **7 hooks pré-construídos**:
 
-- [Administrative](prompts/administrative/)
-- [Finance](prompts/finance/)
+| Hook                        | Finalidade                                     |
+| --------------------------- | ---------------------------------------------- |
+| `security-scan`             | Escanear vulnerabilidades e segredos           |
+| `pre-commit-linting`        | Formatação e estilo de código                  |
+| `test-runner`               | Execução automatizada de testes                |
+| `dependency-check`          | Auditar dependências                           |
+| `breaking-change-detection` | Detectar mudanças de API                       |
+| `auto-format`               | Formatação automática                          |
+| `session-setup`             | Inicialização do ambiente                      |
+
+Veja [HOOKS-LIBRARY.md](HOOKS-LIBRARY.md) para instruções de instalação.
+
+---
+
+## Navegue por Todas as Categorias
+
+### Operações de Negócios
+
+- [Administrativo](prompts/administrative/)
+- [Finanças](prompts/finance/)
 - [Marketing](prompts/business/marketing/)
-- [Operations](prompts/operations/)
-- [Project Management](prompts/project-management/)
-- [Human Resources](prompts/human-resources/)
-- [Customer Service](prompts/customer-service/)
+- [Operações](prompts/operations/)
+- [Gestão de Projetos](prompts/project-management/)
+- [Recursos Humanos](prompts/human-resources/)
+- [Atendimento ao Cliente](prompts/customer-service/)
 
-### Technology
+### Tecnologia
 
-- [Software Engineering](prompts/technical/)
+- [Engenharia de Software](prompts/technical/)
 - [DevOps](prompts/technical/devops/)
-- [Security](prompts/security/)
-- [Data Science](prompts/technical/data-science/)
+- [Segurança](prompts/security/)
+- [Ciência de Dados](prompts/technical/data-science/)
 
-### Creative
+### Criatividade
 
 - [Design](prompts/creative/design/)
-- [UX Research](prompts/creative/ux-design/)
-- [Content Strategy](prompts/creative/content-strategy/)
+- [Pesquisa de UX](prompts/creative/ux-design/)
+- [Estratégia de Conteúdo](prompts/creative/content-strategy/)
 
-### Emerging Tech
+### Tecnologias Emergentes
 
-- [Quantum Computing](prompts/quantum-computing/)
+- [Computação Quântica](prompts/quantum-computing/)
 - [Blockchain](prompts/blockchain/)
-- [Biotechnology](prompts/biotechnology/)
-- [Space Economy](prompts/space-economy/)
-- [Renewable Energy](prompts/renewable-energy/)
-- [Healthcare Digital](prompts/healthcare-digital/)
-- [Government Digital](prompts/government/)
+- [Biotecnologia](prompts/biotechnology/)
+- [Economia Espacial](prompts/space-economy/)
+- [Energia Renovável](prompts/renewable-energy/)
+- [Saúde Digital](prompts/healthcare-digital/)
+- [Governo Digital](prompts/government/)
 
-### Specialized
+### Especializados
 
-- [Healthcare](prompts/healthcare/)
-- [Engineering](prompts/engineering/)
-- [Education](prompts/education/)
-- [Research](prompts/research/)
+- [Saúde](prompts/healthcare/)
+- [Engenharia](prompts/engineering/)
+- [Educação](prompts/education/)
+- [Pesquisa](prompts/research/)
 
 ---
 
-## Customization Guide
+## Guia de Personalização
 
-### Adapt Prompts to Your Needs
+### Adapte Prompts às Suas Necessidades
 
-1. **Industry-Specific**: Add your industry's terminology and regulations
-2. **Company Culture**: Adjust tone to match your organization
-3. **Tool Integration**: Include your specific tools and platforms
-4. **Compliance**: Add relevant standards (ISO, SOC2, HIPAA, GDPR)
+1. **Específico do Setor**: Adicione a terminologia e regulamentações do seu setor
+2. **Cultura da Empresa**: Ajuste o tom para combinar com sua organização
+3. **Integração de Ferramentas**: Inclua suas ferramentas e plataformas específicas
+4. **Conformidade**: Adicione padrões relevantes (ISO, SOC2, HIPAA, LGPD)
 
-### Create Reusable Templates
+### Crie Templates Reutilizáveis
 
-Save time by pre-filling common variables:
+Economize tempo preenchendo variáveis comuns:
 
 ```markdown
-{{company_name}} = "Your Company"
-{{industry}} = "Your Industry"
+{{company_name}} = "Sua Empresa"
+{{industry}} = "Seu Setor"
 {{standard_tools}} = "Jira, Slack, GitHub"
-{{compliance_requirements}} = "SOC2, GDPR"
+{{compliance_requirements}} = "SOC2, LGPD"
 ```
 
 ---
 
-## Community
+## Comunidade
 
-### Get Help
+### Obtenha Ajuda
 
-- **Issues**: [Report bugs or request features](https://github.com/aj-geddes/useful-ai-prompts/issues)
-- **Discussions**: [Ask questions and share ideas](https://github.com/aj-geddes/useful-ai-prompts/discussions)
+- **Issues**: [Reportar bugs ou solicitar funcionalidades](https://github.com/aj-geddes/useful-ai-prompts/issues)
+- **Discussões**: [Fazer perguntas e compartilhar ideias](https://github.com/aj-geddes/useful-ai-prompts/discussions)
 
-### Contribute
+### Contribua
 
-- **Star** the repository to help others discover it
-- **Share** your customizations and success stories
-- **Submit** new prompts via pull request
+- **Dê uma estrela** no repositório para ajudar outros a descobri-lo
+- **Compartilhe** suas personalizações e histórias de sucesso
+- **Envie** novos prompts via pull request
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
-
----
-
-## Additional Resources
-
-- **[Main README](README.md)** - Complete overview
-- **[AI Agent Guide](AI-AGENT-GUIDE.md)** - For developers and integrators
-- **[Skills Matrix](SKILLS-MATRIX.md)** - Complete skills reference
-- **[Hooks Library](HOOKS-LIBRARY.md)** - Automation hooks documentation
-- **[Contributing Guide](CONTRIBUTING.md)** - How to contribute
+Veja [CONTRIBUTING.md](CONTRIBUTING.md) para diretrizes de contribuição.
 
 ---
 
-## License
+## Recursos Adicionais
 
-MIT License - Free to use, modify, and distribute. See [LICENSE](LICENSE) for details.
+- **[README Principal](README.md)** - Visão geral completa
+- **[Guia para Agentes de IA](AI-AGENT-GUIDE.md)** - Para desenvolvedores e integradores
+- **[Matriz de Skills](SKILLS-MATRIX.md)** - Referência completa de skills
+- **[Biblioteca de Hooks](HOOKS-LIBRARY.md)** - Documentação de hooks de automação
+- **[Guia de Contribuição](CONTRIBUTING.md)** - Como contribuir
 
 ---
 
-**Start transforming your AI interactions today!**
+## Licença
 
-Browse prompts at [https://aj-geddes.github.io/useful-ai-prompts/](https://aj-geddes.github.io/useful-ai-prompts/)
+Licença MIT — Livre para usar, modificar e distribuir. Veja [LICENSE](LICENSE) para detalhes.
+
+---
+
+**Comece a transformar suas interações com IA hoje!**
+
+Navegue pelos prompts em [https://aj-geddes.github.io/useful-ai-prompts/](https://aj-geddes.github.io/useful-ai-prompts/)

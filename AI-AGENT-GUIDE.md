@@ -1,45 +1,45 @@
-# AI Agent Integration Guide
+# Guia de Integração para Agentes de IA
 
-Technical specifications for AI agents, assistants, and automation systems to programmatically access and utilize the Useful AI Prompts library.
+Especificações técnicas para agentes de IA, assistentes e sistemas de automação acessarem e utilizarem programaticamente a biblioteca Useful AI Prompts.
 
-## Library Overview
+## Visão Geral da Biblioteca
 
-| Resource    | Count | Location            | Description                                 |
-| ----------- | ----- | ------------------- | ------------------------------------------- |
-| **Prompts** | 557+  | `/prompts/`         | Expert-crafted prompts across 47 categories |
-| **Skills**  | 260+  | `/skills/`          | Claude Code auto-triggering capabilities    |
-| **Hooks**   | 7     | `/hooks/`           | Event-driven automation scripts             |
-| **Index**   | 1     | `PROMPT-INDEX.json` | Machine-readable prompt catalog             |
+| Recurso     | Qtd   | Localização         | Descrição                                            |
+| ----------- | ----- | ------------------- | ---------------------------------------------------- |
+| **Prompts** | 557+  | `/prompts/`         | Prompts criados por especialistas em 47 categorias   |
+| **Skills**  | 260+  | `/skills/`          | Habilidades de ativação automática do Claude Code    |
+| **Hooks**   | 7     | `/hooks/`           | Scripts de automação orientados a eventos            |
+| **Índice**  | 1     | `PROMPT-INDEX.json` | Catálogo de prompts legível por máquina              |
 
 ---
 
-## Integration Architecture
+## Arquitetura de Integração
 
 ```mermaid
 graph LR
-    A[User Request] --> B[AI Agent]
-    B --> C[Task Parser]
-    C --> D{Resource Type?}
-    D -->|Prompt| E[Prompt Selector]
-    D -->|Skill| F[Skill Matcher]
-    D -->|Hook| G[Hook Trigger]
-    E --> H[Prompt Library]
-    F --> I[Skills Library]
-    G --> J[Hooks Library]
-    H --> K[Variable Injector]
+    A[Solicitação do Usuário] --> B[Agente de IA]
+    B --> C[Analisador de Tarefa]
+    C --> D{Tipo de Recurso?}
+    D -->|Prompt| E[Seletor de Prompt]
+    D -->|Skill| F[Matcher de Skill]
+    D -->|Hook| G[Gatilho de Hook]
+    E --> H[Biblioteca de Prompts]
+    F --> I[Biblioteca de Skills]
+    G --> J[Biblioteca de Hooks]
+    H --> K[Injetor de Variáveis]
     I --> K
-    K --> L[Execution Engine]
-    L --> M[Structured Output]
+    K --> L[Motor de Execução]
+    L --> M[Saída Estruturada]
 ```
 
 ---
 
-## Prompt Selection
+## Seleção de Prompts
 
-### Category Taxonomy
+### Taxonomia de Categorias
 
 ```yaml
-# 47 categories organized by domain
+# 47 categorias organizadas por domínio
 categories:
   business:
     - business
@@ -106,30 +106,30 @@ categories:
     - creation
 ```
 
-### Selection Algorithm
+### Algoritmo de Seleção
 
 ```python
 def select_prompt(user_request: str) -> str:
     """
-    Select the most appropriate prompt based on user request analysis.
+    Seleciona o prompt mais apropriado baseado na análise da solicitação.
     """
-    # Step 1: Extract key indicators
+    # Passo 1: Extrair indicadores-chave
     indicators = extract_indicators(user_request)
 
-    # Step 2: Match against prompt taxonomy
+    # Passo 2: Comparar com a taxonomia de prompts
     category = match_category(indicators)
     subcategory = match_subcategory(indicators, category)
 
-    # Step 3: Score specific prompts
+    # Passo 3: Pontuar prompts específicos
     candidates = load_prompts(category, subcategory)
     scores = score_prompts(candidates, indicators)
 
-    # Step 4: Return best match
+    # Passo 4: Retornar melhor correspondência
     return select_best_match(scores)
 
 
 def extract_indicators(request: str) -> dict:
-    """Extract classification indicators from request."""
+    """Extrai indicadores de classificação da solicitação."""
     return {
         'keywords': extract_keywords(request),
         'domain': detect_domain(request),
@@ -139,7 +139,7 @@ def extract_indicators(request: str) -> dict:
     }
 ```
 
-### Task Classification Keywords
+### Palavras-Chave de Classificação de Tarefas
 
 ```yaml
 technical:
@@ -195,31 +195,31 @@ specialized:
     engineering: [build, construct, manufacture, technical, mechanical]
 ```
 
-### Direct Task Mapping
+### Mapeamento Direto de Tarefas
 
 ```python
 TASK_TO_PROMPT_MAP = {
-    # Financial tasks
+    # Tarefas financeiras
     "analyze financial performance": "financial-analysis-expert",
     "create financial projections": "financial-model-builder",
     "evaluate investment": "financial-analysis-expert",
 
-    # Development tasks
+    # Tarefas de desenvolvimento
     "build web application": "fullstack-developer-architect",
     "optimize code performance": "algorithm-optimization-expert",
     "design system architecture": "system-architecture-design-expert",
 
-    # Security tasks
+    # Tarefas de segurança
     "security assessment": "cybersecurity-defense-architect",
     "incident response": "incident-response-commander",
     "design secure architecture": "security-implementation-expert",
 
-    # Business analysis
+    # Análise de negócios
     "gather requirements": "requirements-engineering-expert",
     "process improvement": "process-optimization-expert",
     "create specifications": "specification-creation-expert",
 
-    # Emerging tech
+    # Tecnologias emergentes
     "quantum algorithm": "quantum-circuit-optimization-design",
     "smart contract": "smart-contract-security-audit-platform",
     "drug discovery": "ai-powered-drug-screening-optimization",
@@ -230,23 +230,23 @@ TASK_TO_PROMPT_MAP = {
 
 ---
 
-## Skills Integration
+## Integração de Skills
 
-### What Are Skills?
+### O que São Skills?
 
-Skills are specialized Claude Code capabilities that auto-trigger based on request keywords. Unlike prompts, skills:
+Skills são capacidades especializadas do Claude Code que são ativadas automaticamente baseadas em palavras-chave da solicitação. Diferente dos prompts, skills:
 
-- Activate automatically without explicit selection
-- Provide step-by-step guidance with code examples
-- Include multi-language implementations
-- Range from 200-500+ lines of detailed instructions
+- São ativadas automaticamente sem seleção explícita
+- Fornecem orientação passo a passo com exemplos de código
+- Incluem implementações em múltiplas linguagens
+- Variam de 200 a 500+ linhas de instruções detalhadas
 
-### Skill Matching
+### Correspondência de Skills
 
 ```python
 def match_skill(user_request: str) -> Optional[str]:
     """
-    Match user request to appropriate skill based on keywords.
+    Corresponde a solicitação do usuário à skill apropriada baseada em palavras-chave.
     """
     skills_index = load_skills_index()
 
@@ -257,7 +257,7 @@ def match_skill(user_request: str) -> Optional[str]:
     return None
 
 
-# Example skill triggers
+# Exemplo de gatilhos de skills
 SKILL_TRIGGERS = {
     "refactor-legacy-code": ["refactor", "modernize", "legacy code", "technical debt"],
     "docker-containerization": ["docker", "containerize", "container", "dockerfile"],
@@ -269,74 +269,74 @@ SKILL_TRIGGERS = {
 }
 ```
 
-### Skills by Domain
+### Skills por Domínio
 
-| Domain               | Count | Key Skills                                                    |
-| -------------------- | ----- | ------------------------------------------------------------- |
-| Software Development | 35    | refactor-legacy-code, code-review-analysis, design-patterns   |
-| DevOps               | 20    | docker-containerization, kubernetes-deployment, terraform-iac |
-| Testing              | 15    | unit-testing-framework, e2e-testing, test-automation          |
-| Security             | 15    | vulnerability-scanning, oauth-implementation, data-encryption |
-| API                  | 12    | rest-api-design, graphql-implementation, webhook-development  |
-| Database             | 12    | sql-optimization, schema-design, database-indexing            |
-| Cloud                | 15    | aws-lambda, serverless-architecture, cloud-cost-optimization  |
-| Frontend             | 12    | react-components, responsive-design, css-architecture         |
-| Backend              | 12    | nodejs-express, django-application, background-jobs           |
-| ML/AI                | 10    | ml-model-training, model-deployment, hyperparameter-tuning    |
+| Domínio                    | Qtd | Skills Principais                                             |
+| -------------------------- | --- | ------------------------------------------------------------- |
+| Desenvolvimento de Software | 35  | refactor-legacy-code, code-review-analysis, design-patterns   |
+| DevOps                     | 20  | docker-containerization, kubernetes-deployment, terraform-iac |
+| Testes                     | 15  | unit-testing-framework, e2e-testing, test-automation          |
+| Segurança                  | 15  | vulnerability-scanning, oauth-implementation, data-encryption |
+| API                        | 12  | rest-api-design, graphql-implementation, webhook-development  |
+| Banco de Dados             | 12  | sql-optimization, schema-design, database-indexing            |
+| Cloud                      | 15  | aws-lambda, serverless-architecture, cloud-cost-optimization  |
+| Frontend                   | 12  | react-components, responsive-design, css-architecture         |
+| Backend                    | 12  | nodejs-express, django-application, background-jobs           |
+| ML/IA                      | 10  | ml-model-training, model-deployment, hyperparameter-tuning    |
 
-### Loading Skills
+### Carregando Skills
 
 ```python
 import os
 from pathlib import Path
 
 def load_skill(skill_name: str) -> str:
-    """Load skill content from skills directory."""
+    """Carrega conteúdo da skill do diretório de skills."""
     skill_path = Path("skills") / f"{skill_name}.md"
     if skill_path.exists():
         return skill_path.read_text()
-    raise FileNotFoundError(f"Skill not found: {skill_name}")
+    raise FileNotFoundError(f"Skill não encontrada: {skill_name}")
 
 
 def list_skills() -> list:
-    """List all available skills."""
+    """Lista todas as skills disponíveis."""
     skills_dir = Path("skills")
     return [f.stem for f in skills_dir.glob("*.md")]
 ```
 
 ---
 
-## Hooks Integration
+## Integração de Hooks
 
-### What Are Hooks?
+### O que São Hooks?
 
-Hooks are automation scripts that execute in response to Claude Code events:
+Hooks são scripts de automação que executam em resposta a eventos do Claude Code:
 
-| Hook                      | Trigger Event | Purpose                               |
-| ------------------------- | ------------- | ------------------------------------- |
-| security-scan             | Pre-commit    | Scan for vulnerabilities and secrets  |
-| pre-commit-linting        | Pre-commit    | Code formatting and style enforcement |
-| test-runner               | Pre-commit    | Run automated tests                   |
-| dependency-check          | Pre-commit    | Audit dependencies                    |
-| breaking-change-detection | Pre-commit    | Detect API breaking changes           |
-| auto-format               | Post-save     | Automatic code formatting             |
-| session-setup             | Session start | Environment initialization            |
+| Hook                      | Evento Gatilho  | Finalidade                                   |
+| ------------------------- | --------------- | -------------------------------------------- |
+| security-scan             | Pré-commit      | Escanear vulnerabilidades e segredos         |
+| pre-commit-linting        | Pré-commit      | Formatação e estilo de código                |
+| test-runner               | Pré-commit      | Executar testes automatizados                |
+| dependency-check          | Pré-commit      | Auditar dependências                         |
+| breaking-change-detection | Pré-commit      | Detectar breaking changes em APIs            |
+| auto-format               | Pós-salvamento  | Formatação automática de código              |
+| session-setup             | Início de sessão | Inicialização de ambiente                   |
 
-### Hook Execution
+### Execução de Hooks
 
 ```python
 def execute_hook(hook_name: str, context: dict) -> dict:
     """
-    Execute a hook with the given context.
+    Executa um hook com o contexto fornecido.
     """
     hook_path = Path("hooks") / hook_name
     if not hook_path.exists():
-        raise FileNotFoundError(f"Hook not found: {hook_name}")
+        raise FileNotFoundError(f"Hook não encontrado: {hook_name}")
 
-    # Load hook configuration
+    # Carregar configuração do hook
     config = load_hook_config(hook_path)
 
-    # Execute hook script
+    # Executar script do hook
     result = run_hook_script(config, context)
 
     return {
@@ -348,7 +348,7 @@ def execute_hook(hook_name: str, context: dict) -> dict:
 
 ---
 
-## Prompt Metadata Schema
+## Schema de Metadados de Prompts
 
 ```json
 {
@@ -357,13 +357,13 @@ def execute_hook(hook_name: str, context: dict) -> dict:
   "category": "finance",
   "subcategory": "analysis",
   "title": "Financial Analysis Expert",
-  "description": "Expert financial analysis with investment evaluation and portfolio management",
+  "description": "Análise financeira especializada com avaliação de investimentos e gestão de portfólio",
   "tags": ["finance", "investment", "analysis", "valuation", "portfolio"],
   "use_cases": [
-    "company valuation",
-    "investment decisions",
-    "portfolio review",
-    "market analysis"
+    "avaliação de empresa",
+    "decisões de investimento",
+    "revisão de portfólio",
+    "análise de mercado"
   ],
   "complexity_level": "advanced",
   "estimated_output_lines": 600
@@ -372,47 +372,47 @@ def execute_hook(hook_name: str, context: dict) -> dict:
 
 ---
 
-## Variable Injection
+## Injeção de Variáveis
 
-### Standard Variables
+### Variáveis Padrão
 
 ```yaml
 common_variables:
-  - company_name: "Organization name"
-  - industry: "Industry sector"
-  - team_size: "Number of team members"
-  - timeline: "Project timeline"
-  - budget: "Available budget"
-  - constraints: "Specific limitations"
-  - goals: "Desired outcomes"
+  - company_name: "Nome da organização"
+  - industry: "Setor da indústria"
+  - team_size: "Número de membros da equipe"
+  - timeline: "Cronograma do projeto"
+  - budget: "Orçamento disponível"
+  - constraints: "Limitações específicas"
+  - goals: "Resultados desejados"
 
 domain_specific:
   technical:
-    - technology_stack: "Current tech stack"
-    - architecture_type: "System architecture"
-    - performance_requirements: "Performance targets"
-    - security_requirements: "Security standards"
-    - codebase_size: "Lines of code or repository size"
+    - technology_stack: "Stack tecnológica atual"
+    - architecture_type: "Arquitetura do sistema"
+    - performance_requirements: "Metas de desempenho"
+    - security_requirements: "Padrões de segurança"
+    - codebase_size: "Linhas de código ou tamanho do repositório"
 
   business:
-    - market_conditions: "Current market state"
-    - competition: "Competitive landscape"
-    - regulatory_environment: "Compliance requirements"
-    - stakeholders: "Key stakeholders"
-    - revenue_model: "Business revenue model"
+    - market_conditions: "Estado atual do mercado"
+    - competition: "Cenário competitivo"
+    - regulatory_environment: "Requisitos de conformidade"
+    - stakeholders: "Stakeholders principais"
+    - revenue_model: "Modelo de receita do negócio"
 
   emerging_tech:
-    - technology_readiness: "TRL level"
-    - regulatory_status: "Regulatory approval status"
-    - infrastructure_requirements: "Infrastructure needs"
+    - technology_readiness: "Nível TRL"
+    - regulatory_status: "Status de aprovação regulatória"
+    - infrastructure_requirements: "Necessidades de infraestrutura"
 ```
 
-### Variable Extraction
+### Extração de Variáveis
 
 ```python
 def extract_variables(user_request: str, prompt_template: str) -> dict:
     """
-    Extract values for prompt variables from user request.
+    Extrai valores para variáveis do prompt a partir da solicitação do usuário.
     """
     variables = {}
     required_vars = extract_template_variables(prompt_template)
@@ -430,7 +430,7 @@ def extract_variables(user_request: str, prompt_template: str) -> dict:
 
 
 def extract_template_variables(template: str) -> list:
-    """Extract variable names from template."""
+    """Extrai nomes de variáveis do template."""
     import re
     pattern = r'\{\{(\w+)\}\}'
     return re.findall(pattern, template)
@@ -438,99 +438,99 @@ def extract_template_variables(template: str) -> list:
 
 ---
 
-## API Specification
+## Especificação de API
 
-### RESTful Endpoints
+### Endpoints RESTful
 
 ```yaml
 endpoints:
   # Prompts
   GET /api/prompts:
-    description: "List all available prompts"
+    description: "Listar todos os prompts disponíveis"
     parameters:
-      - category: "Filter by category"
-      - tags: "Filter by tags (comma-separated)"
-      - search: "Full-text search"
+      - category: "Filtrar por categoria"
+      - tags: "Filtrar por tags (separadas por vírgula)"
+      - search: "Busca por texto completo"
     response:
-      - prompts: "Array of prompt metadata"
-      - total: "Total count"
+      - prompts: "Array de metadados de prompts"
+      - total: "Contagem total"
 
   GET /api/prompts/{prompt_id}:
-    description: "Get specific prompt"
+    description: "Obter prompt específico"
     response:
-      - metadata: "Prompt metadata"
-      - content: "Prompt content"
-      - variables: "Required variables"
+      - metadata: "Metadados do prompt"
+      - content: "Conteúdo do prompt"
+      - variables: "Variáveis obrigatórias"
 
   POST /api/match:
-    description: "Find best matching prompt"
+    description: "Encontrar prompt com melhor correspondência"
     body:
-      - request: "User request text"
-      - context: "Additional context"
-      - preferences: "User preferences"
+      - request: "Texto da solicitação do usuário"
+      - context: "Contexto adicional"
+      - preferences: "Preferências do usuário"
     response:
-      - prompt_id: "Best matching prompt"
-      - confidence: "Match confidence score (0-1)"
-      - alternatives: "Other potential matches"
+      - prompt_id: "Prompt com melhor correspondência"
+      - confidence: "Score de confiança da correspondência (0-1)"
+      - alternatives: "Outras correspondências potenciais"
 
   # Skills
   GET /api/skills:
-    description: "List all available skills"
+    description: "Listar todas as skills disponíveis"
     parameters:
-      - domain: "Filter by domain"
+      - domain: "Filtrar por domínio"
     response:
-      - skills: "Array of skill metadata"
+      - skills: "Array de metadados de skills"
 
   GET /api/skills/{skill_name}:
-    description: "Get specific skill"
+    description: "Obter skill específica"
     response:
-      - metadata: "Skill metadata"
-      - content: "Skill content"
-      - triggers: "Trigger keywords"
+      - metadata: "Metadados da skill"
+      - content: "Conteúdo da skill"
+      - triggers: "Palavras-chave de ativação"
 
   # Hooks
   GET /api/hooks:
-    description: "List all available hooks"
+    description: "Listar todos os hooks disponíveis"
     response:
-      - hooks: "Array of hook metadata"
+      - hooks: "Array de metadados de hooks"
 
   POST /api/hooks/{hook_name}/execute:
-    description: "Execute a hook"
+    description: "Executar um hook"
     body:
-      - context: "Execution context"
+      - context: "Contexto de execução"
     response:
-      - status: "Success/failure"
-      - output: "Hook output"
+      - status: "Sucesso/falha"
+      - output: "Saída do hook"
 ```
 
 ---
 
-## Execution Framework
+## Framework de Execução
 
-### Four-Phase Processing
+### Processamento em Quatro Fases
 
 ```python
 class PromptExecutor:
     def execute(self, prompt: str, variables: dict) -> str:
         """
-        Execute prompt through standard four-phase framework.
+        Executa prompt através do framework padrão de quatro fases.
         """
-        # Prepare prompt with variables
+        # Preparar prompt com variáveis
         prepared_prompt = self.inject_variables(prompt, variables)
 
-        # Phase 1: Assessment/Analysis
+        # Fase 1: Avaliação/Análise
         assessment = self.execute_phase("assessment", prepared_prompt)
 
-        # Phase 2: Strategic Design
+        # Fase 2: Design Estratégico
         strategy = self.execute_phase("strategy", assessment)
 
-        # Phase 3: Implementation/Execution
+        # Fase 3: Implementação/Execução
         implementation = self.execute_phase("implementation", strategy)
 
-        # Phase 4: Optimization/Control
+        # Fase 4: Otimização/Controle
         optimization = self.execute_phase("optimization", implementation)
 
-        # Compile structured output
+        # Compilar saída estruturada
         return self.compile_output([
             assessment,
             strategy,
@@ -539,46 +539,46 @@ class PromptExecutor:
         ])
 ```
 
-### Output Structure
+### Estrutura de Saída
 
 ```yaml
 output_structure:
   executive_summary:
     - key_findings: "Top 3-5 insights"
-    - recommendations: "Primary actions"
-    - impact_assessment: "Expected outcomes"
+    - recommendations: "Ações primárias"
+    - impact_assessment: "Resultados esperados"
 
   detailed_analysis:
-    - current_state: "Comprehensive assessment"
-    - gap_analysis: "Identified gaps"
-    - root_causes: "Underlying issues"
+    - current_state: "Avaliação abrangente"
+    - gap_analysis: "Lacunas identificadas"
+    - root_causes: "Problemas subjacentes"
 
   strategic_plan:
-    - objectives: "SMART goals"
-    - strategies: "Approach for each objective"
-    - tactics: "Specific actions"
+    - objectives: "Metas SMART"
+    - strategies: "Abordagem para cada objetivo"
+    - tactics: "Ações específicas"
 
   implementation_roadmap:
-    - phases: "Breakdown by timeline"
-    - milestones: "Key deliverables"
-    - resources: "Required resources"
+    - phases: "Divisão por cronograma"
+    - milestones: "Entregáveis-chave"
+    - resources: "Recursos necessários"
 
   risk_management:
-    - risk_assessment: "Identified risks"
-    - mitigation_strategies: "Risk responses"
-    - contingency_plans: "Backup approaches"
+    - risk_assessment: "Riscos identificados"
+    - mitigation_strategies: "Respostas aos riscos"
+    - contingency_plans: "Abordagens de contingência"
 
   metrics_and_monitoring:
-    - kpis: "Key performance indicators"
-    - dashboards: "Monitoring approach"
-    - review_cycles: "Evaluation schedule"
+    - kpis: "Indicadores-chave de desempenho"
+    - dashboards: "Abordagem de monitoramento"
+    - review_cycles: "Cronograma de avaliação"
 ```
 
 ---
 
-## Performance Optimization
+## Otimização de Desempenho
 
-### Caching Strategy
+### Estratégia de Cache
 
 ```python
 from functools import lru_cache
@@ -586,38 +586,38 @@ from pathlib import Path
 
 @lru_cache(maxsize=100)
 def get_prompt_content(prompt_id: str) -> str:
-    """Cache prompt content for repeated access."""
+    """Cacheia conteúdo do prompt para acesso repetido."""
     prompt_path = find_prompt_path(prompt_id)
     return prompt_path.read_text()
 
 
 @lru_cache(maxsize=50)
 def get_skill_content(skill_name: str) -> str:
-    """Cache skill content for repeated access."""
+    """Cacheia conteúdo da skill para acesso repetido."""
     skill_path = Path("skills") / f"{skill_name}.md"
     return skill_path.read_text()
 
 
 def clear_caches():
-    """Clear all caches when content updates."""
+    """Limpa todos os caches quando o conteúdo é atualizado."""
     get_prompt_content.cache_clear()
     get_skill_content.cache_clear()
 ```
 
-### Batch Processing
+### Processamento em Lote
 
 ```python
 from concurrent.futures import ThreadPoolExecutor
 
 def batch_process_requests(requests: list[dict]) -> list[dict]:
-    """Process multiple requests efficiently."""
-    # Group by resource type
+    """Processa múltiplas solicitações de forma eficiente."""
+    # Agrupar por tipo de recurso
     prompts_requests = [r for r in requests if r['type'] == 'prompt']
     skills_requests = [r for r in requests if r['type'] == 'skill']
 
     results = []
 
-    # Process in parallel
+    # Processar em paralelo
     with ThreadPoolExecutor(max_workers=4) as executor:
         prompt_futures = [
             executor.submit(process_prompt_request, r)
@@ -636,44 +636,44 @@ def batch_process_requests(requests: list[dict]) -> list[dict]:
 
 ---
 
-## Error Handling
+## Tratamento de Erros
 
 ```python
 class PromptLibraryError(Exception):
-    """Base exception for prompt library errors."""
+    """Exceção base para erros da biblioteca de prompts."""
     pass
 
 class PromptNotFoundError(PromptLibraryError):
-    """Requested prompt does not exist."""
+    """Prompt solicitado não existe."""
     pass
 
 class SkillNotFoundError(PromptLibraryError):
-    """Requested skill does not exist."""
+    """Skill solicitada não existe."""
     pass
 
 class VariableExtractionError(PromptLibraryError):
-    """Failed to extract required variables."""
+    """Falha ao extrair variáveis obrigatórias."""
     pass
 
 def handle_error(error: Exception) -> dict:
-    """Graceful error handling with fallbacks."""
+    """Tratamento de erros elegante com fallbacks."""
     if isinstance(error, PromptNotFoundError):
         return {
             'status': 'error',
-            'message': f'Prompt not found: {error}',
-            'suggestion': 'Try browsing available prompts at /api/prompts',
+            'message': f'Prompt não encontrado: {error}',
+            'suggestion': 'Tente navegar pelos prompts disponíveis em /api/prompts',
             'fallback': get_general_purpose_prompt()
         }
     elif isinstance(error, SkillNotFoundError):
         return {
             'status': 'error',
-            'message': f'Skill not found: {error}',
-            'suggestion': 'Try browsing available skills at /api/skills'
+            'message': f'Skill não encontrada: {error}',
+            'suggestion': 'Tente navegar pelas skills disponíveis em /api/skills'
         }
     elif isinstance(error, VariableExtractionError):
         return {
             'status': 'partial',
-            'message': 'Some variables could not be extracted',
+            'message': 'Algumas variáveis não puderam ser extraídas',
             'missing_variables': error.missing_vars,
             'partial_result': execute_with_defaults(error.prompt)
         }
@@ -686,47 +686,47 @@ def handle_error(error: Exception) -> dict:
 
 ---
 
-## Testing
+## Testes
 
-### Prompt Validation
+### Validação de Prompts
 
 ```python
 def validate_prompt(prompt_path: str) -> bool:
-    """Validate prompt meets quality standards."""
+    """Valida se o prompt atende aos padrões de qualidade."""
     prompt = load_prompt(prompt_path)
 
-    # Check structure
-    assert has_metadata_section(prompt), "Missing metadata"
-    assert has_use_cases(prompt), "Missing use cases"
-    assert has_deliverables(prompt), "Missing deliverables"
+    # Verificar estrutura
+    assert has_metadata_section(prompt), "Metadados ausentes"
+    assert has_use_cases(prompt), "Casos de uso ausentes"
+    assert has_deliverables(prompt), "Entregáveis ausentes"
 
-    # Check content quality
-    assert len(prompt) > 500, "Prompt too short"
-    assert has_context_questions(prompt), "Missing context questions"
+    # Verificar qualidade do conteúdo
+    assert len(prompt) > 500, "Prompt muito curto"
+    assert has_context_questions(prompt), "Perguntas de contexto ausentes"
 
     return True
 
 
 def validate_skill(skill_path: str) -> bool:
-    """Validate skill meets quality standards."""
+    """Valida se a skill atende aos padrões de qualidade."""
     skill = load_skill(skill_path)
 
-    # Check structure
-    assert has_triggers(skill), "Missing trigger keywords"
-    assert has_code_examples(skill), "Missing code examples"
-    assert has_best_practices(skill), "Missing best practices"
+    # Verificar estrutura
+    assert has_triggers(skill), "Palavras-chave de ativação ausentes"
+    assert has_code_examples(skill), "Exemplos de código ausentes"
+    assert has_best_practices(skill), "Boas práticas ausentes"
 
-    # Check content
-    assert len(skill) > 200, "Skill too short"
+    # Verificar conteúdo
+    assert len(skill) > 200, "Skill muito curta"
 
     return True
 ```
 
 ---
 
-## Integration Examples
+## Exemplos de Integração
 
-### Python Integration
+### Integração Python
 
 ```python
 import requests
@@ -736,7 +736,7 @@ class PromptLibraryClient:
         self.base_url = base_url
 
     def find_prompt(self, user_request: str) -> dict:
-        """Find best matching prompt for request."""
+        """Encontra o prompt com melhor correspondência para a solicitação."""
         response = requests.post(
             f"{self.base_url}/api/match",
             json={"request": user_request}
@@ -744,14 +744,14 @@ class PromptLibraryClient:
         return response.json()
 
     def get_prompt(self, prompt_id: str) -> dict:
-        """Get prompt content and metadata."""
+        """Obtém conteúdo e metadados do prompt."""
         response = requests.get(
             f"{self.base_url}/api/prompts/{prompt_id}"
         )
         return response.json()
 
     def list_skills(self, domain: str = None) -> list:
-        """List available skills."""
+        """Lista skills disponíveis."""
         params = {"domain": domain} if domain else {}
         response = requests.get(
             f"{self.base_url}/api/skills",
@@ -760,13 +760,13 @@ class PromptLibraryClient:
         return response.json()["skills"]
 
 
-# Usage
+# Uso
 client = PromptLibraryClient()
 match = client.find_prompt("Help me analyze financial performance")
 prompt = client.get_prompt(match["prompt_id"])
 ```
 
-### JavaScript/TypeScript Integration
+### Integração JavaScript/TypeScript
 
 ```typescript
 interface PromptMatch {
@@ -809,33 +809,33 @@ class PromptLibrary {
 
 ---
 
-## File Access Patterns
+## Padrões de Acesso a Arquivos
 
-### Direct File Access
+### Acesso Direto a Arquivos
 
 ```python
 from pathlib import Path
 import json
 
-# Load prompt index
+# Carregar índice de prompts
 def load_prompt_index() -> list:
     with open("PROMPT-INDEX.json") as f:
         return json.load(f)
 
-# Find prompt file
+# Encontrar arquivo de prompt
 def find_prompt_file(prompt_id: str) -> Path:
     prompts_dir = Path("prompts")
     for md_file in prompts_dir.rglob("*.md"):
         if md_file.stem == prompt_id:
             return md_file
-    raise FileNotFoundError(f"Prompt not found: {prompt_id}")
+    raise FileNotFoundError(f"Prompt não encontrado: {prompt_id}")
 
-# List all skills
+# Listar todas as skills
 def list_all_skills() -> list:
     skills_dir = Path("skills")
     return sorted([f.stem for f in skills_dir.glob("*.md")])
 
-# List all hooks
+# Listar todos os hooks
 def list_all_hooks() -> list:
     hooks_dir = Path("hooks")
     return [d.name for d in hooks_dir.iterdir()
@@ -844,10 +844,10 @@ def list_all_hooks() -> list:
 
 ---
 
-## Support
+## Suporte
 
-- **Documentation**: [README.md](README.md)
-- **Human Guide**: [README-HUMANS.md](README-HUMANS.md)
-- **Skills Reference**: [SKILLS-MATRIX.md](SKILLS-MATRIX.md)
-- **Hooks Reference**: [HOOKS-LIBRARY.md](HOOKS-LIBRARY.md)
+- **Documentação**: [README.md](README.md)
+- **Guia do Usuário**: [README-HUMANS.md](README-HUMANS.md)
+- **Referência de Skills**: [SKILLS-MATRIX.md](SKILLS-MATRIX.md)
+- **Referência de Hooks**: [HOOKS-LIBRARY.md](HOOKS-LIBRARY.md)
 - **Issues**: [GitHub Issues](https://github.com/aj-geddes/useful-ai-prompts/issues)

@@ -1,18 +1,18 @@
-# Claude Code Skills Matrix
+# Matriz de Skills do Claude Code
 
-## Overview
+## Visão Geral
 
-This matrix contains **200 specialized skills** organized into **20 categories** to help Claude Code efficiently handle specific technical tasks. Each skill is designed following [Claude Code Skills best practices](https://code.claude.com/docs/en/skills) with focused scope, specific descriptions, and actionable instructions.
+Esta matriz contém **200 skills especializadas** organizadas em **20 categorias** para ajudar o Claude Code a lidar eficientemente com tarefas técnicas específicas. Cada skill é projetada seguindo as [boas práticas de Skills do Claude Code](https://code.claude.com/docs/en/skills) com escopo focado, descrições específicas e instruções acionáveis.
 
-## Skills Organization
+## Organização das Skills
 
-Skills are located in `.claude/skills/` and follow the standard format:
+As skills estão localizadas em `.claude/skills/` e seguem o formato padrão:
 
-- Each skill has its own directory
-- Contains `SKILL.md` with YAML frontmatter
-- Includes instructions, examples, and supporting documentation
+- Cada skill tem seu próprio diretório
+- Contém `SKILL.md` com frontmatter YAML
+- Inclui instruções, exemplos e documentação de apoio
 
-## Quick Navigation
+## Navegação Rápida
 
 ```mermaid
 graph TB
@@ -62,7 +62,7 @@ graph TB
 
 ---
 
-## 1. Software Development & Engineering (35 skills)
+## 1. Desenvolvimento de Software e Engenharia (35 skills)
 
 | Skill Name                       | Description                                                                | Trigger Keywords                                      |
 | -------------------------------- | -------------------------------------------------------------------------- | ----------------------------------------------------- |
@@ -104,7 +104,7 @@ graph TB
 
 ---
 
-## 2. Data Science & Analytics (20 skills)
+## 2. Ciência de Dados e Analytics (20 skills)
 
 | Skill Name                       | Description                                                 | Trigger Keywords                                         |
 | -------------------------------- | ----------------------------------------------------------- | -------------------------------------------------------- |
@@ -131,7 +131,7 @@ graph TB
 
 ---
 
-## 3. DevOps & Infrastructure (20 skills)
+## 3. DevOps e Infraestrutura (20 skills)
 
 | Skill Name                         | Description                                               | Trigger Keywords                                        |
 | ---------------------------------- | --------------------------------------------------------- | ------------------------------------------------------- |
@@ -158,7 +158,7 @@ graph TB
 
 ---
 
-## 4. Security & Compliance (15 skills)
+## 4. Segurança e Conformidade (15 skills)
 
 | Skill Name                       | Description                                              | Trigger Keywords                                        |
 | -------------------------------- | -------------------------------------------------------- | ------------------------------------------------------- |
@@ -180,7 +180,7 @@ graph TB
 
 ---
 
-## 5. Testing & Quality Assurance (15 skills)
+## 5. Testes e Garantia de Qualidade (15 skills)
 
 | Skill Name                  | Description                                           | Trigger Keywords                                        |
 | --------------------------- | ----------------------------------------------------- | ------------------------------------------------------- |
@@ -202,7 +202,7 @@ graph TB
 
 ---
 
-## 6. Documentation & Technical Writing (15 skills)
+## 6. Documentação e Redação Técnica (15 skills)
 
 | Skill Name                      | Description                                           | Trigger Keywords                                      |
 | ------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
@@ -224,7 +224,7 @@ graph TB
 
 ---
 
-## 7. Database & Storage (12 skills)
+## 7. Banco de Dados e Armazenamento (12 skills)
 
 | Skill Name                      | Description                                        | Trigger Keywords                                            |
 | ------------------------------- | -------------------------------------------------- | ----------------------------------------------------------- |
@@ -243,7 +243,7 @@ graph TB
 
 ---
 
-## 8. API & Integration (12 skills)
+## 8. API e Integração (12 skills)
 
 | Skill Name                  | Description                                        | Trigger Keywords                                     |
 | --------------------------- | -------------------------------------------------- | ---------------------------------------------------- |
@@ -262,7 +262,7 @@ graph TB
 
 ---
 
-## 9. Cloud Platforms (15 skills)
+## 9. Plataformas Cloud (15 skills)
 
 | Skill Name                     | Description                                          | Trigger Keywords                                    |
 | ------------------------------ | ---------------------------------------------------- | --------------------------------------------------- |
@@ -284,7 +284,7 @@ graph TB
 
 ---
 
-## 10. Frontend Development (12 skills)
+## 10. Desenvolvimento Frontend (12 skills)
 
 | Skill Name                     | Description                                             | Trigger Keywords                                       |
 | ------------------------------ | ------------------------------------------------------- | ------------------------------------------------------ |
@@ -303,7 +303,7 @@ graph TB
 
 ---
 
-## 11. Backend Development (12 skills)
+## 11. Desenvolvimento Backend (12 skills)
 
 | Skill Name                    | Description                                              | Trigger Keywords                                  |
 | ----------------------------- | -------------------------------------------------------- | ------------------------------------------------- |
@@ -322,7 +322,7 @@ graph TB
 
 ---
 
-## 12. Mobile Development (8 skills)
+## 12. Desenvolvimento Mobile (8 skills)
 
 | Skill Name                   | Description                                        | Trigger Keywords                                  |
 | ---------------------------- | -------------------------------------------------- | ------------------------------------------------- |
@@ -337,7 +337,7 @@ graph TB
 
 ---
 
-## 13. Machine Learning & AI (10 skills)
+## 13. Machine Learning e IA (10 skills)
 
 | Skill Name                    | Description                                                | Trigger Keywords                                                 |
 | ----------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------------- |
@@ -354,7 +354,7 @@ graph TB
 
 ---
 
-## 14. Monitoring & Observability (8 skills)
+## 14. Monitoramento e Observabilidade (8 skills)
 
 | Skill Name              | Description                                           | Trigger Keywords                                    |
 | ----------------------- | ----------------------------------------------------- | --------------------------------------------------- |
@@ -369,7 +369,7 @@ graph TB
 
 ---
 
-## 15. Version Control & CI/CD (10 skills)
+## 15. Controle de Versão e CI/CD (10 skills)
 
 | Skill Name                | Description                                          | Trigger Keywords                                    |
 | ------------------------- | ---------------------------------------------------- | --------------------------------------------------- |
@@ -386,7 +386,7 @@ graph TB
 
 ---
 
-## 16. Project Management (10 skills)
+## 16. Gestão de Projetos (10 skills)
 
 | Skill Name                   | Description                                     | Trigger Keywords                                        |
 | ---------------------------- | ----------------------------------------------- | ------------------------------------------------------- |
@@ -403,7 +403,7 @@ graph TB
 
 ---
 
-## 17. Business Analysis (8 skills)
+## 17. Análise de Negócios (8 skills)
 
 | Skill Name                  | Description                                            | Trigger Keywords                                            |
 | --------------------------- | ------------------------------------------------------ | ----------------------------------------------------------- |
@@ -418,7 +418,7 @@ graph TB
 
 ---
 
-## 18. Design & UX (8 skills)
+## 18. Design e UX (8 skills)
 
 | Skill Name                 | Description                                                | Trigger Keywords                                    |
 | -------------------------- | ---------------------------------------------------------- | --------------------------------------------------- |
@@ -433,7 +433,7 @@ graph TB
 
 ---
 
-## 19. Performance & Optimization (8 skills)
+## 19. Desempenho e Otimização (8 skills)
 
 | Skill Name                    | Description                                                | Trigger Keywords                                          |
 | ----------------------------- | ---------------------------------------------------------- | --------------------------------------------------------- |
@@ -448,7 +448,7 @@ graph TB
 
 ---
 
-## 20. Troubleshooting & Debugging (12 skills)
+## 20. Resolução de Problemas e Debugging (12 skills)
 
 | Skill Name                         | Description                                       | Trigger Keywords                                   |
 | ---------------------------------- | ------------------------------------------------- | -------------------------------------------------- |
@@ -467,71 +467,71 @@ graph TB
 
 ---
 
-## Usage Guide
+## Guia de Uso
 
-### For Claude Code
+### Para o Claude Code
 
-When a user's request matches keywords in the **Trigger Keywords** column, Claude Code will automatically invoke the appropriate skill. Each skill contains:
+Quando a solicitação de um usuário corresponde a palavras-chave na coluna **Trigger Keywords**, o Claude Code invocará automaticamente a skill apropriada. Cada skill contém:
 
-1. **Detailed Instructions**: Step-by-step guidance for completing the task
-2. **Code Examples**: Practical examples demonstrating the skill
-3. **Best Practices**: Industry-standard approaches and patterns
-4. **Common Pitfalls**: Issues to avoid and how to handle them
-5. **Testing Strategies**: How to verify the implementation works correctly
+1. **Instruções Detalhadas**: Orientação passo a passo para completar a tarefa
+2. **Exemplos de Código**: Exemplos práticos demonstrando a skill
+3. **Boas Práticas**: Abordagens e padrões padrão da indústria
+4. **Armadilhas Comuns**: Problemas a evitar e como lidar com eles
+5. **Estratégias de Teste**: Como verificar se a implementação funciona corretamente
 
-### Skill Discovery
+### Descoberta de Skills
 
-Claude Code automatically discovers and activates skills based on:
+O Claude Code descobre e ativa skills automaticamente baseado em:
 
-- Keywords mentioned in your request
-- Context of the conversation
-- Files and technologies in your project
+- Palavras-chave mencionadas na sua solicitação
+- Contexto da conversa
+- Arquivos e tecnologias no seu projeto
 
-### Manual Skill Reference
+### Referência Manual de Skills
 
-You can reference specific skills by mentioning their exact trigger keywords or asking:
+Você pode referenciar skills específicas mencionando suas palavras-chave exatas de ativação ou perguntando:
 
-- "What skills are available for testing?"
-- "Show me skills related to API development"
-- "Which skills can help with performance optimization?"
-
----
-
-## Contributing Skills
-
-To add new skills to this library:
-
-1. Create a new directory in `.claude/skills/skill-name/`
-2. Add `SKILL.md` with proper YAML frontmatter
-3. Include detailed instructions and examples
-4. Update this matrix document with the new skill
-5. Test the skill with realistic scenarios
+- "Quais skills estão disponíveis para testes?"
+- "Mostre-me skills relacionadas a desenvolvimento de APIs"
+- "Quais skills podem ajudar com otimização de desempenho?"
 
 ---
 
-## Skill Categories Reference
+## Contribuindo com Skills
 
-| Category                           | Count | Primary Use Cases                           |
-| ---------------------------------- | ----- | ------------------------------------------- |
-| Software Development & Engineering | 35    | Code architecture, patterns, frameworks     |
-| Data Science & Analytics           | 20    | Data analysis, statistics, ML models        |
-| DevOps & Infrastructure            | 20    | Deployment, orchestration, monitoring       |
-| Security & Compliance              | 15    | Security audits, compliance, authentication |
-| Testing & Quality Assurance        | 15    | Automated testing, QA processes             |
-| Documentation & Technical Writing  | 15    | Technical docs, guides, diagrams            |
-| Database & Storage                 | 12    | SQL, NoSQL, data management                 |
-| API & Integration                  | 12    | REST, GraphQL, webhooks, integrations       |
-| Cloud Platforms                    | 15    | AWS, Azure, GCP, serverless                 |
-| Frontend Development               | 12    | React, Vue, Angular, web UI                 |
-| Backend Development                | 12    | Server-side frameworks, APIs                |
-| Mobile Development                 | 8     | iOS, Android, React Native                  |
-| Machine Learning & AI              | 10    | ML models, training, deployment             |
-| Monitoring & Observability         | 8     | Metrics, logging, tracing                   |
-| Version Control & CI/CD            | 10    | Git workflows, pipelines                    |
-| Project Management                 | 10    | Agile, planning, estimation                 |
-| Business Analysis                  | 8     | Requirements, process mapping               |
-| Design & UX                        | 8     | UI/UX design, prototyping                   |
-| Performance & Optimization         | 8     | Performance tuning, profiling               |
-| Troubleshooting & Debugging        | 12    | Debugging, root cause analysis              |
+Para adicionar novas skills a esta biblioteca:
 
-**Total: 200 skills across 20 categories**
+1. Crie um novo diretório em `.claude/skills/nome-da-skill/`
+2. Adicione `SKILL.md` com frontmatter YAML adequado
+3. Inclua instruções detalhadas e exemplos
+4. Atualize este documento de matriz com a nova skill
+5. Teste a skill com cenários realistas
+
+---
+
+## Referência de Categorias de Skills
+
+| Categoria                                    | Qtd | Principais Casos de Uso                         |
+| -------------------------------------------- | --- | ------------------------------------------------ |
+| Desenvolvimento de Software e Engenharia     | 35  | Arquitetura de código, padrões, frameworks       |
+| Ciência de Dados e Analytics                 | 20  | Análise de dados, estatística, modelos de ML     |
+| DevOps e Infraestrutura                      | 20  | Deploy, orquestração, monitoramento              |
+| Segurança e Conformidade                     | 15  | Auditorias de segurança, conformidade, autenticação |
+| Testes e Garantia de Qualidade               | 15  | Testes automatizados, processos de QA            |
+| Documentação e Redação Técnica               | 15  | Docs técnicos, guias, diagramas                 |
+| Banco de Dados e Armazenamento               | 12  | SQL, NoSQL, gestão de dados                      |
+| API e Integração                             | 12  | REST, GraphQL, webhooks, integrações             |
+| Plataformas Cloud                            | 15  | AWS, Azure, GCP, serverless                      |
+| Desenvolvimento Frontend                     | 12  | React, Vue, Angular, UI web                      |
+| Desenvolvimento Backend                      | 12  | Frameworks server-side, APIs                     |
+| Desenvolvimento Mobile                       | 8   | iOS, Android, React Native                       |
+| Machine Learning e IA                        | 10  | Modelos de ML, treinamento, deploy               |
+| Monitoramento e Observabilidade              | 8   | Métricas, logging, tracing                       |
+| Controle de Versão e CI/CD                   | 10  | Fluxos Git, pipelines                            |
+| Gestão de Projetos                           | 10  | Agile, planejamento, estimativas                 |
+| Análise de Negócios                          | 8   | Requisitos, mapeamento de processos              |
+| Design e UX                                  | 8   | Design UI/UX, prototipagem                       |
+| Desempenho e Otimização                      | 8   | Tuning de desempenho, profiling                  |
+| Resolução de Problemas e Debugging           | 12  | Debugging, análise de causa raiz                 |
+
+**Total: 200 skills em 20 categorias**

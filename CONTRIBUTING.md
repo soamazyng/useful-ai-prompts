@@ -1,177 +1,177 @@
-# Contributing to Useful AI Prompts
+# Contribuindo para Useful AI Prompts
 
-🎉 Thank you for your interest in contributing to this collection of AI prompts! This guide will help you understand how to contribute effectively.
+🎉 Obrigado pelo seu interesse em contribuir para esta coleção de prompts de IA! Este guia vai te ajudar a entender como contribuir de forma eficaz.
 
-## 📋 Table of Contents
+## 📋 Índice
 
-- [Getting Started](#getting-started)
-- [Types of Contributions](#types-of-contributions)
-- [Prompt Standards](#prompt-standards)
-- [File Organization](#file-organization)
-- [Submission Process](#submission-process)
-- [Quality Guidelines](#quality-guidelines)
-- [Review Process](#review-process)
+- [Primeiros Passos](#primeiros-passos)
+- [Tipos de Contribuição](#tipos-de-contribuição)
+- [Padrões de Prompts](#padrões-de-prompts)
+- [Organização de Arquivos](#organização-de-arquivos)
+- [Processo de Envio](#processo-de-envio)
+- [Diretrizes de Qualidade](#diretrizes-de-qualidade)
+- [Processo de Revisão](#processo-de-revisão)
 
-## 🚀 Getting Started
+## 🚀 Primeiros Passos
 
-### Prerequisites
+### Pré-requisitos
 
-- GitHub account
-- Basic understanding of Markdown
-- Experience with AI assistants (Claude, ChatGPT, etc.)
-- Familiarity with the relevant domain (development, security, etc.)
+- Conta no GitHub
+- Conhecimento básico de Markdown
+- Experiência com assistentes de IA (Claude, ChatGPT, etc.)
+- Familiaridade com o domínio relevante (desenvolvimento, segurança, etc.)
 
-### Repository Structure
+### Estrutura do Repositório
 
 ```
 .
-├── development/          # Software development prompts
-├── security/             # Security and vulnerability prompts
-├── infrastructure/       # Infrastructure and deployment prompts
-├── ai-prompt-engineering/ # AI and prompting technique prompts
-├── project-management/   # Workflow and project management prompts
-├── README.md             # Main repository documentation
-└── CONTRIBUTING.md       # This file
+├── development/          # Prompts de desenvolvimento de software
+├── security/             # Prompts de segurança e vulnerabilidades
+├── infrastructure/       # Prompts de infraestrutura e deploy
+├── ai-prompt-engineering/ # Prompts de técnicas de IA e prompting
+├── project-management/   # Prompts de fluxo de trabalho e gestão de projetos
+├── README.md             # Documentação principal do repositório
+└── CONTRIBUTING.md       # Este arquivo
 ```
 
-## 🎯 Types of Contributions
+## 🎯 Tipos de Contribuição
 
-### 1. New Prompts
+### 1. Novos Prompts
 
-**What we're looking for:**
+**O que estamos procurando:**
 
-- Comprehensive, production-ready prompts
-- Clear use cases and benefits
-- Well-tested with AI assistants
-- Professional quality output
+- Prompts abrangentes e prontos para produção
+- Casos de uso e benefícios claros
+- Bem testados com assistentes de IA
+- Resultados de qualidade profissional
 
-### 2. Prompt Improvements
+### 2. Melhorias em Prompts
 
-**Enhancement areas:**
+**Áreas de aprimoramento:**
 
-- Adding more detailed examples
-- Improving clarity and structure
-- Adding edge case handling
-- Including more comprehensive error handling
+- Adicionar exemplos mais detalhados
+- Melhorar clareza e estrutura
+- Adicionar tratamento de casos extremos
+- Incluir tratamento de erros mais abrangente
 
-### 3. Documentation
+### 3. Documentação
 
-**Documentation needs:**
+**Necessidades de documentação:**
 
-- Usage examples with different AI assistants
-- Troubleshooting guides
-- Best practices for prompt engineering
+- Exemplos de uso com diferentes assistentes de IA
+- Guias de resolução de problemas
+- Boas práticas de engenharia de prompts
 
-## 📝 Prompt Standards
+## 📝 Padrões de Prompts
 
-### Structure Requirements
+### Requisitos de Estrutura
 
-Every prompt file must include:
+Cada arquivo de prompt deve incluir:
 
 ```markdown
-# [Prompt Title]
+# [Título do Prompt]
 
-## Overview
+## Visão Geral
 
-[Brief description of what this prompt does and its primary use case]
+[Breve descrição do que este prompt faz e seu principal caso de uso]
 
-## The Prompt
+## O Prompt
 ```
 
-[The actual prompt content in a code block]
+[O conteúdo real do prompt em um bloco de código]
 
 ```
 
-## Key Features
-- Feature 1
-- Feature 2
-- Feature 3
+## Principais Funcionalidades
+- Funcionalidade 1
+- Funcionalidade 2
+- Funcionalidade 3
 
-## Benefits
-- Benefit 1
-- Benefit 2
-- Benefit 3
+## Benefícios
+- Benefício 1
+- Benefício 2
+- Benefício 3
 
 ## Tags
 `tag1` `tag2` `tag3`
 ```
 
-### Content Quality Standards
+### Padrões de Qualidade de Conteúdo
 
-#### Comprehensive Scope
+#### Escopo Abrangente
 
-- Prompts should be thorough and production-ready
-- Include error handling and edge cases
-- Provide multiple examples and use cases
-- Cover security considerations where applicable
+- Os prompts devem ser completos e prontos para produção
+- Incluir tratamento de erros e casos extremos
+- Fornecer múltiplos exemplos e casos de uso
+- Abordar considerações de segurança quando aplicável
 
-#### Clear Instructions
+#### Instruções Claras
 
-- Use precise, actionable language
-- Include step-by-step workflows
-- Provide context and rationale for decisions
-- Include validation and testing steps
+- Usar linguagem precisa e acionável
+- Incluir fluxos de trabalho passo a passo
+- Fornecer contexto e justificativa para decisões
+- Incluir etapas de validação e teste
 
-#### Professional Output
+#### Resultado Profissional
 
-- Generate enterprise-quality results
-- Include proper documentation patterns
-- Follow industry best practices
-- Provide complete, functional examples
+- Gerar resultados de nível empresarial
+- Incluir padrões adequados de documentação
+- Seguir as melhores práticas do setor
+- Fornecer exemplos completos e funcionais
 
-## 📁 File Organization
+## 📁 Organização de Arquivos
 
-### Naming Conventions
+### Convenções de Nomenclatura
 
-**File names:**
+**Nomes de arquivos:**
 
-- Use lowercase with hyphens: `my-prompt-name.md`
-- Be descriptive but concise
-- Avoid special characters except hyphens
+- Usar minúsculas com hifens: `meu-nome-de-prompt.md`
+- Ser descritivo, mas conciso
+- Evitar caracteres especiais exceto hifens
 
-**Prompt titles:**
+**Títulos de prompts:**
 
-- Use title case: "My Prompt Name"
-- Be specific about the use case
-- Avoid generic terms like "Helper" or "Assistant"
+- Usar Title Case: "Meu Nome de Prompt"
+- Ser específico sobre o caso de uso
+- Evitar termos genéricos como "Ajudante" ou "Assistente"
 
-### Category Guidelines
+### Diretrizes de Categorias
 
-**development/**: Software development, frameworks, languages, testing
-**security/**: Security analysis, vulnerability scanning, secure coding
-**infrastructure/**: Docker, Kubernetes, Terraform, cloud platforms
-**ai-prompt-engineering/**: AI techniques, memory management, prompting patterns
-**project-management/**: Git workflows, project setup, documentation
+**development/**: Desenvolvimento de software, frameworks, linguagens, testes
+**security/**: Análise de segurança, varredura de vulnerabilidades, programação segura
+**infrastructure/**: Docker, Kubernetes, Terraform, plataformas de nuvem
+**ai-prompt-engineering/**: Técnicas de IA, gerenciamento de memória, padrões de prompting
+**project-management/**: Fluxos de trabalho com Git, configuração de projetos, documentação
 
-## 🔄 Submission Process
+## 🔄 Processo de Envio
 
-1. Fork the repository
-2. Create a descriptive branch
-3. Add your content following standards
-4. Test thoroughly with AI assistants
-5. Create a pull request with detailed description
+1. Faça um fork do repositório
+2. Crie um branch descritivo
+3. Adicione seu conteúdo seguindo os padrões
+4. Teste minuciosamente com assistentes de IA
+5. Crie um pull request com descrição detalhada
 
-## ✅ Quality Guidelines
+## ✅ Diretrizes de Qualidade
 
-### Before Submitting
+### Antes de Enviar
 
-- [ ] Test with at least one AI assistant
-- [ ] Verify outputs are accurate and complete
-- [ ] Check spelling and grammar
-- [ ] Follow file structure requirements
-- [ ] Include comprehensive examples
+- [ ] Testar com pelo menos um assistente de IA
+- [ ] Verificar se os resultados são precisos e completos
+- [ ] Verificar ortografia e gramática
+- [ ] Seguir os requisitos de estrutura de arquivos
+- [ ] Incluir exemplos abrangentes
 
-## 🔍 Review Process
+## 🔍 Processo de Revisão
 
-Contributions are reviewed for:
+As contribuições são revisadas quanto a:
 
-- Technical accuracy
-- Prompt effectiveness
-- Documentation quality
-- Professional standards
+- Precisão técnica
+- Eficácia do prompt
+- Qualidade da documentação
+- Padrões profissionais
 
 ---
 
-**Thank you for contributing to the AI prompting community! 🚀**
+**Obrigado por contribuir para a comunidade de prompts de IA! 🚀**
 
-Your contributions help developers, security professionals, and AI engineers work more effectively with AI assistants.
+Suas contribuições ajudam desenvolvedores, profissionais de segurança e engenheiros de IA a trabalhar de forma mais eficaz com assistentes de IA.

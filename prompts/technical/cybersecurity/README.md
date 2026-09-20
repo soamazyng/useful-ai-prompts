@@ -1,13 +1,13 @@
-# Cybersecurity Prompts
+# Prompts de Cibersegurança
 
-Security incident response and threat management prompts for enterprise protection.
+Prompts de resposta a incidentes de segurança e gestão de ameaças para proteção empresarial.
 
-## Available Prompts
+## Prompts Disponíveis
 
-### Incident Response
+### Resposta a Incidentes
 
-- [Incident Response Commander](./incident-response-commander.md) - Comprehensive security incident management
+- [Comandante de Resposta a Incidentes](./incident-response-commander.md) - Gestão abrangente de incidentes de segurança
 
 ---
 
-_Defend against threats with AI-powered security operations._
+_Defenda-se contra ameaças com operações de segurança alimentadas por IA._

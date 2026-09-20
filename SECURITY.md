@@ -1,91 +1,91 @@
-# Security Policy
+# Política de Segurança
 
-## Scope
+## Escopo
 
-This repository contains a library of AI prompts designed for professional workflows. Unlike traditional software repositories, there is no executable code that could contain conventional security vulnerabilities such as buffer overflows, SQL injection, or authentication bypasses.
+Este repositório contém uma biblioteca de prompts de IA projetados para fluxos de trabalho profissionais. Diferentemente de repositórios de software tradicionais, não há código executável que possa conter vulnerabilidades de segurança convencionais, como buffer overflows, injeção de SQL ou falhas de autenticação.
 
-However, prompt libraries have their own unique security considerations related to content safety and prompt integrity.
+No entanto, bibliotecas de prompts têm suas próprias considerações de segurança únicas relacionadas à segurança de conteúdo e integridade dos prompts.
 
-## Supported Versions
+## Versões Suportadas
 
-| Version | Supported          |
-| ------- | ------------------ |
-| main    | :white_check_mark: |
+| Versão | Suportada          |
+| ------ | ------------------ |
+| main   | :white_check_mark: |
 
-Only the current `main` branch is actively maintained. We do not provide security updates for historical commits or branches.
+Apenas o branch `main` atual é mantido ativamente. Não fornecemos atualizações de segurança para commits ou branches históricos.
 
-## What Constitutes a Security Issue
+## O que Constitui um Problema de Segurança
 
-For a prompt library, security issues may include:
+Para uma biblioteca de prompts, problemas de segurança podem incluir:
 
-### High Priority
+### Alta Prioridade
 
-- **Prompt injection attacks**: Prompts designed to manipulate AI systems into bypassing safety guidelines or performing unintended actions
-- **Malicious content**: Prompts that encourage or facilitate harmful, illegal, or unethical activities
-- **Data exfiltration prompts**: Content designed to trick AI systems into revealing sensitive information
+- **Ataques de injeção de prompt**: Prompts projetados para manipular sistemas de IA a contornar diretrizes de segurança ou executar ações não intencionadas
+- **Conteúdo malicioso**: Prompts que incentivam ou facilitam atividades prejudiciais, ilegais ou antiéticas
+- **Prompts de exfiltração de dados**: Conteúdo projetado para enganar sistemas de IA a revelar informações sensíveis
 
-### Medium Priority
+### Média Prioridade
 
-- **Jailbreak attempts**: Prompts crafted to circumvent AI safety measures
-- **Deceptive prompts**: Content that misrepresents its purpose or contains hidden instructions
-- **Social engineering templates**: Prompts designed to manipulate users or third parties
+- **Tentativas de jailbreak**: Prompts criados para contornar medidas de segurança de IA
+- **Prompts enganosos**: Conteúdo que desvirtua seu propósito ou contém instruções ocultas
+- **Templates de engenharia social**: Prompts projetados para manipular usuários ou terceiros
 
-### Lower Priority
+### Prioridade Menor
 
-- **Biased or discriminatory content**: Prompts that promote unfair treatment of individuals or groups
-- **Misinformation templates**: Prompts designed to generate false or misleading content
+- **Conteúdo tendencioso ou discriminatório**: Prompts que promovem tratamento injusto de indivíduos ou grupos
+- **Templates de desinformação**: Prompts projetados para gerar conteúdo falso ou enganoso
 
-## Reporting a Vulnerability
+## Reportando uma Vulnerabilidade
 
-If you discover a security issue in this prompt library, please report it through one of the following channels:
+Se você descobrir um problema de segurança nesta biblioteca de prompts, por favor reporte através de um dos seguintes canais:
 
-### Preferred: GitHub Security Advisories
+### Preferido: GitHub Security Advisories
 
-1. Navigate to the [Security tab](../../security) of this repository
-2. Click "Report a vulnerability"
-3. Provide a detailed description of the issue
+1. Navegue até a [aba Security](../../security) deste repositório
+2. Clique em "Report a vulnerability"
+3. Forneça uma descrição detalhada do problema
 
-### Alternative: Private Issue
+### Alternativa: Issue Privada
 
-If you cannot use GitHub Security Advisories:
+Se você não puder usar o GitHub Security Advisories:
 
-1. Open a new issue with the title prefix `[SECURITY]`
-2. Provide minimal details publicly
-3. Request a private communication channel for full disclosure
+1. Abra uma nova issue com o prefixo `[SECURITY]` no título
+2. Forneça detalhes mínimos publicamente
+3. Solicite um canal de comunicação privado para divulgação completa
 
-**Please do not:**
+**Por favor, não:**
 
-- Publicly disclose the full details of security issues before they are addressed
-- Submit security reports for issues that do not fall within the scope defined above
+- Divulgue publicamente os detalhes completos de problemas de segurança antes que sejam resolvidos
+- Envie relatórios de segurança para problemas que não se enquadram no escopo definido acima
 
-## What to Include in Your Report
+## O que Incluir no seu Relatório
 
-- Location of the problematic prompt (file path and line numbers if applicable)
-- Description of the security concern
-- Potential impact or harm that could result
-- Any suggested remediation steps
+- Localização do prompt problemático (caminho do arquivo e números de linha, se aplicável)
+- Descrição da preocupação de segurança
+- Impacto potencial ou dano que poderia resultar
+- Quaisquer passos de remediação sugeridos
 
-## Response Timeline
+## Cronograma de Resposta
 
-| Action                               | Expected Timeframe     |
-| ------------------------------------ | ---------------------- |
-| Initial acknowledgment               | Within 48 hours        |
-| Preliminary assessment               | Within 5 business days |
-| Resolution for high-priority issues  | Within 14 days         |
-| Resolution for medium/lower priority | Within 30 days         |
+| Ação                                          | Prazo Esperado         |
+| --------------------------------------------- | ---------------------- |
+| Confirmação inicial                           | Dentro de 48 horas     |
+| Avaliação preliminar                          | Dentro de 5 dias úteis |
+| Resolução para problemas de alta prioridade   | Dentro de 14 dias      |
+| Resolução para prioridade média/menor         | Dentro de 30 dias      |
 
-These timelines are targets and may vary based on the complexity of the issue and maintainer availability.
+Esses prazos são metas e podem variar com base na complexidade do problema e disponibilidade dos mantenedores.
 
-## Our Commitment
+## Nosso Compromisso
 
-We take the safety and integrity of this prompt library seriously. When a valid security issue is reported, we will:
+Levamos a segurança e integridade desta biblioteca de prompts a sério. Quando um problema de segurança válido for reportado, nós iremos:
 
-1. Acknowledge receipt of your report promptly
-2. Investigate the issue thoroughly
-3. Remove or remediate problematic content
-4. Credit reporters (unless anonymity is requested) in our changelog
-5. Communicate transparently about the resolution
+1. Confirmar o recebimento do seu relatório prontamente
+2. Investigar o problema minuciosamente
+3. Remover ou remediar o conteúdo problemático
+4. Creditar os reportadores (a menos que anonimato seja solicitado) em nosso changelog
+5. Comunicar de forma transparente sobre a resolução
 
-## Questions
+## Dúvidas
 
-For general questions about this security policy, please open a standard issue in the repository.
+Para perguntas gerais sobre esta política de segurança, por favor abra uma issue padrão no repositório.

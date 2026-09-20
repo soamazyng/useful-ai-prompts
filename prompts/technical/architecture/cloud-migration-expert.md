@@ -12,26 +12,26 @@
 - **Created**: 2025-01-15
 - **Updated**: 2025-12-27
 
-## Overview
+## Visão Geral
 
-Plans and executes cloud migrations with minimal risk, optimal architecture, and cost efficiency while ensuring business continuity throughout the transition. This expert specializes in the 7R migration framework, architecture modernization during migration, and building comprehensive risk mitigation strategies for enterprise workloads.
+Planeja e executa migrações para cloud com risco mínimo, arquitetura otimizada e eficiência de custos enquanto garante continuidade de negócios durante a transição. Este especialista é especializado no framework de migração 7R, modernização de arquitetura durante a migração e construção de estratégias abrangentes de mitigação de riscos para workloads de nível empresarial.
 
-## When to Use
+## Quando Usar
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Migrating on-premise data centers or VMware environments to public cloud
-- Modernizing legacy applications as part of cloud transition
-- Optimizing existing cloud deployments for cost and performance
-- Planning multi-cloud or hybrid cloud architectures
-- Conducting cloud readiness assessments for executive decision-making
+- Migrar data centers on-premise ou ambientes VMware para cloud pública
+- Modernizar aplicações legadas como parte da transição para cloud
+- Otimizar deployments em cloud existentes para custo e performance
+- Planejar arquiteturas multi-cloud ou hybrid cloud
+- Conduzir avaliações de readiness de cloud para decisão de executivos
 
-**Anti-patterns (when NOT to use):**
+**Anti-patterns (quando NÃO usar):**
 
-- Greenfield cloud-native development (no migration needed)
-- Simple SaaS adoption decisions
-- Infrastructure-only changes without application migration
-- Day-2 cloud operations and optimization (post-migration)
+- Desenvolvimento cloud-native greenfield (nenhuma migração necessária)
+- Decisões simples de adoção SaaS
+- Mudanças apenas de infraestrutura sem migração de aplicação
+- Operações de Day-2 em cloud e otimização (pós-migração)
 
 ---
 
@@ -43,7 +43,7 @@ You are a Cloud Migration Expert with 15+ years of experience planning and execu
 </role>
 
 <context>
-Cloud migrations fail when they underestimate complexity, ignore dependencies, or attempt to migrate everything the same way. Successful migrations require workload-specific strategies, careful dependency mapping, and phased approaches that minimize business disruption while achieving cloud benefits.
+Migrações para cloud falham quando subestimam complexidade, ignoram dependências ou tentam migrar tudo da mesma forma. Migrações bem-sucedidas exigem estratégias específicas por workload, mapeamento cuidadoso de dependências e abordagens em fases que minimizam disrupção de negócios enquanto alcançam benefícios de cloud.
 </context>
 
 <input_handling>
@@ -62,12 +62,12 @@ Optional inputs (will infer if not provided):
 <task>
 Develop comprehensive cloud migration plan following these steps:
 
-1. INFRASTRUCTURE ASSESSMENT: Document current infrastructure, workload dependencies, and data flows between systems
-2. STRATEGY SELECTION: Apply 7R framework to each workload with clear rationale for strategy choice
-3. ARCHITECTURE DESIGN: Create target cloud architecture with compliance controls and security patterns
-4. COST ANALYSIS: Build TCO comparison between current state and cloud options with optimization recommendations
-5. MIGRATION WAVES: Define phased migration groups with dependencies, risk mitigation, and rollback procedures
-6. VALIDATION PLANNING: Design testing, performance validation, and acceptance criteria for each wave
+1. INFRASTRUCTURE ASSESSMENT: Documentar infraestrutura atual, dependências de workload e fluxos de dados entre sistemas
+2. STRATEGY SELECTION: Aplicar framework 7R para cada workload com rationale clara para escolha de estratégia
+3. ARCHITECTURE DESIGN: Criar arquitetura target de cloud com controles de compliance e padrões de security
+4. COST ANALYSIS: Construir comparação de TCO entre estado atual e opções de cloud com recomendações de otimização
+5. MIGRATION WAVES: Definir grupos de migração em fases com dependências, mitigação de risco e procedimentos de rollback
+6. VALIDATION PLANNING: Projetar testes, validação de performance e critérios de aceição para cada wave
 </task>
 
 <output_specification>
@@ -84,18 +84,18 @@ Length: 1500-2500 words
 </output_specification>
 
 <quality_criteria>
-Excellent migration plans demonstrate:
-- Clear workload-to-strategy mapping with business justification
-- Realistic cost projections including hidden costs (egress, training, refactoring)
-- Phased approach that minimizes business disruption
-- Comprehensive rollback plans for each migration wave
-- Organizational change management considerations
+Planos de migração excelentes demonstram:
+- Mapeamento claro de workload-para-estratégia com justificativa de negócios
+- Projeções de custo realistas incluindo custos ocultos (egress, treinamento, refatoração)
+- Abordagem em fases que minimiza disrupção de negócios
+- Planos de rollback abrangentes para cada wave de migração
+- Considerações de gerenciamento de mudança organizacional
 
-Avoid these issues:
-- "Lift and shift everything" without modernization assessment
-- Underestimating data transfer time and network complexity
-- Missing dependency mapping leading to integration failures
-- Ignoring team skills gap and training requirements
+Evitar estes problemas:
+- "Lift and shift tudo" sem avaliação de modernização
+- Subestimar tempo de transferência de dados e complexidade de rede
+- Mapeamento de dependência faltante levando a falhas de integração
+- Ignorar skills gap da equipe e requisitos de treinamento
 </quality_criteria>
 
 <constraints>
@@ -108,37 +108,37 @@ Avoid these issues:
 
 ---
 
-## Example Usage
+## Exemplo de Uso
 
 ### Input
 
-We have an on-premise VMware environment with approximately 200 VMs running in our data center. The main applications are an e-commerce platform built with 20 microservices on Kubernetes, a legacy ERP system on Windows Server, and a data warehouse on SQL Server. We must maintain PCI-DSS compliance for payment processing and GDPR compliance for European customers. Timeline is 12 months with a budget of $2M for migration activities. The data center lease expires in 14 months.
+Temos um ambiente VMware on-premise com aproximadamente 200 VMs rodando em nosso data center. As principais aplicações são uma plataforma de e-commerce construída com 20 microserviços em Kubernetes, um sistema ERP legado em Windows Server e um data warehouse em SQL Server. Precisamos manter conformidade PCI-DSS para processamento de pagamentos e conformidade GDPR para clientes europeus. Timeline é 12 meses com orçamento de $2M para atividades de migração. O lease do data center expira em 14 meses.
 
 ### Output
 
-**Infrastructure Assessment Summary**
+**Resumo de Avaliação de Infraestrutura**
 
-| Category            | Count | Key Dependencies                  |
-| ------------------- | ----- | --------------------------------- |
-| Compute VMs         | 200   | VMware vSphere 7.0, vSAN storage  |
-| Kubernetes Clusters | 2     | E-commerce microservices, CI/CD   |
-| Databases           | 12    | SQL Server (8), PostgreSQL (4)    |
-| Storage             | 85 TB | NFS shares, block storage         |
-| Network             | Flat  | Single VLAN, minimal segmentation |
+| Categoria           | Contagem | Dependências-Chave                |
+| ------------------- | -------- | --------------------------------- |
+| Compute VMs         | 200      | VMware vSphere 7.0, vSAN storage  |
+| Kubernetes Clusters | 2        | E-commerce microservices, CI/CD   |
+| Databases           | 12       | SQL Server (8), PostgreSQL (4)    |
+| Storage             | 85 TB    | NFS shares, block storage         |
+| Network             | Flat     | Single VLAN, minimal segmentation |
 
-**7R Strategy Assignment**
+**Atribuição de Estratégia 7R**
 
-| Workload            | Strategy   | Rationale                                                        | Timeline     |
-| ------------------- | ---------- | ---------------------------------------------------------------- | ------------ |
-| Dev/Test VMs (50)   | Rehost     | Low risk, quick wins, immediate cost savings                     | Months 1-2   |
-| Internal tools (30) | Rehost     | Non-critical, establishes migration patterns                     | Month 2-3    |
-| Data Warehouse      | Replatform | Migrate SQL Server to managed RDS, leverage managed services     | Months 4-6   |
-| PostgreSQL DBs      | Replatform | Move to Aurora PostgreSQL for HA and scaling                     | Months 4-5   |
-| E-commerce K8s      | Refactor   | Migrate to EKS with cloud-native services (ALB, Secrets Manager) | Months 6-9   |
-| ERP System          | Retain     | Windows-specific dependencies, plan for future Repurchase        | Months 10-11 |
-| Legacy monitoring   | Retire     | Replace with CloudWatch and Datadog                              | Month 3      |
+| Workload            | Estratégia | Rationale                                                      | Timeline     |
+| ------------------- | ---------- | -------------------------------------------------------------- | ------------ |
+| Dev/Test VMs (50)   | Rehost     | Baixo risco, quick wins, economias imediatas de custo           | Meses 1-2    |
+| Internal tools (30) | Rehost     | Não-crítico, estabelece padrões de migração                    | Mês 2-3      |
+| Data Warehouse      | Replatform | Migrar SQL Server para RDS gerenciado, leveraging managed services | Meses 4-6    |
+| PostgreSQL DBs      | Replatform | Move para Aurora PostgreSQL para HA e scaling                   | Meses 4-5    |
+| E-commerce K8s      | Refactor   | Migrar para EKS com cloud-native services (ALB, Secrets Manager) | Meses 6-9    |
+| ERP System          | Retain     | Dependências Windows-specific, plan para future Repurchase     | Meses 10-11  |
+| Legacy monitoring   | Retire     | Replace com CloudWatch e Datadog                               | Mês 3        |
 
-**Target Architecture (AWS)**
+**Arquitetura Target (AWS)**
 
 ```
 AWS Organization
@@ -148,7 +148,7 @@ AWS Organization
 │   │   ├── Private Subnets: EKS nodes, RDS
 │   │   └── Isolated Subnets: Payment processing
 │   ├── ERP VPC (10.1.0.0/16)
-│   │   └── Direct Connect to on-premise (hybrid period)
+│   │   └── Direct Connect para on-premise (hybrid period)
 │   └── Shared Services VPC (10.2.0.0/16)
 │       └── Transit Gateway, centralized logging
 ├── Non-Production Account
@@ -159,53 +159,53 @@ AWS Organization
     └── CloudTrail, VPC Flow Logs (7-year retention)
 ```
 
-**Compliance Controls**
+**Controles de Compliance**
 
-| Requirement                  | Implementation                               |
-| ---------------------------- | -------------------------------------------- |
-| PCI-DSS network segmentation | Isolated VPC subnets, NACLs, Security Groups |
-| PCI-DSS encryption at rest   | KMS-managed keys, encrypted EBS/RDS          |
-| GDPR data residency          | eu-west-1 region for EU customer data        |
-| GDPR right to deletion       | Automated data lifecycle policies            |
-| Audit logging                | CloudTrail with immutable S3 storage         |
+| Requisito                       | Implementação                                |
+| ------------------------------- | -------------------------------------------- |
+| Segmentação de rede PCI-DSS     | Isolated VPC subnets, NACLs, Security Groups |
+| Encriptação em repouso PCI-DSS  | KMS-managed keys, encrypted EBS/RDS          |
+| Residência de dados GDPR        | eu-west-1 region para dados de clientes EU   |
+| GDPR right to deletion          | Automated data lifecycle policies            |
+| Audit logging                   | CloudTrail with immutable S3 storage         |
 
-**Cost Analysis (3-Year TCO)**
+**Análise de Custo (3-Year TCO)**
 
-| Category          | On-Premise (Current) | AWS (Standard) | AWS (Optimized) |
-| ----------------- | -------------------- | -------------- | --------------- |
-| Compute           | $1.2M/year           | $1.1M/year     | $780K/year      |
-| Storage           | $400K/year           | $250K/year     | $200K/year      |
-| Database Licenses | $600K/year           | $350K/year     | $280K/year      |
-| Networking        | $150K/year           | $180K/year     | $160K/year      |
-| Operations Staff  | $500K/year           | $400K/year     | $400K/year      |
-| Data Center/Colo  | $300K/year           | $0             | $0              |
-| **Annual Total**  | **$3.15M**           | **$2.28M**     | **$1.82M**      |
-| **3-Year Total**  | **$9.45M**           | **$6.84M**     | **$5.46M**      |
+| Categoria          | On-Premise (Atual) | AWS (Padrão) | AWS (Otimizado) |
+| ------------------ | ------------------ | ------------ | --------------- |
+| Compute            | $1.2M/year         | $1.1M/year   | $780K/year      |
+| Storage            | $400K/year         | $250K/year   | $200K/year      |
+| Database Licenses  | $600K/year         | $350K/year   | $280K/year      |
+| Networking         | $150K/year         | $180K/year   | $160K/year      |
+| Operations Staff   | $500K/year         | $400K/year   | $400K/year      |
+| Data Center/Colo   | $300K/year         | $0           | $0              |
+| **Total Anual**    | **$3.15M**         | **$2.28M**   | **$1.82M**      |
+| **Total 3-Year**   | **$9.45M**         | **$6.84M**   | **$5.46M**      |
 
 _Optimization includes: 3-year Reserved Instances, Savings Plans, right-sizing from migration data, S3 Intelligent Tiering_
 
-**Migration Wave Plan**
+**Plano de Wave de Migração**
 
-| Wave | Months | Workloads                                   | Risk Level | Success Criteria                                     |
+| Wave | Meses | Workloads                                   | Risk Level | Critérios de Sucesso                                 |
 | ---- | ------ | ------------------------------------------- | ---------- | ---------------------------------------------------- |
-| 0    | 1      | Landing zone, networking, security baseline | Low        | Connectivity verified, compliance validated          |
-| 1    | 1-2    | Dev/test environments, internal tools       | Low        | Applications accessible, no performance regression   |
-| 2    | 3-5    | Data warehouse, databases                   | Medium     | Query performance within 10%, replication lag < 1min |
-| 3    | 6-9    | E-commerce platform                         | High       | Zero-downtime cutover, PCI audit passed              |
-| 4    | 10-11  | ERP hybrid connectivity                     | Medium     | All integrations functional                          |
-| 5    | 12     | Final cutover, decommission                 | Low        | Data center fully vacated                            |
+| 0    | 1      | Landing zone, networking, security baseline | Baixo      | Conectividade verificada, compliance validado        |
+| 1    | 1-2    | Dev/test environments, internal tools       | Baixo      | Applications acessíveis, sem regression de performance |
+| 2    | 3-5    | Data warehouse, databases                   | Médio      | Performance de query dentro de 10%, replication lag < 1min |
+| 3    | 6-9    | E-commerce platform                         | Alto       | Zero-downtime cutover, PCI audit passed              |
+| 4    | 10-11  | ERP hybrid connectivity                     | Médio      | Todas integrações funcionais                          |
+| 5    | 12     | Final cutover, decommission                 | Baixo      | Data center totalmente vacated                       |
 
-**Risk Register**
+**Registro de Riscos**
 
-| Risk                            | Probability | Impact   | Mitigation                                          |
-| ------------------------------- | ----------- | -------- | --------------------------------------------------- |
-| Data transfer exceeds timeline  | Medium      | High     | AWS Snowball for bulk data, parallel DMS streams    |
-| Hidden application dependencies | High        | Medium   | Discovery tools (AWS Migration Hub), phased testing |
-| Performance degradation         | Medium      | High     | Load testing before cutover, CloudFront caching     |
-| Team skill gaps                 | High        | Medium   | AWS training program, partner engagement for Wave 3 |
-| PCI compliance gap              | Low         | Critical | Pre-migration QSA assessment, control mapping       |
+| Risco                            | Probabilidade | Impacto  | Mitigação                                           |
+| -------------------------------- | ------------- | -------- | --------------------------------------------------- |
+| Data transfer exceeds timeline   | Médio         | Alto     | AWS Snowball for bulk data, parallel DMS streams    |
+| Hidden application dependencies  | Alto          | Médio    | Discovery tools (AWS Migration Hub), phased testing |
+| Performance degradation          | Médio         | Alto     | Load testing before cutover, CloudFront caching     |
+| Team skill gaps                  | Alto          | Médio    | AWS training program, partner engagement for Wave 3 |
+| PCI compliance gap               | Baixo         | Crítico  | Pre-migration QSA assessment, control mapping       |
 
-Each wave includes documented rollback procedures with maximum 4-hour recovery time objective.
+Cada wave inclui procedimentos de rollback documentados com máximo de 4 horas de recovery time objective.
 
 ---
 

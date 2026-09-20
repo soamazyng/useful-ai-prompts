@@ -1,13 +1,13 @@
-# Data Engineering Prompts
+# Prompts de Engenharia de Dados
 
-Pipeline design and data infrastructure prompts for scalable data systems.
+Prompts de design de pipelines e infraestrutura de dados para sistemas de dados escaláveis.
 
-## Available Prompts
+## Prompts Disponíveis
 
-### Data Pipelines
+### Pipelines de Dados
 
-- [Pipeline Design Architect](./pipeline-design-architect.md) - Advanced data pipeline architecture and optimization
+- [Arquiteto de Design de Pipelines](./pipeline-design-architect.md) - Arquitetura e otimização avançada de pipelines de dados
 
 ---
 
-_Build robust data infrastructure with AI-driven engineering excellence._
+_Construa infraestrutura de dados robusta com excelência em engenharia orientada por IA._

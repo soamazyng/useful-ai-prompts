@@ -1,20 +1,20 @@
-# MCP Instructions
+# Instruções MCP
 
-This folder contains prompts that provide comprehensive instructions for LLMs (Large Language Models) on how to effectively utilize Model Context Protocol (MCP) capabilities.
+Esta pasta contém prompts que fornecem instruções abrangentes para LLMs (Modelos de Linguagem de Grande Escala) sobre como utilizar efetivamente as capacidades do Model Context Protocol (MCP).
 
-## Purpose
+## Propósito
 
-These prompts are designed to guide AI assistants in:
+Estes prompts são projetados para orientar assistentes de IA em:
 
-- Leveraging available MCP servers and tools
-- Following best practices for multi-tool workflows
-- Maintaining context and memory across sessions
-- Integrating various capabilities seamlessly
+- Aproveitar servidores e ferramentas MCP disponíveis
+- Seguir boas práticas para fluxos de trabalho com múltiplas ferramentas
+- Manter contexto e memória entre sessões
+- Integrar diversas capacidades de forma fluida
 
-## Contents
+## Conteúdo
 
-- **claude-with-mcps.md**: Comprehensive instructions for Claude to maximize MCP tool utilization across all available servers and capabilities
+- **claude-with-mcps.md**: Instruções abrangentes para o Claude maximizar a utilização de ferramentas MCP em todos os servidores e capacidades disponíveis
 
-## Usage
+## Uso
 
-These instruction prompts should be provided to the LLM at the beginning of a session or conversation to establish proper workflow patterns and tool usage guidelines.
+Estes prompts de instrução devem ser fornecidos ao LLM no início de uma sessão ou conversa para estabelecer padrões adequados de fluxo de trabalho e diretrizes de uso de ferramentas.

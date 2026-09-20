@@ -1,6 +1,6 @@
 # Skills Library
 
-A collection of 259 specialized skills for AI assistants, each providing expert guidance on a specific technical or professional domain. Skills are structured for both programmatic indexing and human browsing.
+A collection of 260 specialized skills for AI assistants, each providing expert guidance on a specific technical or professional domain. Skills are structured for both programmatic indexing and human browsing.
 
 ## For AI Assistants: How to Use This Library
 
@@ -94,7 +94,7 @@ When a user asks for help on a topic:
 | Infrastructure | 32 | docker-containerization, kubernetes-deployment, terraform-iac |
 | Frontend | 31 | react-component-design, css-grid-layout, angular-module-design |
 | Database | 30 | sql-query-optimization, mongodb-schema-design, redis-caching |
-| Testing | 28 | unit-testing, integration-testing, load-testing |
+| Testing | 29 | unit-testing, integration-testing, load-testing, test-cases |
 | Security | 21 | api-security-hardening, access-control-rbac, vulnerability-scanning |
 | CI/CD | 16 | jenkins-pipeline, github-actions, gitlab-ci |
 | Process | 13 | agile-sprint-planning, code-review, stakeholder-communication |
@@ -104,7 +104,7 @@ When a user asks for help on a topic:
 
 ### Skill Structure
 
-**228 skills** use the full Progressive Disclosure Architecture (hub + references). The remaining 31 skills are single-file (under 150 lines of content — too concise to warrant splitting).
+**229 skills** use the full Progressive Disclosure Architecture (hub + references). The remaining 31 skills are single-file (under 150 lines of content — too concise to warrant splitting).
 
 Every restructured skill includes:
 - **Hub SKILL.md** — Concise overview (typically 80-130 lines)

@@ -14,10 +14,15 @@ These headings are hardcoded into scripts and MUST NOT be translated:
 
 ```markdown
 ## Metadata
+
 ## Overview
+
 ## When to Use
+
 ## Prompt
+
 ## Example Usage
+
 ## Related Prompts
 ```
 
@@ -80,12 +85,19 @@ The following section headings are referenced by tooling and MUST be in English:
 
 ```markdown
 ## Metadata
+
 ## Overview
+
 ## When to Use
+
 ## Prompt
+
 ## Example Usage
+
 ## Related Prompts
+
 ## XML Tag Structure (or similar schema doc sections)
+
 ## Quality Checks (or similar validation sections)
 ```
 
@@ -96,6 +108,7 @@ The following section headings are referenced by tooling and MUST be in English:
 These elements should be translated for user readability:
 
 ### Prose and Descriptions
+
 - **Descriptive text** in section introductions
 - **Examples of prompt outputs** (the user-facing content within `<role>`, `<context>`, `<task>` tags when showing translations of what prompts do)
 - **Navigation text** ("Consulte X para...", "Navigate to...", "See...")
@@ -103,10 +116,12 @@ These elements should be translated for user readability:
 - **Instructions and guidance** in sections like "Quick Start", "Contributing", etc.
 
 ### Section Headings (NOT Schema-Level)
+
 These can be translated if they are organizational/navigational (not part of prompt schema):
 
 ```markdown
 ✅ CAN translate:
+
 - Quick Start → "Início Rápido" (organizational, not schema)
 - Contributing → "Contribuindo" (organizational)
 - Web Interface → "Interface Web" (organizational)
@@ -114,6 +129,7 @@ These can be translated if they are organizational/navigational (not part of pro
 - Links → "Links" (organizational)
 
 ❌ CANNOT translate:
+
 - Metadata → must stay "Metadata"
 - Overview → must stay "Overview"
 - When to Use → must stay "When to Use"
@@ -197,6 +213,7 @@ feature/[what-you-are-doing]
 ```
 
 **Examples**:
+
 ```
 feature/translate-readme-pt-br
 feature/add-missing-hooks
@@ -208,6 +225,7 @@ feature/add-rules-documentation
 ### Workflow Steps
 
 1. **Create a feature branch** from `main`:
+
    ```bash
    git checkout -b feature/[description]
    ```
@@ -218,6 +236,7 @@ feature/add-rules-documentation
    - Include proper attribution in commits
 
 3. **Push to remote**:
+
    ```bash
    git push origin feature/[description]
    ```
@@ -291,11 +310,52 @@ Never run a bare `gh pr create` in this repo — it will silently target the wro
 
 ---
 
+## 📘 Required README.md Format for Every Skill (`skills/<name>/README.md`)
+
+**Every new or adapted skill added under `skills/<name>/` must ship a `README.md`** in addition to the `SKILL.md` hub. The canonical reference implementation is [`skills/test-cases/README.md`](skills/test-cases/README.md) — use it as the template for structure, tone, and depth.
+
+### Required Sections (in this order)
+
+1. **Attribution + License** (if the skill is adapted from an external source)
+   - Name/handle of the original author and a link to the original repository
+   - Note that it was adapted to this project's Progressive Disclosure architecture (link to `skills/README.md`)
+   - License of the original work
+
+2. **"Como a skill funciona" (How the skill works)**
+   - Walk through every section of `SKILL.md` (frontmatter, Overview, When to Use, Quick Start, Reference Guides, Best Practices) and explain, in plain language, what each one is for and why it exists — not just that it exists
+   - List each file under `references/` with a one-line description of what it covers, and explain that these are loaded on demand (progressive disclosure), not upfront
+   - Include a short numbered **"Fluxo de execução"** summarizing the skill's workflow end to end (the steps a reader would find inside `references/*-workflow.md`, condensed)
+
+3. **"Como usar" (How to use)**
+   - A subsection for using it inside Claude Code (trigger phrases matching the `description`, explicit invocation via `/skill-name` or the `Skill` tool)
+   - A subsection for using the skill's capability in **any other AI assistant** by copying the standalone prompt (see next section) — this repository is a prompt library first, so every skill must remain usable without Claude Code
+
+4. **"Prompt de Exemplo — Copiar e Colar" (Example Prompt — Copy and Paste)**
+   - A single, self-contained, production-quality prompt that reproduces the skill's behavior in any LLM chat interface
+   - **Must follow the same structure used throughout `prompts/`**: `<role>` (concrete persona with real expertise, years of experience, named methodologies/certifications — never a generic "you are a helpful assistant"), `<context>` (why this matters, what failure mode the skill prevents), `<input_handling>` (required vs. optional inputs, what to do when input is ambiguous), `<task>` (numbered steps), `<output_specification>` (format, length, required contents), `<quality_criteria>` (what excellent output looks like vs. what to avoid), `<constraints>` (hard rules, what never to fabricate)
+   - **Write the prompt body in Portuguese** (pt-BR) — translate everything inside the tags, but **keep the XML tag names themselves in English** (`<role>`, `<context>`, etc.) since they are structural delimiters, not prose, and match the convention used across this repository's schema (see the Critical Rule section above)
+   - Follow the prompt block with a short **"Exemplo de uso do prompt"** subsection showing a realistic Input and a summarized Output, so a reader can verify the prompt works before pasting it elsewhere
+
+### Why This Matters
+
+A skill without this README is only usable by an agent that already knows to read `SKILL.md` — it is opaque to a human browsing the repository and worthless outside Claude Code. The standalone prompt in section 4 is what makes every skill in `skills/` double as a prompt in the spirit of this repository's name: **Useful AI Prompts**.
+
+### Checklist Before Adding a New Skill
+
+- [ ] `SKILL.md` hub exists with valid frontmatter (`name`, `description`)
+- [ ] `README.md` exists with all four required sections above, in the order given
+- [ ] The example prompt inside `README.md` is a complete `<role>/<context>/<input_handling>/<task>/<output_specification>/<quality_criteria>/<constraints>` block, written in Portuguese, with English tag names
+- [ ] The example prompt was sanity-checked against the "Exemplo de uso" — does the described input plausibly produce the described output?
+- [ ] `npx prettier --check` passes on all new files
+
+---
+
 ## 📝 Last Updated
 
 - **2026-09-20** — Created to prevent schema translation errors in README.md
 - **2026-09-20** — Added Git Workflow & Best Practices section
 - **2026-09-20** — Added critical rule: PRs must target the fork (`origin`) only, never `upstream`
+- **2026-09-20** — Added required README.md format for skills, using `skills/test-cases/README.md` as the canonical reference
 - **Status**: Active for all future translation and contribution work in this repository
 
 ---

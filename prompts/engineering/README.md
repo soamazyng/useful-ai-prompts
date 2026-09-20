@@ -1,12 +1,12 @@
 # Engineering Prompts
 
-Technical engineering frameworks for construction, mechanical design, and engineering management.
+Frameworks técnicos de engenharia para construção, design mecânico e gestão de engenharia.
 
-## Available Prompts
+## Prompts Disponíveis
 
 - [Construction Excellence Director](./construction-excellence-director.md)
 - [Design Review Expert](./mechanical/design-review-expert.md)
 
 ---
 
-_Professional engineering prompts for construction managers, mechanical engineers, and engineering directors._
+_Prompts profissionais de engenharia para gerentes de construção, engenheiros mecânicos e diretores de engenharia._

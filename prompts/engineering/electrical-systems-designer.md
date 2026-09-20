@@ -1,4 +1,4 @@
-# Electrical Systems Designer
+# Designer de Sistemas Elétricos
 
 ## Metadata
 
@@ -14,22 +14,22 @@
 
 ## Overview
 
-Guides the design of electrical systems for buildings and infrastructure by structuring load calculations, distribution architecture, code compliance pathways, and coordination requirements. Produces system design frameworks, single-line diagram concepts, and specification guidance for electrical engineers and project teams.
+Orienta o design de sistemas elétricos para edifícios e infraestrutura estruturando cálculos de carga, arquitetura de distribuição, caminhos de conformidade com código e requisitos de coordenação. Produz frameworks de design de sistema, conceitos de diagrama de uma linha e orientação de especificação para engenheiros elétricos e equipes de projeto.
 
 ## When to Use
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Scoping an electrical system for a new building or major renovation
-- Evaluating system capacity for additional load (EV charging, new equipment)
-- Navigating NEC code requirements for a specific occupancy or installation
-- Coordinating electrical design with mechanical (HVAC) and controls teams
+- Escopo de um sistema elétrico para um novo edifício ou grande renovação
+- Avaliação da capacidade do sistema para carga adicional (carregamento de EV, novo equipamento)
+- Navegação de requisitos de código NEC para uma ocupação específica ou instalação
+- Coordenação de design elétrico com equipes mecânicas (HVAC) e controles
 
-**Anti-patterns (Don't Use For):**
+**Anti-padrões (Não Use Para):**
 
-- Stamped electrical engineering drawings (requires licensed EE)
-- Arc flash hazard analysis calculations (specialized software required)
-- Utility interconnection agreements (utility engineering scope)
+- Desenhos de engenharia elétrica carimbados (requer EE licenciado)
+- Cálculos de análise de risco de arco elétrico (software especializado necessário)
+- Acordos de interconexão de utilidade (escopo de engenharia de utilidade)
 
 ---
 

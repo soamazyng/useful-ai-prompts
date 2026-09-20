@@ -1,4 +1,4 @@
-# Technical Specification Writer
+# Redator de Especificação Técnica
 
 ## Metadata
 
@@ -14,20 +14,20 @@
 
 ## Overview
 
-This prompt activates a technical writing specialist with engineering depth who drafts engineering specifications, performance specifications, interface control documents (ICDs), and design requirements documents. The expert translates verbal requirements and design intent into precise, unambiguous specification language that can be used for procurement, design, testing, and contractual obligations. Outputs include complete specification documents with appropriate structure, measurable requirements, and verification methods.
+Este prompt ativa um especialista em redação técnica com profundidade de engenharia que redige especificações de engenharia, especificações de desempenho, documentos de controle de interface (ICDs) e documentos de requisitos de design. O especialista traduz requisitos verbais e intenção de design em linguagem de especificação precisa e sem ambiguidade que pode ser usada para procurement, design, teste e obrigações contratuais. Outputs incluem documentos de especificação completos com estrutura apropriada, requisitos mensuráveis e métodos de verificação.
 
 ## When to Use
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Writing a performance or design specification for a component or subsystem to release to a supplier
-- Drafting an Interface Control Document (ICD) defining the technical interface between two systems or teams
-- Producing a System Requirements Specification (SRS) to formally capture requirements for development and testing
+- Redação de uma especificação de desempenho ou design para um componente ou subsistema para lançar a um fornecedor
+- Redação de um Documento de Controle de Interface (ICD) definindo a interface técnica entre dois sistemas ou equipes
+- Produção de uma Especificação de Requisitos de Sistema (SRS) para capturar formalmente requisitos para desenvolvimento e teste
 
-**Anti-patterns (Don't Use For):**
+**Anti-padrões (Não Use Para):**
 
-- User manuals or operator instructions (different document type with different audience and structure)
-- Marketing or sales materials describing product capabilities (not engineering specification language)
+- Manuais de usuário ou instruções de operador (tipo de documento diferente com audiência e estrutura diferentes)
+- Materiais de marketing ou vendas descrevendo capacidades de produto (não é linguagem de especificação de engenharia)
 
 ---
 
@@ -126,68 +126,68 @@ Avoid:
 
 ### Input
 
-"Write a performance specification for a brushless DC motor for an electric bicycle drivetrain. The motor needs to propel a 120kg rider + bike to 28 km/h on flat ground and handle hills up to 10% grade. It should operate in outdoor conditions."
+"Escreva uma especificação de desempenho para um motor CC brushless para uma transmissão de bicicleta elétrica. O motor precisa propelir um ciclista + bicicleta de 120kg a 28 km/h em terreno plano e lidar com subidas de até 10% de inclinação. Deve operar em condições ao ar livre."
 
 ### Output
 
-**Performance Specification — Brushless DC Motor, Electric Bicycle Drivetrain**
+**Especificação de Desempenho — Motor CC Brushless, Transmissão de Bicicleta Elétrica**
 
-**Document No.:** SPEC-MOTOR-001 | **Rev:** A | **Date:** 2026-02-28 | **Status:** Released
+**Nº do Documento:** SPEC-MOTOR-001 | **Rev:** A | **Data:** 2026-02-28 | **Status:** Liberado
 
 ---
 
-**1. Scope**
+**1. Escopo**
 
-This specification establishes minimum performance requirements for a brushless DC (BLDC) hub motor for use in a Class 1 electric bicycle drivetrain system. The motor shall provide pedal-assist propulsion for a system gross mass of 120 kg maximum.
+Esta especificação estabelece requisitos mínimos de desempenho para um motor de cubo CC brushless (BLDC) para uso em um sistema de transmissão de bicicleta elétrica Classe 1. O motor deve fornecer propulsão de assistência de pedal para uma massa bruta de sistema de 120 kg máximo.
 
-**2. Applicable Documents**
+**2. Documentos Aplicáveis**
 
-IEC 60034-1: Rotating Electrical Machines. EN 15194: Electric Power Assisted Cycles. MIL-STD-810H: Environmental Testing (Methods 514, 516, 501, 502 as reference for environmental limits).
+IEC 60034-1: Máquinas Elétricas Rotativas. EN 15194: Ciclos com Assistência Elétrica de Pedalada. MIL-STD-810H: Teste Ambiental (Métodos 514, 516, 501, 502 como referência para limites ambientais).
 
-**3. General Requirements**
+**3. Requisitos Gerais**
 
-3.1 The motor shall operate continuously within ambient temperature range -20°C to +50°C.
-3.2 The motor shall withstand water ingress per IP65 per IEC 60529 (water jet from any direction — no ingress).
-3.3 The motor and integration envelope shall not exceed 95 mm axle-to-axle width at the dropout.
-3.4 The motor mass shall not exceed 3.0 kg including axle and fasteners.
+3.1 O motor deve operar continuamente dentro da faixa de temperatura ambiente de -20°C a +50°C.
+3.2 O motor deve suportar entrada de água conforme IP65 por IEC 60529 (jato de água de qualquer direção — sem entrada).
+3.3 O motor e envelope de integração não deve exceder 95 mm de largura eixo-a-eixo na ponteira.
+3.4 A massa do motor não deve exceder 3,0 kg incluindo eixo e fixadores.
 
-**4. Performance Requirements**
+**4. Requisitos de Desempenho**
 
-| Req. ID | Requirement                   | Unit | Limit                      | Condition                        | Verify |
+| Req. ID | Requisito                   | Unidade | Limite                      | Condição                        | Verificação |
 | ------- | ----------------------------- | ---- | -------------------------- | -------------------------------- | ------ |
-| PR-01   | Continuous output power       | W    | ≥ 250                      | 25°C ambient, rated voltage      | T      |
-| PR-02   | Peak output power (30s)       | W    | ≥ 500                      | 25°C ambient, rated voltage      | T      |
-| PR-03   | No-load speed at 36V          | RPM  | 340 ± 20                   | 36V ±2% input, no load           | T      |
-| PR-04   | Motor efficiency (rated load) | %    | ≥ 82                       | 250W output, 36V input           | T      |
-| PR-05   | Operating voltage range       | V DC | 24 – 48                    | Continuous operation             | T      |
-| PR-06   | Stall torque (peak)           | N·m  | ≥ 40                       | 36V, locked rotor, ≤3s           | T      |
-| PR-07   | Thermal cutoff temperature    | °C   | ≤ 120                      | Motor winding temperature        | T      |
-| PR-08   | Continuous torque             | N·m  | ≥ 22                       | At rated 250W output             | T      |
-| PR-09   | Electromagnetic emissions     | —    | EN 55032 Class B           | Full operating speed, rated load | T      |
-| PR-10   | Vibration endurance           | —    | No performance degradation | IEC 60068-2-6: 10-55Hz, 0.15mm   | T      |
-| PR-11   | Operating life                | km   | ≥ 20,000                   | Normal operating duty cycle      | A      |
-| PR-12   | Insulation resistance         | MΩ   | ≥ 100                      | 500V DC megger, winding to case  | T      |
+| PR-01   | Potência de saída contínua       | W    | ≥ 250                      | 25°C ambiente, tensão nominal      | T      |
+| PR-02   | Potência de saída de pico (30s)       | W    | ≥ 500                      | 25°C ambiente, tensão nominal      | T      |
+| PR-03   | Velocidade sem carga a 36V          | RPM  | 340 ± 20                   | Entrada 36V ±2%, sem carga           | T      |
+| PR-04   | Eficiência do motor (carga nominal) | %    | ≥ 82                       | Saída 250W, entrada 36V           | T      |
+| PR-05   | Faixa de tensão operacional       | V CC | 24 – 48                    | Operação contínua             | T      |
+| PR-06   | Torque de partida (pico)           | N·m  | ≥ 40                       | 36V, rotor travado, ≤3s           | T      |
+| PR-07   | Temperatura de corte térmico    | °C   | ≤ 120                      | Temperatura de enrolamento do motor        | T      |
+| PR-08   | Torque contínuo             | N·m  | ≥ 22                       | Na saída nominal de 250W             | T      |
+| PR-09   | Emissões eletromagnéticas     | —    | EN 55032 Classe B           | Velocidade operacional total, carga nominal | T      |
+| PR-10   | Resistência à vibração           | —    | Sem degradação de desempenho | IEC 60068-2-6: 10-55Hz, 0,15mm   | T      |
+| PR-11   | Vida operacional                | km   | ≥ 20.000                   | Ciclo de trabalho operacional normal      | A      |
+| PR-12   | Resistência de isolamento         | MΩ   | ≥ 100                      | Megômetro 500V CC, enrolamento ao chassi  | T      |
 
-**5. Verification Cross-Reference**
+**5. Referência Cruzada de Verificação**
 
-All PR requirements verified by Test (T) per condition column. PR-11 (operating life) verified by Analysis (A) using MTBF calculation with accelerated life test data submission.
+Todos os requisitos PR verificados por Teste (T) conforme coluna de condição. PR-11 (vida operacional) verificado por Análise (A) usando cálculo MTBF com submissão de dados de teste de vida acelerado.
 
-**6. Revision History**
+**6. Histórico de Revisão**
 
-| Rev | Date       | Description     |
+| Rev | Data       | Descrição     |
 | --- | ---------- | --------------- |
-| A   | 2026-02-28 | Initial release |
+| A   | 2026-02-28 | Lançamento inicial |
 
 ---
 
 ## Variations
 
-- **Interface Control Document (ICD)**: Defines the physical, electrical, data, and mechanical interface between two assemblies or systems for multi-team programs
-- **Software Requirements Specification (SRS)**: IEEE 830-compliant software requirements for embedded firmware or application software
-- **Supplier qualification specification**: Specification package for supplier qualification including quality management, process, and sample submission requirements
+- **Documento de Controle de Interface (ICD)**: Define a interface física, elétrica, de dados e mecânica entre duas montagens ou sistemas para programas multi-equipe
+- **Especificação de Requisitos de Software (SRS)**: Requisitos de software compatíveis com IEEE 830 para firmware embarcado ou software de aplicação
+- **Especificação de qualificação de fornecedor**: Pacote de especificação para qualificação de fornecedor incluindo gestão de qualidade, processo e requisitos de submissão de amostra
 
 ## Related Prompts
 
-- [systems-engineering-expert](systems-engineering-expert.md) - Develops the requirements architecture that populates this specification
-- [test-validation-engineer](test-validation-engineer.md) - Develops test plans and procedures that execute the verification requirements stated here
-- [design-review-facilitator](design-review-facilitator.md) - Uses specifications as the basis for design review against requirements
+- [systems-engineering-expert](systems-engineering-expert.md) - Desenvolve a arquitetura de requisitos que popula esta especificação
+- [test-validation-engineer](test-validation-engineer.md) - Desenvolve planos e procedimentos de teste que executam os requisitos de verificação declarados aqui
+- [design-review-facilitator](design-review-facilitator.md) - Usa especificações como base para revisão de design contra requisitos

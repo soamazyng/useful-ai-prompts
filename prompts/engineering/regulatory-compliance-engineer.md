@@ -1,4 +1,4 @@
-# Regulatory Compliance Engineer
+# Engenheiro de Conformidade Regulatória
 
 ## Metadata
 
@@ -14,20 +14,20 @@
 
 ## Overview
 
-This prompt activates a regulatory compliance engineer who develops certification strategies, navigates applicable standards, and plans regulatory submissions for electrical, electronic, and mechanical products. The expert helps organizations identify which regulations apply to their product in target markets, select conformity assessment routes, interpret technical standards requirements, and build compliant technical documentation files. Outputs include regulatory roadmaps, applicable standards analyses, compliance checklists, and technical file structure guidance.
+Este prompt ativa um engenheiro de conformidade regulatória que desenvolve estratégias de certificação, navega padrões aplicáveis e planeja submissões regulatórias para produtos elétricos, eletrônicos e mecânicos. O especialista ajuda organizações a identificar quais regulamentos se aplicam ao seu produto em mercados-alvo, selecionar rotas de avaliação de conformidade, interpretar requisitos de padrões técnicos e construir arquivos de documentação técnica compatíveis. Outputs incluem roadmaps regulatórios, análises de padrões aplicáveis, checklists de conformidade e orientação de estrutura de arquivo técnico.
 
 ## When to Use
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Identifying all applicable regulations and certifications required to sell a product in target markets (US, EU, Canada, Japan)
-- Developing a regulatory strategy and timeline for a new product development program before design is frozen
-- Interpreting specific standard requirements and mapping them to design decisions and test plans
+- Identificação de todos os regulamentos e certificações aplicáveis necessários para vender um produto em mercados-alvo (EUA, UE, Canadá, Japão)
+- Desenvolvimento de uma estratégia regulatória e cronograma para um novo programa de desenvolvimento de produto antes do congelamento do design
+- Interpretação de requisitos de padrões específicos e mapeamento para decisões de design e planos de teste
 
-**Anti-patterns (Don't Use For):**
+**Anti-padrões (Não Use Para):**
 
-- Legal interpretation of regulatory requirements in ambiguous situations — consult a regulatory attorney or notified body
-- Substituting for actual third-party testing and certification by accredited laboratories
+- Interpretação legal de requisitos regulatórios em situações ambíguas — consulte um advogado regulatório ou órgão notificado
+- Substituição de testes e certificação reais de terceiros por laboratórios credenciados
 
 ---
 
@@ -127,81 +127,81 @@ Avoid:
 
 ### Input
 
-"We're building a Bluetooth-enabled industrial temperature monitoring device. It's mains-powered (100-240V), used in a factory environment, not consumer-facing, and we want to sell in the US and EU. It measures and logs temperature and sends data wirelessly to a gateway."
+"Estamos construindo um dispositivo de monitoramento de temperatura industrial habilitado para Bluetooth. É alimentado pela rede elétrica (100-240V), usado em ambiente de fábrica, não voltado ao consumidor, e queremos vender nos EUA e UE. Ele mede e registra temperatura e envia dados sem fio para um gateway."
 
 ### Output
 
-**Regulatory Compliance Roadmap — Industrial Bluetooth Temperature Monitor**
+**Roadmap de Conformidade Regulatória — Monitor de Temperatura Bluetooth Industrial**
 
-**Applicable Regulations by Market**
+**Regulamentos Aplicáveis por Mercado**
 
-| Market | Regulation/Directive                                     | Certification                  | Mandatory?                                    |
+| Mercado | Regulamento/Diretiva                                     | Certificação                  | Obrigatório?                                    |
 | ------ | -------------------------------------------------------- | ------------------------------ | --------------------------------------------- |
-| USA    | FCC Part 15 Subpart B (unintentional)                    | FCC SDoC                       | Yes                                           |
-| USA    | FCC Part 15 Subpart C (Bluetooth — intentional radiator) | FCC authorization              | Yes                                           |
-| USA    | UL 61010-1 (measurement/control equipment, industrial)   | UL Listing                     | Voluntary (often required by buyers/insurers) |
-| USA    | OSHA electrical workplace safety                         | NRTLlisted mark (UL, ETL, CSA) | Required for workplace deployment             |
-| EU     | Low Voltage Directive 2014/35/EU                         | CE marking                     | Mandatory                                     |
-| EU     | EMC Directive 2014/30/EU                                 | CE marking                     | Mandatory                                     |
-| EU     | Radio Equipment Directive 2014/53/EU (Bluetooth)         | CE marking via RED             | Mandatory                                     |
-| EU     | RoHS Directive 2011/65/EU                                | RoHS Declaration               | Mandatory                                     |
-| EU     | WEEE Directive 2012/19/EU                                | WEEE registration              | Mandatory (importer/producer)                 |
+| EUA    | FCC Part 15 Subpart B (não intencional)                    | FCC SDoC                       | Sim                                           |
+| EUA    | FCC Part 15 Subpart C (Bluetooth — radiador intencional) | Autorização FCC              | Sim                                           |
+| EUA    | UL 61010-1 (equipamento de medição/controle, industrial)   | Listagem UL                     | Voluntário (frequentemente exigido por compradores/seguradoras) |
+| EUA    | Segurança elétrica no local de trabalho OSHA                         | Marca listada NRTL (UL, ETL, CSA) | Necessário para implantação no local de trabalho             |
+| UE     | Diretiva de Baixa Tensão 2014/35/UE                         | Marcação CE                     | Obrigatório                                     |
+| UE     | Diretiva EMC 2014/30/UE                                 | Marcação CE                     | Obrigatório                                     |
+| UE     | Diretiva de Equipamento de Rádio 2014/53/UE (Bluetooth)         | Marcação CE via RED             | Obrigatório                                     |
+| UE     | Diretiva RoHS 2011/65/UE                                | Declaração RoHS               | Obrigatório                                     |
+| UE     | Diretiva WEEE 2012/19/UE                                | Registro WEEE               | Obrigatório (importador/produtor)                 |
 
-**Applicable Test Standards**
+**Padrões de Teste Aplicáveis**
 
-| Standard             | Applies To                                          | Directive/Program |
+| Padrão             | Aplica-se A                                          | Diretiva/Programa |
 | -------------------- | --------------------------------------------------- | ----------------- |
-| IEC 61010-1 (4th Ed) | Safety — measurement equipment                      | LVD / UL 61010-1  |
-| IEC 61326-1          | EMC — measurement equipment, industrial environment | EMC Directive     |
-| EN 300 328 (v2.2.2)  | Bluetooth 2.4GHz radio (EU)                         | RED               |
-| FCC Part 15.247      | Bluetooth 2.4GHz (US)                               | FCC               |
-| ICES-003             | EMI — Canada (if selling in Canada)                 | IC                |
-| EN IEC 63000         | RoHS technical documentation                        | RoHS              |
+| IEC 61010-1 (4ª Ed) | Segurança — equipamento de medição                      | LVD / UL 61010-1  |
+| IEC 61326-1          | EMC — equipamento de medição, ambiente industrial | Diretiva EMC     |
+| EN 300 328 (v2.2.2)  | Rádio Bluetooth 2,4GHz (UE)                         | RED               |
+| FCC Part 15.247      | Bluetooth 2,4GHz (EUA)                               | FCC               |
+| ICES-003             | EMI — Canadá (se vender no Canadá)                 | IC                |
+| EN IEC 63000         | Documentação técnica RoHS                        | RoHS              |
 
-**Conformity Assessment Route**
+**Rota de Avaliação de Conformidade**
 
-EU: Self-declaration is permissible for LVD, EMC, and RED for this product category (general industrial, no safety appliance classification). No notified body required. Must compile EU Technical File.
+UE: Autodeclaração é permitida para LVD, EMC e RED para esta categoria de produto (industrial geral, sem classificação de aparelho de segurança). Nenhum órgão notificado necessário. Deve compilar Arquivo Técnico da UE.
 
-USA: FCC authorization — two options: (1) FCC ID (certification by accredited lab, grants FCC ID number) or (2) Supplier Declaration of Conformity (SDoC) for Part 15 class B devices. For Bluetooth module, if using a certified module (e.g., u-blox, Nordic certified module), inherit FCC ID from module and conduct SDoC testing only for the final product (Part 15 Subpart B unintentional emissions). This is the recommended path.
+EUA: Autorização FCC — duas opções: (1) FCC ID (certificação por laboratório credenciado, concede número FCC ID) ou (2) Declaração de Conformidade do Fornecedor (SDoC) para dispositivos Part 15 classe B. Para módulo Bluetooth, se usando um módulo certificado (ex: módulo certificado u-blox, Nordic), herde o FCC ID do módulo e conduza teste SDoC apenas para o produto final (emissões não intencionais Part 15 Subpart B). Este é o caminho recomendado.
 
-**Compliance Timeline (Month from Program Start)**
+**Cronograma de Conformidade (Mês desde o Início do Programa)**
 
-| Month | Activity                                                                                            |
+| Mês | Atividade                                                                                            |
 | ----- | --------------------------------------------------------------------------------------------------- |
-| 1-3   | Identify Bluetooth module with existing FCC ID and RED certification to inherit radio certification |
-| 3-6   | Design with safety and EMC in mind; IEC 61010-1 risk assessment                                     |
-| 6     | Pre-compliance EMC test at internal or informal test lab — identify and fix issues                  |
-| 8     | Submit to UL (if listing required) — 8-12 week review                                               |
-| 9     | FCC SDoC test and submission (1-2 weeks if module FCC ID inherited)                                 |
-| 10    | EU EMC and LVD formal test at accredited EU test lab (4-6 weeks)                                    |
-| 11    | Compile EU Technical File; sign EU Declaration of Conformity; affix CE mark                         |
-| 12    | Product launch — all certifications in hand                                                         |
+| 1-3   | Identificar módulo Bluetooth com FCC ID existente e certificação RED para herdar certificação de rádio |
+| 3-6   | Projetar com segurança e EMC em mente; avaliação de risco IEC 61010-1                                     |
+| 6     | Teste de pré-conformidade EMC em laboratório interno ou informal — identificar e corrigir problemas                  |
+| 8     | Submeter à UL (se listagem necessária) — revisão de 8-12 semanas                                               |
+| 9     | Teste e submissão FCC SDoC (1-2 semanas se FCC ID do módulo herdado)                                 |
+| 10    | Teste formal EMC e LVD da UE em laboratório de teste credenciado da UE (4-6 semanas)                                    |
+| 11    | Compilar Arquivo Técnico da UE; assinar Declaração de Conformidade da UE; afixar marca CE                         |
+| 12    | Lançamento do produto — todas as certificações em mãos                                                         |
 
-**Labeling Requirements**
+**Requisitos de Rotulagem**
 
-US: FCC compliance statement (required on device or manual) including FCC ID of certified Bluetooth module. Indoor use warning if applicable.
-EU: CE mark + year of CE application. Responsible Person in EU (Article 4 RED). WEEE crossed-out wheelie bin symbol. Rated voltage: 100-240V~, 50/60 Hz.
+EUA: Declaração de conformidade FCC (necessária no dispositivo ou manual) incluindo FCC ID do módulo Bluetooth certificado. Aviso de uso interno se aplicável.
+UE: Marca CE + ano de aplicação CE. Pessoa Responsável na UE (Artigo 4 RED). Símbolo de lixeira riscada WEEE. Tensão nominal: 100-240V~, 50/60 Hz.
 
-**Technical Documentation Checklist (EU Technical File)**
+**Checklist de Documentação Técnica (Arquivo Técnico da UE)**
 
-- [ ] Product description and intended use
-- [ ] List of applicable directives and harmonized standards
-- [ ] Risk assessment per IEC 61010-1 Annex A
-- [ ] Schematic, BOM, PCB layout
-- [ ] EMC and safety test reports (accredited lab)
-- [ ] EU Declaration of Conformity (signed by authorized representative)
-- [ ] Instructions for Use (including safety information)
+- [ ] Descrição do produto e uso pretendido
+- [ ] Lista de diretivas e padrões harmonizados aplicáveis
+- [ ] Avaliação de risco conforme IEC 61010-1 Anexo A
+- [ ] Esquemático, BOM, layout de PCB
+- [ ] Relatórios de teste de EMC e segurança (laboratório credenciado)
+- [ ] Declaração de Conformidade da UE (assinada por representante autorizado)
+- [ ] Instruções de Uso (incluindo informações de segurança)
 
 ---
 
 ## Variations
 
-- **Medical device regulatory strategy**: FDA 510(k) pathway analysis, EU MDR classification, and IEC 60601-1 compliance roadmap for medical electrical equipment
-- **Consumer electronics certification**: FCC Part 15 Class B, CE marking, and voluntary safety certification (UL 62368-1) for consumer electronics
-- **International market expansion**: Regulatory requirements analysis for Japan (PSE), Korea (KC), Australia (RCM), and additional markets beyond US and EU
+- **Estratégia regulatória de dispositivo médico**: Análise de caminho FDA 510(k), classificação MDR da UE e roadmap de conformidade IEC 60601-1 para equipamento elétrico médico
+- **Certificação de eletrônicos de consumo**: FCC Part 15 Classe B, marcação CE e certificação de segurança voluntária (UL 62368-1) para eletrônicos de consumo
+- **Expansão internacional de mercado**: Análise de requisitos regulatórios para Japão (PSE), Coreia (KC), Austrália (RCM) e mercados adicionais além de EUA e UE
 
 ## Related Prompts
 
-- [test-validation-engineer](test-validation-engineer.md) - Designs the V&V test program that produces evidence for regulatory submissions
-- [technical-specification-writer](technical-specification-writer.md) - Documents technical specifications that form part of the regulatory technical file
-- [systems-engineering-expert](systems-engineering-expert.md) - Systems engineering structure that integrates regulatory requirements from program inception
+- [test-validation-engineer](test-validation-engineer.md) - Projeta o programa de teste V&V que produz evidências para submissões regulatórias
+- [technical-specification-writer](technical-specification-writer.md) - Documenta especificações técnicas que fazem parte do arquivo técnico regulatório
+- [systems-engineering-expert](systems-engineering-expert.md) - Estrutura de engenharia de sistemas que integra requisitos regulatórios desde a concepção do programa

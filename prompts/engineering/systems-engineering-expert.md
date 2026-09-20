@@ -1,4 +1,4 @@
-# Systems Engineering Expert
+# Especialista em Engenharia de Sistemas
 
 ## Metadata
 
@@ -14,20 +14,20 @@
 
 ## Overview
 
-This prompt activates a systems engineering specialist who applies Model-Based Systems Engineering (MBSE) principles and INCOSE guidelines to decompose complex system requirements, manage interfaces, and guide system integration. The expert translates stakeholder needs into verifiable technical requirements, develops functional architectures, and manages the relationships between system elements across the full engineering lifecycle. Outputs include requirements hierarchies, interface control documents, traceability matrices, and integration plans.
+Este prompt ativa um especialista em engenharia de sistemas que aplica princípios de Engenharia de Sistemas Baseada em Modelos (MBSE) e diretrizes INCOSE para decompor requisitos complexos de sistema, gerenciar interfaces e orientar integração de sistema. O especialista traduz necessidades de stakeholders em requisitos técnicos verificáveis, desenvolve arquiteturas funcionais e gerencia as relações entre elementos de sistema ao longo de todo o ciclo de vida de engenharia. Outputs incluem hierarquias de requisitos, documentos de controle de interface, matrizes de rastreabilidade e planos de integração.
 
 ## When to Use
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Decomposing high-level customer requirements into verifiable system and subsystem specifications
-- Managing interface definition and control between multiple engineering teams or contractors
-- Planning system integration sequences and test strategies for complex multi-element systems
+- Decomposição de requisitos de cliente de alto nível em especificações verificáveis de sistema e subsistema
+- Gerenciamento de definição e controle de interface entre múltiplas equipes de engenharia ou contratantes
+- Planejamento de sequências de integração de sistema e estratégias de teste para sistemas complexos multi-elemento
 
-**Anti-patterns (Don't Use For):**
+**Anti-padrões (Não Use Para):**
 
-- Single-discipline detailed design (use domain-specific engineering prompts for mechanical, electrical, or software design)
-- Post-delivery field service and maintenance planning (different lifecycle phase)
+- Design detalhado de disciplina única (use prompts de engenharia específicos de domínio para design mecânico, elétrico ou de software)
+- Planejamento de serviço de campo e manutenção pós-entrega (fase de ciclo de vida diferente)
 
 ---
 
@@ -124,60 +124,60 @@ Avoid:
 
 ### Input
 
-"We're developing an autonomous ground vehicle for agricultural applications. It needs to navigate a field, avoid obstacles, and report its position and status to a farm management system. Three teams are building: vehicle platform, perception/autonomy software, and communications. Help us set up systems engineering structure."
+"Estamos desenvolvendo um veículo terrestre autônomo para aplicações agrícolas. Ele precisa navegar em um campo, evitar obstáculos e reportar sua posição e status para um sistema de gestão agrícola. Três equipes estão construindo: plataforma do veículo, software de percepção/autonomia e comunicações. Ajude-nos a estabelecer estrutura de engenharia de sistemas."
 
 ### Output
 
-**Systems Engineering Structure — Autonomous Agricultural Vehicle**
+**Estrutura de Engenharia de Sistemas — Veículo Agrícola Autônomo**
 
-**System Context**
+**Contexto do Sistema**
 
-System boundary: Autonomous Ground Vehicle (AGV). External systems: Farm Management System (FMS), GPS constellation, field terrain. Operators: Remote fleet manager (monitoring), field technician (maintenance). Operational environment: Outdoor agricultural fields, variable terrain, weather exposure, dust, vibration.
+Limite do sistema: Veículo Terrestre Autônomo (AGV). Sistemas externos: Sistema de Gestão Agrícola (FMS), constelação GPS, terreno de campo. Operadores: Gerente de frota remoto (monitoramento), técnico de campo (manutenção). Ambiente operacional: Campos agrícolas ao ar livre, terreno variável, exposição climática, poeira, vibração.
 
 **Stakeholder Requirements (EARS Notation)**
 
-| ID    | Type         | Requirement                                                                                         |
+| ID    | Tipo         | Requisito                                                                                         |
 | ----- | ------------ | --------------------------------------------------------------------------------------------------- |
-| SR-01 | Ubiquitous   | The AGV shall navigate a defined field boundary at a minimum speed of 3 km/h                        |
-| SR-02 | Event-driven | When the AGV detects an obstacle within 2m, the AGV shall stop within 0.5s                          |
-| SR-03 | Ubiquitous   | The AGV shall transmit position and operational status to the FMS at minimum 1 Hz                   |
-| SR-04 | State-driven | While operating in autonomous mode, the AGV shall not require human intervention for path execution |
-| SR-05 | Unwanted     | The AGV shall not operate when battery state of charge falls below 15%                              |
-| SR-06 | Ubiquitous   | The AGV shall achieve field navigation with position accuracy of ±0.5m (CEP95)                      |
+| SR-01 | Ubíquo   | O AGV deve navegar um limite de campo definido a uma velocidade mínima de 3 km/h                        |
+| SR-02 | Orientado a evento | Quando o AGV detecta um obstáculo dentro de 2m, o AGV deve parar em 0,5s                          |
+| SR-03 | Ubíquo   | O AGV deve transmitir posição e status operacional para o FMS a no mínimo 1 Hz                   |
+| SR-04 | Orientado a estado | Enquanto operando em modo autônomo, o AGV não deve requerer intervenção humana para execução de trajeto |
+| SR-05 | Não desejado     | O AGV não deve operar quando o estado de carga da bateria cair abaixo de 15%                              |
+| SR-06 | Ubíquo   | O AGV deve alcançar navegação de campo com precisão de posição de ±0,5m (CEP95)                      |
 
-**Functional Decomposition**
+**Decomposição Funcional**
 
-F1: Perceive environment → F1.1: Detect obstacles, F1.2: Determine vehicle position, F1.3: Map terrain
-F2: Navigate → F2.1: Plan path, F2.2: Execute path, F2.3: Re-plan on obstacle detection
-F3: Communicate → F3.1: Transmit telemetry, F3.2: Receive mission commands, F3.3: Report faults
+F1: Perceber ambiente → F1.1: Detectar obstáculos, F1.2: Determinar posição do veículo, F1.3: Mapear terreno
+F2: Navegar → F2.1: Planejar trajeto, F2.2: Executar trajeto, F2.3: Replanejar na detecção de obstáculo
+F3: Comunicar → F3.1: Transmitir telemetria, F3.2: Receber comandos de missão, F3.3: Reportar falhas
 
-**Interface Summary**
+**Resumo de Interface**
 
-| Interface | From              | To                     | Key Attributes                                           |
+| Interface | De              | Para                     | Atributos Chave                                           |
 | --------- | ----------------- | ---------------------- | -------------------------------------------------------- |
-| IF-01     | Vehicle Platform  | Perception System      | CAN bus, 1Mbps, position/speed/actuator feedback at 10Hz |
-| IF-02     | Perception System | Vehicle Platform       | Drive commands (speed, steering), 10Hz minimum           |
-| IF-03     | Comms Subsystem   | Farm Management System | LTE/Wi-Fi, JSON telemetry, REST API, 1Hz minimum         |
-| IF-04     | GPS Antenna       | Perception System      | NMEA 0183, RS-232, 5Hz position fix                      |
+| IF-01     | Plataforma do Veículo  | Sistema de Percepção      | Barramento CAN, 1Mbps, feedback de posição/velocidade/atuador a 10Hz |
+| IF-02     | Sistema de Percepção | Plataforma do Veículo       | Comandos de condução (velocidade, direção), 10Hz mínimo           |
+| IF-03     | Subsistema de Comunicações   | Sistema de Gestão Agrícola | LTE/Wi-Fi, telemetria JSON, API REST, 1Hz mínimo         |
+| IF-04     | Antena GPS       | Sistema de Percepção      | NMEA 0183, RS-232, fixação de posição 5Hz                      |
 
-**Integration Sequence**
+**Sequência de Integração**
 
-Phase 1: Vehicle platform standalone (mobility, power — no perception). Phase 2: Perception integrated on stationary vehicle (sensor calibration, data quality). Phase 3: Closed-loop navigation in controlled environment (obstacle avoidance, path following). Phase 4: FMS communication integration. Phase 5: Full system field trials.
+Fase 1: Plataforma do veículo autônoma (mobilidade, energia — sem percepção). Fase 2: Percepção integrada em veículo estacionário (calibração de sensor, qualidade de dados). Fase 3: Navegação em malha fechada em ambiente controlado (evasão de obstáculos, seguimento de trajeto). Fase 4: Integração de comunicação FMS. Fase 5: Testes de campo de sistema completo.
 
-**Major Review Milestones**
+**Marcos Principais de Revisão**
 
-SRR (Requirements confirmed): Month 2. PDR (Architecture frozen): Month 4. CDR (Detailed design complete): Month 8. TRR (Test readiness): Month 14. SVR (System validation): Month 18.
+SRR (Requisitos confirmados): Mês 2. PDR (Arquitetura congelada): Mês 4. CDR (Design detalhado completo): Mês 8. TRR (Prontidão de teste): Mês 14. SVR (Validação de sistema): Mês 18.
 
 ---
 
 ## Variations
 
-- **Defense program systems engineering**: DoD-aligned SE with MIL-STD-961 requirements format, DI-SESS deliverables, and JCIDS requirements traceability
-- **Software-intensive system SE**: Requirements and interface management for software-dominant systems using SysML in Cameo or Rhapsody
-- **Product-line systems engineering**: SE approach for platform architecture supporting multiple product variants with shared subsystems
+- **Engenharia de sistemas de programa de defesa**: SE alinhado ao DoD com formato de requisitos MIL-STD-961, entregáveis DI-SESS e rastreabilidade de requisitos JCIDS
+- **SE de sistema intensivo em software**: Gerenciamento de requisitos e interface para sistemas dominados por software usando SysML em Cameo ou Rhapsody
+- **Engenharia de sistemas de linha de produto**: Abordagem SE para arquitetura de plataforma suportando múltiplas variantes de produto com subsistemas compartilhados
 
 ## Related Prompts
 
-- [technical-specification-writer](technical-specification-writer.md) - Produces detailed specifications from the requirements architecture developed here
-- [test-validation-engineer](test-validation-engineer.md) - Develops test plans that verify the requirements traced in the RTM
-- [design-review-facilitator](design-review-facilitator.md) - Structures the PDR/CDR reviews using the architecture and requirements outputs
+- [technical-specification-writer](technical-specification-writer.md) - Produz especificações detalhadas a partir da arquitetura de requisitos desenvolvida aqui
+- [test-validation-engineer](test-validation-engineer.md) - Desenvolve planos de teste que verificam os requisitos rastreados no RTM
+- [design-review-facilitator](design-review-facilitator.md) - Estrutura as revisões PDR/CDR usando os outputs de arquitetura e requisitos

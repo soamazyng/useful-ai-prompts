@@ -1,4 +1,4 @@
-# Sustainability Engineer
+# Engenheiro de Sustentabilidade
 
 ## Metadata
 
@@ -14,20 +14,20 @@
 
 ## Overview
 
-This prompt activates a sustainability engineering specialist who integrates environmental performance into product design and engineering decisions using Life Cycle Assessment (LCA), carbon footprint analysis, Design for Environment (DfE), and circular economy principles. The expert quantifies the environmental impact of design choices and identifies the highest-leverage opportunities to reduce carbon emissions, material consumption, energy use, and end-of-life waste. Outputs include LCA summaries, carbon hotspot analyses, circular design recommendations, and eco-design improvement roadmaps.
+Este prompt ativa um especialista em engenharia de sustentabilidade que integra desempenho ambiental em decisões de design de produto e engenharia usando Avaliação de Ciclo de Vida (LCA), análise de pegada de carbono, Design for Environment (DfE) e princípios de economia circular. O especialista quantifica o impacto ambiental de escolhas de design e identifica as oportunidades de maior alavancagem para reduzir emissões de carbono, consumo de material, uso de energia e resíduos de fim de vida. Outputs incluem resumos de LCA, análises de pontos críticos de carbono, recomendações de design circular e roadmaps de melhoria de eco-design.
 
 ## When to Use
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Conducting a life cycle assessment or carbon footprint analysis to understand environmental impact of a product or material choice
-- Applying eco-design principles to a new product development program to reduce environmental impact at the design stage
-- Evaluating materials substitutions or design changes from an environmental performance perspective
+- Condução de uma avaliação de ciclo de vida ou análise de pegada de carbono para entender impacto ambiental de um produto ou escolha de material
+- Aplicação de princípios de eco-design a um novo programa de desenvolvimento de produto para reduzir impacto ambiental na etapa de design
+- Avaliação de substituições de materiais ou mudanças de design de uma perspectiva de desempenho ambiental
 
-**Anti-patterns (Don't Use For):**
+**Anti-padrões (Não Use Para):**
 
-- Corporate ESG reporting strategy (broader organizational scope than product engineering)
-- Supply chain carbon accounting at the portfolio level (requires supply chain data collection beyond engineering scope)
+- Estratégia de relatório ESG corporativo (escopo organizacional mais amplo que engenharia de produto)
+- Contabilidade de carbono de cadeia de suprimentos em nível de portfólio (requer coleta de dados de cadeia de suprimentos além do escopo de engenharia)
 
 ---
 
@@ -127,71 +127,71 @@ Avoid:
 
 ### Input
 
-"Analyze the sustainability of a 65-inch LED TV for eco-design improvement. It runs about 6 hours/day, 365 days/year, for an expected 10-year life. Manufactured in China. We want to know where the biggest environmental impacts are and what design changes would have the most effect."
+"Analise a sustentabilidade de uma TV LED de 65 polegadas para melhoria de eco-design. Ela funciona cerca de 6 horas/dia, 365 dias/ano, para uma vida esperada de 10 anos. Fabricada na China. Queremos saber onde estão os maiores impactos ambientais e quais mudanças de design teriam mais efeito."
 
 ### Output
 
-**Sustainability Analysis — 65-inch LED TV**
+**Análise de Sustentabilidade — TV LED de 65 polegadas**
 
-**Functional Unit**: Providing television viewing for 10 years (21,900 operating hours total)
+**Unidade Funcional**: Fornecer visualização de televisão por 10 anos (21.900 horas de operação totais)
 
-**Life Cycle Phase Analysis**
+**Análise de Fase do Ciclo de Vida**
 
-| Phase                     | % of Total Carbon Impact | Key Drivers                                                 |
+| Fase                     | % do Impacto Total de Carbono | Principais Fatores                                                 |
 | ------------------------- | ------------------------ | ----------------------------------------------------------- |
-| Use phase (electricity)   | 68%                      | 150W average power × 21,900 hours = 3,285 kWh               |
-| Manufacturing (materials) | 20%                      | Large LCD panel, electronics, steel/aluminum chassis        |
-| Manufacturing (processes) | 6%                       | Chinese grid electricity for assembly and panel fabrication |
-| Distribution              | 4%                       | Large packaging, sea freight (China to US: ~20,000 km)      |
-| End of life               | 2%                       | WEEE recycling recovery rate ~35% in typical scenario       |
+| Fase de uso (eletricidade)   | 68%                      | 150W potência média × 21.900 horas = 3.285 kWh               |
+| Manufatura (materiais) | 20%                      | Painel LCD grande, eletrônicos, chassi de aço/alumínio        |
+| Manufatura (processos) | 6%                       | Eletricidade da rede chinesa para montagem e fabricação de painel |
+| Distribuição              | 4%                       | Embalagem grande, frete marítimo (China para EUA: ~20.000 km)      |
+| Fim de vida               | 2%                       | Taxa de recuperação de reciclagem WEEE ~35% em cenário típico       |
 
-**Carbon Footprint Estimate**
+**Estimativa de Pegada de Carbono**
 
-Total lifetime carbon: ~680 kgCO2e (use phase: ~460 kg at US average 0.14 kgCO2e/kWh)
-Manufacturing carbon: ~135 kgCO2e
-Note: These are estimates based on industry LCA literature for comparable TVs (uncertainty ±30%)
+Carbono total de vida: ~680 kgCO2e (fase de uso: ~460 kg na média dos EUA de 0,14 kgCO2e/kWh)
+Carbono de manufatura: ~135 kgCO2e
+Nota: Estas são estimativas baseadas em literatura de LCA da indústria para TVs comparáveis (incerteza ±30%)
 
-**Environmental Hotspot Analysis**
+**Análise de Ponto Crítico Ambiental**
 
-Use phase electricity dominates at 68% of lifecycle impact. This means panel efficiency and power management are the highest-leverage design decisions for environmental performance. Manufacturing materials (LCD panel glass, indium for ITO layers, PCBs) are secondary but significant. End-of-life is a small share of lifecycle carbon but an important issue for hazardous material recovery (indium, lead-free solder, flame retardants).
+Eletricidade da fase de uso domina com 68% do impacto de ciclo de vida. Isso significa que eficiência de painel e gerenciamento de energia são as decisões de design de maior alavancagem para desempenho ambiental. Materiais de manufatura (vidro de painel LCD, índio para camadas ITO, PCBs) são secundários mas significativos. Fim de vida é uma pequena parcela do carbono de ciclo de vida mas uma questão importante para recuperação de material perigoso (índio, solda sem chumbo, retardantes de chama).
 
 **Eco-Design Recommendation Table**
 
-| Recommendation                                          | Phase         | Carbon Reduction             | Cost Impact   | Priority |
+| Recomendação                                          | Fase         | Redução de Carbono             | Impacto de Custo   | Prioridade |
 | ------------------------------------------------------- | ------------- | ---------------------------- | ------------- | -------- |
-| Reduce standby power to <0.5W (from typical 2W)         | Use           | 7 kgCO2e lifetime            | Negligible    | High     |
-| Implement auto-brightness and ambient light sensing     | Use           | 25-50 kgCO2e lifetime        | +$2-5         | High     |
-| Achieve ENERGY STAR certification (Most Efficient tier) | Use           | 60-100 kgCO2e lifetime       | Design effort | High     |
-| Increase PCB recycled copper content to 30%             | Manufacturing | 3-5 kgCO2e                   | +<$1          | Medium   |
-| Design panel bezel for tool-free disassembly            | End of life   | Indium recovery improvement  | Neutral       | Medium   |
-| Eliminate PVC from internal cables (halogen-free)       | End of life   | Toxicity reduction (not CO2) | Neutral       | Medium   |
-| Reduce packaging volume and use recycled cardboard      | Distribution  | 8 kgCO2e lifetime            | Neutral       | Low      |
+| Reduzir energia standby para <0,5W (do típico 2W)         | Uso           | 7 kgCO2e de vida            | Negligível    | Alta     |
+| Implementar auto-brilho e sensoriamento de luz ambiente     | Uso           | 25-50 kgCO2e de vida        | +$2-5         | Alta     |
+| Alcançar certificação ENERGY STAR (nível Mais Eficiente) | Uso           | 60-100 kgCO2e de vida       | Esforço de design | Alta     |
+| Aumentar conteúdo de cobre reciclado em PCB para 30%             | Manufatura | 3-5 kgCO2e                   | +<$1          | Média   |
+| Projetar moldura de painel para desmontagem sem ferramentas            | Fim de vida   | Melhoria de recuperação de índio  | Neutro       | Média   |
+| Eliminar PVC de cabos internos (livre de halogênio)       | Fim de vida   | Redução de toxicidade (não CO2) | Neutro       | Média   |
+| Reduzir volume de embalagem e usar papelão reciclado      | Distribuição  | 8 kgCO2e de vida            | Neutro       | Baixa     |
 
-**Circular Economy Scorecard**
+**Placar de Economia Circular**
 
-- Repairability: 3/10 — display replacement requires full disassembly, proprietary parts
-- Recyclability: 5/10 — most materials recoverable but multi-material panel creates sorting challenges
-- Recycled content: 2/10 — minimal recycled content in current design
-- Hazardous material reduction: 6/10 — RoHS compliant but legacy flame retardants in some components
+- Reparabilidade: 3/10 — substituição de display requer desmontagem completa, peças proprietárias
+- Reciclabilidade: 5/10 — a maioria dos materiais é recuperável mas painel multi-material cria desafios de separação
+- Conteúdo reciclado: 2/10 — conteúdo reciclado mínimo no design atual
+- Redução de material perigoso: 6/10 — compatível com RoHS mas retardantes de chama legados em alguns componentes
 
-**Top 3 Priority Design Actions**
+**Top 3 Ações de Design Prioritárias**
 
-1. Target ENERGY STAR Most Efficient certification — this captures 60-100 kgCO2e lifetime reduction (9-15% of total impact) through power mode optimization, backlight efficiency, and auto-brightness. It also differentiates the product in retail.
+1. Visar certificação ENERGY STAR Mais Eficiente — isso captura redução de vida de 60-100 kgCO2e (9-15% do impacto total) através de otimização de modo de energia, eficiência de backlight e auto-brilho. Também diferencia o produto no varejo.
 
-2. Implement aggressive auto-dimming and motion-based power off — use phase electricity is 68% of lifecycle impact. A 15% reduction in average wattage (from 150W to 127W) reduces lifetime carbon by 33 kgCO2e.
+2. Implementar auto-dimming agressivo e desligamento baseado em movimento — eletricidade da fase de uso é 68% do impacto de ciclo de vida. Uma redução de 15% na potência média (de 150W para 127W) reduz carbono de vida em 33 kgCO2e.
 
-3. Design display panel for accessibility — enable screen replacement without specialized tools, publish service documentation. This extends product life from 10 to 12+ years, reducing manufacturing carbon by 20% per product.
+3. Projetar painel de display para acessibilidade — permitir substituição de tela sem ferramentas especializadas, publicar documentação de serviço. Isso estende vida do produto de 10 para 12+ anos, reduzindo carbono de manufatura em 20% por produto.
 
 ---
 
 ## Variations
 
-- **Material-level LCA comparison**: Comparative LCA of two material candidates (e.g., aluminum vs. magnesium die casting vs. CFRP) for a structural component
-- **Packaging sustainability analysis**: Life cycle analysis of packaging alternatives with recyclability, material efficiency, and logistics impact trade-offs
-- **Manufacturing process carbon analysis**: Carbon footprint of specific manufacturing processes (machining, injection molding, electroplating) to identify process-level reduction opportunities
+- **Comparação de LCA em nível de material**: LCA comparativo de dois candidatos de material (ex: alumínio vs. fundição de magnésio vs. CFRP) para um componente estrutural
+- **Análise de sustentabilidade de embalagem**: Análise de ciclo de vida de alternativas de embalagem com trade-offs de reciclabilidade, eficiência de material e impacto logístico
+- **Análise de carbono de processo de manufatura**: Pegada de carbono de processos de manufatura específicos (usinagem, moldagem por injeção, eletrodeposição) para identificar oportunidades de redução em nível de processo
 
 ## Related Prompts
 
-- [materials-selection-expert](materials-selection-expert.md) - Integrates environmental performance criteria alongside mechanical and cost properties in material selection
-- [cost-estimation-engineer](cost-estimation-engineer.md) - Life cycle cost analysis that integrates environmental externalities with traditional unit cost
-- [regulatory-compliance-engineer](regulatory-compliance-engineer.md) - EU Ecodesign Regulation, REACH, and RoHS requirements that sustainability decisions must satisfy
+- [materials-selection-expert](materials-selection-expert.md) - Integra critérios de desempenho ambiental junto com propriedades mecânicas e de custo na seleção de material
+- [cost-estimation-engineer](cost-estimation-engineer.md) - Análise de custo de ciclo de vida que integra externalidades ambientais com custo unitário tradicional
+- [regulatory-compliance-engineer](regulatory-compliance-engineer.md) - Requisitos de Regulamento de Ecodesign da UE, REACH e RoHS que decisões de sustentabilidade devem satisfazer

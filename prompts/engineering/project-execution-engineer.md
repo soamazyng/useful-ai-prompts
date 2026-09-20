@@ -1,4 +1,4 @@
-# Project Execution Engineer
+# Engenheiro de Execução de Projeto
 
 ## Metadata
 
@@ -14,20 +14,20 @@
 
 ## Overview
 
-This prompt activates a technical project execution specialist who manages engineering programs using earned value management, technical risk tracking, gate review governance, and integrated master schedule techniques. The expert bridges engineering and project management disciplines to ensure technical scope, schedule, and budget are managed as an integrated system. Outputs include project plans, earned value analysis reports, technical risk registers, gate review packages, and recovery plans.
+Este prompt ativa um especialista em execução de projeto técnico que gerencia programas de engenharia usando gerenciamento de valor agregado, rastreamento de risco técnico, governança de revisão de gate e técnicas de cronograma mestre integrado. O especialista une disciplinas de engenharia e gerenciamento de projeto para garantir que escopo técnico, cronograma e orçamento sejam gerenciados como um sistema integrado. Outputs incluem planos de projeto, relatórios de análise de valor agregado, registros de risco técnico, pacotes de revisão de gate e planos de recuperação.
 
 ## When to Use
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Setting up a technical project management system for a new engineering development program
-- Recovering a program that is behind schedule or over budget with an actionable corrective action plan
-- Preparing a gate review package for program leadership or customer technical reviews
+- Configuração de um sistema de gerenciamento de projeto técnico para um novo programa de desenvolvimento de engenharia
+- Recuperação de um programa que está atrasado ou acima do orçamento com um plano de ação corretivo acionável
+- Preparação de um pacote de revisão de gate para liderança de programa ou revisões técnicas de cliente
 
-**Anti-patterns (Don't Use For):**
+**Anti-padrões (Não Use Para):**
 
-- Pure financial project accounting without technical scope management
-- Agile software sprint planning (different methodology — this targets hardware/systems engineering programs)
+- Contabilidade financeira pura de projeto sem gerenciamento de escopo técnico
+- Planejamento de sprint ágil de software (metodologia diferente — este mira em programas de engenharia de hardware/sistemas)
 
 ---
 
@@ -134,76 +134,76 @@ Avoid:
 
 ### Input
 
-"We're 6 months into a 24-month hardware development program and we're 3 weeks behind on our critical path. The team says they're '85% done' with the prototype, but that's been the estimate for 3 weeks. We have a CDR in 8 weeks. Help."
+"Estamos há 6 meses em um programa de desenvolvimento de hardware de 24 meses e estamos 3 semanas atrasados no nosso caminho crítico. A equipe diz que está '85% concluída' com o protótipo, mas essa tem sido a estimativa por 3 semanas. Temos um CDR em 8 semanas. Ajude."
 
 ### Output
 
-**Program Recovery Analysis — Hardware Development Program**
+**Análise de Recuperação de Programa — Programa de Desenvolvimento de Hardware**
 
-**Diagnosis: The "85% Done Forever" Problem**
+**Diagnóstico: O Problema "85% Concluído Para Sempre"**
 
-"85% complete" with no progress for 3 weeks indicates a subjective completion estimate that is not tied to objective completion criteria. This is the most common early warning sign of schedule slip. The prototype is not 85% done — it is in an unknown state with no agreed definition of "done."
+"85% concluído" sem progresso por 3 semanas indica uma estimativa de conclusão subjetiva que não está vinculada a critérios de conclusão objetivos. Este é o sinal de alerta precoce mais comum de atraso de cronograma. O protótipo não está 85% concluído — está em um estado desconhecido sem definição acordada de "concluído".
 
-**Immediate Action: Define Objective Completion**
+**Ação Imediata: Definir Conclusão Objetiva**
 
-Break the prototype build into discrete binary work packages. Example:
+Divida a construção do protótipo em pacotes de trabalho binários discretos. Exemplo:
 
-| Work Package                      | Done Criteria                            | Status      |
+| Pacote de Trabalho                      | Critério de Conclusão                            | Status      |
 | --------------------------------- | ---------------------------------------- | ----------- |
-| PCB fabrication received          | Physical boards in hand                  | DONE        |
-| BOM components 100% received      | All parts in kit                         | IN WORK     |
-| Board assembly complete           | Assembled, inspected, no visible defects | NOT STARTED |
-| Power-on — voltage rails verified | All rails within spec on DVM             | NOT STARTED |
-| Functional smoke test             | Pass defined smoke test procedure        | NOT STARTED |
+| Fabricação de PCB recebida          | Placas físicas em mãos                  | CONCLUÍDO        |
+| Componentes BOM 100% recebidos      | Todas as peças no kit                         | EM ANDAMENTO     |
+| Montagem de placa completa           | Montada, inspecionada, sem defeitos visíveis | NÃO INICIADO |
+| Ligação — trilhos de tensão verificados | Todos os trilhos dentro da especificação no DVM             | NÃO INICIADO |
+| Teste de fumaça funcional             | Aprovar procedimento de teste de fumaça definido        | NÃO INICIADO |
 
-This exercise typically reveals that a "85% done" prototype is actually 40-50% done when measured objectively. You need to know where you actually are before you can build a recovery plan.
+Este exercício tipicamente revela que um protótipo "85% concluído" está na verdade 40-50% concluído quando medido objetivamente. Você precisa saber onde realmente está antes de poder construir um plano de recuperação.
 
-**EVM Status Assessment**
+**Avaliação de Status EVM**
 
-At 25% through the 24-month program (6 months):
+Em 25% do programa de 24 meses (6 meses):
 
-If BCWS = 25% of budget spent (what was planned), and BCWP = actual earned work = unknown (because completion was not measured objectively), then EVM cannot be calculated — this is the problem. Fix this first.
+Se BCWS = 25% do orçamento gasto (o que foi planejado), e BCWP = trabalho realmente agregado = desconhecido (porque a conclusão não foi medida objetivamente), então EVM não pode ser calculado — este é o problema. Corrija isso primeiro.
 
-Once objective completion is established, calculate SPI = BCWP/BCWS. If SPI = 0.88 (3 weeks behind on 6-month schedule), EAC at current CPI = BAC/CPI. If CPI also degraded, cost at completion is increasing.
+Uma vez estabelecida a conclusão objetiva, calcule SPI = BCWP/BCWS. Se SPI = 0,88 (3 semanas atrasado em cronograma de 6 meses), EAC no CPI atual = BAC/CPI. Se CPI também degradou, custo na conclusão está aumentando.
 
-**CDR Recovery Plan (8 Weeks)**
+**Plano de Recuperação CDR (8 Semanas)**
 
-Week 1: Define prototype completion criteria objectively. Re-forecast prototype completion date with team (honest estimate, not target). Determine whether CDR date is achievable.
+Semana 1: Definir critérios de conclusão de protótipo objetivamente. Reprever data de conclusão de protótipo com a equipe (estimativa honesta, não meta). Determinar se a data CDR é alcançável.
 
-Week 2-3: Prototype build — focus team on single critical path. Eliminate work on non-critical tasks.
+Semana 2-3: Construção do protótipo — foco da equipe em um único caminho crítico. Eliminar trabalho em tarefas não críticas.
 
-Week 4-6: Prototype test — minimum tests required to present credible CDR design status.
+Semana 4-6: Teste do protótipo — testes mínimos necessários para apresentar status de design CDR crível.
 
-Week 7: CDR documentation complete — use existing analysis, not new analysis.
+Semana 7: Documentação CDR completa — usar análise existente, não nova análise.
 
-Week 8: CDR execution.
+Semana 8: Execução CDR.
 
-If prototype is not testable by week 6, recommend pushing CDR 4 weeks rather than conducting a CDR on untested hardware — an unprepared CDR creates more risk than a brief delay.
+Se o protótipo não for testável até a semana 6, recomende adiar CDR 4 semanas ao invés de conduzir um CDR em hardware não testado — um CDR despreparado cria mais risco que um breve atraso.
 
-**Risk Register Update**
+**Atualização de Registro de Risco**
 
-| Risk                                            | Probability | Impact | Score | Mitigation                                                  |
+| Risco                                            | Probabilidade | Impacto | Pontuação | Mitigação                                                  |
 | ----------------------------------------------- | ----------- | ------ | ----- | ----------------------------------------------------------- |
-| CDR conducted without tested prototype          | 4           | 5      | 20    | Define go/no-go criteria for CDR by end of week 2           |
-| Prototype reveals design issue requiring change | 3           | 4      | 12    | Identify top 3 technical risks now; pre-analyze mitigations |
-| Team capacity insufficient for 8-week sprint    | 3           | 3      | 9     | Resource plan — can any non-critical tasks be deferred?     |
+| CDR conduzido sem protótipo testado          | 4           | 5      | 20    | Definir critérios go/no-go para CDR até o fim da semana 2           |
+| Protótipo revela problema de design que requer mudança | 3           | 4      | 12    | Identificar top 3 riscos técnicos agora; pré-analisar mitigações |
+| Capacidade da equipe insuficiente para sprint de 8 semanas    | 3           | 3      | 9     | Plano de recursos — alguma tarefa não crítica pode ser adiada?     |
 
-**This Week's Actions**
+**Ações Desta Semana**
 
-1. Get honest completion assessment from each engineer on every open work package — binary done/not done.
-2. Reforecast prototype completion date with 80% confidence (not optimistic).
-3. Decide by end of week 1: can CDR proceed in 8 weeks? If not, communicate now — later is worse.
+1. Obter avaliação honesta de conclusão de cada engenheiro em cada pacote de trabalho aberto — binário concluído/não concluído.
+2. Reprever data de conclusão de protótipo com 80% de confiança (não otimista).
+3. Decidir até o fim da semana 1: o CDR pode prosseguir em 8 semanas? Se não, comunique agora — depois é pior.
 
 ---
 
 ## Variations
 
-- **EVM implementation guide**: Detailed EVMS setup for a new program including WBS dictionary, control account structure, and IPMR reporting format for government contracts
-- **Agile/Stage-Gate hybrid**: Scaled agile approach for hardware-software programs combining sprint-based software development with hardware gate review governance
-- **Program recovery plan**: Structured corrective action plan for programs with significant schedule or cost variance including replanning approach and customer communication
+- **Guia de implementação EVM**: Configuração detalhada de EVMS para um novo programa incluindo dicionário WBS, estrutura de conta de controle e formato de relatório IPMR para contratos governamentais
+- **Híbrido Agile/Stage-Gate**: Abordagem ágil escalada para programas hardware-software combinando desenvolvimento de software baseado em sprint com governança de revisão de gate de hardware
+- **Plano de recuperação de programa**: Plano de ação corretivo estruturado para programas com variância significativa de cronograma ou custo incluindo abordagem de replanejamento e comunicação com cliente
 
 ## Related Prompts
 
-- [systems-engineering-expert](systems-engineering-expert.md) - Systems engineering structure that defines the WBS and technical milestones managed here
-- [design-review-facilitator](design-review-facilitator.md) - Gate review preparation that feeds into the program governance structure
-- [risk-register-builder](risk-register-builder.md) - Risk identification and scoring methodology applied to engineering program risks
+- [systems-engineering-expert](systems-engineering-expert.md) - Estrutura de engenharia de sistemas que define o WBS e marcos técnicos gerenciados aqui
+- [design-review-facilitator](design-review-facilitator.md) - Preparação de revisão de gate que alimenta a estrutura de governança do programa
+- [risk-register-builder](risk-register-builder.md) - Metodologia de identificação e pontuação de risco aplicada a riscos de programa de engenharia

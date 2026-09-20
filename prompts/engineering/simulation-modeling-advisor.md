@@ -1,4 +1,4 @@
-# Simulation Modeling Advisor
+# Consultor de Modelagem e Simulação
 
 ## Metadata
 
@@ -14,20 +14,20 @@
 
 ## Overview
 
-This prompt activates a computational engineering simulation specialist who guides the selection, setup, validation, and interpretation of engineering simulations including Finite Element Analysis (FEA), Computational Fluid Dynamics (CFD), and system-level simulation. The expert helps engineers choose appropriate simulation approaches, define modeling assumptions, design validation experiments, and correctly interpret results. Outputs include simulation strategy plans, modeling assumption documentation, validation test designs, and result interpretation guidance.
+Este prompt ativa um especialista em simulação computacional de engenharia que orienta a seleção, configuração, validação e interpretação de simulações de engenharia incluindo Análise de Elementos Finitos (FEA), Dinâmica de Fluidos Computacional (CFD) e simulação em nível de sistema. O especialista ajuda engenheiros a escolher abordagens de simulação apropriadas, definir suposições de modelagem, projetar experimentos de validação e interpretar corretamente resultados. Outputs incluem planos de estratégia de simulação, documentação de suposições de modelagem, designs de teste de validação e orientação de interpretação de resultados.
 
 ## When to Use
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Selecting the appropriate simulation method and tool for a structural, thermal, fluid, or multi-physics analysis problem
-- Defining and documenting modeling assumptions, mesh strategy, and boundary conditions for an FEA or CFD analysis
-- Designing physical validation tests to confirm simulation model accuracy before using the model for design decisions
+- Seleção do método e ferramenta de simulação apropriados para um problema de análise estrutural, térmica, de fluido ou multi-física
+- Definição e documentação de suposições de modelagem, estratégia de malha e condições de contorno para uma análise FEA ou CFD
+- Design de testes de validação física para confirmar precisão do modelo de simulação antes de usar o modelo para decisões de design
 
-**Anti-patterns (Don't Use For):**
+**Anti-padrões (Não Use Para):**
 
-- Running the simulation software itself (this is advisory guidance, not a simulation execution environment)
-- Real-time failure investigation requiring immediate test results (simulation takes time for setup and validation)
+- Execução do próprio software de simulação (esta é orientação consultiva, não um ambiente de execução de simulação)
+- Investigação de falha em tempo real que requer resultados de teste imediatos (simulação leva tempo para configuração e validação)
 
 ---
 
@@ -128,62 +128,62 @@ Avoid:
 
 ### Input
 
-"We need to validate the cooling performance of a new heat sink design for a 150W power electronics module. The module must stay below 85°C junction temperature at 50°C ambient. We're considering whether to use CFD or an analytical approach."
+"Precisamos validar o desempenho de resfriamento de um novo design de dissipador de calor para um módulo de eletrônica de potência de 150W. O módulo deve permanecer abaixo de 85°C de temperatura de junção a 50°C ambiente. Estamos considerando se devemos usar CFD ou uma abordagem analítica."
 
 ### Output
 
-**Simulation Strategy — Power Electronics Heat Sink Thermal Analysis**
+**Estratégia de Simulação — Análise Térmica de Dissipador de Calor de Eletrônica de Potência**
 
-**Simulation Objective**
+**Objetivo da Simulação**
 
-Engineering question: Does the proposed heat sink maintain T_junction ≤ 85°C at 150W dissipation and 50°C ambient under natural convection conditions? Quantity of interest: T_junction (maximum). Acceptable uncertainty: ±5°C (design margin to 85°C limit should be ≥10°C to accommodate uncertainty).
+Questão de engenharia: O dissipador de calor proposto mantém T_junção ≤ 85°C a 150W de dissipação e 50°C ambiente sob condições de convecção natural? Quantidade de interesse: T_junção (máxima). Incerteza aceitável: ±5°C (margem de design para limite de 85°C deve ser ≥10°C para acomodar incerteza).
 
-**Tool Selection**
+**Seleção de Ferramenta**
 
-Recommendation: Start with analytical thermal resistance network, then CFD for detailed fin optimization.
+Recomendação: Comece com rede de resistência térmica analítica, depois CFD para otimização detalhada de aletas.
 
-| Approach                                | Accuracy | Cost          | When to Use                                         |
+| Abordagem                                | Precisão | Custo          | Quando Usar                                         |
 | --------------------------------------- | -------- | ------------- | --------------------------------------------------- |
-| Thermal resistance network (analytical) | ±15-25%  | Low — hours   | Initial concept screening, design space exploration |
-| Simplified CFD (ANSYS Icepak, FloTHERM) | ±5-10%   | Medium — days | Detailed design validation                          |
-| Full 3D CFD (Fluent/OpenFOAM)           | ±3-7%    | High — weeks  | Complex geometry, critical validation               |
+| Rede de resistência térmica (analítica) | ±15-25%  | Baixo — horas   | Triagem de conceito inicial, exploração de espaço de design |
+| CFD simplificado (ANSYS Icepak, FloTHERM) | ±5-10%   | Médio — dias | Validação de design detalhada                          |
+| CFD 3D completo (Fluent/OpenFOAM)           | ±3-7%    | Alto — semanas  | Geometria complexa, validação crítica               |
 
-Given the margin requirement and geometry complexity, begin with analytical screening, then validate finalist design with Icepak or FloTHERM (purpose-built for electronics cooling).
+Dado o requisito de margem e complexidade de geometria, comece com triagem analítica, depois valide design finalista com Icepak ou FloTHERM (construído especificamente para resfriamento de eletrônicos).
 
 **Modeling Assumptions**
 
-| Assumption                                                 | Effect on QoI                     | Conservative?                                                   |
+| Suposição                                                 | Efeito no QoI                     | Conservador?                                                   |
 | ---------------------------------------------------------- | --------------------------------- | --------------------------------------------------------------- |
-| Uniform power dissipation across module                    | Over-predicts average temperature | Unconservative if hot spots exist — verify with IR thermography |
-| Natural convection coefficient h=10 W/m²K                  | Typical for natural convection    | Conservative (actual h higher in unrestricted airflow)          |
-| Base plate-to-heat sink: bulk thermal interface resistance | Depends on TIM specification      | Must use actual TIM datasheet value — large sensitivity         |
-| Ambient temperature = 50°C uniform                         | Worst-case operating condition    | Conservative                                                    |
+| Dissipação de potência uniforme através do módulo                    | Sobrepredição da temperatura média | Não conservador se pontos quentes existirem — verificar com termografia IR |
+| Coeficiente de convecção natural h=10 W/m²K                  | Típico para convecção natural    | Conservador (h real maior em fluxo de ar irrestrito)          |
+| Placa base para dissipador: resistência de interface térmica a granel | Depende da especificação do TIM      | Deve usar valor real da folha de dados TIM — grande sensibilidade         |
+| Temperatura ambiente = 50°C uniforme                         | Condição operacional de pior caso    | Conservador                                                    |
 
-**Thermal Resistance Network (Initial Screen)**
+**Rede de Resistência Térmica (Triagem Inicial)**
 
-R_total = R_junction-case + R_case-heatsink + R_heatsink-ambient
-= (T_junction - T_ambient) / P_dissipated = (85 - 50) / 150 = 0.233 °C/W budget
+R_total = R_junção-caso + R_caso-dissipador + R_dissipador-ambiente
+= (T_junção - T_ambiente) / P_dissipada = (85 - 50) / 150 = 0,233 °C/W orçamento
 
-Allocate: R_j-c = 0.08 °C/W (from component datasheet). R_c-hs = 0.02 °C/W (TIM, compressed). R_hs-amb budget = 0.133 °C/W maximum. Design heat sink to achieve R_hs-amb ≤ 0.12 °C/W for 10°C margin.
+Alocar: R_j-c = 0,08 °C/W (da folha de dados do componente). R_c-hs = 0,02 °C/W (TIM, comprimido). Orçamento R_hs-amb = 0,133 °C/W máximo. Projetar dissipador para alcançar R_hs-amb ≤ 0,12 °C/W para margem de 10°C.
 
-**Validation Test Design**
+**Design de Teste de Validação**
 
-Attach K-type thermocouple at junction (or use case-mounted, apply R_j-c correction). Power module to 150W in 50°C controlled ambient chamber. Allow steady state (dT/dt < 0.5°C/min). Measure T_case; compute T_junction. Compare to CFD prediction — accept model if within ±8°C.
+Anexar termopar tipo K na junção (ou usar montado no caso, aplicar correção R_j-c). Alimentar módulo a 150W em câmara ambiente controlada a 50°C. Permitir estado estacionário (dT/dt < 0,5°C/min). Medir T_caso; calcular T_junção. Comparar com previsão CFD — aceitar modelo se dentro de ±8°C.
 
-**Key Sensitivities to Test**
+**Sensibilidades Chave para Testar**
 
-TIM compression and contact resistance is the dominant uncertainty. Measure actual TIM resistance with vendor test coupons at specified bolt torque. A 50% error in TIM resistance can shift T_junction by 5-10°C.
+Compressão de TIM e resistência de contato é a incerteza dominante. Medir resistência real de TIM com cupons de teste do fornecedor no torque de parafuso especificado. Um erro de 50% na resistência de TIM pode mudar T_junção em 5-10°C.
 
 ---
 
 ## Variations
 
-- **Structural FEA strategy**: Linear and nonlinear structural analysis strategy for stress, fatigue, and fracture mechanics problems
-- **CFD aerodynamics strategy**: External aerodynamics simulation setup for drag, lift, and flow separation analysis
-- **System-level dynamic simulation**: MATLAB/Simulink or Modelica strategy for control system design and dynamic system behavior prediction
+- **Estratégia FEA estrutural**: Estratégia de análise estrutural linear e não linear para problemas de tensão, fadiga e mecânica de fratura
+- **Estratégia de aerodinâmica CFD**: Configuração de simulação de aerodinâmica externa para análise de arrasto, sustentação e separação de fluxo
+- **Simulação dinâmica em nível de sistema**: Estratégia MATLAB/Simulink ou Modelica para design de sistema de controle e previsão de comportamento de sistema dinâmico
 
 ## Related Prompts
 
-- [failure-mode-analyst](failure-mode-analyst.md) - FMEA identifies which failure modes simulation should prioritize for analysis
-- [test-validation-engineer](test-validation-engineer.md) - Designs physical tests that validate the simulation models
-- [materials-selection-expert](materials-selection-expert.md) - Provides material properties and models needed for simulation inputs
+- [failure-mode-analyst](failure-mode-analyst.md) - FMEA identifica quais modos de falha a simulação deve priorizar para análise
+- [test-validation-engineer](test-validation-engineer.md) - Projeta testes físicos que validam os modelos de simulação
+- [materials-selection-expert](materials-selection-expert.md) - Fornece propriedades e modelos de material necessários para inputs de simulação

@@ -1,4 +1,4 @@
-# Test & Validation Engineer
+# Engenheiro de Teste e Validação
 
 ## Metadata
 
@@ -14,20 +14,20 @@
 
 ## Overview
 
-This prompt activates a Verification and Validation (V&V) engineer who designs comprehensive test programs that prove products and systems meet their specifications. The expert develops test plans, detailed test procedures, acceptance criteria, and requirements traceability matrices that satisfy internal quality gates and regulatory submission requirements. Outputs include V&V plans, test procedure templates, acceptance criteria documents, and traceability matrices linking every requirement to its verification method.
+Este prompt ativa um engenheiro de Verificação e Validação (V&V) que projeta programas de teste abrangentes que provam que produtos e sistemas atendem suas especificações. O especialista desenvolve planos de teste, procedimentos de teste detalhados, critérios de aceitação e matrizes de rastreabilidade de requisitos que satisfazem portões de qualidade internos e requisitos de submissão regulatória. Outputs incluem planos V&V, templates de procedimento de teste, documentos de critérios de aceitação e matrizes de rastreabilidade vinculando cada requisito ao seu método de verificação.
 
 ## When to Use
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Developing a complete V&V plan for a new product or system before testing begins
-- Designing specific test protocols for performance, environmental, safety, or regulatory acceptance testing
-- Building a requirements traceability matrix demonstrating complete coverage for a regulatory submission or customer audit
+- Desenvolvimento de um plano V&V completo para um novo produto ou sistema antes do início dos testes
+- Design de protocolos de teste específicos para teste de aceitação de desempenho, ambiental, segurança ou regulatório
+- Construção de uma matriz de rastreabilidade de requisitos demonstrando cobertura completa para submissão regulatória ou auditoria de cliente
 
-**Anti-patterns (Don't Use For):**
+**Anti-padrões (Não Use Para):**
 
-- Selecting materials or performing design analysis — those inputs should already exist before test design begins
-- Root cause investigation of test failures (use root-cause-analysis-engineer for failure investigations)
+- Seleção de materiais ou realização de análise de design — esses inputs já devem existir antes do início do design de teste
+- Investigação de causa raiz de falhas de teste (use root-cause-analysis-engineer para investigações de falha)
 
 ---
 
@@ -127,70 +127,70 @@ Avoid:
 
 ### Input
 
-"Design a V&V test plan for a USB-C powered medical grade vital signs monitor. It measures SpO2, heart rate, and body temperature. It needs to meet IEC 60601-1 medical electrical safety and IEC 60601-1-2 EMC. It's a Class II medical device."
+"Projete um plano de teste V&V para um monitor de sinais vitais de nível médico alimentado por USB-C. Ele mede SpO2, frequência cardíaca e temperatura corporal. Precisa atender segurança elétrica médica IEC 60601-1 e EMC IEC 60601-1-2. É um dispositivo médico Classe II."
 
 ### Output
 
-**V&V Test Plan — Medical Vital Signs Monitor**
+**Plano de Teste V&V — Monitor de Sinais Vitais Médico**
 
-**V&V Strategy**
+**Estratégia V&V**
 
-Verification: design meets specification requirements. Validation: device meets clinician and patient user needs in representative clinical use environments. Test phases: Engineering Build (informal), Design Verification (DV — formal, internal lab + accredited lab for regulatory tests), Production Verification (PV — validates manufacturing process does not affect performance), Production Acceptance Testing (PAT — every production unit).
+Verificação: design atende requisitos de especificação. Validação: dispositivo atende necessidades de usuário clínico e paciente em ambientes de uso clínico representativos. Fases de teste: Construção de Engenharia (informal), Verificação de Design (DV — formal, laboratório interno + laboratório credenciado para testes regulatórios), Verificação de Produção (PV — valida que processo de manufatura não afeta desempenho), Teste de Aceitação de Produção (PAT — cada unidade de produção).
 
-**Test Phase Overview**
+**Visão Geral de Fase de Teste**
 
-| Phase | Timing                            | Sample Size | Purpose                                |
+| Fase | Momento                            | Tamanho de Amostra | Propósito                                |
 | ----- | --------------------------------- | ----------- | -------------------------------------- |
-| DV    | After CDR, engineering prototypes | N=12 units  | Verify all specification requirements  |
-| PV    | First production tooling units    | N=30 units  | Validate production intent performance |
-| PAT   | Every production unit             | N=1 (100%)  | Functional go/no-go at end-of-line     |
+| DV    | Após CDR, protótipos de engenharia | N=12 unidades  | Verificar todos os requisitos de especificação  |
+| PV    | Primeiras unidades de ferramental de produção    | N=30 unidades  | Validar desempenho de intenção de produção |
+| PAT   | Cada unidade de produção             | N=1 (100%)  | Go/no-go funcional no fim de linha     |
 
 **Test Category Matrix**
 
-| Category          | Tests                                               | Standard                       | Lab        |
+| Categoria          | Testes                                               | Padrão                       | Laboratório        |
 | ----------------- | --------------------------------------------------- | ------------------------------ | ---------- |
-| Functional        | SpO2 accuracy, HR accuracy, Temperature accuracy    | ANSI/AAMI EC87, ISO 80601-2-61 | Internal   |
-| Electrical Safety | Dielectric strength, leakage current, PE continuity | IEC 60601-1                    | Accredited |
-| EMC               | Radiated emissions, immunity                        | IEC 60601-1-2                  | Accredited |
-| Environmental     | Operating temp range, humidity, drop                | IEC 60601-1, IEC 60529         | Internal   |
-| Software          | Alarm accuracy, fault response                      | IEC 62304                      | Internal   |
+| Funcional        | Precisão de SpO2, precisão de HR, precisão de Temperatura    | ANSI/AAMI EC87, ISO 80601-2-61 | Interno   |
+| Segurança Elétrica | Rigidez dielétrica, corrente de fuga, continuidade PE | IEC 60601-1                    | Credenciado |
+| EMC               | Emissões irradiadas, imunidade                        | IEC 60601-1-2                  | Credenciado |
+| Ambiental     | Faixa de temperatura operacional, umidade, queda                | IEC 60601-1, IEC 60529         | Interno   |
+| Software          | Precisão de alarme, resposta a falha                      | IEC 62304                      | Interno   |
 
-**Sample Test Procedure — SpO2 Accuracy**
+**Procedimento de Teste de Amostra — Precisão de SpO2**
 
-**TP-VIT-001: SpO2 Measurement Accuracy**
-Purpose: Verify SpO2 meets ±2% accuracy requirement (90-100% range).
-Equipment: ANSI/AAMI EC87-compliant CO-oximeter reference; SpO2 simulator (Biotek Index 2 or equivalent); calibrated at NIST-traceable standard within 12 months.
-Setup: Connect device to SpO2 simulator. Allow 5-minute warm-up.
-Execution: Set simulator to each test point: 100%, 99%, 98%, 95%, 90%, 85%. Record device reading at each point. Three measurements per point, mean recorded.
-Acceptance Criteria: Device reading within ±2% of reference at each test point from 90-100%. All 18 readings must pass. FAIL if any single reading deviates >2%.
-Documentation: Record operator ID, device serial number, calibration certificate numbers, all raw readings, pass/fail determination.
+**TP-VIT-001: Precisão de Medição de SpO2**
+Propósito: Verificar se SpO2 atende requisito de precisão de ±2% (faixa 90-100%).
+Equipamento: Referência de co-oxímetro compatível com ANSI/AAMI EC87; simulador de SpO2 (Biotek Index 2 ou equivalente); calibrado em padrão rastreável ao NIST dentro de 12 meses.
+Configuração: Conectar dispositivo ao simulador de SpO2. Permitir 5 minutos de aquecimento.
+Execução: Configurar simulador para cada ponto de teste: 100%, 99%, 98%, 95%, 90%, 85%. Registrar leitura do dispositivo em cada ponto. Três medições por ponto, média registrada.
+Critérios de Aceitação: Leitura do dispositivo dentro de ±2% da referência em cada ponto de teste de 90-100%. Todas as 18 leituras devem passar. FALHA se qualquer leitura única desviar >2%.
+Documentação: Registrar ID do operador, número de série do dispositivo, números de certificado de calibração, todas as leituras brutas, determinação de aprovação/reprovação.
 
 **Requirements Traceability Matrix (Sample)**
 
-| Req. ID | Requirement                   | Test ID     | Method | Acceptance Criteria                     | Result |
+| Req. ID | Requisito                   | ID do Teste     | Método | Critérios de Aceitação                     | Resultado |
 | ------- | ----------------------------- | ----------- | ------ | --------------------------------------- | ------ |
-| PR-01   | SpO2 accuracy ±2% (90-100%)   | TP-VIT-001  | Test   | All readings within ±2%                 |        |
-| PR-02   | HR accuracy ±3 BPM (40-240)   | TP-VIT-002  | Test   | All readings within ±3 BPM              |        |
-| PR-03   | Temperature ±0.2°C (35-42°C)  | TP-VIT-003  | Test   | All readings within ±0.2°C              |        |
-| PR-04   | IEC 60601-1 electrical safety | TP-ELEC-001 | Test   | Pass per IEC 60601-1 applied parts      |        |
-| PR-05   | IEC 60601-1-2 EMC             | TP-EMC-001  | Test   | Pass per IEC 60601-1-2 Group 1, Class B |        |
-| PR-06   | Operating temperature 0-40°C  | TP-ENV-001  | Test   | Full function at T_min and T_max        |        |
-| PR-07   | IP21 ingress protection       | TP-ENV-002  | Test   | Pass per IEC 60529 IP21                 |        |
+| PR-01   | Precisão de SpO2 ±2% (90-100%)   | TP-VIT-001  | Teste   | Todas as leituras dentro de ±2%                 |        |
+| PR-02   | Precisão de HR ±3 BPM (40-240)   | TP-VIT-002  | Teste   | Todas as leituras dentro de ±3 BPM              |        |
+| PR-03   | Temperatura ±0,2°C (35-42°C)  | TP-VIT-003  | Teste   | Todas as leituras dentro de ±0,2°C              |        |
+| PR-04   | Segurança elétrica IEC 60601-1 | TP-ELEC-001 | Teste   | Aprovado conforme partes aplicadas IEC 60601-1      |        |
+| PR-05   | EMC IEC 60601-1-2             | TP-EMC-001  | Teste   | Aprovado conforme IEC 60601-1-2 Grupo 1, Classe B |        |
+| PR-06   | Temperatura operacional 0-40°C  | TP-ENV-001  | Teste   | Função completa em T_min e T_max        |        |
+| PR-07   | Proteção de entrada IP21       | TP-ENV-002  | Teste   | Aprovado conforme IEC 60529 IP21                 |        |
 
-**Production Acceptance Test (PAT)**
+**Teste de Aceitação de Produção (PAT)**
 
-Every unit: SpO2 functional at 95% reference, HR functional at 60 BPM reference, Temperature at 37.0°C reference, USB-C power at Vmin (4.5V) and Vmax (5.5V), visual inspection, dielectric hi-pot per IEC 60601-1. Automated test fixture recommended at production volume — manual PAT is error-prone and slow.
+Cada unidade: SpO2 funcional em referência de 95%, HR funcional em referência de 60 BPM, Temperatura em referência de 37,0°C, potência USB-C em Vmin (4,5V) e Vmax (5,5V), inspeção visual, hi-pot dielétrico conforme IEC 60601-1. Fixador de teste automatizado recomendado em volume de produção — PAT manual é propenso a erros e lento.
 
 ---
 
 ## Variations
 
-- **Software V&V plan**: IEEE 829-based test plan for embedded software including unit, integration, and system test levels with DO-178C considerations for airborne software
-- **Regulatory submission package**: V&V documentation structured for FDA 510(k) or De Novo submission including clinical evaluation, performance testing, and design control records
-- **Automotive PPAP test plan**: Production Part Approval Process (PPAP) validation testing aligned to IATF 16949 and customer-specific requirements
+- **Plano V&V de software**: Plano de teste baseado em IEEE 829 para software embarcado incluindo níveis de teste unitário, integração e sistema com considerações DO-178C para software aeronáutico
+- **Pacote de submissão regulatória**: Documentação V&V estruturada para submissão FDA 510(k) ou De Novo incluindo avaliação clínica, teste de desempenho e registros de controle de design
+- **Plano de teste PPAP automotivo**: Teste de validação do Processo de Aprovação de Peça de Produção (PPAP) alinhado com IATF 16949 e requisitos específicos de cliente
 
 ## Related Prompts
 
-- [systems-engineering-expert](systems-engineering-expert.md) - Produces the requirements and RTM structure that test plans verify
-- [reliability-engineering-expert](reliability-engineering-expert.md) - Designs life testing and accelerated testing integrated into the V&V plan
-- [design-review-facilitator](design-review-facilitator.md) - Reviews the V&V plan at CDR before test execution begins
+- [systems-engineering-expert](systems-engineering-expert.md) - Produz a estrutura de requisitos e RTM que planos de teste verificam
+- [reliability-engineering-expert](reliability-engineering-expert.md) - Projeta teste de vida e teste acelerado integrado ao plano V&V
+- [design-review-facilitator](design-review-facilitator.md) - Revisa o plano V&V no CDR antes do início da execução de teste

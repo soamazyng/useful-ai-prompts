@@ -20,7 +20,7 @@ A skill vive em [`SKILL.md`](SKILL.md), o "hub" que o assistente lê primeiro. E
   - [`references/follow-up-prevention.md`](references/follow-up-prevention.md) — acompanhamento e prevenção de recorrência.
 - **Best Practices** — listas DO/DON'T: seguir padrões e convenções estabelecidos, escrever de forma clara e manutenível, adicionar documentação apropriada, testar minuciosamente antes de finalizar a análise — versus pular validação, ignorar tratamento de causas alternativas, fixar conclusões prematuramente sem investigar.
 
-Há também um script em [`scripts/validate-schema.sh`](scripts/validate-schema.sh) e um template em [`templates/migration-template.sql`](templates/migration-template.sql), reaproveitados de um scaffold genérico da skill para casos de RCA relacionados a mudanças de schema de banco de dados.
+Há também `scripts/validate-schema.sh` e `templates/migration-template.sql` como utilitários genéricos de scaffolding/validação de schema SQL herdados da estrutura padrão de skills desta biblioteca — não têm relação com a técnica dos 5 Porquês ou com o processo de RCA; para o relatório e a investigação em si, use [`references/systematic-rca-process.md`](references/systematic-rca-process.md) e [`references/rca-report-template.md`](references/rca-report-template.md).
 
 ### Fluxo de execução (resumo)
 

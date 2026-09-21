@@ -20,7 +20,7 @@ A skill vive em [`SKILL.md`](SKILL.md), o "hub" que o assistente lê primeiro. E
   - [`references/requirements-traceability-matrix.md`](references/requirements-traceability-matrix.md) — construção de matriz de rastreabilidade ligando requisitos a entregáveis.
 - **Best Practices** — listas DO/DON'T: engajar stakeholders-chave cedo, documentar requisitos por escrito, usar linguagem específica e mensurável, definir critérios de aceitação, priorizar com o método MoSCoW, obter sign-off dos stakeholders, criar matriz de rastreabilidade, revisar requisitos regularmente, distinguir obrigatórios de desejáveis, documentar suposições e restrições — versus confiar na memória ou em acordos verbais, criar requisitos sem input dos stakeholders, usar linguagem ambígua ("rapidamente", "facilmente"), pular requisitos não-funcionais, ignorar restrições e dependências, documentar excessivamente detalhes triviais, apressar a fase de requisitos, construir sem acordo dos stakeholders, mudar escopo sem processo definido, esquecer casos de borda e condições de erro.
 
-Há também um template em [`templates/process-template.md`](templates/process-template.md) com a estrutura pronta para conduzir e documentar um processo de levantamento de requisitos.
+Há também `templates/process-template.md` como utilitário genérico herdado da estrutura padrão de skills desta biblioteca — é um esqueleto de processo em branco (campos TODO), não um formulário específico de levantamento de requisitos; para conduzir e documentar o processo, use [`references/requirements-elicitation-techniques.md`](references/requirements-elicitation-techniques.md) e [`references/requirements-documentation.md`](references/requirements-documentation.md).
 
 ### Fluxo de execução (resumo)
 

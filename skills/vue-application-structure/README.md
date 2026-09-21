@@ -20,7 +20,7 @@ A skill vive em [`SKILL.md`](SKILL.md), o "hub" que o assistente lê primeiro:
   - [`references/pinia-store-state-management.md`](references/pinia-store-state-management.md) — gerenciamento de estado global com Pinia.
 - **Best Practices** — listas DO/DON'T rápidas (ex.: seguir padrões estabelecidos, escrever código limpo e documentado, testar antes de implantar vs. pular validação ou hardcodear valores de configuração).
 
-A pasta de apoio inclui [`templates/component-template.tsx`](templates/component-template.tsx), um template de componente pronto para preencher.
+A pasta de apoio inclui `templates/component-template.tsx` como utilitário genérico herdado da estrutura padrão de skills desta biblioteca — o arquivo é literalmente um componente React (JSX), não um componente `.vue`, então não deve ser usado como ponto de partida real; use antes o exemplo de `<script setup>` em [`references/vue-3-composition-api-component.md`](references/vue-3-composition-api-component.md).
 
 ### Fluxo de execução (resumo)
 

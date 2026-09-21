@@ -19,7 +19,7 @@ A skill vive em [`SKILL.md`](SKILL.md), o "hub" que o assistente lê primeiro. E
   - [`references/client-implementation.md`](references/client-implementation.md) — implementação de cliente gRPC.
 - **Best Practices** — listas DO/DON'T: usar nomenclatura clara de mensagens e serviços, tratar erros com códigos de status gRPC apropriados, adicionar metadata para logging/tracing, versionar as definições protobuf, usar streaming para datasets grandes, implementar timeouts e deadlines, monitorar métricas gRPC; e nunca usar gRPC para clientes baseados em browser (usar gRPC-Web), expor dados sensíveis nas definições proto, criar mensagens profundamente aninhadas, ignorar códigos de status de erro, enviar payloads grandes sem compressão ou pular TLS em produção.
 
-A skill inclui ainda um template de definição de API em [`templates/api-scaffold.yaml`](templates/api-scaffold.yaml) e um script de validação em [`scripts/validate-api.sh`](scripts/validate-api.sh).
+A skill inclui ainda `templates/api-scaffold.yaml` e `scripts/validate-api.sh` como utilitários genéricos de scaffolding/validação herdados da estrutura padrão de skills desta biblioteca — o scaffold é um stub OpenAPI/REST, não uma definição Protocol Buffers, então não deve ser usado como ponto de partida para o contrato `.proto` da skill.
 
 ### Fluxo de execução (resumo)
 

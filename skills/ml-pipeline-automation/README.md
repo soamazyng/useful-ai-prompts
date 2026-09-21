@@ -132,4 +132,3 @@ Evite:
 - Gate de validação comparando a métrica (ex.: F1) do novo modelo contra o modelo em produção atual, bloqueando o deploy se não houver melhora
 - Logging de parâmetros e métricas via MLflow em cada execução, permitindo comparar as últimas N semanas de retraining
 - Alerta explícito (log de `WARNING`) quando a validação falha e o deploy é pulado, em vez de falhar silenciosamente
-</content>

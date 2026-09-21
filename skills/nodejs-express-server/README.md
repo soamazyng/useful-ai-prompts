@@ -135,4 +135,3 @@ Evite:
 - Controller de produtos delegando toda a lógica de acesso a dados para um `productService`, que usa o modelo Sequelize com queries parametrizadas
 - Middleware global de erro capturando exceções (incluindo erros de validação do Sequelize) e retornando um formato JSON consistente com `code`, `message` e `requestId`
 - Nota sobre uso de `.env` para `DATABASE_URL` e `JWT_SECRET`
-</content>

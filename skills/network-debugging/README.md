@@ -134,4 +134,3 @@ Evite:
 - Comando de confirmação: `curl -I -H "Origin: https://meusite.com" https://api.minhaempresa.com/endpoint` para inspecionar os headers de resposta reais
 - Correção: middleware/configuração do servidor de produção adicionando explicitamente `Access-Control-Allow-Origin` com a origem exata do frontend (não `*`, já que a API é autenticada), `Access-Control-Allow-Methods` e tratamento de preflight (`OPTIONS`)
 - Validação: reexecutar o `curl` e confirmar a presença do header correto antes de considerar resolvido
-</content>

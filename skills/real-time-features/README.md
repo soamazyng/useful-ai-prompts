@@ -145,4 +145,3 @@ Evite:
 - Cliente React com `EventSource`, tratando reconexão automática e parsing dos eventos
 - Nota sobre autenticação (token no header ou query string, já que `EventSource` nativo não permite headers customizados) e sobre o limite de conexões simultâneas do navegador por domínio
 - Nota final assinalando que o volume de pedidos por minuto não foi informado e que a solução assume volume baixo/moderado (sem necessidade de Redis pub/sub)
-</content>

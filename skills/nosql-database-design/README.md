@@ -137,4 +137,3 @@ Evite:
 - Justificativa explícita de por que o preço é duplicado no item do pedido (histórico de preço no momento da compra) versus referenciado no catálogo (dado atual do produto)
 - Índice em `orders.customerId` para listar pedidos por cliente, e índice único em `products.sku` para busca direta
 - Nota sobre paginação se o volume de pedidos por cliente crescer muito, evitando arrays embutidos sem limite
-</content>

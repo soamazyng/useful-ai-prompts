@@ -126,4 +126,3 @@ Evite:
 - Item 2 (alto): função de cálculo de imposto com complexidade ciclomática de 45 — candidata a refatoração antes de qualquer nova funcionalidade ser adicionada a ela, pelo alto risco de bug em mudanças futuras
 - Recomendação de alocação: dedicar 20% da capacidade dos próximos 2 sprints para elevar a cobertura de teste do módulo crítico antes de abordar a refatoração de complexidade
 - Quality gate sugerido: cobertura mínima de 70% obrigatória para qualquer PR que toque o módulo de faturamento, e limite de complexidade ciclomática de 10 para novas funções
-</content>

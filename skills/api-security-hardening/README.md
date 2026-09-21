@@ -133,4 +133,3 @@ Evite:
 - Stack de segurança adicional: `helmet` para cabeçalhos, rate limiting no endpoint de login, sanitização de input
 - Handler de erro global garantindo que nenhuma resposta 500 vaze stack trace
 - Nota explícita de que a falha de autorização encontrada é exatamente a categoria "Broken Object Level Authorization" do OWASP API Security Top 10
-</content>

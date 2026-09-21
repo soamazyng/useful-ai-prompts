@@ -135,4 +135,3 @@ Evite:
 - `Strict-Transport-Security` com `max-age=31536000; includeSubDomains`, com nota pedindo confirmação de que todos os subdomínios já servem HTTPS antes de adicionar `preload`
 - `X-Frame-Options: DENY` e `X-Content-Type-Options: nosniff` configurados via `helmet`
 - Recomendação de rodar a CSP em `Content-Security-Policy-Report-Only` por alguns dias antes de aplicar em modo bloqueante, com endpoint de `report-uri` sugerido
-</content>

@@ -134,4 +134,3 @@ Evite:
 - `.env.example` substituindo o `.env` commitado, com a chave de pagamento marcada como segredo a ser injetado via gerenciador de segredos em produção
 - Orientação para remover o `.env` real do histórico do Git e rotacionar a chave de pagamento exposta
 - Lista de todos os pontos no código que devem ser migrados de `process.env.X` direto para o módulo de configuração centralizado
-</content>

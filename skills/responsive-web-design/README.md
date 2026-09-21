@@ -141,4 +141,3 @@ Evite:
 - `@media (min-width: 1024px)` elevando para `repeat(4, 1fr)`
 - Estilo de card com padding consistente e sombra sutil, usando `rem` para espaçamento
 - Nota final assinalando que os breakpoints seguem os padrões usuais de tablet/desktop, já que a largura exata do conteúdo não foi especificada
-</content>

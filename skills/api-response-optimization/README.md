@@ -132,4 +132,3 @@ Evite:
 - Recomendação de `ETag` para permitir requisições condicionais (304) quando o perfil não muda
 - Nota de que os 800ms provavelmente não vêm só do payload — sugestão de medir a query que busca o usuário separadamente
 - Comparação antes/depois: tamanho de payload reduzido em ~85%, com nota de que o ganho de tempo de resposta depende também da otimização da query subjacente
-</content>

@@ -130,4 +130,3 @@ Evite:
 - Frase-resumo: "A solicitação foi negada principalmente pela relação entre dívida e renda acima do limite considerado seguro e por um atraso de pagamento recente"
 - Nota explícita de que a explicação é uma aproximação baseada em SHAP e reflete associação, não uma regra determinística única
 - Recomendação de guardar o relatório de importância global do modelo como evidência de conformidade com exigências de transparência em crédito
-</content>

@@ -134,4 +134,3 @@ Evite:
 - Detecção de comunidade via modularidade, confirmando se as comunidades encontradas coincidem com as áreas declaradas (Produto/Engenharia) ou revelam sub-grupos inesperados
 - Identificação de componentes desconectados, se houver, como possíveis silos
 - Síntese: "X e Y são as únicas pontes de alto tráfego entre as duas áreas; removê-las do fluxo de comunicação isolaria Engenharia de Produto quase completamente"
-</content>

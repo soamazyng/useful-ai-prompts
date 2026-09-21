@@ -144,4 +144,3 @@ Evite:
 - Cada elo marcado como [Confirmado com evidência de log] até o 3º porquê; os últimos dois marcados como [Hipótese a validar com o time de banco de dados]
 - Correção imediata: reiniciar o pool de conexões e aumentar temporariamente o limite; Ação preventiva: estabelecer timeout padrão obrigatório em toda query, com dono sugerido (time de plataforma de dados)
 - Nota final pedindo confirmação sobre se realmente não existia política de timeout antes do incidente, já que essa causa raiz foi inferida e não confirmada nos dados fornecidos
-</content>

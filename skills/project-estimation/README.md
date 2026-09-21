@@ -135,4 +135,3 @@ Evite:
 - Buffer de contingência de 25% justificado pela falta de familiaridade da equipe com a tecnologia
 - Faixa final apresentada como "3 a 5 semanas, 4 semanas como cenário mais provável"
 - Premissas explícitas: não inclui suporte a templates customizáveis pelo usuário final; risco listado: escolha da biblioteca de PDF pode exigir ajuste de escopo após o protótipo
-</content>

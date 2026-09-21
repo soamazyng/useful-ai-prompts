@@ -131,4 +131,3 @@ Evite:
 - Sentimento por aspecto: "Entrega" com sentimento médio fortemente negativo e alto volume de menções; "Qualidade" majoritariamente positiva; "Atendimento" neutro com poucas menções
 - Palavras mais frequentes em reviews negativas: "atraso", "rastreio", "demora"; em positivas: "qualidade", "recomendo", "chegou rápido" (contraditório com o aspecto entrega, indicando heterogeneidade regional a investigar)
 - Resumo executivo recomendando priorizar a investigação da cadeia logística antes de qualquer ação sobre qualidade do produto
-</content>

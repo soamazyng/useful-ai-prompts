@@ -144,4 +144,3 @@ Evite:
 - Requisitos não-funcionais sinalizados como pendentes de esclarecimento: "rápido" e "seguro" marcados como não-mensuráveis, com perguntas específicas (SLA de processamento em horas? PCI-DSS já é requisito da empresa?)
 - Matriz de rastreabilidade ligando cada requisito ao stakeholder responsável pela aprovação
 - Seção de Perguntas em Aberto destacando a necessidade de definir SLA e requisitos de conformidade com o gateway de pagamento
-</content>

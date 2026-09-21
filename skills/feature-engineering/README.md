@@ -135,4 +135,3 @@ Evite:
 - Feature de domínio `razão_idade_experiencia` e `log_renda` para tratar o enviesamento típico de variáveis de renda
 - Pipeline com `ColumnTransformer` ajustado apenas nos dados de treino
 - Alerta de que o fit do encoder de `cidade` deve considerar categorias não vistas no teste (uso de `handle_unknown='ignore'`)
-</content>

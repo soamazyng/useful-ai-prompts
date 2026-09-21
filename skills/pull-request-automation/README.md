@@ -130,4 +130,3 @@ Evite:
 - Workflow separado de validação de título usando regex de conventional commits, falhando o check com mensagem indicando o formato esperado (`tipo(escopo): descrição`)
 - Nota explícita de que branch protection precisa marcar os checks como "required" no GitHub (configuração de repositório, não de arquivo YAML) para que o auto-merge seja realmente bloqueante
 - Aviso de que o workflow não mescla se houver conflito com a branch base, delegando a resolução ao autor do PR
-</content>

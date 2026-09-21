@@ -128,4 +128,3 @@ Evite:
 - Schema `Product` reutilizável e envelope de resposta paginada (`data`, `pagination`)
 - Respostas documentadas: 200 (lista de produtos com exemplo), 401 (token inválido, com exemplo do formato de erro)
 - Exemplo de requisição `curl` com o cabeçalho `Authorization: Bearer <token>`
-</content>

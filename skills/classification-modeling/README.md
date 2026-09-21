@@ -139,4 +139,3 @@ Evite:
 - Comparação entre Regressão Logística, Random Forest e Gradient Boosting usando AUC-ROC, F1-Score e recall da classe fraude — não acurácia
 - Ajuste do threshold de decisão abaixo de 0.5 para priorizar recall (menos fraudes não detectadas), com trade-off explícito de mais falsos positivos
 - Recomendação do Gradient Boosting com maior recall na classe minoritária, acompanhada da lista das features mais importantes (ex.: valor da transação, horário, distância geográfica)
-</content>

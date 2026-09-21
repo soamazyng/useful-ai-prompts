@@ -144,4 +144,3 @@ Evite:
 - Tratamento de erro com `catchError` retornando um array vazio em vez de derrubar o stream
 - Exemplo de subscribe/unsubscribe atrelado ao ciclo de vida do componente
 - Nota explicando por que `switchMap` foi escolhido em vez de `mergeMap` (cancelamento da busca anterior é o comportamento desejado)
-</content>

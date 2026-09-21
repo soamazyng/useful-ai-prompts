@@ -136,4 +136,3 @@ Evite:
 - Política de ciclo de vida (`lifecycle policy`) do ECR removendo automaticamente tags não referenciadas por deploy ativo com mais de 30 dias, preservando as últimas 10 versões de produção
 - Convenção de tagging por SHA de commit + tag semântica para produção, eliminando ambiguidade de qual imagem está de fato implantada
 - Recomendação de configurar alerta de custo/armazenamento no CloudWatch para acompanhar o efeito da nova política de retenção
-</content>

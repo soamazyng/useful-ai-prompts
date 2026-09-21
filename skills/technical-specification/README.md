@@ -134,4 +134,3 @@ Evite:
 - Requisitos não-funcionais: tempo de resposta do fluxo OAuth abaixo de 2s no p95, rate limiting no endpoint de reenvio de verificação, logs de auditoria de tentativas de login
 - Design técnico: schema de tabela de usuários com provedores vinculados, alternativa considerada (login social apenas, sem senha) descartada por complicar recuperação de conta
 - Plano faseado: Fase 1 (autenticação central com senha + verificação de e-mail), Fase 2 (login social Google), Fase 3 (login social GitHub), com riscos como dependência de disponibilidade dos provedores OAuth de terceiros
-</content>

@@ -132,4 +132,3 @@ Evite:
 - Security Group do RDS: ingress apenas do Security Group da aplicação na porta 5432 — nenhum acesso direto de `0.0.0.0/0` ou de IPs fixos
 - Nota explícita recomendando acesso administrativo ao RDS via bastion host ou túnel SSM, nunca por IP público direto
 - Sugestão de auditoria periódica das regras e de tags/descrições identificando o propósito de cada Security Group
-</content>

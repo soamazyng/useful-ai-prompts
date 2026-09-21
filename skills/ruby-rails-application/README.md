@@ -148,4 +148,3 @@ Evite:
 - `OrdersController` com ações `index`/`show`/`create`, usando `includes(:order_items)` para evitar N+1 ao listar pedidos com seus itens
 - `before_action :authenticate_user!` centralizado no `ApplicationController`, consumindo o token JWT do header Authorization
 - Nota final assinalando as suposições: Rails API-only, PostgreSQL, e que a lógica de cálculo de valor total do pedido foi colocada em um método do model `Order` por ser lógica de domínio, não de controller
-</content>

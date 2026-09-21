@@ -135,4 +135,3 @@ Evite:
 - Bucket policy concedendo `s3:PutObject` apenas à IAM role do serviço de geração de relatórios e `s3:GetObject` apenas à IAM role usada pelo dashboard interno
 - Regra de lifecycle transicionando relatórios com mais de 90 dias para Infrequent Access e expirando versões não atuais após 1 ano
 - Nota recomendando habilitar MFA delete e CloudTrail dado o caráter financeiro dos dados
-</content>

@@ -136,4 +136,3 @@ Evite:
 - Hook `useFeatureFlag('new-checkout')` no React que consome o mesmo resultado do backend (evitando divergência entre camadas)
 - Instrumentação registrando exposição de cada usuário à variante `new` ou `old`, permitindo comparar métricas de conversão
 - Critério de encerramento sugerido: quando o rollout atingir 100% e permanecer estável por duas semanas, remover a flag e o código do checkout antigo
-</content>

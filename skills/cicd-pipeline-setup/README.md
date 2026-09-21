@@ -133,4 +133,3 @@ Evite:
 - Job `security-scan` rodando Trivy ou equivalente sobre a imagem, bloqueando o pipeline em vulnerabilidades críticas
 - Job `deploy-production` com `environment` protegido exigindo aprovação manual, seguido de health check no endpoint de saúde da aplicação
 - Nota explícita indicando que credenciais do registry e do ambiente de produção devem ser configuradas como GitHub Secrets, nunca no YAML
-</content>

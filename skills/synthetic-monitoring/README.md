@@ -129,4 +129,3 @@ Evite:
 - Conta de teste dedicada usada via variável de ambiente, nunca hard-coded, com nota sobre rotação periódica da senha
 - Cenário adicional de erro: busca por um produto inexistente, validando que a mensagem de "nenhum resultado encontrado" aparece corretamente
 - Agendamento sugerido a cada 5 minutos a partir de duas regiões geográficas diferentes, com alerta se qualquer etapa exceder 3 segundos ou se o teste falhar duas execuções seguidas
-</content>

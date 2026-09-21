@@ -134,4 +134,3 @@ Evite:
 - `proxy_pass` para o upstream com headers `Host`, `X-Real-IP`, `X-Forwarded-For` e `X-Forwarded-Proto` preservados
 - Zona de `limit_req` aplicada especificamente à rota `/login`, com burst configurado para tolerar picos legítimos sem abrir brecha para força bruta
 - Headers de segurança (HSTS, X-Content-Type-Options) e log de acesso/erro separados, mais nota sobre habilitar `stub_status` para monitoramento
-</content>

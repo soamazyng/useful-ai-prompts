@@ -136,4 +136,3 @@ Evite:
 - Nome de arquivo gerado com UUID, armazenado fora da pasta estática pública, servido através de endpoint dedicado com cache apropriado
 - Recomendação explícita de scanning de malware, já que o arquivo é visível a outros usuários (não apenas ao autor do upload)
 - Nota sobre redimensionar/reprocessar a imagem no servidor antes de servi-la, eliminando metadados EXIF potencialmente sensíveis
-</content>

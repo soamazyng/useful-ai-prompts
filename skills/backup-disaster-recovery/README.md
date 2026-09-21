@@ -133,4 +133,3 @@ Evite:
 - Segunda localização de armazenamento fora da região principal, com criptografia em repouso e chaves gerenciadas separadamente
 - Script de restauração testável, com cadência mensal de teste de restauração completa e medição do tempo real contra o RTO de 1 hora
 - Nota sobre documentar o procedimento no plano de disaster recovery para atender ao requisito de auditoria mencionado
-</content>

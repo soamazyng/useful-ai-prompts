@@ -145,4 +145,3 @@ Evite:
 - Filtragem baseada em conteúdo usando gênero/artista via TF-IDF, combinada em modelo híbrido ponderado
 - Estratégia de cold start: recomendar músicas populares por gênero para novos usuários (com base no gênero mais tocado nas primeiras interações)
 - Métricas reportadas: precision@10, recall@10, NDCG@10 e cobertura do catálogo, com nota assinalando que os números do exemplo são ilustrativos e precisam ser recalculados com os dados reais da plataforma
-</content>

@@ -138,4 +138,3 @@ Evite:
 - Modelos SQLAlchemy `User` e `Task` com relacionamento de propriedade (`user.tasks`)
 - Decorator `@jwt_required` aplicado nas rotas de `tasks_bp`, com verificação centralizada de identidade do token
 - Validação de payload com biblioteca de schema antes de criar/atualizar uma tarefa, e handlers globais de erro para 400/401/404/500 retornando JSON consistente
-</content>

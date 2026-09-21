@@ -136,4 +136,3 @@ Evite:
 - Índice composto `(created_at DESC, id DESC)` recomendado para suportar a ordenação
 - Cursor opaco codificado em base64 contendo `created_at` e `id` do último item da página
 - Resposta sem `total`, apenas `hasNext` e o próximo cursor, com nota explicando por que contar 40 milhões de linhas a cada request seria custoso demais
-</content>

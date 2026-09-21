@@ -133,4 +133,3 @@ Evite:
 - Tratamento de exceção que loga o erro com o `invocationId` e o `pedidoId` para rastreabilidade
 - Managed identity configurada para autenticação no Cosmos DB, sem connection string em texto puro
 - Nota explicando que, se o processamento puder demorar mais que o timeout do plano Consumption, a função deveria evoluir para uma orquestração Durable Functions
-</content>

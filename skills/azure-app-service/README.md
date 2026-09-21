@@ -138,4 +138,3 @@ Evite:
 - Configuração de regra de autoscaling baseada em CPU (ex.: escalar entre 2 e 6 instâncias quando CPU média ultrapassar 70%)
 - Health check em `/health` para remoção automática de instâncias não saudáveis
 - Processo de swap de slot documentado, com nota sobre quais app settings devem ser marcadas como "sticky" ao ambiente de produção
-</content>

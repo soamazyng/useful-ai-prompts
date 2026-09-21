@@ -133,4 +133,3 @@ Evite:
 - Configuração de `.releaserc` com plugins `@semantic-release/commit-analyzer`, `@semantic-release/release-notes-generator`, `@semantic-release/changelog`, `@semantic-release/npm` e `@semantic-release/github`
 - Changelog gerado com seções "Breaking Changes" (remoção do formato legado), "Features" (timezone customizado) e "Bug Fixes" (parsing de datas)
 - Recomendação de adicionar um hook de commit-msg (ex.: `commitlint`) para impedir commits fora do padrão Conventional Commits no futuro
-</content>

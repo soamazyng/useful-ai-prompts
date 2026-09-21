@@ -131,4 +131,3 @@ Evite:
 - Troca de tráfego via patch do `selector` do Service Kubernetes de `version: blue` para `version: green`, operação atômica
 - Alerta de que a migração de coluna deve ser aditiva e compatível com ambas as versões durante a janela de observação, evitando `DROP COLUMN` até o blue ser decomissionado
 - Script de rollback que reverte o `selector` do Service para `version: blue` após checar que os pods blue ainda estão saudáveis
-</content>

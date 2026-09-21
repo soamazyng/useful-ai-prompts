@@ -135,4 +135,3 @@ Evite:
 - Duas frentes de correção: aumentar o limite de memória se o uso for legítimo, ou investigar vazamento/acúmulo de memória no processamento se o uso crescer sem liberar
 - Sugestão de adicionar um `livenessProbe` e um limite de requests/limits mais realista para o Kubernetes reiniciar de forma controlada em vez de deixar o processo estourar
 - Nota de prevenção: monitorar tendência de uso de memória ao longo do tempo para diferenciar pico pontual de vazamento gradual
-</content>

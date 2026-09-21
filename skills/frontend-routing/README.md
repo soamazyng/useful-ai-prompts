@@ -137,4 +137,3 @@ Evite:
 - Rota `/products` lendo `page` e `q` (busca) da query string via `useSearchParams`, atualizando a URL a cada mudança de filtro
 - Rota de fallback `*` renderizando uma página 404 dedicada
 - Navegação programática (`navigate('/dashboard', { replace: true })`) usada após login bem-sucedido, retornando à rota originalmente solicitada
-</content>

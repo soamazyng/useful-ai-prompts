@@ -133,4 +133,3 @@ Evite:
 - Teste log-rank comparando as duas curvas, com p-valor e interpretação de significância
 - Modelo de Cox com `plano` como covariável, hazard ratio do plano anual (ex.: 0.6, indicando 40% menos risco de churn em um dado instante) e verificação da suposição de riscos proporcionais
 - Recomendação: se o hazard ratio for significativo e a suposição se sustentar, priorizar incentivos de migração para o plano anual como estratégia de retenção
-</content>

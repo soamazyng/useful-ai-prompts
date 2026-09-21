@@ -139,4 +139,3 @@ Evite:
 - Trap de foco implementado dentro do modal enquanto aberto, com fechamento via tecla `Esc`
 - Foco devolvido ao botão que originalmente abriu o modal após o fechamento
 - Checklist de validação: teste de navegação só por teclado (Tab/Shift+Tab/Esc) e teste com leitor de tela confirmando o anúncio do título e da ação de exclusão
-</content>

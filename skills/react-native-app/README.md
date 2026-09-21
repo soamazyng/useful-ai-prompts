@@ -147,4 +147,3 @@ Evite:
 - Tratamento de estado vazio ("nenhum produto encontrado") e estado de erro com botão de retry
 - Navegação para `ProductDetailsScreen` via `navigation.navigate("ProductDetails", { id })`
 - Nota final assinalando que a URL da API foi deixada como placeholder e que o exemplo assume Expo + TypeScript + Context API, por não terem sido especificados
-</content>

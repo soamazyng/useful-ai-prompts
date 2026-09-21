@@ -142,4 +142,3 @@ Evite:
 - Risco regulatório sinalizado explicitamente por se tratar de sistema de pagamentos: necessidade de validar compliance (PCI-DSS) com o novo provedor antes da migração
 - Plano de contingência para o risco de maior prioridade (estouro da janela de manutenção): gatilho de rollback definido em "se a migração não estiver validada até a hora 3 das 4 disponíveis"
 - Nota final assinalando que a escala Baixo/Médio/Alto foi usada por padrão e que o apetite de risco da organização não foi informado
-</content>

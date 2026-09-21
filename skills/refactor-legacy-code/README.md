@@ -147,4 +147,3 @@ Evite:
 - Plano incremental: (1) extrair validação para função separada, (2) converter callbacks para async/await preservando a mesma sequência de erros, (3) extrair formatação de resposta
 - Código "antes/depois" de cada passo, com os testes de caracterização passando após cada um
 - Nota final destacando que, sem testes de caracterização completos, a garantia de "zero mudança de comportamento" é parcial e onde ficam os riscos residuais
-</content>

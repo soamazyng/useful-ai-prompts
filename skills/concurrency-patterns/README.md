@@ -136,4 +136,3 @@ Evite:
 - Tratamento de erro por item: uma falha em um ID não derruba o processamento dos demais, com coleta de resultados e erros separadamente
 - Liberação garantida do slot de concorrência via `finally`, mesmo se a requisição individual lançar exceção
 - Nota explicando por que o limite foi fixado em 10 (mesmo valor do rate limit documentado da API) e sugestão de adicionar backoff se 429 ainda ocorrer
-</content>

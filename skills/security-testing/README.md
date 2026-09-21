@@ -143,4 +143,3 @@ Evite:
 - **Médio**: mensagens de erro do banco de dados expostas na resposta da API, revelando nomes de tabelas
 - Categorias testadas sem achados: SQL injection (parametrização confirmada em todos os endpoints testados), CSRF (não aplicável, API stateless com JWT)
 - Recomendação: adicionar a varredura de dependências ao pipeline de CI/CD e reteste do IDOR após correção
-</content>

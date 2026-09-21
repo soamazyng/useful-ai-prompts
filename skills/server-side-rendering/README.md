@@ -136,4 +136,3 @@ Evite:
 - Filtros customizados `currency` e `date_format` registrados no Flask e usados no template em vez de formatação inline
 - Nenhum cache de página aplicado, com nota explicando que os dados mudam constantemente e cache agressivo mostraria informação desatualizada
 - Paginação implementada na view (`per_page`, `page`) e refletida nos controles de navegação do template
-</content>

@@ -136,4 +136,3 @@ Evite:
 - Correção proposta: liberar explicitamente o cache de imagem ao desmontar o componente e usar um componente de imagem com gerenciamento de memória mais eficiente para telas cheias
 - Validação recomendada: testar em um dispositivo Android físico de baixo custo/RAM reduzida, repetindo o ciclo abrir/fechar imagem 20+ vezes e monitorando memória no Profiler
 - Nota de que o problema é específico de plataforma (gestão de memória do Android), não um bug do código JavaScript compartilhado
-</content>

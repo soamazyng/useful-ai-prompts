@@ -135,4 +135,3 @@ Evite:
 - Invalidação explícita da chave `user:profile:{id}` em todo endpoint que atualiza dados de perfil (edição de perfil, alteração de avatar, mudança de e-mail)
 - Uso do Redis (não memória local) justificado pela topologia multi-instância, evitando inconsistência entre réplicas
 - Sugestão de métrica de hit rate exposta via Prometheus para validar o ganho real de carga no banco
-</content>

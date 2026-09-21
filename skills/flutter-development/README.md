@@ -135,4 +135,3 @@ Evite:
 - `ProductScreen` consumindo o provider via `Consumer<ProductProvider>`, decomposta em `ProductSearchField` e `ProductList`/`ProductCard`
 - Tratamento explícito de estado vazio (nenhum resultado da busca) e de erro de rede com botão de tentar novamente
 - Rota `/products` configurada via GoRouter, com nota sobre dispose do `TextEditingController` do campo de busca
-</content>

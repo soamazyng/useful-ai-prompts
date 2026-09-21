@@ -135,4 +135,3 @@ Evite:
 - Verificação de idempotência checando se o PDF já existe para aquele `relatorio_id` antes de regenerar, evitando reprocessamento duplicado em caso de retry
 - Retry com backoff exponencial limitado a 3 tentativas, movendo para uma fila `relatorios.dlq` após esgotar as tentativas
 - Log estruturado registrando início, duração e resultado de cada execução, com nota sobre monitorar a profundidade da fila `relatorios` como indicador de gargalo
-</content>

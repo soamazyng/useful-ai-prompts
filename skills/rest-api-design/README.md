@@ -146,4 +146,3 @@ Evite:
 - Exemplo de erro 404 padronizado para livro inexistente e 409 para tentativa de empréstimo de livro já emprestado
 - Tabela de status codes: 200 (sucesso), 201 (criado), 204 (devolução sem corpo de resposta), 404, 409
 - Nota final assinalando suposições: versionamento por URL, autenticação Bearer token, e que a regra "um livro só pode estar emprestado por vez" foi inferida do domínio e deve ser confirmada
-</content>

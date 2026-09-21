@@ -138,4 +138,3 @@ Evite:
 - Mensagens específicas por regra de senha (não apenas "senha inválida")
 - Tratamento do erro 422 da API mapeando `{ field: message }` para `setError` no campo `email` correspondente
 - Atributos `aria-invalid`/`aria-describedby` em todos os campos com erro ativo
-</content>

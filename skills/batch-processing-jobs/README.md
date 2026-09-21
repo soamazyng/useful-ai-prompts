@@ -134,4 +134,3 @@ Evite:
 - Verificação de idempotência por linha (chave única do registro) antes de inserir, evitando duplicatas mesmo em caso de reprocessamento
 - Registro de lotes com erro em uma tabela/arquivo separado para reprocessamento seletivo, sem precisar reimportar o CSV inteiro
 - Checkpoint de progresso (último lote concluído) permitindo retomar a importação exatamente de onde parou se o processo for interrompido
-</content>

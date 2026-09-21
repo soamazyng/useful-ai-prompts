@@ -142,4 +142,3 @@ Evite:
 - Perguntas estruturadas separando "o que aconteceu" (linha do tempo factual) de "por que aconteceu" (causas sistêmicas) de "o que fazemos diferente" (ações)
 - Itens de ação de exemplo com dono e prazo (ex.: "Adicionar alerta de esgotamento de conexões — Dono: time de infraestrutura — Prazo: próximo sprint")
 - Nota final com dica de facilitação: reconhecer explicitamente a pressão da diretoria sem deixar isso se transformar em busca por um culpado dentro do time
-</content>

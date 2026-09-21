@@ -136,4 +136,3 @@ Evite:
 - Mapa de tiers: `free: 100/h`, `pro: 1000/h`
 - Middleware Express retornando 429 com `Retry-After` calculado a partir do tempo restante da janela
 - Cabeçalhos `X-RateLimit-Limit`, `X-RateLimit-Remaining` e `X-RateLimit-Reset` em toda resposta do endpoint
-</content>

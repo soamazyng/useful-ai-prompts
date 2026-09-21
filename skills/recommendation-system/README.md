@@ -141,4 +141,3 @@ Evite:
 - Fatoração de matrizes com NMF para mitigar a esparsidade típica de 6 meses de histórico
 - Métricas técnicas (precision@5, recall@5, NDCG@5) e cobertura do catálogo reportadas lado a lado
 - Desenho de teste A/B: grupo controle (página de produto sem seção de recomendação) vs. tratamento (com a seção), métrica primária = taxa de conversão da página de produto, com nota final assinalando que os números do exemplo são ilustrativos e que a duração do teste depende do volume de tráfego real, não informado
-</content>

@@ -132,4 +132,3 @@ Evite:
 - Treinamento comparando Logistic Regression, Random Forest e Gradient Boosting com 5-fold cross-validation
 - Métricas reportadas: precision, recall, F1 e ROC-AUC (não apenas accuracy, dado o desbalanceamento de 12%)
 - Recomendação de usar `class_weight='balanced'` ou reamostragem, com nota de que accuracy isolada seria enganosa (um modelo que sempre prevê "não-churn" já acertaria ~88%)
-</content>

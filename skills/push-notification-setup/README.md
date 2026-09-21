@@ -134,4 +134,3 @@ Evite:
 - `onMessage` (foreground) exibindo notificação local; `setBackgroundMessageHandler` para background; verificação de `getInitialNotification` para cold start
 - Deep linking usando o `conversationId` do payload para navegar direto à tela de conversa em qualquer um dos três estados
 - Canal de notificação Android dedicado a mensagens de chat, com prioridade alta, e nota sugerindo tela de preferências para o usuário silenciar conversas específicas
-</content>

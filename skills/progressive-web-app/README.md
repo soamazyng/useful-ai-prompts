@@ -132,4 +132,3 @@ Evite:
 - Lógica de `activate` removendo caches de versões anteriores pelo nome
 - Captura do `beforeinstallprompt` com um botão customizado de "Instalar app", já que o prompt nativo isolado tem baixa taxa de conversão
 - Nota explícita de que sincronização de dados via IndexedDB não foi incluída por não ter sido solicitada, com sugestão de quando adicioná-la
-</content>

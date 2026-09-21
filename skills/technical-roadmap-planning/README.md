@@ -131,4 +131,3 @@ Evite:
 - Q3: otimização de custo (right-sizing de recursos, instâncias reservadas/spot onde aplicável), meta de redução de 20% do custo atual
 - Q4: hardening de disponibilidade (multi-AZ, health checks avançados) mirando 99,99%, com revisão do roadmap ao final do trimestre
 - Nota explícita de que containerização é pré-requisito bloqueante para os dois objetivos de negócio, e recomendação de não agendar a migração de orquestrador durante períodos sazonais de pico de tráfego
-</content>

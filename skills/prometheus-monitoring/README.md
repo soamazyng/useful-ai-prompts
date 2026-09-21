@@ -134,4 +134,3 @@ Evite:
 - Middleware Express que registra as métricas em cada requisição, normalizando `route` para o padrão da rota (não a URL bruta, evitando cardinalidade alta)
 - Trecho de `prometheus.yml` com o job `api-service` fazendo scrape do endpoint `/metrics`
 - Regra de alerta PromQL calculando taxa de erro sobre taxa total, com `for: 5m` e severidade `critical`, com nota sugerindo runbook de investigação de erro 5xx
-</content>

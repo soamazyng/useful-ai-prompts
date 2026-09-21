@@ -132,4 +132,3 @@ Evite:
 - Sugestão explícita de transfer learning (fine-tuning de uma CNN pré-treinada como ResNet-18/MobileNet) como alternativa preferencial ao treinar do zero, dado o volume de dados
 - Contagem de parâmetros calculada e comparada ao tamanho do dataset, com alerta sobre a necessidade de data augmentation
 - Código PyTorch completo da CNN proposta, com `forward()` e comentários explicando cada bloco
-</content>

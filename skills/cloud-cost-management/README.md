@@ -135,4 +135,3 @@ Evite:
 - Recomendação de migrar as instâncias EC2 estáveis (rodando 24/7 há meses) para Savings Plans de 1 ano, com estimativa de economia percentual típica
 - Sugestão de right-sizing para instâncias com utilização de CPU consistentemente abaixo de 20%
 - Configuração de AWS Budgets com alerta em 80% do orçamento mensal e recomendação de política de tags obrigatórias por equipe/projeto
-</content>

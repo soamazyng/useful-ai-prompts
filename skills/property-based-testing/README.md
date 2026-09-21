@@ -130,4 +130,3 @@ Evite:
 - `example()` explícito cobrindo lista vazia e campo vazio como string
 - Propriedade adicional verificando que o número de campos é preservado no round-trip
 - Nota final sinalizando que testes de exemplo separados continuam necessários para validar o tratamento de aspas e delimitadores escapados, fora do escopo da propriedade de round-trip básica
-</content>

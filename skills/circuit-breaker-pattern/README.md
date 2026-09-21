@@ -136,4 +136,3 @@ Evite:
 - Fallback retornando a lista de recomendações em cache quando o circuito está `OPEN`, nunca uma nova tentativa à mesma dependência
 - Log estruturado de cada transição de estado (`CLOSED → OPEN`, motivo, timestamp) e métrica de contagem de aberturas para alertar a equipe
 - Instância de circuit breaker isolada especificamente para essa dependência, sem compartilhamento com outras chamadas externas do serviço
-</content>

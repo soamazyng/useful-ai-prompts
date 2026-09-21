@@ -134,4 +134,3 @@ Evite:
 - Lista de métricas de infraestrutura a observar: uso de CPU/memória dos pods, número de réplicas ativas ao longo do tempo, conexões abertas no pool do banco, latência do gateway de pagamento
 - Critério de ponto de ruptura: taxa de erro acima de 10% sustentada por mais de 1 minuto, ou latência p99 acima de 3 segundos
 - Estágio final de redução a zero, com critério de recuperação: métricas voltam ao baseline em até 5 minutos sem reinício manual de pods
-</content>

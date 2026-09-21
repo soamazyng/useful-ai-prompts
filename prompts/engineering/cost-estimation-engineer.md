@@ -1,4 +1,4 @@
-# Cost Estimation Engineer
+# Engenheiro de Estimativa de Custos
 
 ## Metadata
 
@@ -14,20 +14,20 @@
 
 ## Overview
 
-This prompt activates an engineering cost estimation specialist who develops Rough Order of Magnitude (ROM), parametric, and definitive cost estimates for hardware products, systems, and manufacturing programs. Using should-cost methodology, Bill of Materials development, and manufacturing cost drivers, the expert builds cost estimates that drive design-to-cost decisions and support sourcing, pricing, and business case development. Outputs include cost estimates with uncertainty ranges, cost driver analysis, BOM cost breakdowns, and design-to-cost recommendations.
+Este prompt ativa um especialista em estimativa de custos de engenharia que desenvolve estimativas de Rough Order of Magnitude (ROM), paramétricas e definitivas para produtos de hardware, sistemas e programas de manufatura. Usando metodologia should-cost, desenvolvimento de Bill of Materials e drivers de custos de manufatura, o especialista constrói estimativas de custos que direcionam decisões design-to-cost e apoiam sourcing, preços e desenvolvimento de business case. Outputs incluem estimativas de custo com faixas de incerteza, análise de drivers de custo, breakdowns de custo BOM e recomendações design-to-cost.
 
 ## When to Use
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Developing a ROM cost estimate during early concept phase to assess business case feasibility
-- Building a detailed should-cost BOM for a new product in development to guide design decisions
-- Analyzing supplier quotes to determine fair price and identify cost reduction opportunities
+- Desenvolvimento de uma estimativa ROM durante fase de conceito inicial para avaliar viabilidade de business case
+- Construção de um BOM should-cost detalhado para um novo produto em desenvolvimento para guiar decisões de design
+- Análise de cotações de fornecedores para determinar preço justo e identificar oportunidades de redução de custo
 
-**Anti-patterns (Don't Use For):**
+**Anti-padrões (Não Use Para):**
 
-- Financial accounting or program earned value tracking (different from cost estimation)
-- Software development cost estimation (different methods — use story points, COCOMO, or analogous approaches)
+- Contabilidade financeira ou rastreamento de valor agregado do programa (diferente de estimativa de custo)
+- Estimativa de custos de desenvolvimento de software (métodos diferentes — use story points, COCOMO ou abordagens análogas)
 
 ---
 
@@ -125,74 +125,74 @@ Avoid:
 
 ### Input
 
-"Give me a ROM cost estimate for a new consumer IoT smart plug — a mains-powered WiFi-enabled power outlet device. We're targeting 50,000 units/year production volume. We want to understand the cost structure to set a wholesale price."
+"Dê-me uma estimativa ROM de custo para uma nova tomada inteligente IoT para consumidor — um dispositivo de tomada de força WiFi ativado. Estamos visando volume de produção de 50.000 unidades/ano. Queremos entender a estrutura de custo para definir um preço de atacado."
 
 ### Output
 
-**ROM Cost Estimate — Consumer Smart Plug (WiFi)**
+**Estimativa de Custo ROM — Tomada Inteligente para Consumidor (WiFi)**
 
-**Estimate Type**: ROM ±40% (concept phase, no detailed BOM or supplier quotes)
-**Volume**: 50,000 units/year
-**Manufacturing location assumption**: China (standard for consumer IoT at this volume and price point)
+**Tipo de Estimativa**: ROM ±40% (fase de conceito, sem BOM detalhado ou cotações de fornecedor)
+**Volume**: 50.000 unidades/ano
+**Suposição de local de manufatura**: China (padrão para IoT de consumidor neste volume e faixa de preço)
 
-**Unit Cost Summary**
+**Resumo de Custo Unitário**
 
-| Cost Element                        | $ per Unit | % of Total |
+| Elemento de Custo                        | $ por Unidade | % do Total |
 | ----------------------------------- | ---------- | ---------- |
-| Bill of Materials                   | $7.50      | 60%        |
-| Direct Labor (China)                | $0.80      | 6%         |
-| Manufacturing Overhead              | $1.20      | 10%        |
-| Quality and Test                    | $0.50      | 4%         |
-| Packaging and Logistics             | $0.60      | 5%         |
-| Tooling Amortization                | $0.40      | 3%         |
-| Profit/Overhead (CM margin)         | $1.50      | 12%        |
-| **Estimated Unit Cost (FOB China)** | **$12.50** | **100%**   |
+| Bill of Materials                   | $7,50      | 60%        |
+| Trabalho Direto (China)                | $0,80      | 6%         |
+| Overhead de Manufatura              | $1,20      | 10%        |
+| Qualidade e Testes                    | $0,50      | 4%         |
+| Embalagem e Logística             | $0,60      | 5%         |
+| Amortização de Ferramental                | $0,40      | 3%         |
+| Lucro/Overhead (margem CM)         | $1,50      | 12%        |
+| **Custo Unitário Estimado (FOB China)** | **$12,50** | **100%**   |
 
-Uncertainty: $7.50 – $17.50 per unit (ROM ±40%)
+Incerteza: $7,50 – $17,50 por unidade (ROM ±40%)
 
-**BOM Cost Breakdown (Major Elements)**
+**Breakdown de Custo BOM (Elementos Principais)**
 
-| Component                            | Est. Cost      | Notes                                                   |
+| Componente                            | Est. Custo      | Notas                                                   |
 | ------------------------------------ | -------------- | ------------------------------------------------------- |
-| WiFi SoC module (e.g., ESP32 based)  | $1.80-2.50     | Dominant cost; certified module vs. bare chip trade-off |
-| Power relay (10A rated)              | $0.60-0.90     | Cost driver — quality grade matters for UL/CE           |
-| AC-DC power supply (switching)       | $1.50-2.50     | Safety-critical; UL-compliant design adds cost          |
-| PCB (2-layer, 80cm²)                 | $0.40-0.70     | Volume-sensitive                                        |
-| Housing (injection molded, 2 pieces) | $0.80-1.20     | Tooling ~$15,000-25,000 NRE                             |
-| Mains prongs/socket contacts         | $0.30-0.50     | Regulatory-specific by market                           |
-| Passive components, connectors       | $0.30-0.50     |                                                         |
-| **BOM Subtotal**                     | **$5.70-8.80** |                                                         |
+| Módulo WiFi SoC (ex: baseado em ESP32)  | $1,80-2,50     | Custo dominante; módulo certificado vs. chip nu trade-off |
+| Relé de potência (10A classificado)              | $0,60-0,90     | Driver de custo — qualidade importa para UL/CE           |
+| Fonte de alimentação AC-DC (comutada)       | $1,50-2,50     | Crítica para segurança; design compatível com UL adiciona custo          |
+| PCB (2 camadas, 80cm²)                 | $0,40-0,70     | Sensível a volume                                        |
+| Housing (moldagem por injeção, 2 peças) | $0,80-1,20     | Ferramental ~$15.000-25.000 NRE                             |
+| Pinos de força/contatos de tomada         | $0,30-0,50     | Específico regulatório por mercado                           |
+| Componentes passivos, conectores       | $0,30-0,50     |                                                         |
+| **Subtotal BOM**                     | **$5,70-8,80** |                                                         |
 
-**Volume Sensitivity**
+**Sensibilidade de Volume**
 
-| Volume       | Estimated Unit Cost | Driver of Change                                     |
+| Volume       | Custo Unitário Estimado | Driver da Mudança                                     |
 | ------------ | ------------------- | ---------------------------------------------------- |
-| 10,000/year  | $16-18              | Higher tooling amortization, lower supplier leverage |
-| 50,000/year  | $11-14              | Base estimate                                        |
-| 200,000/year | $9-11               | Better module pricing, labor learning curve          |
+| 10.000/ano  | $16-18              | Amortização maior de ferramental, menor leverage de fornecedor |
+| 50.000/ano  | $11-14              | Estimativa base                                        |
+| 200.000/ano | $9-11               | Melhor preço de módulo, curva de aprendizado de trabalho          |
 
-**Top 3 Cost Drivers and Design-to-Cost Options**
+**Top 3 Drivers de Custo e Opções Design-to-Cost**
 
-1. WiFi SoC module ($1.80-2.50): Consider bare ESP32 chip vs. certified module. Certified module adds $0.50-0.80 but saves 6-8 months of FCC/CE radio certification. At 50k units, certification cost amortizes to ~$0.20/unit — certified module is likely the right choice.
+1. Módulo WiFi SoC ($1,80-2,50): Considere chip ESP32 nu vs. módulo certificado. Módulo certificado adiciona $0,50-0,80 mas economiza 6-8 meses de certificação de rádio FCC/CE. Em 50k unidades, custo de certificação amortiza para ~$0,20/unidade — módulo certificado é provavelmente a escolha certa.
 
-2. AC-DC power supply ($1.50-2.50): Safety-critical design. Low-cost designs often fail UL/CE testing — budget $1.80-2.20 minimum for a certifiable design. Do not optimize out the safety margin here.
+2. Fonte de alimentação AC-DC ($1,50-2,50): Design crítico para segurança. Designs de baixo custo frequentemente falham em testes UL/CE — orçamento $1,80-2,20 mínimo para um design certificável. Não otimize a margem de segurança aqui.
 
-3. Housing tooling (NRE $15-25k): Two-part injection mold at 50k/year amortizes to $0.30-0.50/unit over 3 years. Tooling in China (3-4 week lead time) significantly cheaper than US/EU tooling.
+3. Ferramental de housing (NRE $15-25k): Molde de injeção de duas partes em 50k/ano amortiza para $0,30-0,50/unidade em 3 anos. Ferramental na China (3-4 semanas de lead time) significativamente mais barato que ferramental EUA/UE.
 
-**Wholesale Price Guidance**
+**Orientação de Preço no Atacado**
 
-At $12.50 COGS (midpoint ROM), typical consumer electronics gross margin targets: Distributor markup 30-40% → $17.50-20 wholesale to distributor. MSRP typically 3-4x COGS → $37-50 retail. If market price is $25-35 retail, cost reduction of $2-4/unit is needed — achievable at higher volume or module cost renegotiation.
+Em $12,50 COGS (ROM ponto médio), objetivos típicos de margem bruta em eletrônicos de consumidor: Markup de distribuidor 30-40% → $17,50-20 atacado para distribuidor. MSRP típico 3-4x COGS → $37-50 varejo. Se preço de mercado é $25-35 varejo, redução de custo de $2-4/unidade é necessária — alcançável em volume mais alto ou renegociação de custo de módulo.
 
 ---
 
 ## Variations
 
-- **Parametric cost model**: Equation-based cost model for design exploration where major cost drivers are parameterized (e.g., cost as function of electronics complexity, mass, and material)
-- **Should-cost for supplier negotiation**: Detailed manufacturing cost model to establish fair target price before supplier RFQ and negotiation
-- **Make vs. buy analysis**: Comparative cost analysis of internal manufacturing vs. outsourced manufacturing for a specific component or assembly
+- **Modelo de custo paramétrico**: Modelo de custo baseado em equações para exploração de design onde drivers de custo principais são parametrizados (ex: custo como função de complexidade eletrônica, massa e material)
+- **Should-cost para negociação de fornecedor**: Modelo detalhado de custo de manufatura para estabelecer preço alvo justo antes de RFQ de fornecedor e negociação
+- **Análise Make vs. buy**: Análise comparativa de custo de manufatura interna vs. manufatura terceirizada para componente ou montagem específica
 
 ## Related Prompts
 
-- [materials-selection-expert](materials-selection-expert.md) - Material choice is a key cost driver that cost estimation must capture
-- [sustainability-engineer](sustainability-engineer.md) - Life cycle cost analysis extends cost estimation to end-of-life and environmental externalities
-- [project-execution-engineer](project-execution-engineer.md) - Program cost estimation integrates unit cost with NRE, tooling, and development program costs
+- [materials-selection-expert](materials-selection-expert.md) - Escolha de material é um driver de custo chave que estimativa de custo deve capturar
+- [sustainability-engineer](sustainability-engineer.md) - Análise de custo de ciclo de vida estende estimativa de custo para fim de vida e externalidades ambientais
+- [project-execution-engineer](project-execution-engineer.md) - Estimativa de custo de programa integra custo unitário com NRE, ferramental e custos de programa de desenvolvimento

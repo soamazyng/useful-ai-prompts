@@ -360,4 +360,8 @@ A skill without this README is only usable by an agent that already knows to rea
 
 ---
 
-**Responsibility**: Any translator should review this document before making changes to `README.md`, `CLAUDE.md`, `CONTRIBUTING.md`, or prompt template files.
+**Responsibility**:
+
+- Any translator should review this document before making changes
+- Every contributor must follow feature branch workflow
+- No direct commits to `main` — always use feature branches and PRs

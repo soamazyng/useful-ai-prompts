@@ -1,4 +1,4 @@
-# Reliability Engineering Expert
+# Especialista em Engenharia de Confiabilidade
 
 ## Metadata
 
@@ -14,20 +14,20 @@
 
 ## Overview
 
-This prompt activates a reliability engineering specialist who predicts, measures, and improves the reliability of products and systems across the engineering lifecycle. Using MTBF/MTTF estimation, Weibull analysis, accelerated life testing (ALT), component derating, and reliability growth programs, the expert guides organizations from early design reliability allocation through production monitoring and field data analysis. Outputs include reliability predictions, ALT plans, Weibull analysis interpretations, reliability growth curves, and reliability demonstration test designs.
+Este prompt ativa um especialista em engenharia de confiabilidade que prevê, mede e melhora a confiabilidade de produtos e sistemas ao longo do ciclo de vida de engenharia. Usando estimativa de MTBF/MTTF, análise Weibull, teste de vida acelerado (ALT), derating de componentes e programas de crescimento de confiabilidade, o especialista orienta organizações desde a alocação de confiabilidade de design inicial até o monitoramento de produção e análise de dados de campo. Outputs incluem previsões de confiabilidade, planos ALT, interpretações de análise Weibull, curvas de crescimento de confiabilidade e designs de teste de demonstração de confiabilidade.
 
 ## When to Use
 
-**Ideal Scenarios:**
+**Cenários Ideais:**
 
-- Establishing reliability targets and allocating them across subsystems during early design
-- Designing and interpreting accelerated life tests to predict product life before market release
-- Analyzing field return data using Weibull statistics to characterize failure distributions and improve future designs
+- Estabelecimento de metas de confiabilidade e alocação entre subsistemas durante design inicial
+- Design e interpretação de testes de vida acelerados para prever vida do produto antes do lançamento no mercado
+- Análise de dados de retorno de campo usando estatística Weibull para caracterizar distribuições de falha e melhorar designs futuros
 
-**Anti-patterns (Don't Use For):**
+**Anti-padrões (Não Use Para):**
 
-- Real-time failure response — reliability engineering is a predictive and improvement discipline
-- Single-event failure investigation (use root-cause-analysis-engineer for specific failure investigations)
+- Resposta de falha em tempo real — engenharia de confiabilidade é uma disciplina preditiva e de melhoria
+- Investigação de falha de evento único (use root-cause-analysis-engineer para investigações de falha específicas)
 
 ---
 
@@ -125,61 +125,61 @@ Avoid:
 
 ### Input
 
-"We're designing a consumer IoT device with a target of less than 2% warranty returns in 2 years. The device runs 24/7 at typical home temperatures (15-35°C). It has a microcontroller, power supply components, and wireless antenna. How do we set up reliability engineering for this program?"
+"Estamos projetando um dispositivo IoT de consumo com meta de menos de 2% de retornos de garantia em 2 anos. O dispositivo funciona 24/7 em temperaturas domésticas típicas (15-35°C). Tem um microcontrolador, componentes de fonte de alimentação e antena sem fio. Como configuramos engenharia de confiabilidade para este programa?"
 
 ### Output
 
-**Reliability Engineering Program — Consumer IoT Device**
+**Programa de Engenharia de Confiabilidade — Dispositivo IoT de Consumo**
 
-**Reliability Targets**
+**Metas de Confiabilidade**
 
-2% warranty return rate in 2 years at home ambient conditions.
+Taxa de retorno de garantia de 2% em 2 anos em condições ambientais domésticas.
 
-Conversion: R(24 months) ≥ 0.98. Assuming exponential failure model as initial estimate: MTBF ≥ 24 months / (-ln(0.98)) = 24 / 0.0202 ≈ 1,188 months ≈ 8.3 years (100,000 hours). This is the prediction target — aim for MTBF ≥ 100,000 hours for margin.
+Conversão: R(24 meses) ≥ 0,98. Assumindo modelo de falha exponencial como estimativa inicial: MTBF ≥ 24 meses / (-ln(0,98)) = 24 / 0,0202 ≈ 1.188 meses ≈ 8,3 anos (100.000 horas). Esta é a meta de previsão — vise MTBF ≥ 100.000 horas para margem.
 
-**Reliability Allocation**
+**Alocação de Confiabilidade**
 
-| Subsystem                  | Allocated MTBF (hours) | Notes                                          |
+| Subsistema                  | MTBF Alocado (horas) | Notas                                          |
 | -------------------------- | ---------------------- | ---------------------------------------------- |
-| Microcontroller + firmware | 1,000,000              | Silicon dominant; firmware robustness critical |
-| Power supply (switching)   | 250,000                | Electrolytic capacitors are weakest link       |
-| RF/Antenna                 | 800,000                | Solder joint fatigue under thermal cycling     |
-| Housing/mechanical         | 500,000                | PCB mounting, button mechanisms                |
-| **System (series model)**  | **~115,000**           | 1/MTBF_sys = Σ(1/MTBF_i)                       |
+| Microcontrolador + firmware | 1.000.000              | Silício dominante; robustez de firmware crítica |
+| Fonte de alimentação (comutada)   | 250.000                | Capacitores eletrolíticos são o elo mais fraco       |
+| RF/Antena                 | 800.000                | Fadiga de junta de solda sob ciclagem térmica     |
+| Carcaça/mecânico         | 500.000                | Montagem de PCB, mecanismos de botão                |
+| **Sistema (modelo série)**  | **~115.000**           | 1/MTBF_sys = Σ(1/MTBF_i)                       |
 
-System MTBF prediction ≈ 115,000 hours → R(2 years) ≈ 98.3% — marginally meeting target. Power supply is the weakest link.
+Previsão de MTBF do sistema ≈ 115.000 horas → R(2 anos) ≈ 98,3% — atingindo marginalmente a meta. Fonte de alimentação é o elo mais fraco.
 
-**Component Derating**
+**Derating de Componentes**
 
-Review all power supply components against 0.6 derating rule: bulk capacitors should be operated at ≤60% rated voltage (e.g., 25V cap on 16V rail). Electrolytic capacitor temperature is critical — every 10°C above rated temperature halves capacitor life (Arrhenius). Ensure capacitors are rated for 105°C if board temperature at that location exceeds 55°C.
+Revise todos os componentes de fonte de alimentação contra a regra de derating de 0,6: capacitores a granel devem operar a ≤60% da tensão nominal (ex: capacitor de 25V em trilho de 16V). Temperatura do capacitor eletrolítico é crítica — cada 10°C acima da temperatura nominal reduz pela metade a vida do capacitor (Arrhenius). Garanta que os capacitores sejam classificados para 105°C se a temperatura da placa naquele local exceder 55°C.
 
-**ALT Plan — Power Supply Subsystem**
+**Plano ALT — Subsistema de Fonte de Alimentação**
 
-Acceleration model: Arrhenius for temperature-driven failures (capacitor electrolyte degradation).
-Acceleration factor at 70°C vs. 35°C average use: AF = exp[Ea/k × (1/T_use - 1/T_acc)] = exp[0.7/8.617e-5 × (1/308 - 1/343)] ≈ 8.
+Modelo de aceleração: Arrhenius para falhas orientadas por temperatura (degradação do eletrólito do capacitor).
+Fator de aceleração a 70°C vs. uso médio de 35°C: AF = exp[Ea/k × (1/T_uso - 1/T_acel)] = exp[0,7/8,617e-5 × (1/308 - 1/343)] ≈ 8.
 
-Test plan: Run 30 units at 70°C for 3,000 hours. This represents 24,000 equivalent field hours (3,000 × 8). With 0 failures in 3,000 hours, 90% confidence MTBF > 43,400 hours — use accelerated test as screen to confirm design margins, then combine with field data for full life prediction.
+Plano de teste: Execute 30 unidades a 70°C por 3.000 horas. Isso representa 24.000 horas de campo equivalentes (3.000 × 8). Com 0 falhas em 3.000 horas, confiança de 90% MTBF > 43.400 horas — use teste acelerado como triagem para confirmar margens de design, depois combine com dados de campo para previsão de vida completa.
 
-**Field Monitoring Plan**
+**Plano de Monitoramento de Campo**
 
-Track monthly warranty return rate by failure mode category (power, connectivity, mechanical). If return rate trends above 0.08%/month cumulative, trigger investigation. Use first 6 months of field data to conduct early Weibull fit and project 2-year return rate trajectory.
+Rastreie taxa de retorno de garantia mensal por categoria de modo de falha (energia, conectividade, mecânica). Se a taxa de retorno tender acima de 0,08%/mês acumulado, acione investigação. Use os primeiros 6 meses de dados de campo para conduzir ajuste Weibull inicial e projetar trajetória de taxa de retorno de 2 anos.
 
-**Top Reliability Action Items**
+**Principais Itens de Ação de Confiabilidade**
 
-1. Review all electrolytic capacitor junction temperatures — this is the #1 IoT device life limiter
-2. Conduct solder joint fatigue analysis for RF module under home thermal cycling (day/night 15-35°C)
-3. Run HALT early in DVT to find design margin weaknesses before production commitment
+1. Revisar todas as temperaturas de junção de capacitor eletrolítico — este é o limitador de vida #1 de dispositivo IoT
+2. Conduzir análise de fadiga de junta de solda para módulo RF sob ciclagem térmica doméstica (dia/noite 15-35°C)
+3. Executar HALT cedo em DVT para encontrar fraquezas de margem de design antes do compromisso de produção
 
 ---
 
 ## Variations
 
-- **Software reliability**: Software reliability modeling, fault density metrics, defect prediction, and operational reliability growth for embedded firmware
-- **System availability modeling**: MTBF/MTTR-based availability analysis for repairable systems where maintenance affects operational availability
-- **Reliability demonstration test design**: Statistical test plan to demonstrate a reliability or MTBF claim at required confidence for customer or regulatory acceptance
+- **Confiabilidade de software**: Modelagem de confiabilidade de software, métricas de densidade de defeitos, previsão de defeitos e crescimento de confiabilidade operacional para firmware embarcado
+- **Modelagem de disponibilidade de sistema**: Análise de disponibilidade baseada em MTBF/MTTR para sistemas reparáveis onde manutenção afeta disponibilidade operacional
+- **Design de teste de demonstração de confiabilidade**: Plano de teste estatístico para demonstrar uma reivindicação de confiabilidade ou MTBF na confiança necessária para aceitação de cliente ou regulatória
 
 ## Related Prompts
 
-- [failure-mode-analyst](failure-mode-analyst.md) - FMEA identifies failure modes that reliability engineering then quantifies and mitigates
-- [test-validation-engineer](test-validation-engineer.md) - Designs the test program that executes the reliability demonstration and ALT plans
-- [simulation-modeling-advisor](simulation-modeling-advisor.md) - Physics-of-failure simulation that informs reliability predictions and acceleration models
+- [failure-mode-analyst](failure-mode-analyst.md) - FMEA identifica modos de falha que engenharia de confiabilidade então quantifica e mitiga
+- [test-validation-engineer](test-validation-engineer.md) - Projeta o programa de teste que executa os planos de demonstração de confiabilidade e ALT
+- [simulation-modeling-advisor](simulation-modeling-advisor.md) - Simulação de física de falha que informa previsões de confiabilidade e modelos de aceleração

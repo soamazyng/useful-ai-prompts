@@ -1,4 +1,4 @@
-# Mechanical Design Review Expert
+# Especialista em Revisão de Design Mecânico
 
 ## Metadata
 
@@ -14,24 +14,24 @@
 
 ## Overview
 
-Conduct thorough mechanical design reviews that ensure safety, performance, manufacturability, and cost-effectiveness through systematic engineering analysis. Identifies critical issues, assesses failure modes, and provides actionable optimization recommendations prioritized by risk and impact.
+Conduza revisões completas de design mecânico que garantam segurança, desempenho, capacidade de manufatura e custo-benefício através de análise sistemática de engenharia. Identifica problemas críticos, avalia modos de falha e fornece recomendações de otimização acionáveis priorizadas por risco e impacto.
 
 ## When to Use
 
-**Ideal scenarios:**
+**Cenários ideais:**
 
-- Reviewing designs before prototype or production release
-- Validating engineering analysis and calculations
-- Assessing manufacturability and cost optimization opportunities
-- Conducting failure mode and risk assessments (FMEA)
-- Evaluating designs against performance requirements
+- Revisão de designs antes do lançamento de protótipo ou produção
+- Validação de análise e cálculos de engenharia
+- Avaliação de capacidade de manufatura e oportunidades de otimização de custo
+- Condução de avaliações de modo de falha e risco (FMEA)
+- Avaliação de designs contra requisitos de desempenho
 
-**Anti-patterns (when not to use):**
+**Anti-padrões (quando não usar):**
 
-- Electrical or software design reviews
-- Routine inspection procedures or quality control checks
-- Design creation (use for review, not initial design)
-- Regulatory certification (requires certified engineers)
+- Revisões de design elétrico ou de software
+- Procedimentos de inspeção de rotina ou verificações de controle de qualidade
+- Criação de design (use para revisão, não design inicial)
+- Certificação regulatória (requer engenheiros certificados)
 
 ---
 
@@ -110,110 +110,110 @@ Avoid:
 
 ### Input
 
-"Industrial pump impeller for chemical processing. 3600 RPM, 500 GPM flow, 150 PSI head, 5-year continuous operation. Corrosive chemicals (pH 2-12), 20-80C, occasional dry running. 316L stainless steel, investment casting + CNC. Previous design had fatigue cracks at blade roots after 2 years."
+"Impelidor de bomba industrial para processamento químico. 3600 RPM, vazão de 500 GPM, altura manométrica de 150 PSI, operação contínua de 5 anos. Produtos químicos corrosivos (pH 2-12), 20-80C, funcionamento a seco ocasional. Aço inoxidável 316L, fundição de precisão + CNC. Design anterior teve trincas por fadiga nas raízes das pás após 2 anos."
 
 ### Output
 
-**Design Review: Industrial Pump Impeller**
+**Revisão de Design: Impelidor de Bomba Industrial**
 
-**Design Assessment**
+**Avaliação de Design**
 
-_Strengths_
+_Pontos Fortes_
 
-- Material Selection: 316L SS excellent for pH 2-12 range
-- Conservative Stress: 180 MPa provides ~40% safety margin on yield
-- Standard Compliance: API 610 ensures proven practices
+- Seleção de Material: 316L SS excelente para faixa de pH 2-12
+- Tensão Conservadora: 180 MPa fornece ~40% de margem de segurança no escoamento
+- Conformidade com Padrão: API 610 garante práticas comprovadas
 
-_Critical Issues_
+_Problemas Críticos_
 
-1. **Fatigue Life Concern** (CRITICAL)
-   - Previous 2-year failure vs. 5-year requirement
-   - No fatigue analysis completed
-   - Stress concentration at blade roots likely cause
+1. **Preocupação com Vida em Fadiga** (CRÍTICO)
+   - Falha anterior de 2 anos vs. requisito de 5 anos
+   - Nenhuma análise de fadiga concluída
+   - Concentração de tensão na raiz das pás é provável causa
 
-2. **Dry Running Risk** (HIGH)
-   - No protection mentioned
-   - Can cause rapid overheating and seizure
+2. **Risco de Funcionamento a Seco** (ALTO)
+   - Nenhuma proteção mencionada
+   - Pode causar superaquecimento rápido e travamento
 
-3. **Dynamic Analysis Gap** (MEDIUM)
-   - No modal analysis or critical speed evaluation
-   - 3600 RPM requires resonance avoidance
+3. **Lacuna de Análise Dinâmica** (MÉDIO)
+   - Nenhuma análise modal ou avaliação de velocidade crítica
+   - 3600 RPM requer prevenção de ressonância
 
-**Performance Analysis Recommendations**
+**Recomendações de Análise de Desempenho**
 
-_Fatigue Life Calculation_
-Based on 316L properties and stress levels:
+_Cálculo de Vida em Fadiga_
+Baseado nas propriedades e níveis de tensão do 316L:
 
-- Endurance limit: ~140 MPa (adjusted for surface finish)
-- Stress concentration at root: 2.5-3.0x
-- Effective stress: 180 x 2.5 = 450 MPa
-- Expected life: ~10^5 cycles = 28 hours at 3600 RPM
+- Limite de resistência: ~140 MPa (ajustado para acabamento de superfície)
+- Concentração de tensão na raiz: 2,5-3,0x
+- Tensão efetiva: 180 x 2,5 = 450 MPa
+- Vida esperada: ~10^5 ciclos = 28 horas a 3600 RPM
 
-Required Actions:
+Ações Necessárias:
 
-- Add 8mm minimum root radius
-- Polish blade roots to Ra 0.4 um
-- Shot peen high-stress areas
-- Target max stress <100 MPa for infinite life
+- Adicionar raio mínimo de raiz de 8mm
+- Polir raízes das pás para Ra 0,4 um
+- Jateamento com granalha em áreas de alta tensão
+- Meta de tensão máxima <100 MPa para vida infinita
 
-_Thermal Analysis_
+_Análise Térmica_
 
-- Dry run temperature rise: ~50C/minute
-- 316L loses strength above 400C
-- Add temperature monitoring (RTD), auto-shutdown at 120C
+- Aumento de temperatura em funcionamento a seco: ~50C/minuto
+- 316L perde resistência acima de 400C
+- Adicionar monitoramento de temperatura (RTD), desligamento automático a 120C
 
-_Dynamic Analysis_
+_Análise Dinâmica_
 
-- First critical speed estimate: 5,400 RPM
-- Separation margin: 50% (acceptable)
-- Verify with full modal analysis including fluid effects
+- Estimativa de primeira velocidade crítica: 5.400 RPM
+- Margem de separação: 50% (aceitável)
+- Verificar com análise modal completa incluindo efeitos de fluido
 
-**Manufacturability Review**
+**Revisão de Capacidade de Manufatura**
 
-_Investment Casting Issues_
+_Problemas de Fundição de Precisão_
 
-- 8mm blade thickness may cause shrinkage porosity
-- Sharp internal corners increase defect risk
+- Espessura de pá de 8mm pode causar porosidade por contração
+- Cantos internos afiados aumentam risco de defeito
 
-_DFM Improvements_
+_Melhorias DFM_
 
-- Taper blades: 10mm at root to 6mm at tip
-- Add draft angles: 1.5 minimum
-- Uniform wall thickness: Avoid abrupt changes
+- Afunilar pás: 10mm na raiz a 6mm na ponta
+- Adicionar ângulos de saída: mínimo 1,5
+- Espessura de parede uniforme: Evitar mudanças abruptas
 
-_Cost Optimization_
+_Otimização de Custo_
 
-- Consider CF8M (cast 316) vs. wrought 316L: 20% savings
-- Hybrid approach (cast + minimal machining): $650 vs. $800 target
+- Considerar CF8M (316 fundido) vs. 316L trabalhado: 20% de economia
+- Abordagem híbrida (fundido + usinagem mínima): $650 vs. meta de $800
 
-**Failure Mode Analysis**
+**Análise de Modo de Falha**
 
-| Failure Mode          | Severity | Probability | RPN | Mitigation             |
+| Modo de Falha          | Severidade | Probabilidade | RPN | Mitigação             |
 | --------------------- | -------- | ----------- | --- | ---------------------- |
-| Fatigue crack at root | 9        | 8           | 72  | Redesign geometry      |
-| Dry run seizure       | 8        | 5           | 40  | Temperature protection |
-| Corrosion/erosion     | 7        | 4           | 28  | Material upgrade path  |
-| Resonance             | 6        | 3           | 18  | Modal analysis         |
-| Casting defects       | 5        | 4           | 20  | Improved NDT           |
+| Trinca por fadiga na raiz | 9        | 8           | 72  | Redesenhar geometria      |
+| Travamento por funcionamento a seco       | 8        | 5           | 40  | Proteção de temperatura |
+| Corrosão/erosão     | 7        | 4           | 28  | Caminho de upgrade de material  |
+| Ressonância             | 6        | 3           | 18  | Análise modal         |
+| Defeitos de fundição       | 5        | 4           | 20  | NDT melhorado           |
 
-**Prioritized Recommendations**
+**Recomendações Priorizadas**
 
-_Critical (Before Prototype)_
+_Crítico (Antes do Protótipo)_
 
-1. Redesign blade roots with 8mm+ radius fillet
-2. Complete fatigue analysis targeting 10^7 cycles
-3. Add temperature monitoring for dry-run protection
+1. Redesenhar raízes das pás com filete de raio 8mm+
+2. Completar análise de fadiga visando 10^7 ciclos
+3. Adicionar monitoramento de temperatura para proteção de funcionamento a seco
 
-_Important (Before Production)_ 4. Perform full modal analysis 5. Validate with 500-hour endurance test 6. Optimize casting process for defect reduction
+_Importante (Antes da Produção)_ 4. Realizar análise modal completa 5. Validar com teste de resistência de 500 horas 6. Otimizar processo de fundição para redução de defeitos
 
-_Cost-Benefit_: $5K redesign prevents $50K+ warranty claims (10:1 ROI minimum).
+_Custo-Benefício_: Redesign de $5K previne reclamações de garantia de $50K+ (ROI mínimo de 10:1).
 
-**Validation Testing Plan**
+**Plano de Teste de Validação**
 
-- Hydrostatic test: 1.5x max pressure
-- Spin test: 1.2x max speed
-- Accelerated corrosion: ASTM G48
-- Endurance run: 500 hours minimum
+- Teste hidrostático: 1,5x pressão máxima
+- Teste de rotação: 1,2x velocidade máxima
+- Corrosão acelerada: ASTM G48
+- Teste de resistência: mínimo 500 horas
 
 ## Related Prompts
 
